@@ -9,7 +9,7 @@ import {
 } from '@wordpress/element';
 import { __, sprintf } from '@wordpress/i18n';
 import { api, boot, post, problem } from './api';
-import { ChatProvider } from './Assistant';
+import { ChatDock, ChatProvider } from './Assistant';
 import { Button, Engenty, Icon, Notice, Spinner } from './ui';
 import Start from './Start';
 import Dialog from './Dialog';
@@ -24,6 +24,15 @@ const VIEWS = {
 	services: [ Services, __( 'Dienste', 'cookie-dialog' ) ],
 	log: [ Log, __( 'Protokoll', 'cookie-dialog' ) ],
 	settings: [ Settings, __( 'Einstellungen', 'cookie-dialog' ) ],
+};
+
+/** What the assistant's input suggests on each page. */
+const PLACEHOLDERS = {
+	start: __( 'z. B. „Füge Hotjar hinzu“', 'cookie-dialog' ),
+	log: __(
+		'Frag zum Protokoll, z. B. „Wie viele haben gestern abgelehnt?“',
+		'cookie-dialog'
+	),
 };
 
 const AppContext = createContext( null );
@@ -190,6 +199,10 @@ function App( { view } ) {
 								state={ state }
 								onState={ onState }
 								save={ save }
+							/>
+							<ChatDock
+								placeholder={ PLACEHOLDERS[ view ] }
+								quiet={ view === 'start' }
 							/>
 						</ChatProvider>
 					</AppContext.Provider>

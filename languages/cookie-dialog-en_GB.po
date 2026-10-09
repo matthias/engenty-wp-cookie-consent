@@ -115,7 +115,6 @@ msgstr "Assistant: %s"
 
 #. translators: %s: what the person asked
 #: includes/class-assistant.php:466
-#: build/admin.js:2
 #: build/admin.js:3
 #: build/admin.js:26
 msgid "Assistent"
@@ -615,13 +614,12 @@ msgid "Diese Version gibt es nicht."
 msgstr "This version doesn’t exist."
 
 #: includes/class-rest.php:373
-#: build/admin.js:14
 #: build/admin.js:15
 msgid "Was soll anders sein?"
 msgstr "What should be different?"
 
 #: build/admin.js:1
-#: build/admin.js:2
+#: build/admin.js:3
 msgid "Schließen"
 msgstr "Close"
 
@@ -645,7 +643,7 @@ msgstr "Message to the assistant"
 msgid "Senden"
 msgstr "Send"
 
-#: build/admin.js:2
+#: build/admin.js:3
 msgid "Neu"
 msgstr "New"
 
@@ -978,7 +976,7 @@ msgstr "Until then, nothing changes on your website. You can turn it off at any 
 msgid "Ich ändere Dialog, Dienste und Einstellungen. Jede Änderung siehst du als Karte und kannst sie zurücknehmen."
 msgstr "I change the dialog, services and settings. You see each change as a card and can undo it."
 
-#: build/admin.js:15
+#: build/admin.js:27
 msgid "z. B. „Füge Hotjar hinzu“"
 msgstr "e.g. “Add Hotjar”"
 
@@ -1869,7 +1867,7 @@ msgstr "No decision with this consent ID."
 msgid "Noch keine Entscheidungen in diesem Zeitraum."
 msgstr "No decisions in this period yet."
 
-#: build/admin.js:25
+#: build/admin.js:27
 msgid "Frag zum Protokoll, z. B. „Wie viele haben gestern abgelehnt?“"
 msgstr "Ask about the log, e.g. “How many rejected yesterday?”"
 
@@ -2515,3 +2513,35 @@ msgid "%d Seite"
 msgid_plural "%d Seiten"
 msgstr[0] "%d page"
 msgstr[1] "%d pages"
+
+#: build/admin.js:2
+msgid "Sag, was anders sein soll – ich ändere Dialog, Dienste und Einstellungen. Jede Änderung kommt als Karte und lässt sich zurücknehmen."
+msgstr "Say what should be different – I change the dialog, services and settings. Each change comes as a card and can be undone."
+
+#: build/admin.js:3
+msgid "Unten anzeigen"
+msgstr "Show at the bottom"
+
+#: build/admin.js:3
+msgid "In der Seitenleiste anzeigen"
+msgstr "Show in the sidebar"
+
+#: build/admin.js:3
+msgid "Assistent öffnen"
+msgstr "Open assistant"
+
+#: build/admin.js:3
+msgid "Breite des Assistenten"
+msgstr "Assistant width"
+
+#: build/admin.js:3
+msgid "Höhe des Verlaufs"
+msgstr "History height"
+
+#: build/admin.js:3
+msgid "Verlauf einklappen"
+msgstr "Collapse history"
+
+#: build/admin.js:3
+msgid "Verlauf zeigen"
+msgstr "Show history"

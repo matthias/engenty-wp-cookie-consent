@@ -3,13 +3,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Cookie Dialog 0.1.0\n"
-"Report-Msgid-Bugs-To: https://engenty.ai\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cookie-dialog\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-09T06:18:53+00:00\n"
+"POT-Creation-Date: 2026-10-09T06:40:00+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: cookie-dialog\n"
@@ -120,7 +120,6 @@ msgstr ""
 
 #. translators: %s: what the person asked
 #: includes/class-assistant.php:466
-#: build/admin.js:2
 #: build/admin.js:3
 #: build/admin.js:26
 msgid "Assistent"
@@ -628,7 +627,6 @@ msgid "Diese Version gibt es nicht."
 msgstr ""
 
 #: includes/class-rest.php:373
-#: build/admin.js:14
 #: build/admin.js:15
 msgid "Was soll anders sein?"
 msgstr ""
@@ -638,7 +636,7 @@ msgid "Das hat nicht geklappt."
 msgstr ""
 
 #: build/admin.js:1
-#: build/admin.js:2
+#: build/admin.js:3
 msgid "Schließen"
 msgstr ""
 
@@ -671,7 +669,7 @@ msgid "Senden"
 msgstr ""
 
 #: build/admin.js:2
-msgid "Neu"
+msgid "Sag, was anders sein soll – ich ändere Dialog, Dienste und Einstellungen. Jede Änderung kommt als Karte und lässt sich zurücknehmen."
 msgstr ""
 
 #: build/admin.js:2
@@ -694,11 +692,43 @@ msgid "Denkt nach …"
 msgstr ""
 
 #: build/admin.js:3
+msgid "Neu"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Unten anzeigen"
+msgstr ""
+
+#: build/admin.js:3
+msgid "In der Seitenleiste anzeigen"
+msgstr ""
+
+#: build/admin.js:3
 msgid "Sag dem Assistenten, was anders sein soll …"
 msgstr ""
 
 #: build/admin.js:3
 msgid "Assistent aus – alles andere funktioniert. KI-Anbieter einrichten"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Assistent öffnen"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Breite des Assistenten"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Höhe des Verlaufs"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Verlauf einklappen"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Verlauf zeigen"
 msgstr ""
 
 #: build/admin.js:3
@@ -1025,10 +1055,6 @@ msgstr ""
 
 #: build/admin.js:15
 msgid "Ich ändere Dialog, Dienste und Einstellungen. Jede Änderung siehst du als Karte und kannst sie zurücknehmen."
-msgstr ""
-
-#: build/admin.js:15
-msgid "z. B. „Füge Hotjar hinzu“"
 msgstr ""
 
 #: build/admin.js:15
@@ -1941,10 +1967,6 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: build/admin.js:25
-msgid "Frag zum Protokoll, z. B. „Wie viele haben gestern abgelehnt?“"
-msgstr ""
-
-#: build/admin.js:25
 msgid "überall"
 msgstr ""
 
@@ -2374,6 +2396,14 @@ msgstr ""
 
 #: build/admin.js:27
 msgid "Der Dialog ist noch aus."
+msgstr ""
+
+#: build/admin.js:27
+msgid "z. B. „Füge Hotjar hinzu“"
+msgstr ""
+
+#: build/admin.js:27
+msgid "Frag zum Protokoll, z. B. „Wie viele haben gestern abgelehnt?“"
 msgstr ""
 
 #: build/admin.js:27

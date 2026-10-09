@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from '@wordpress/element';
 import { __, _x, sprintf } from '@wordpress/i18n';
 import { pageUrl, problem } from './api';
-import { Dock, runJob, useBrowserModel } from './Assistant';
+import { runJob, useBrowserModel } from './Assistant';
 import Preview from './Preview';
 import {
 	Button,
@@ -767,7 +767,6 @@ export default function Dialog( { state, onState, save } ) {
 					</Card>
 				</div>
 			</div>
-			<Dock />
 		</>
 	);
 }

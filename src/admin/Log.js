@@ -1,7 +1,6 @@
 import { useEffect, useState } from '@wordpress/element';
 import { __, _n, sprintf } from '@wordpress/i18n';
 import { api, boot, problem, query } from './api';
-import { Dock } from './Assistant';
 import { Split } from './Start';
 import {
 	Button,
@@ -391,12 +390,6 @@ export default function Log( { state } ) {
 					onClose={ () => setVersion( null ) }
 				/>
 			) : null }
-			<Dock
-				placeholder={ __(
-					'Frag zum Protokoll, z. B. „Wie viele haben gestern abgelehnt?“',
-					'cookie-dialog'
-				) }
-			/>
 		</>
 	);
 }

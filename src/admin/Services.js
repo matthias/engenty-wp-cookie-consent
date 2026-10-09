@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from '@wordpress/element';
 import { __, _n, sprintf } from '@wordpress/i18n';
 import { api, post, problem } from './api';
-import { Dock } from './Assistant';
 import {
 	Button,
 	Card,
@@ -1902,7 +1901,6 @@ export default function Services( { state, onState, save } ) {
 					onClose={ closeDrawer }
 				/>
 			) : null }
-			<Dock />
 		</>
 	);
 }

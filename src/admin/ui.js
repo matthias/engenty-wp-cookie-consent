@@ -25,6 +25,10 @@ const ICONS = {
 	eye: '<path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
 	server: '<rect x="4" y="4" width="16" height="7" rx="2"/><rect x="4" y="13" width="16" height="7" rx="2"/><path d="M8 7.5h.01M8 16.5h.01"/>',
 	undo: '<path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/>',
+	dockSide:
+		'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M15 4v16"/>',
+	dockBottom:
+		'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 14h18"/>',
 	chip: '<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>',
 };
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
 import { __, _n, _x, sprintf } from '@wordpress/i18n';
 import { boot, pageUrl, post, problem } from './api';
-import { Dock, useBrowserModel } from './Assistant';
+import { useBrowserModel } from './Assistant';
 import {
 	Accordion,
 	Button,
@@ -1116,7 +1116,6 @@ export default function Settings( { state, onState, save } ) {
 					</span>
 				</div>
 			) }
-			<Dock />
 		</>
 	);
 }

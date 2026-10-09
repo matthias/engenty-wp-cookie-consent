@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from '@wordpress/element';
 import { __, _n, sprintf } from '@wordpress/i18n';
 import { boot, pageUrl, post, problem } from './api';
-import { AssistantCard, Dock, browserModel, runJob } from './Assistant';
+import { AssistantCard, browserModel, runJob } from './Assistant';
 import Preview from './Preview';
 import {
 	Button,
@@ -572,18 +572,6 @@ function Proposal( { state, onState } ) {
 function Before( { state, onState } ) {
 	const [ going, setGoing ] = useState( false );
 	const [ error, setError ] = useState( null );
-	const card = useRef();
-	const [ cardVisible, setCardVisible ] = useState( true );
-	useEffect( () => {
-		if ( ! card.current || ! ( 'IntersectionObserver' in window ) ) {
-			return undefined;
-		}
-		const io = new window.IntersectionObserver( ( [ e ] ) =>
-			setCardVisible( e.isIntersecting )
-		);
-		io.observe( card.current );
-		return () => io.disconnect();
-	}, [] );
 	const go = async () => {
 		setGoing( true );
 		setError( null );
@@ -601,7 +589,6 @@ function Before( { state, onState } ) {
 	return (
 		<>
 			<AssistantCard
-				cardRef={ card }
 				title={ sprintf(
 					/* translators: %s: the site's host */
 					__( 'Ich habe %s gelesen', 'cookie-dialog' ),
@@ -618,7 +605,6 @@ function Before( { state, onState } ) {
 					c.embeds || 0,
 					c.plugins || 0
 				) }
-				placeholder={ __( 'Was soll anders sein?', 'cookie-dialog' ) }
 				suggestions={ [
 					__( 'Schreib per Sie', 'cookie-dialog' ),
 					__( 'Dunkler Dialog', 'cookie-dialog' ),
@@ -701,7 +687,6 @@ function Before( { state, onState } ) {
 				</span>
 				{ error ? <Notice tone="error">{ error }</Notice> : null }
 			</div>
-			<Dock hidden={ cardVisible } />
 		</>
 	);
 }
@@ -711,32 +696,15 @@ function Before( { state, onState } ) {
 function Live( { state, onState } ) {
 	const fix = useFix( state, onState );
 	const [ passedOpen, setPassedOpen ] = useState( false );
-	const card = useRef();
-	const [ cardVisible, setCardVisible ] = useState( true );
-	useEffect( () => {
-		if ( ! card.current || ! ( 'IntersectionObserver' in window ) ) {
-			return undefined;
-		}
-		const io = new window.IntersectionObserver( ( [ e ] ) =>
-			setCardVisible( e.isIntersecting )
-		);
-		io.observe( card.current );
-		return () => io.disconnect();
-	}, [] );
 	const open = state.checks.filter( ( c ) => ! c.ok );
 	const passed = state.checks.filter( ( c ) => c.ok );
 	const s = state.stats;
 	return (
 		<>
 			<AssistantCard
-				cardRef={ card }
 				title={ __( 'Was soll anders sein?', 'cookie-dialog' ) }
 				text={ __(
 					'Ich ändere Dialog, Dienste und Einstellungen. Jede Änderung siehst du als Karte und kannst sie zurücknehmen.',
-					'cookie-dialog'
-				) }
-				placeholder={ __(
-					'z. B. „Füge Hotjar hinzu“',
 					'cookie-dialog'
 				) }
 				suggestions={ [
@@ -895,7 +863,6 @@ function Live( { state, onState } ) {
 				</Section>
 			) : null }
 			{ fix.drawer }
-			<Dock hidden={ cardVisible } />
 		</>
 	);
 }
