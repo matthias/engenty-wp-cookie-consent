@@ -600,7 +600,7 @@ class CookieDialog {
 		const w = Number( iframe.getAttribute( 'width' ) );
 		const h = Number( iframe.getAttribute( 'height' ) );
 		if ( w && h ) {
-			ph.style.aspectRatio = `${ w } / ${ h }`;
+			ph.style.setProperty( '--cookie-dialog-ratio', `${ w } / ${ h }` );
 		}
 		const tpl = document.createElement( 'template' );
 		tpl.setAttribute( 'data-cookie-dialog', 'embed' );

@@ -50,7 +50,7 @@ class BlockerTest extends Cookie_Dialog_TestCase {
 		$html = Cookie_Dialog_Blocker::process( '<iframe width="560" height="315" src="https://www.youtube.com/embed/abcdefghijk"></iframe>' );
 		$this->assertStringContainsString( 'class="cookie-dialog-ph cookie-dialog-ph--video', $html );
 		$this->assertStringContainsString( 'data-cookie-service="youtube"', $html );
-		$this->assertStringContainsString( 'aspect-ratio:560/315', $html );
+		$this->assertStringContainsString( '--cookie-dialog-ratio:560/315', $html );
 		$this->assertStringContainsString( '<template data-cookie-dialog="embed"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/abcdefghijk"', $html );
 		$this->assertStringContainsString( 'data-cookie-always', $html );
 		// A second pass leaves the placeholder alone.

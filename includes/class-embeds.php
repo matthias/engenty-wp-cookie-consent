@@ -139,9 +139,9 @@ class Cookie_Dialog_Embeds {
 		$height = isset( $attrs['height'] ) && is_numeric( $attrs['height'] ) ? (int) $attrs['height'] : 0;
 		$style  = '';
 		if ( $width > 0 && $height > 0 ) {
-			$style = sprintf( 'aspect-ratio:%d/%d;', $width, $height );
+			$style = sprintf( '--cookie-dialog-ratio:%d/%d;', $width, $height );
 		} elseif ( in_array( $type, array( 'video', 'map' ), true ) ) {
-			$style = 'aspect-ratio:16/9;';
+			$style = '--cookie-dialog-ratio:16/9;';
 		}
 		if ( $width > 0 && ! str_contains( (string) ( $attrs['width'] ?? '' ), '%' ) ) {
 			$style .= sprintf( 'max-width:%dpx;', $width );

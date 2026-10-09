@@ -339,9 +339,8 @@ html.cookie-dialog-locked, html.cookie-dialog-locked body { overflow: hidden; }
 
 .cookie-dialog-ph {
 	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	display: grid;
+	place-items: center;
 	box-sizing: border-box;
 	width: 100%;
 	min-height: 220px;
@@ -349,11 +348,13 @@ html.cookie-dialog-locked, html.cookie-dialog-locked body { overflow: hidden; }
 	border-radius: var(--cookie-dialog-r, 16px);
 	background: #ebe9e2;
 	color: #1b1b1b;
-	/* clip, not hidden: the box still grows with its text below the aspect ratio's height. */
-	overflow: clip;
+	overflow: hidden;
 	text-align: center;
 	line-height: 1.5;
 }
+/* The embed's proportions as a spacer in the same grid cell: the box keeps them and grows with its text. */
+.cookie-dialog-ph::before { content: ""; grid-area: 1 / 1; width: 100%; aspect-ratio: var(--cookie-dialog-ratio, auto); }
+.cookie-dialog-ph > .cookie-dialog-ph__over { grid-area: 1 / 1; }
 .cookie-dialog-ph > template { display: none; }
 .cookie-dialog-ph--social, .cookie-dialog-ph--other, .cookie-dialog-ph--calendar, .cookie-dialog-ph--form { min-height: 200px; }
 .cookie-dialog-ph__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(2px) brightness(.5); transform: scale(1.04); }
