@@ -26,6 +26,11 @@ class Cookie_Dialog_Html {
 		if ( '' === $html || false === strpos( $html, '<' ) ) {
 			return $html;
 		}
+		$original = $html;
+		// Large pages (a builder's inline JSON, a data: font) need room for the lazy expressions.
+		if ( strlen( $html ) > 200000 && (int) ini_get( 'pcre.backtrack_limit' ) < 20000000 ) {
+			ini_set( 'pcre.backtrack_limit', '20000000' ); // phpcs:ignore WordPress.PHP.IniSet.Risky -- raised for this request only.
+		}
 		$kept = array();
 		$keep = static function ( $markup ) use ( &$kept ) {
 			$kept[] = $markup;
@@ -33,13 +38,17 @@ class Cookie_Dialog_Html {
 		};
 
 		// What is held already, and comments (conditional comments may hold scripts for old browsers).
-		$html = (string) preg_replace_callback(
+		$html = preg_replace_callback(
 			'#<template\b[^>]*\bdata-cookie-dialog\b[^>]*>.*?</template\s*>|<!--.*?-->#is',
 			static fn( $m ) => $keep( $m[0] ),
 			$html
 		);
+		if ( null === $html ) {
+			// A page too big for the expressions (backtrack limit): left as it was rather than lost.
+			return $original;
+		}
 
-		$html = (string) preg_replace_callback(
+		$html = preg_replace_callback(
 			'#<script\b([^>]*)>(.*?)</script\s*>#is',
 			static function ( $m ) use ( $handlers, $keep ) {
 				$attrs = self::attrs( $m[1] );
@@ -48,8 +57,12 @@ class Cookie_Dialog_Html {
 			},
 			$html
 		);
+		if ( null === $html ) {
+			// A page too big for the expressions (backtrack limit): left as it was rather than lost.
+			return $original;
+		}
 
-		$html = (string) preg_replace_callback(
+		$html = preg_replace_callback(
 			'#<iframe\b([^>]*?)(?:/>|>(.*?)</iframe\s*>)#is',
 			static function ( $m ) use ( $handlers, $keep ) {
 				$attrs = self::attrs( $m[1] );
@@ -58,8 +71,12 @@ class Cookie_Dialog_Html {
 			},
 			$html
 		);
+		if ( null === $html ) {
+			// A page too big for the expressions (backtrack limit): left as it was rather than lost.
+			return $original;
+		}
 
-		$html = (string) preg_replace_callback(
+		$html = preg_replace_callback(
 			'#<style\b([^>]*)>(.*?)</style\s*>#is',
 			static function ( $m ) use ( $handlers, $keep ) {
 				$attrs = self::attrs( $m[1] );
@@ -68,6 +85,10 @@ class Cookie_Dialog_Html {
 			},
 			$html
 		);
+		if ( null === $html ) {
+			// A page too big for the expressions (backtrack limit): left as it was rather than lost.
+			return $original;
+		}
 
 		foreach ( array(
 			'link'  => '#<link\b([^>]*?)/?>#is',
@@ -77,7 +98,7 @@ class Cookie_Dialog_Html {
 			if ( ! isset( $handlers[ $kind ] ) ) {
 				continue;
 			}
-			$html = (string) preg_replace_callback(
+			$html = preg_replace_callback(
 				$pattern,
 				static function ( $m ) use ( $handlers, $kind ) {
 					$out = $handlers[ $kind ]( self::attrs( $m[1] ), '', $m[0] );
@@ -85,6 +106,10 @@ class Cookie_Dialog_Html {
 				},
 				$html
 			);
+			if ( null === $html ) {
+				// A page too big for the expressions (backtrack limit): left as it was rather than lost.
+				return $original;
+			}
 		}
 
 		// Kept parts may contain kept parts (a held script inside a placeholder's template).
@@ -92,7 +117,11 @@ class Cookie_Dialog_Html {
 			if ( false === strpos( $html, "\x1Acd" ) ) {
 				break;
 			}
-			$html = (string) preg_replace_callback( "#\x1Acd(\d+)\x1A#", static fn( $m ) => $kept[ (int) $m[1] ] ?? '', $html );
+			$html = preg_replace_callback( "#\x1Acd(\d+)\x1A#", static fn( $m ) => $kept[ (int) $m[1] ] ?? '', $html );
+			if ( null === $html ) {
+				// A page too big for the expressions (backtrack limit): left as it was rather than lost.
+				return $original;
+			}
 		}
 		return $html;
 	}

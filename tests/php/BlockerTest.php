@@ -98,4 +98,12 @@ class BlockerTest extends Cookie_Dialog_TestCase {
 		$this->assertStringNotContainsString( 'fonts.googleapis.com', $out );
 		$reflection->setValue( null, null );
 	}
+
+	public function test_a_huge_page_keeps_its_content_and_holds_the_tag() {
+		$big  = '<script>var data = "' . str_repeat( 'x', 3000000 ) . '";</script>';
+		$html = Cookie_Dialog_Blocker::process( '<p>Hallo</p>' . $big . '<script async src="https://www.googletagmanager.com/gtag/js?id=G-1"></script>' );
+		$this->assertStringContainsString( '<p>Hallo</p>', $html );
+		$this->assertStringContainsString( 'data-cookie-service="ga4"', $html );
+		$this->assertGreaterThan( 3000000, strlen( $html ) );
+	}
 }

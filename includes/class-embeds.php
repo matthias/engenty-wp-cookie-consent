@@ -55,7 +55,7 @@ class Cookie_Dialog_Embeds {
 		if ( false === stripos( (string) $html, '<blockquote' ) ) {
 			return $html;
 		}
-		return (string) preg_replace_callback(
+		$out = preg_replace_callback(
 			'#<blockquote\b[^>]*class="[^"]*\b(instagram-media|twitter-tweet|tiktok-embed|bluesky-embed|threads-post)\b[^"]*"[^>]*>.*?</blockquote>\s*(?:<script\b[^>]*></script>)?#is',
 			static function ( $m ) {
 				if ( preg_match( '#<script\b[^>]*\bsrc=["\']([^"\']+)#i', $m[0], $src ) ) {
@@ -70,6 +70,7 @@ class Cookie_Dialog_Embeds {
 			},
 			(string) $html
 		);
+		return null === $out ? $html : $out;
 	}
 
 	/**
