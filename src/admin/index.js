@@ -75,7 +75,7 @@ function Top( { view, state, saving, savedAt } ) {
 	return (
 		<header className="cd-top">
 			<div className="cd-crumb">
-				<Engenty kind="round" size={ 28 } />
+				<Engenty kind="incognito" size={ 28 } />
 				<a
 					className="cd-crumb__brand"
 					href={ `${ boot.admin }?page=cookie-dialog` }

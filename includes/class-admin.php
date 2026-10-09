@@ -33,12 +33,12 @@ class Cookie_Dialog_Admin {
 	}
 
 	/**
-	 * The menu icon: a cookie, in WordPress' grey.
+	 * The menu icon: the incognito engenty – hat and one lens over its one eye – in WordPress' grey.
 	 *
 	 * @return string
 	 */
 	private static function icon() {
-		$svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#a7aaad" fill-rule="evenodd" d="M12 2.5a9.5 9.5 0 1 0 9.5 9.5 1 1 0 0 0-1.3-.95 2.6 2.6 0 0 1-3.2-3.1 1 1 0 0 0-1.1-1.2A2.6 2.6 0 0 1 13 4a1 1 0 0 0-1-1.5zM8.5 9.5a1.3 1.3 0 1 0 0 2.6 1.3 1.3 0 0 0 0-2.6zm4 5a1.3 1.3 0 1 0 0 2.6 1.3 1.3 0 0 0 0-2.6zm3.6-2.4a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM8 15a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>';
+		$svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="6 -8 108 108"><path fill="#a7aaad" fill-rule="evenodd" d="M60 22 Q96 26 96 62 Q96 96 60 100 Q24 96 24 62 Q24 26 60 22 Z M83.5 58 A15.5 15.5 0 1 0 52.5 58 A15.5 15.5 0 1 0 83.5 58 Z"/><circle fill="#a7aaad" cx="68" cy="58" r="10.5"/><g transform="rotate(-8 60 10.5)"><path fill="#a7aaad" d="M42 9.5 L44.5 -2.5 Q46 -6 50 -5 Q60 -1.5 70 -5 Q74 -6 75.5 -2.5 L78 9.5 Z"/><ellipse fill="#a7aaad" cx="60" cy="10.5" rx="31" ry="3.6"/></g></svg>';
 		return 'data:image/svg+xml;base64,' . base64_encode( $svg ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
 	}
 

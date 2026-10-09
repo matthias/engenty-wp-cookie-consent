@@ -1459,7 +1459,7 @@ class CookieDialog {
 				[]
 			) as HTMLButtonElement;
 			this.fab.innerHTML =
-				'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 3 3 0 0 1-3-3 3 3 0 0 1-3-3 3 3 0 0 1-3-3z"/><circle cx="8.5" cy="10.5" r=".8"/><circle cx="12" cy="15.5" r=".8"/><circle cx="15.5" cy="13" r=".8"/><circle cx="9" cy="15" r=".6"/></svg>';
+				'<svg width="24" height="24" aria-hidden="true" viewBox="6 -8 108 108"><path fill="currentColor" fill-rule="evenodd" d="M60 22 Q96 26 96 62 Q96 96 60 100 Q24 96 24 62 Q24 26 60 22 Z M83.5 58 A15.5 15.5 0 1 0 52.5 58 A15.5 15.5 0 1 0 83.5 58 Z"/><circle fill="currentColor" cx="68" cy="58" r="10.5"/><g transform="rotate(-8 60 10.5)"><path fill="currentColor" d="M42 9.5 L44.5 -2.5 Q46 -6 50 -5 Q60 -1.5 70 -5 Q74 -6 75.5 -2.5 L78 9.5 Z"/><ellipse fill="currentColor" cx="60" cy="10.5" rx="31" ry="3.6"/></g></svg>';
 			this.fab.addEventListener( 'click', () => this.show( 2 ) );
 			this.root.appendChild( this.fab );
 		}
