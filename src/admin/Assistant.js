@@ -526,10 +526,44 @@ function ResizeHandle( { axis, value, limits, onChange, label } ) {
 	);
 }
 
+/** How long a state takes to come and go (matches admin.css). */
+const MOTION = 320;
+
+/**
+ * Keeps a part mounted while it animates out: `in` once shown, `out` before it enters and while it
+ * leaves. A part that is there when the page loads does not animate.
+ * @param show Whether it should be there.
+ */
+function usePresence( show ) {
+	const [ mounted, setMounted ] = useState( show );
+	const [ phase, setPhase ] = useState( show ? 'in' : 'out' );
+	useEffect( () => {
+		let frame;
+		let timer;
+		if ( show ) {
+			setMounted( true );
+			// Two frames: the part is drawn in its `out` state before it moves to `in`.
+			frame = window.requestAnimationFrame( () => {
+				frame = window.requestAnimationFrame( () => setPhase( 'in' ) );
+			} );
+		} else {
+			setPhase( 'out' );
+			timer = window.setTimeout( () => setMounted( false ), MOTION );
+		}
+		return () => {
+			window.cancelAnimationFrame( frame );
+			window.clearTimeout( timer );
+		};
+	}, [ show ] );
+	return { mounted, phase };
+}
+
 /**
  * The assistant on every page: a running chat at the bottom, or – when the window is wide enough –
  * an open, resizable column on the right that the page makes room for; closed, an engenty in the
- * bottom right corner opens it again. Without a provider, one quiet line says so.
+ * bottom right corner opens it again. Between these it moves: the column slides in from the right,
+ * the chat at the bottom rises, both shrink into the engenty when closed and grow out of it again.
+ * Without a provider, one quiet line says so.
  * @param root0
  * @param root0.placeholder What the input suggests on this page.
  * @param root0.quiet       No line without a provider (Start explains it in its card).
@@ -538,14 +572,32 @@ export function ChatDock( { placeholder, quiet = false } ) {
 	const chat = useChat();
 	const width = useWindowWidth();
 	const node = useRef();
+	const bottomRef = useRef();
+	const historyRef = useRef();
 	const canSide = width >= SIDE_FROM;
 	const { layout } = chat;
 	const mode = layout.mode === 'side' && canSide ? 'side' : 'bottom';
-	const sideOpen = chat.ready && layout.open && mode === 'side';
-	const side = clamp( layout.side, {
-		min: SIDE.min,
-		max: Math.min( SIDE.max, width - 760 ),
-	} );
+	let view = 'off';
+	if ( chat.ready ) {
+		view = layout.open ? mode : 'avatar';
+	}
+	const sideOpen = view === 'side';
+	const sideMax = Math.min( SIDE.max, width - 760 );
+	const side = clamp( layout.side, { min: SIDE.min, max: sideMax } );
+
+	// Where the chat comes from and goes to: into the engenty it shrinks, between bottom and side it slides.
+	const [ pair, setPair ] = useState( { from: view, to: view } );
+	if ( pair.to !== view ) {
+		setPair( { from: pair.to, to: view } );
+	}
+	const variant = ( part ) =>
+		( part === pair.to ? pair.from : pair.to ) === 'avatar'
+			? 'corner'
+			: 'slide';
+
+	const sideLayer = usePresence( view === 'side' );
+	const bottomLayer = usePresence( view === 'bottom' );
+	const avatarLayer = usePresence( view === 'avatar' );
 
 	// The page makes room for the side column.
 	useEffect( () => {
@@ -563,29 +615,41 @@ export function ChatDock( { placeholder, quiet = false } ) {
 
 	// The page keeps its last lines clear of the chat at the bottom.
 	useEffect( () => {
-		const el = node.current;
-		const app = el?.closest( '.cd-app' );
-		if ( ! el || ! app || ! ( 'ResizeObserver' in window ) ) {
+		const app = node.current?.closest( '.cd-app' );
+		const el = bottomRef.current;
+		if ( ! app ) {
+			return undefined;
+		}
+		if ( ! el || view !== 'bottom' || ! ( 'ResizeObserver' in window ) ) {
+			app.style.setProperty(
+				'--cd-bottom',
+				view === 'off' && ! quiet ? '64px' : '0px'
+			);
 			return undefined;
 		}
 		const measure = () =>
 			app.style.setProperty(
 				'--cd-bottom',
-				el.classList.contains( 'cd-bdock' )
-					? `${ Math.round( el.getBoundingClientRect().height ) }px`
-					: '0px'
+				`${ Math.round( el.getBoundingClientRect().height ) }px`
 			);
 		measure();
 		const ro = new window.ResizeObserver( measure );
 		ro.observe( el );
 		return () => ro.disconnect();
+	}, [ view, quiet, bottomLayer.mounted ] );
+
+	// A folded history takes no focus.
+	useEffect( () => {
+		if ( historyRef.current ) {
+			historyRef.current.inert = Boolean( layout.folded );
+		}
 	} );
 
 	const text =
 		placeholder ||
 		__( 'Sag dem Assistenten, was anders sein soll …', 'cookie-dialog' );
 
-	if ( ! chat.ready ) {
+	if ( view === 'off' ) {
 		return quiet ? (
 			<span ref={ node } hidden />
 		) : (
@@ -607,108 +671,110 @@ export function ChatDock( { placeholder, quiet = false } ) {
 		);
 	}
 
-	if ( ! layout.open ) {
-		return (
-			<button
-				ref={ node }
-				type="button"
-				className="cd-avatar"
-				title={ __( 'Assistent öffnen', 'cookie-dialog' ) }
-				aria-label={ __( 'Assistent öffnen', 'cookie-dialog' ) }
-				onClick={ () => chat.setLayout( { open: true } ) }
-			>
-				<Engenty kind="drop" size={ 44 } />
-				{ chat.busy ? <span className="cd-avatar__busy" /> : null }
-			</button>
-		);
-	}
-
-	if ( mode === 'side' ) {
-		return (
-			<aside
-				className="cd-side"
-				ref={ node }
-				aria-label={ __( 'Assistent', 'cookie-dialog' ) }
-				style={ { width: side } }
-			>
-				<ResizeHandle
-					axis="x"
-					value={ side }
-					limits={ {
-						min: SIDE.min,
-						max: Math.min( SIDE.max, width - 760 ),
-					} }
-					onChange={ ( v ) => chat.setLayout( { side: v } ) }
-					label={ __( 'Breite des Assistenten', 'cookie-dialog' ) }
-				/>
-				<ChatHead mode="side" canSide={ canSide } />
-				<Messages />
-				<div className="cd-side__foot">
-					<ChatInput placeholder={ text } />
-				</div>
-			</aside>
-		);
-	}
-
 	const history = clamp( layout.history, HISTORY );
 	const showHistory = ! layout.folded;
+	const foldLabel = showHistory
+		? __( 'Verlauf einklappen', 'cookie-dialog' )
+		: __( 'Verlauf zeigen', 'cookie-dialog' );
+
 	return (
-		<div className="cd-bdock" ref={ node }>
-			<div className="cd-bdock__in">
-				<div className="cd-bdock__card">
-					{ showHistory ? (
-						<ResizeHandle
-							axis="y"
-							value={ history }
-							limits={ HISTORY }
-							onChange={ ( v ) =>
-								chat.setLayout( { history: v } )
-							}
-							label={ __( 'Höhe des Verlaufs', 'cookie-dialog' ) }
-						/>
-					) : null }
-					<ChatHead mode="bottom" canSide={ canSide }>
-						<button
-							type="button"
-							className="cd-icon-btn"
-							title={
-								showHistory
-									? __(
-											'Verlauf einklappen',
-											'cookie-dialog'
-									  )
-									: __( 'Verlauf zeigen', 'cookie-dialog' )
-							}
-							aria-label={
-								showHistory
-									? __(
-											'Verlauf einklappen',
-											'cookie-dialog'
-									  )
-									: __( 'Verlauf zeigen', 'cookie-dialog' )
-							}
-							aria-expanded={ showHistory ? 'true' : 'false' }
-							onClick={ () =>
-								chat.setLayout( { folded: showHistory } )
-							}
-						>
-							<Icon
-								name={ showHistory ? 'down' : 'up' }
-								size={ 16 }
-							/>
-						</button>
-					</ChatHead>
-					{ showHistory ? (
-						<div
-							className="cd-bdock__history"
-							style={ { height: history } }
-						>
-							<Messages />
+		<div className="cd-chatroot" ref={ node }>
+			{ sideLayer.mounted ? (
+				<aside
+					className={ `cd-side is-${ sideLayer.phase }` }
+					data-variant={ variant( 'side' ) }
+					aria-label={ __( 'Assistent', 'cookie-dialog' ) }
+					aria-hidden={ view !== 'side' ? 'true' : undefined }
+					style={ { width: side } }
+				>
+					<ResizeHandle
+						axis="x"
+						value={ side }
+						limits={ { min: SIDE.min, max: sideMax } }
+						onChange={ ( v ) => chat.setLayout( { side: v } ) }
+						label={ __(
+							'Breite des Assistenten',
+							'cookie-dialog'
+						) }
+					/>
+					<ChatHead mode="side" canSide={ canSide } />
+					<Messages />
+					<div className="cd-side__foot">
+						<ChatInput placeholder={ text } />
+					</div>
+				</aside>
+			) : null }
+			{ bottomLayer.mounted ? (
+				<div
+					className={ `cd-bdock is-${ bottomLayer.phase }` }
+					data-variant={ variant( 'bottom' ) }
+					aria-hidden={ view !== 'bottom' ? 'true' : undefined }
+					ref={ bottomRef }
+				>
+					<div className="cd-bdock__in">
+						<div className="cd-bdock__card">
+							{ showHistory ? (
+								<ResizeHandle
+									axis="y"
+									value={ history }
+									limits={ HISTORY }
+									onChange={ ( v ) =>
+										chat.setLayout( { history: v } )
+									}
+									label={ __(
+										'Höhe des Verlaufs',
+										'cookie-dialog'
+									) }
+								/>
+							) : null }
+							<ChatHead mode="bottom" canSide={ canSide }>
+								<button
+									type="button"
+									className={ `cd-icon-btn cd-fold${
+										showHistory ? '' : ' is-folded'
+									}` }
+									title={ foldLabel }
+									aria-label={ foldLabel }
+									aria-expanded={
+										showHistory ? 'true' : 'false'
+									}
+									onClick={ () =>
+										chat.setLayout( {
+											folded: showHistory,
+										} )
+									}
+								>
+									<Icon name="down" size={ 16 } />
+								</button>
+							</ChatHead>
+							<div
+								className={ `cd-bdock__history${
+									showHistory ? '' : ' is-folded'
+								}` }
+								style={ { height: showHistory ? history : 0 } }
+								aria-hidden={ showHistory ? undefined : 'true' }
+								ref={ historyRef }
+							>
+								<Messages />
+							</div>
+							<ChatInput placeholder={ text } />
 						</div>
-					) : null }
-					<ChatInput placeholder={ text } />
+					</div>
 				</div>
-			</div>
+			) : null }
+			{ avatarLayer.mounted ? (
+				<button
+					type="button"
+					className={ `cd-avatar is-${ avatarLayer.phase }` }
+					title={ __( 'Assistent öffnen', 'cookie-dialog' ) }
+					aria-label={ __( 'Assistent öffnen', 'cookie-dialog' ) }
+					tabIndex={ view === 'avatar' ? undefined : -1 }
+					onClick={ () => chat.setLayout( { open: true } ) }
+				>
+					<Engenty kind="drop" size={ 44 } />
+					{ chat.busy ? <span className="cd-avatar__busy" /> : null }
+				</button>
+			) : null }
 		</div>
 	);
 }
