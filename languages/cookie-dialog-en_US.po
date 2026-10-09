@@ -2558,3 +2558,12 @@ msgstr "WordPress manages it under Settings › Connectors – one API key for a
 #: build/admin.js:26
 msgid "Konnektoren"
 msgstr "Connectors"
+
+#: build/admin.js:2
+msgid "Zeigen, was einzurichten ist"
+msgstr "Show what to set up"
+
+#: build/admin.js:2
+#: build/admin.js:3
+msgid "Hinweis ausblenden"
+msgstr "Hide notice"

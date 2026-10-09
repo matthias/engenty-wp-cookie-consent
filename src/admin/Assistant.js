@@ -115,6 +115,7 @@ const ChatContext = createContext( null );
 
 const STORE = 'cookie-dialog-chat';
 const LAYOUT = 'cookie-dialog-chat-layout';
+const SETUP_HIDDEN = 'cookie-dialog-setup-hidden';
 
 /** The side column is offered from this window width; below it the chat sits at the bottom. */
 export const SIDE_FROM = 1200;
@@ -147,6 +148,14 @@ function loadLayout() {
 	}
 }
 
+function loadSetupHidden() {
+	try {
+		return window.localStorage.getItem( SETUP_HIDDEN ) === '1';
+	} catch {
+		return false;
+	}
+}
+
 const clamp = ( n, { min, max } ) => Math.max( min, Math.min( max, n ) );
 
 /** The window's width, kept up to date. */
@@ -163,6 +172,7 @@ function useWindowWidth() {
 export function ChatProvider( { state, onState, view, children } ) {
 	const [ messages, setMessages ] = useState( loadChat );
 	const [ layout, setLayoutState ] = useState( loadLayout );
+	const [ setupHidden, setSetupHiddenState ] = useState( loadSetupHidden );
 	const [ busy, setBusy ] = useState( false );
 	const [ error, setError ] = useState( null );
 	useEffect( () => {
@@ -243,6 +253,15 @@ export function ChatProvider( { state, onState, view, children } ) {
 		},
 		[ messages, onState ]
 	);
+	/** The notice what to set up, hidden or shown again – in every place at once. */
+	const setSetupHidden = useCallback( ( hidden ) => {
+		setSetupHiddenState( hidden );
+		try {
+			window.localStorage.setItem( SETUP_HIDDEN, hidden ? '1' : '0' );
+		} catch {
+			// Without storage it is hidden for this page only.
+		}
+	}, [] );
 	const clear = () => {
 		setMessages( [] );
 		setError( null );
@@ -259,6 +278,8 @@ export function ChatProvider( { state, onState, view, children } ) {
 				send,
 				undo,
 				clear,
+				setupHidden,
+				setSetupHidden,
 				ready: Boolean( state?.assistant?.ready ),
 			} }
 		>
@@ -279,8 +300,14 @@ export const useChat = () => useContext( ChatContext );
 function ChatInput( { placeholder, className = '', locked = false } ) {
 	const chat = useChat();
 	const [ text, setText ] = useState( '' );
+	const lockLabel = chat.setupHidden
+		? __( 'Zeigen, was einzurichten ist', 'cookie-dialog' )
+		: __( 'Hinweis ausblenden', 'cookie-dialog' );
 	const submit = ( e ) => {
 		e.preventDefault();
+		if ( locked ) {
+			return;
+		}
 		chat.send( text );
 		setText( '' );
 	};
@@ -309,18 +336,31 @@ function ChatInput( { placeholder, className = '', locked = false } ) {
 				onChange={ ( e ) => setText( e.target.value ) }
 				disabled={ locked || chat.busy }
 			/>
-			<button
-				type="submit"
-				className="cd-go"
-				aria-label={ __( 'Senden', 'cookie-dialog' ) }
-				disabled={ locked || chat.busy || ! text.trim() }
-			>
-				{ chat.busy ? (
-					<span className="cd-spinner__dot" />
-				) : (
-					<Icon name={ locked ? 'lock' : 'send' } size={ 15 } />
-				) }
-			</button>
+			{ locked ? (
+				<button
+					type="button"
+					className="cd-go"
+					title={ lockLabel }
+					aria-label={ lockLabel }
+					aria-expanded={ chat.setupHidden ? 'false' : 'true' }
+					onClick={ () => chat.setSetupHidden( ! chat.setupHidden ) }
+				>
+					<Icon name="lock" size={ 15 } />
+				</button>
+			) : (
+				<button
+					type="submit"
+					className="cd-go"
+					aria-label={ __( 'Senden', 'cookie-dialog' ) }
+					disabled={ chat.busy || ! text.trim() }
+				>
+					{ chat.busy ? (
+						<span className="cd-spinner__dot" />
+					) : (
+						<Icon name="send" size={ 15 } />
+					) }
+				</button>
+			) }
 		</form>
 	);
 }
@@ -817,9 +857,24 @@ function Setup() {
 	const chat = useChat();
 	const browser = useBrowserModel();
 	const assistant = chat.state.assistant;
+	if ( chat.setupHidden ) {
+		return null;
+	}
+	const close = (
+		<button
+			type="button"
+			className="cd-icon-btn cd-setup__close"
+			title={ __( 'Hinweis ausblenden', 'cookie-dialog' ) }
+			aria-label={ __( 'Hinweis ausblenden', 'cookie-dialog' ) }
+			onClick={ () => chat.setSetupHidden( true ) }
+		>
+			<Icon name="x" size={ 15 } />
+		</button>
+	);
 	if ( ! assistant.wp ) {
 		return (
 			<div className="cd-setup">
+				{ close }
 				<b className="cd-setup__title">
 					{ __( 'Der Chat braucht WordPress 7.0', 'cookie-dialog' ) }
 				</b>
@@ -843,6 +898,7 @@ function Setup() {
 		assistant.browser && browser && browser !== 'unavailable';
 	return (
 		<div className="cd-setup">
+			{ close }
 			<b className="cd-setup__title">
 				<Icon name="lock" size={ 13 } />{ ' ' }
 				{ __( 'Erst einen KI-Anbieter einrichten', 'cookie-dialog' ) }
