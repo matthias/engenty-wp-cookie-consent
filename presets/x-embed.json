@@ -1,0 +1,57 @@
+{
+  "id": "x-embed",
+  "name": "X (Twitter)",
+  "category": "marketing",
+  "kind": "embed",
+  "provider": {
+    "name": "X Internet Unlimited Company",
+    "address": "One Cumberland Place, Fenian Street, Dublin 2, D02 AX07, Irland"
+  },
+  "purpose": {
+    "de": "Zeigt Beiträge von X (ehemals Twitter) auf dieser Website. X erhält dabei IP-Adresse und Browserdaten und kann Cookies setzen.",
+    "en": "Shows posts from X (formerly Twitter) on this website. X receives the IP address and browser data and may set cookies."
+  },
+  "privacy": "https://x.com/privacy",
+  "cookies": [
+    {
+      "name": "__cf_bm",
+      "duration": "30min",
+      "type": "http"
+    },
+    {
+      "name": "guest_id",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "personalization_id",
+      "duration": "13mo",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "platform.twitter.com",
+    "syndication.twitter.com",
+    "cdn.syndication.twimg.com"
+  ],
+  "patterns": [
+    "platform.twitter.com/widgets.js",
+    "platform.twitter.com/embed/",
+    "twttr.widgets"
+  ],
+  "embed": {
+    "type": "social",
+    "label": {
+      "de": "Beitrag laden",
+      "en": "Load post"
+    }
+  },
+  "keywords": [
+    "x",
+    "twitter",
+    "tweet",
+    "social media",
+    "beitrag",
+    "post"
+  ]
+}

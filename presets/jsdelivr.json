@@ -1,0 +1,30 @@
+{
+  "id": "jsdelivr",
+  "name": "jsDelivr",
+  "category": "functional",
+  "kind": "library",
+  "provider": {
+    "name": "Volentio JSD Limited",
+    "address": "Suite 2a1, Northside House, Mount Pleasant, Barnet, EN4 9EB, Vereinigtes Königreich"
+  },
+  "purpose": {
+    "de": "Lädt JavaScript-Bibliotheken und Stylesheets vom öffentlichen CDN jsDelivr. Dabei werden IP-Adresse und Browserdaten an jsDelivr und dessen CDN-Partner übertragen.",
+    "en": "Loads JavaScript libraries and stylesheets from the public CDN jsDelivr. This sends the IP address and browser data to jsDelivr and its CDN partners."
+  },
+  "privacy": "https://www.jsdelivr.com/terms/privacy-policy",
+  "cookies": [],
+  "hosts": [
+    "jsdelivr.net"
+  ],
+  "patterns": [
+    "cdn.jsdelivr.net/"
+  ],
+  "local": "js",
+  "keywords": [
+    "jsdelivr",
+    "cdn",
+    "javascript",
+    "bibliothek",
+    "library"
+  ]
+}

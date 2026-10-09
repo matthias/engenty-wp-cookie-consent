@@ -1,0 +1,30 @@
+{
+  "id": "gravatar",
+  "name": "Gravatar",
+  "category": "functional",
+  "kind": "avatar",
+  "provider": {
+    "name": "Aut O'Mattic A8C Ireland Ltd.",
+    "address": "Grand Canal Dock, 25 Herbert Pl, Dublin, D02 AY86, Irland"
+  },
+  "purpose": {
+    "de": "Zeigt Profilbilder, die bei Gravatar hinterlegt sind, etwa bei Kommentaren. Dabei werden IP-Adresse und ein Hash der E-Mail-Adresse an Automattic übertragen.",
+    "en": "Shows profile pictures stored with Gravatar, for example next to comments. This sends the IP address and a hash of the email address to Automattic."
+  },
+  "privacy": "https://automattic.com/privacy/",
+  "cookies": [],
+  "hosts": [
+    "gravatar.com"
+  ],
+  "patterns": [
+    "gravatar.com/avatar/"
+  ],
+  "local": "avatar",
+  "keywords": [
+    "gravatar",
+    "avatar",
+    "profilbild",
+    "profile picture",
+    "kommentare"
+  ]
+}

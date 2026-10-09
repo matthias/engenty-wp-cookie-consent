@@ -1,0 +1,56 @@
+{
+  "id": "meta-pixel",
+  "name": "Meta Pixel",
+  "category": "marketing",
+  "kind": "script",
+  "provider": {
+    "name": "Meta Platforms Ireland Limited",
+    "address": "Merrion Road, Dublin 4, D04 X2K5, Irland"
+  },
+  "purpose": {
+    "de": "Misst den Erfolg von Werbeanzeigen auf Facebook und Instagram und ermöglicht, dort passende Werbung zu zeigen. Meta setzt Cookies und erfasst besuchte Seiten und Aktionen auf dieser Website.",
+    "en": "Measures the success of ads on Facebook and Instagram and allows matching ads to be shown there. Meta sets cookies and records pages visited and actions on this website."
+  },
+  "privacy": "https://www.facebook.com/privacy/policy/",
+  "cookies": [
+    {
+      "name": "_fbp",
+      "duration": "3mo",
+      "type": "http"
+    },
+    {
+      "name": "_fbc",
+      "duration": "3mo",
+      "type": "http"
+    },
+    {
+      "name": "fr",
+      "duration": "3mo",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "connect.facebook.net",
+    "facebook.com"
+  ],
+  "patterns": [
+    "fbevents.js",
+    "fbq('init'",
+    "fbq(\"init\"",
+    "facebook.com/tr?",
+    "facebook.com/tr/"
+  ],
+  "strict": true,
+  "plugins": [
+    "official-facebook-pixel/facebook-for-wordpress.php",
+    "facebook-for-woocommerce/facebook-for-woocommerce.php",
+    "pixelyoursite/facebook-pixel-master.php"
+  ],
+  "keywords": [
+    "facebook",
+    "meta",
+    "pixel",
+    "werbung",
+    "ads"
+  ]
+}

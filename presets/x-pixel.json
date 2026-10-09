@@ -1,0 +1,65 @@
+{
+  "id": "x-pixel",
+  "name": "X Pixel",
+  "category": "marketing",
+  "kind": "script",
+  "provider": {
+    "name": "X Internet Unlimited Company",
+    "address": "One Cumberland Place, Fenian Street, Dublin 2, D02 AX07, Irland"
+  },
+  "purpose": {
+    "de": "Misst den Erfolg von Werbeanzeigen auf X (ehemals Twitter) und ermöglicht, dort passende Werbung zu zeigen. X setzt Cookies und erfasst besuchte Seiten und Aktionen auf dieser Website.",
+    "en": "Measures the success of ads on X (formerly Twitter) and allows matching ads to be shown there. X sets cookies and records pages visited and actions on this website."
+  },
+  "privacy": "https://x.com/privacy",
+  "cookies": [
+    {
+      "name": "_twpid",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "personalization_id",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "guest_id",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "guest_id_ads",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "guest_id_marketing",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "muc_ads",
+      "duration": "13mo",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "ads-twitter.com",
+    "analytics.twitter.com"
+  ],
+  "patterns": [
+    "static.ads-twitter.com/uwt.js",
+    "platform.twitter.com/oct.js",
+    "twq('config'",
+    "twq('init'",
+    "twq(\"config\""
+  ],
+  "keywords": [
+    "x",
+    "twitter",
+    "pixel",
+    "werbung",
+    "ads"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "hubspot",
+  "name": "HubSpot",
+  "category": "marketing",
+  "kind": "script",
+  "provider": {
+    "name": "HubSpot Ireland Limited",
+    "address": "HubSpot House, One Sir John Rogerson's Quay, Dublin 2, Irland"
+  },
+  "purpose": {
+    "de": "Verknüpft Besuche mit Kontakten im CRM von HubSpot und stellt Formulare, Chat und Marketing-Automatisierung bereit. HubSpot setzt Cookies und erfasst besuchte Seiten.",
+    "en": "Links visits to contacts in the HubSpot CRM and provides forms, chat and marketing automation. HubSpot sets cookies and records pages visited."
+  },
+  "privacy": "https://legal.hubspot.com/privacy-policy",
+  "cookies": [
+    {
+      "name": "__hstc",
+      "duration": "6mo",
+      "type": "http"
+    },
+    {
+      "name": "hubspotutk",
+      "duration": "6mo",
+      "type": "http"
+    },
+    {
+      "name": "__hssc",
+      "duration": "30min",
+      "type": "http"
+    },
+    {
+      "name": "__hssrc",
+      "duration": "session",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "hs-scripts.com",
+    "hs-analytics.net",
+    "hs-banner.com",
+    "hsadspixel.net",
+    "hscollectedforms.net",
+    "hsforms.net",
+    "hsforms.com",
+    "hsappstatic.net",
+    "usemessages.com",
+    "hubspot.com"
+  ],
+  "patterns": [
+    "js.hs-scripts.com/",
+    "hs-script-loader",
+    "js.hsforms.net/forms/",
+    "hbspt.forms.create"
+  ],
+  "plugins": [
+    "leadin/leadin.php"
+  ],
+  "keywords": [
+    "hubspot",
+    "crm",
+    "marketing",
+    "formulare",
+    "forms"
+  ]
+}

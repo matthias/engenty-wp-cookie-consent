@@ -1,0 +1,65 @@
+{
+  "id": "hotjar",
+  "name": "Hotjar",
+  "category": "statistics",
+  "kind": "script",
+  "provider": {
+    "name": "Hotjar Ltd",
+    "address": "Dragonara Business Centre, 5th Floor, Dragonara Road, Paceville, St Julian's STJ 3141, Malta"
+  },
+  "purpose": {
+    "de": "Zeichnet auf, wie die Website genutzt wird, etwa Klicks, Mausbewegungen und Scrollen, und erstellt daraus Heatmaps und Sitzungsaufnahmen. Hotjar setzt dafür Cookies.",
+    "en": "Records how the website is used, such as clicks, mouse movements and scrolling, and turns this into heatmaps and session recordings. Hotjar sets cookies for this."
+  },
+  "privacy": "https://www.hotjar.com/legal/policies/privacy/",
+  "cookies": [
+    {
+      "name": "_hjSessionUser_*",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "_hjSession_*",
+      "duration": "30min",
+      "type": "http"
+    },
+    {
+      "name": "_hjTLDTest",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "_hjCookieTest",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "_hjHasCachedUserAttributes",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "_hjUserAttributesHash",
+      "duration": "session",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "hotjar.com",
+    "hotjar.io"
+  ],
+  "patterns": [
+    "static.hotjar.com",
+    "_hjSettings"
+  ],
+  "plugins": [
+    "hotjar/hotjar.php"
+  ],
+  "keywords": [
+    "hotjar",
+    "heatmap",
+    "aufzeichnung",
+    "recording",
+    "analytics"
+  ]
+}

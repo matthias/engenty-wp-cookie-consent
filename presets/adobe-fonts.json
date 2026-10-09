@@ -1,0 +1,31 @@
+{
+  "id": "adobe-fonts",
+  "name": "Adobe Fonts",
+  "category": "functional",
+  "kind": "font",
+  "provider": {
+    "name": "Adobe Systems Software Ireland Limited",
+    "address": "4-6 Riverwalk, Citywest Business Campus, Dublin 24, Irland"
+  },
+  "purpose": {
+    "de": "Lädt Schriftarten von Adobe Fonts (ehemals Typekit). Dabei werden IP-Adresse und Browserdaten an Adobe übertragen; Cookies werden nicht gesetzt.",
+    "en": "Loads fonts from Adobe Fonts (formerly Typekit). This sends the IP address and browser data to Adobe; no cookies are set."
+  },
+  "privacy": "https://www.adobe.com/privacy/policies/adobe-fonts.html",
+  "cookies": [],
+  "hosts": [
+    "use.typekit.net",
+    "p.typekit.net"
+  ],
+  "patterns": [
+    "use.typekit.net/",
+    "p.typekit.net/"
+  ],
+  "local": "css",
+  "keywords": [
+    "adobe fonts",
+    "typekit",
+    "schriftarten",
+    "fonts"
+  ]
+}

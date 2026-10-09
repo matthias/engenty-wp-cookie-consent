@@ -1,0 +1,53 @@
+{
+  "id": "stripe",
+  "name": "Stripe",
+  "category": "necessary",
+  "kind": "script",
+  "provider": {
+    "name": "Stripe Payments Europe, Limited",
+    "address": "One Wilton Park, Wilton Place, Dublin 2, D02 FX04, Irland"
+  },
+  "purpose": {
+    "de": "Wickelt Kartenzahlungen und andere Zahlarten im Shop ab. Stripe setzt Cookies und erfasst Geräte- und Nutzungsdaten, um Betrug zu verhindern.",
+    "en": "Processes card and other payments in the shop. Stripe sets cookies and collects device and usage data to prevent fraud."
+  },
+  "privacy": "https://stripe.com/privacy",
+  "cookies": [
+    {
+      "name": "__stripe_mid",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "__stripe_sid",
+      "duration": "30min",
+      "type": "http"
+    },
+    {
+      "name": "m",
+      "duration": "13mo",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "js.stripe.com",
+    "m.stripe.network",
+    "m.stripe.com"
+  ],
+  "patterns": [
+    "js.stripe.com/"
+  ],
+  "handles": [
+    "stripe"
+  ],
+  "plugins": [
+    "woocommerce-gateway-stripe/woocommerce-gateway-stripe.php"
+  ],
+  "keywords": [
+    "stripe",
+    "zahlung",
+    "payment",
+    "kreditkarte",
+    "credit card"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "facebook",
+  "name": "Facebook",
+  "category": "marketing",
+  "kind": "embed",
+  "provider": {
+    "name": "Meta Platforms Ireland Limited",
+    "address": "Merrion Road, Dublin 4, D04 X2K5, Irland"
+  },
+  "purpose": {
+    "de": "Zeigt Beiträge, Seiten und Schaltflächen von Facebook auf dieser Website. Meta erhält dabei IP-Adresse und Browserdaten und kann Cookies setzen.",
+    "en": "Shows Facebook posts, pages and buttons on this website. Meta receives the IP address and browser data and may set cookies."
+  },
+  "privacy": "https://www.facebook.com/privacy/policy/",
+  "cookies": [
+    {
+      "name": "datr",
+      "duration": "2y",
+      "type": "http"
+    },
+    {
+      "name": "fr",
+      "duration": "3mo",
+      "type": "http"
+    },
+    {
+      "name": "sb",
+      "duration": "2y",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "connect.facebook.net",
+    "facebook.com"
+  ],
+  "patterns": [
+    "facebook.com/plugins/",
+    "/sdk.js",
+    "/sdk/xfbml.",
+    "FB.init("
+  ],
+  "strict": true,
+  "embed": {
+    "type": "social",
+    "label": {
+      "de": "Beitrag laden",
+      "en": "Load post"
+    }
+  },
+  "keywords": [
+    "facebook",
+    "meta",
+    "social media",
+    "beitrag",
+    "post"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "google-fonts",
+  "name": "Google Fonts",
+  "category": "functional",
+  "kind": "font",
+  "provider": {
+    "name": "Google Ireland Limited",
+    "address": "Gordon House, Barrow Street, Dublin 4, Irland"
+  },
+  "purpose": {
+    "de": "Lädt Schriftarten von Google. Dabei werden IP-Adresse und Browserdaten an Google übertragen; Cookies werden nicht gesetzt.",
+    "en": "Loads fonts from Google. This sends the IP address and browser data to Google; no cookies are set."
+  },
+  "privacy": "https://policies.google.com/privacy",
+  "cookies": [],
+  "hosts": [
+    "fonts.googleapis.com",
+    "fonts.gstatic.com"
+  ],
+  "patterns": [
+    "fonts.googleapis.com/css",
+    "fonts.gstatic.com/"
+  ],
+  "local": "google-fonts",
+  "keywords": [
+    "google fonts",
+    "schriftarten",
+    "fonts",
+    "webfonts"
+  ]
+}

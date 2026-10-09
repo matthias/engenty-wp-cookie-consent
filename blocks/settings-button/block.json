@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cookie-dialog/settings-button",
+	"title": "Cookie-Einstellungen",
+	"category": "widgets",
+	"icon": "admin-settings",
+	"description": "Ein Button oder Link, der die Cookie-Auswahl öffnet – für den Widerruf.",
+	"keywords": [ "cookie", "consent", "einwilligung", "widerruf" ],
+	"textdomain": "cookie-dialog",
+	"attributes": {
+		"label": { "type": "string", "default": "" },
+		"style": { "type": "string", "default": "button", "enum": [ "button", "link" ] }
+	},
+	"supports": { "html": false, "align": true, "spacing": { "margin": true } },
+	"editorScript": "cookie-dialog-blocks"
+}

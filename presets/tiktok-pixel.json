@@ -1,0 +1,59 @@
+{
+  "id": "tiktok-pixel",
+  "name": "TikTok Pixel",
+  "category": "marketing",
+  "kind": "script",
+  "provider": {
+    "name": "TikTok Technology Limited",
+    "address": "10 Earlsfort Terrace, Dublin, D02 T380, Irland"
+  },
+  "purpose": {
+    "de": "Misst den Erfolg von Werbeanzeigen auf TikTok und ermöglicht, dort passende Werbung zu zeigen. TikTok setzt Cookies und erfasst besuchte Seiten und Aktionen auf dieser Website.",
+    "en": "Measures the success of ads on TikTok and allows matching ads to be shown there. TikTok sets cookies and records pages visited and actions on this website."
+  },
+  "privacy": "https://www.tiktok.com/legal/page/eea/privacy-policy/en",
+  "cookies": [
+    {
+      "name": "_ttp",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "ttcsid",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "ttcsid_*",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "ttclid",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "_tt_enable_cookie",
+      "duration": "13mo",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "analytics.tiktok.com"
+  ],
+  "patterns": [
+    "analytics.tiktok.com/i18n/pixel/",
+    "ttq.load(",
+    "TiktokAnalyticsObject"
+  ],
+  "plugins": [
+    "tiktok-for-business/tiktok-for-woocommerce.php"
+  ],
+  "keywords": [
+    "tiktok",
+    "pixel",
+    "werbung",
+    "ads"
+  ]
+}

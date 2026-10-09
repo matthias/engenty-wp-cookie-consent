@@ -1,0 +1,48 @@
+{
+  "id": "loom",
+  "name": "Loom",
+  "category": "functional",
+  "kind": "embed",
+  "provider": {
+    "name": "Atlassian Pty Ltd",
+    "address": "c/o Atlassian US, Inc., 350 Bush Street, Floor 13, San Francisco, CA 94104, USA"
+  },
+  "purpose": {
+    "de": "Zeigt Videoaufnahmen von Loom auf dieser Website. Loom setzt Cookies und misst, was angesehen wird.",
+    "en": "Shows Loom video recordings on this website. Loom sets cookies and measures what is watched."
+  },
+  "privacy": "https://www.atlassian.com/legal/privacy-policy",
+  "cookies": [
+    {
+      "name": "loom_anon_comment",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "ajs_anonymous_id",
+      "duration": "1y",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "loom.com"
+  ],
+  "patterns": [
+    "loom.com/embed/",
+    "loom.com/share/"
+  ],
+  "embed": {
+    "type": "video",
+    "label": {
+      "de": "Video laden",
+      "en": "Load video"
+    },
+    "thumb": true
+  },
+  "keywords": [
+    "loom",
+    "video",
+    "bildschirmaufnahme",
+    "screen recording"
+  ]
+}

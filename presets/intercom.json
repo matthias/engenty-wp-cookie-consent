@@ -1,0 +1,48 @@
+{
+  "id": "intercom",
+  "name": "Intercom",
+  "category": "functional",
+  "kind": "script",
+  "provider": {
+    "name": "Intercom R&D Unlimited Company",
+    "address": "124 St Stephen's Green, Dublin 2, D02 C628, Irland"
+  },
+  "purpose": {
+    "de": "Stellt einen Chat und Support-Nachrichten bereit. Intercom setzt Cookies, um Besucher und Gespräche wiederzuerkennen, und überträgt Nachrichten und besuchte Seiten an Intercom.",
+    "en": "Provides a chat and support messages. Intercom sets cookies to recognise visitors and conversations and sends messages and pages visited to Intercom."
+  },
+  "privacy": "https://www.intercom.com/legal/privacy",
+  "cookies": [
+    {
+      "name": "intercom-id-*",
+      "duration": "9mo",
+      "type": "http"
+    },
+    {
+      "name": "intercom-session-*",
+      "duration": "7d",
+      "type": "http"
+    },
+    {
+      "name": "intercom-device-id-*",
+      "duration": "9mo",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "intercom.io",
+    "intercomcdn.com",
+    "intercomassets.com"
+  ],
+  "patterns": [
+    "widget.intercom.io/widget/",
+    "js.intercomcdn.com",
+    "intercomSettings"
+  ],
+  "keywords": [
+    "intercom",
+    "chat",
+    "live chat",
+    "support"
+  ]
+}

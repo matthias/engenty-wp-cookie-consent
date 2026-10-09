@@ -1,0 +1,69 @@
+{
+  "id": "linkedin-insight",
+  "name": "LinkedIn Insight Tag",
+  "category": "marketing",
+  "kind": "script",
+  "provider": {
+    "name": "LinkedIn Ireland Unlimited Company",
+    "address": "Wilton Plaza, Wilton Place, Dublin 2, Irland"
+  },
+  "purpose": {
+    "de": "Misst den Erfolg von Werbeanzeigen auf LinkedIn und ermöglicht Retargeting. LinkedIn setzt Cookies und erfasst besuchte Seiten und Conversions.",
+    "en": "Measures the success of ads on LinkedIn and enables retargeting. LinkedIn sets cookies and records pages visited and conversions."
+  },
+  "privacy": "https://www.linkedin.com/legal/privacy-policy",
+  "cookies": [
+    {
+      "name": "li_sugr",
+      "duration": "3mo",
+      "type": "http"
+    },
+    {
+      "name": "bcookie",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "lidc",
+      "duration": "1d",
+      "type": "http"
+    },
+    {
+      "name": "UserMatchHistory",
+      "duration": "30d",
+      "type": "http"
+    },
+    {
+      "name": "AnalyticsSyncHistory",
+      "duration": "30d",
+      "type": "http"
+    },
+    {
+      "name": "li_fat_id",
+      "duration": "30d",
+      "type": "http"
+    },
+    {
+      "name": "li_gc",
+      "duration": "6mo",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "snap.licdn.com",
+    "px.ads.linkedin.com",
+    "ads.linkedin.com"
+  ],
+  "patterns": [
+    "snap.licdn.com/li.lms-analytics/insight.min.js",
+    "_linkedin_partner_id",
+    "_linkedin_data_partner_ids"
+  ],
+  "keywords": [
+    "linkedin",
+    "insight tag",
+    "werbung",
+    "ads",
+    "retargeting"
+  ]
+}

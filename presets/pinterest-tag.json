@@ -1,0 +1,55 @@
+{
+  "id": "pinterest-tag",
+  "name": "Pinterest Tag",
+  "category": "marketing",
+  "kind": "script",
+  "provider": {
+    "name": "Pinterest Europe Ltd.",
+    "address": "Waterloo Exchange, 3rd Floor, Waterloo Road, Dublin 4, Irland"
+  },
+  "purpose": {
+    "de": "Misst den Erfolg von Werbeanzeigen auf Pinterest und ermöglicht, dort passende Werbung zu zeigen. Pinterest setzt Cookies und erfasst besuchte Seiten und Aktionen auf dieser Website.",
+    "en": "Measures the success of ads on Pinterest and allows matching ads to be shown there. Pinterest sets cookies and records pages visited and actions on this website."
+  },
+  "privacy": "https://policy.pinterest.com/privacy-policy",
+  "cookies": [
+    {
+      "name": "_pin_unauth",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "_derived_epik",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "_epik",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "_pinterest_ct_ua",
+      "duration": "1y",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "s.pinimg.com",
+    "ct.pinterest.com"
+  ],
+  "patterns": [
+    "s.pinimg.com/ct/core.js",
+    "pintrk('load'",
+    "pintrk(\"load\""
+  ],
+  "plugins": [
+    "pinterest-for-woocommerce/pinterest-for-woocommerce.php"
+  ],
+  "keywords": [
+    "pinterest",
+    "tag",
+    "werbung",
+    "ads"
+  ]
+}

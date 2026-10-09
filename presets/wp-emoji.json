@@ -1,0 +1,31 @@
+{
+  "id": "wp-emoji",
+  "name": "WordPress Emoji",
+  "category": "functional",
+  "kind": "image",
+  "provider": {
+    "name": "WordPress.org",
+    "address": ""
+  },
+  "purpose": {
+    "de": "Lädt Emoji-Bilder von WordPress.org, wenn der Browser ein Emoji nicht selbst darstellen kann; ein Skript von WordPress prüft das im Browser. Dabei werden IP-Adresse und Browserdaten an WordPress.org übertragen.",
+    "en": "Loads emoji images from WordPress.org when the browser cannot display an emoji itself; a WordPress script checks this in the browser. This sends the IP address and browser data to WordPress.org."
+  },
+  "privacy": "https://wordpress.org/about/privacy/",
+  "cookies": [],
+  "hosts": [
+    "s.w.org"
+  ],
+  "patterns": [
+    "s.w.org/images/core/emoji/",
+    "_wpemojiSettings",
+    "wp-emoji-release.min.js"
+  ],
+  "local": "image",
+  "keywords": [
+    "emoji",
+    "wordpress",
+    "bilder",
+    "images"
+  ]
+}

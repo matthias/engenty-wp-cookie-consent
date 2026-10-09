@@ -1,0 +1,40 @@
+{
+  "id": "google-tag-manager",
+  "name": "Google Tag Manager",
+  "category": "statistics",
+  "kind": "script",
+  "provider": {
+    "name": "Google Ireland Limited",
+    "address": "Gordon House, Barrow Street, Dublin 4, Irland"
+  },
+  "purpose": {
+    "de": "Lädt Statistik- und Werbedienste, die im Google Tag Manager eingerichtet sind. Der Tag Manager selbst setzt keine Cookies, überträgt aber die IP-Adresse an Google; die geladenen Dienste können Cookies setzen.",
+    "en": "Loads statistics and advertising services set up in Google Tag Manager. The Tag Manager itself sets no cookies but sends the IP address to Google; the services it loads may set cookies."
+  },
+  "privacy": "https://policies.google.com/privacy",
+  "cookies": [],
+  "hosts": [
+    "googletagmanager.com"
+  ],
+  "patterns": [
+    "googletagmanager.com/gtm.js",
+    "googletagmanager.com/ns.html",
+    "id=GTM-",
+    "'GTM-",
+    "\"GTM-"
+  ],
+  "strict": true,
+  "plugins": [
+    "duracelltomi-google-tag-manager/duracelltomi-google-tag-manager-for-wordpress.php",
+    "google-site-kit/google-site-kit.php"
+  ],
+  "signals": [
+    "analytics_storage"
+  ],
+  "keywords": [
+    "tag manager",
+    "gtm",
+    "google",
+    "tracking"
+  ]
+}

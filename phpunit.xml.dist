@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<phpunit bootstrap="tests/php/bootstrap.php" colors="true" cacheDirectory=".phpunit.cache">
+	<testsuites>
+		<testsuite name="cookie-dialog">
+			<directory suffix="Test.php">tests/php</directory>
+		</testsuite>
+	</testsuites>
+</phpunit>

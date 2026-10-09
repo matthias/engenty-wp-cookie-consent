@@ -1,0 +1,49 @@
+{
+  "id": "soundcloud",
+  "name": "SoundCloud",
+  "category": "marketing",
+  "kind": "embed",
+  "provider": {
+    "name": "SoundCloud Global Limited & Co. KG",
+    "address": "Karl-Marx-Straße 101, 12043 Berlin, Deutschland"
+  },
+  "purpose": {
+    "de": "Spielt Audio von SoundCloud auf dieser Website ab. SoundCloud setzt Cookies und misst, was gehört wird.",
+    "en": "Plays SoundCloud audio on this website. SoundCloud sets cookies and measures what is played."
+  },
+  "privacy": "https://soundcloud.com/pages/privacy",
+  "cookies": [
+    {
+      "name": "sc_tracking_anonymous_id",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "datadome",
+      "duration": "1y",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "soundcloud.com",
+    "sndcdn.com"
+  ],
+  "patterns": [
+    "w.soundcloud.com/player"
+  ],
+  "embed": {
+    "type": "audio",
+    "label": {
+      "de": "Audio laden",
+      "en": "Load audio"
+    },
+    "thumb": true
+  },
+  "keywords": [
+    "soundcloud",
+    "musik",
+    "music",
+    "podcast",
+    "audio"
+  ]
+}

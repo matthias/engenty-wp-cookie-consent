@@ -1,0 +1,41 @@
+{
+  "id": "openstreetmap",
+  "name": "OpenStreetMap",
+  "category": "functional",
+  "kind": "embed",
+  "provider": {
+    "name": "OpenStreetMap Foundation",
+    "address": "St John's Innovation Centre, Cowley Road, Cambridge, CB4 0WS, Vereinigtes Königreich"
+  },
+  "purpose": {
+    "de": "Zeigt Karten von OpenStreetMap auf dieser Website. Beim Laden der Karte werden IP-Adresse und Browserdaten an die Server der OpenStreetMap Foundation übertragen.",
+    "en": "Shows OpenStreetMap maps on this website. Loading the map sends the IP address and browser data to the OpenStreetMap Foundation's servers."
+  },
+  "privacy": "https://osmfoundation.org/wiki/Privacy_Policy",
+  "cookies": [],
+  "hosts": [
+    "openstreetmap.org"
+  ],
+  "patterns": [
+    "openstreetmap.org/export/embed.html",
+    "tile.openstreetmap.org/"
+  ],
+  "plugins": [
+    "osm/osm.php",
+    "leaflet-map/leaflet-map.php"
+  ],
+  "embed": {
+    "type": "map",
+    "label": {
+      "de": "Karte laden",
+      "en": "Load map"
+    }
+  },
+  "keywords": [
+    "openstreetmap",
+    "osm",
+    "karte",
+    "map",
+    "anfahrt"
+  ]
+}

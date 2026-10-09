@@ -1,0 +1,36 @@
+{
+  "id": "font-awesome",
+  "name": "Font Awesome",
+  "category": "functional",
+  "kind": "font",
+  "provider": {
+    "name": "Fonticons, Inc.",
+    "address": "307 S Main St, Suite 202, Bentonville, AR 72712, USA"
+  },
+  "purpose": {
+    "de": "Lädt Symbole und Schriftarten von Font Awesome. Dabei werden IP-Adresse und Browserdaten an Fonticons übertragen; Cookies werden nicht gesetzt.",
+    "en": "Loads icons and fonts from Font Awesome. This sends the IP address and browser data to Fonticons; no cookies are set."
+  },
+  "privacy": "https://fontawesome.com/privacy",
+  "cookies": [],
+  "hosts": [
+    "use.fontawesome.com",
+    "kit.fontawesome.com",
+    "ka-f.fontawesome.com",
+    "ka-p.fontawesome.com"
+  ],
+  "patterns": [
+    "use.fontawesome.com/",
+    "kit.fontawesome.com/"
+  ],
+  "plugins": [
+    "font-awesome/index.php"
+  ],
+  "local": "css",
+  "keywords": [
+    "font awesome",
+    "icons",
+    "symbole",
+    "fonts"
+  ]
+}

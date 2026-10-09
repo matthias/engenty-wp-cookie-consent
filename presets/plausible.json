@@ -1,0 +1,35 @@
+{
+  "id": "plausible",
+  "name": "Plausible Analytics",
+  "category": "statistics",
+  "kind": "script",
+  "provider": {
+    "name": "Plausible Insights OÜ",
+    "address": "Västriku tn 2, 50403 Tartu, Estland"
+  },
+  "purpose": {
+    "de": "Erstellt Statistiken über die Nutzung der Website ohne Cookies. Erfasst werden aufgerufene Seiten, Herkunft, Browser, Betriebssystem und Land; die IP-Adresse wird nicht gespeichert.",
+    "en": "Creates statistics on how the website is used without cookies. It records pages viewed, referrer, browser, operating system and country; the IP address is not stored."
+  },
+  "privacy": "https://plausible.io/data-policy",
+  "cookies": [],
+  "hosts": [
+    "plausible.io"
+  ],
+  "patterns": [
+    "plausible.io/js/"
+  ],
+  "handles": [
+    "plausible-analytics"
+  ],
+  "plugins": [
+    "plausible-analytics/plausible-analytics.php"
+  ],
+  "keywords": [
+    "plausible",
+    "analytics",
+    "statistik",
+    "statistics",
+    "cookielos"
+  ]
+}

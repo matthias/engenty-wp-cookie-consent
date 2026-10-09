@@ -1,0 +1,66 @@
+{
+  "id": "youtube",
+  "name": "YouTube",
+  "category": "marketing",
+  "kind": "embed",
+  "provider": {
+    "name": "Google Ireland Limited",
+    "address": "Gordon House, Barrow Street, Dublin 4, Irland"
+  },
+  "purpose": {
+    "de": "Zeigt Videos von YouTube auf dieser Website. YouTube setzt Cookies und misst, was angesehen wird.",
+    "en": "Shows YouTube videos on this website. YouTube sets cookies and measures what is watched."
+  },
+  "privacy": "https://policies.google.com/privacy",
+  "cookies": [
+    {
+      "name": "YSC",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "VISITOR_INFO1_LIVE",
+      "duration": "6mo",
+      "type": "http"
+    },
+    {
+      "name": "VISITOR_PRIVACY_METADATA",
+      "duration": "6mo",
+      "type": "http"
+    },
+    {
+      "name": "__Secure-ROLLOUT_TOKEN",
+      "duration": "6mo",
+      "type": "http"
+    },
+    {
+      "name": "__Secure-YNID",
+      "duration": "6mo",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "youtube.com",
+    "youtube-nocookie.com",
+    "ytimg.com"
+  ],
+  "patterns": [
+    "youtube.com/embed/",
+    "youtube-nocookie.com/embed/",
+    "youtube.com/iframe_api",
+    "youtube.com/player_api"
+  ],
+  "embed": {
+    "type": "video",
+    "label": {
+      "de": "Video laden",
+      "en": "Load video"
+    },
+    "thumb": true
+  },
+  "keywords": [
+    "youtube",
+    "video",
+    "videos"
+  ]
+}

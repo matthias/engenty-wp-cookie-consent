@@ -1,0 +1,30 @@
+{
+  "id": "google-hosted-libraries",
+  "name": "Google Hosted Libraries",
+  "category": "functional",
+  "kind": "library",
+  "provider": {
+    "name": "Google Ireland Limited",
+    "address": "Gordon House, Barrow Street, Dublin 4, Irland"
+  },
+  "purpose": {
+    "de": "Lädt JavaScript-Bibliotheken wie jQuery von Google. Dabei werden IP-Adresse und Browserdaten an Google übertragen.",
+    "en": "Loads JavaScript libraries such as jQuery from Google. This sends the IP address and browser data to Google."
+  },
+  "privacy": "https://policies.google.com/privacy",
+  "cookies": [],
+  "hosts": [
+    "ajax.googleapis.com"
+  ],
+  "patterns": [
+    "ajax.googleapis.com/ajax/libs/"
+  ],
+  "local": "js",
+  "keywords": [
+    "google",
+    "jquery",
+    "cdn",
+    "javascript",
+    "library"
+  ]
+}

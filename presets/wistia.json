@@ -1,0 +1,39 @@
+{
+  "id": "wistia",
+  "name": "Wistia",
+  "category": "functional",
+  "kind": "embed",
+  "provider": {
+    "name": "Wistia, Inc.",
+    "address": "120 Brookline Street, Cambridge, MA 02139, USA"
+  },
+  "purpose": {
+    "de": "Zeigt Videos von Wistia auf dieser Website. Wistia speichert Daten im Browser und misst, was angesehen wird.",
+    "en": "Shows Wistia videos on this website. Wistia stores data in the browser and measures what is watched."
+  },
+  "privacy": "https://wistia.com/privacy",
+  "cookies": [],
+  "hosts": [
+    "wistia.com",
+    "wistia.net"
+  ],
+  "patterns": [
+    "fast.wistia.com/embed/",
+    "fast.wistia.net/embed/",
+    "fast.wistia.com/assets/external/E-v1.js",
+    "wistia_embed"
+  ],
+  "embed": {
+    "type": "video",
+    "label": {
+      "de": "Video laden",
+      "en": "Load video"
+    },
+    "thumb": true
+  },
+  "keywords": [
+    "wistia",
+    "video",
+    "videos"
+  ]
+}

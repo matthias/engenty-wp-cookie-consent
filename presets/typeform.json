@@ -1,0 +1,61 @@
+{
+  "id": "typeform",
+  "name": "Typeform",
+  "category": "functional",
+  "kind": "embed",
+  "provider": {
+    "name": "Typeform S.L.",
+    "address": "Via Augusta 29-31, 08006 Barcelona, Spanien"
+  },
+  "purpose": {
+    "de": "Zeigt Formulare und Umfragen von Typeform auf dieser Website. Typeform setzt Cookies und verarbeitet die eingegebenen Antworten.",
+    "en": "Shows Typeform forms and surveys on this website. Typeform sets cookies and processes the answers entered."
+  },
+  "privacy": "https://www.typeform.com/legal/privacy-policy",
+  "cookies": [
+    {
+      "name": "tf_respondent_cc",
+      "duration": "6mo",
+      "type": "http"
+    },
+    {
+      "name": "attribution_user_id",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "AWSALBTG",
+      "duration": "7d",
+      "type": "http"
+    },
+    {
+      "name": "AWSALBTGCORS",
+      "duration": "7d",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "typeform.com"
+  ],
+  "patterns": [
+    "embed.typeform.com/",
+    "form.typeform.com/to/",
+    "data-tf-live",
+    "data-tf-widget",
+    "data-tf-popup"
+  ],
+  "embed": {
+    "type": "form",
+    "label": {
+      "de": "Formular laden",
+      "en": "Load form"
+    }
+  },
+  "keywords": [
+    "typeform",
+    "formular",
+    "form",
+    "umfrage",
+    "survey"
+  ]
+}

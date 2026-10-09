@@ -1,0 +1,43 @@
+{
+  "id": "cloudflare",
+  "name": "Cloudflare",
+  "category": "necessary",
+  "kind": "infrastructure",
+  "provider": {
+    "name": "Cloudflare, Inc.",
+    "address": "101 Townsend St, San Francisco, CA 94107, USA"
+  },
+  "purpose": {
+    "de": "Liefert die Website über das Netzwerk von Cloudflare aus und schützt sie vor Angriffen und automatisierten Zugriffen. Cloudflare verarbeitet dafür die IP-Adresse und setzt technisch notwendige Cookies.",
+    "en": "Delivers the website through Cloudflare's network and protects it from attacks and automated traffic. Cloudflare processes the IP address and sets technically necessary cookies for this."
+  },
+  "privacy": "https://www.cloudflare.com/privacypolicy/",
+  "cookies": [
+    {
+      "name": "__cf_bm",
+      "duration": "30min",
+      "type": "http"
+    },
+    {
+      "name": "cf_clearance",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "_cfuvid",
+      "duration": "session",
+      "type": "http"
+    }
+  ],
+  "patterns": [
+    "/cdn-cgi/challenge-platform/",
+    "/cdn-cgi/scripts/"
+  ],
+  "keywords": [
+    "cloudflare",
+    "cdn",
+    "sicherheit",
+    "security",
+    "bot"
+  ]
+}

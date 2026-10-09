@@ -1,0 +1,66 @@
+{
+  "id": "mailchimp",
+  "name": "Mailchimp",
+  "category": "marketing",
+  "kind": "script",
+  "provider": {
+    "name": "The Rocket Science Group LLC (Mailchimp)",
+    "address": "405 N Angier Ave NE, Atlanta, GA 30308, USA"
+  },
+  "purpose": {
+    "de": "Verbindet die Website mit Mailchimp für Newsletter-Anmeldungen, Pop-ups und die Zuordnung von Käufen zu E-Mail-Kampagnen. Dafür werden Cookies gesetzt und besuchte Seiten sowie die E-Mail-Adresse an Mailchimp übertragen.",
+    "en": "Connects the website to Mailchimp for newsletter sign-ups, pop-ups and attributing purchases to email campaigns. Cookies are set and pages visited and the email address are sent to Mailchimp."
+  },
+  "privacy": "https://www.intuit.com/privacy/statement/",
+  "cookies": [
+    {
+      "name": "mailchimp_landing_site",
+      "duration": "30d",
+      "type": "http"
+    },
+    {
+      "name": "mailchimp_campaign_id",
+      "duration": "30d",
+      "type": "http"
+    },
+    {
+      "name": "mailchimp_email_id",
+      "duration": "30d",
+      "type": "http"
+    },
+    {
+      "name": "mailchimp_user_email",
+      "duration": "30d",
+      "type": "http"
+    },
+    {
+      "name": "mailchimp_user_previous_email",
+      "duration": "30d",
+      "type": "http"
+    },
+    {
+      "name": "mailchimp.cart.*",
+      "duration": "session",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "chimpstatic.com",
+    "list-manage.com"
+  ],
+  "patterns": [
+    "chimpstatic.com/mcjs-connected/",
+    "list-manage.com/",
+    "downloads.mailchimp.com/js/mc-validate.js"
+  ],
+  "plugins": [
+    "mailchimp-for-woocommerce/mailchimp-woocommerce.php"
+  ],
+  "keywords": [
+    "mailchimp",
+    "newsletter",
+    "e-mail",
+    "email",
+    "marketing"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "cloudflare-turnstile",
+  "name": "Cloudflare Turnstile",
+  "category": "functional",
+  "kind": "script",
+  "provider": {
+    "name": "Cloudflare, Inc.",
+    "address": "101 Townsend St, San Francisco, CA 94107, USA"
+  },
+  "purpose": {
+    "de": "Schützt Formulare vor Spam, indem geprüft wird, ob ein Mensch die Seite nutzt. Dabei werden Browser- und Gerätemerkmale an Cloudflare übertragen.",
+    "en": "Protects forms from spam by checking whether a human is using the page. Browser and device characteristics are sent to Cloudflare for this."
+  },
+  "privacy": "https://www.cloudflare.com/turnstile-privacy-policy/",
+  "cookies": [],
+  "hosts": [
+    "challenges.cloudflare.com"
+  ],
+  "patterns": [
+    "challenges.cloudflare.com/turnstile/"
+  ],
+  "plugins": [
+    "simple-cloudflare-turnstile/simple-cloudflare-turnstile.php"
+  ],
+  "keywords": [
+    "turnstile",
+    "captcha",
+    "spamschutz",
+    "spam protection",
+    "cloudflare"
+  ]
+}

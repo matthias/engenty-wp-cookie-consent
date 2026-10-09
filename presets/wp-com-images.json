@@ -1,0 +1,33 @@
+{
+  "id": "wp-com-images",
+  "name": "Jetpack Image CDN",
+  "category": "functional",
+  "kind": "image",
+  "provider": {
+    "name": "Aut O'Mattic A8C Ireland Ltd.",
+    "address": "Grand Canal Dock, 25 Herbert Pl, Dublin, D02 AY86, Irland"
+  },
+  "purpose": {
+    "de": "Lädt Bilder über das Bild-CDN von Jetpack, das sie verkleinert und schneller ausliefert. Dabei werden IP-Adresse und Browserdaten an Automattic übertragen.",
+    "en": "Loads images through Jetpack's image CDN, which resizes them and delivers them faster. This sends the IP address and browser data to Automattic."
+  },
+  "privacy": "https://automattic.com/privacy/",
+  "cookies": [],
+  "hosts": [
+    "i0.wp.com",
+    "i1.wp.com",
+    "i2.wp.com"
+  ],
+  "plugins": [
+    "jetpack/jetpack.php",
+    "jetpack-boost/jetpack-boost.php"
+  ],
+  "local": "image",
+  "keywords": [
+    "jetpack",
+    "photon",
+    "bilder",
+    "images",
+    "cdn"
+  ]
+}

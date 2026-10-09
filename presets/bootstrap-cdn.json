@@ -1,0 +1,31 @@
+{
+  "id": "bootstrap-cdn",
+  "name": "BootstrapCDN",
+  "category": "functional",
+  "kind": "style",
+  "provider": {
+    "name": "Volentio JSD Limited",
+    "address": "Suite 2a1, Northside House, Mount Pleasant, Barnet, EN4 9EB, Vereinigtes Königreich"
+  },
+  "purpose": {
+    "de": "Lädt Stylesheets und Skripte des Frameworks Bootstrap von BootstrapCDN. Dabei werden IP-Adresse und Browserdaten an jsDelivr übertragen, das BootstrapCDN betreibt.",
+    "en": "Loads Bootstrap stylesheets and scripts from BootstrapCDN. This sends the IP address and browser data to jsDelivr, which runs BootstrapCDN."
+  },
+  "privacy": "https://www.jsdelivr.com/terms/privacy-policy",
+  "cookies": [],
+  "hosts": [
+    "stackpath.bootstrapcdn.com",
+    "maxcdn.bootstrapcdn.com",
+    "netdna.bootstrapcdn.com"
+  ],
+  "patterns": [
+    "bootstrapcdn.com/"
+  ],
+  "local": "css",
+  "keywords": [
+    "bootstrap",
+    "cdn",
+    "css",
+    "stylesheet"
+  ]
+}

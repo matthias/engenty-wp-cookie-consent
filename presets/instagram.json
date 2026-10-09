@@ -1,0 +1,54 @@
+{
+  "id": "instagram",
+  "name": "Instagram",
+  "category": "marketing",
+  "kind": "embed",
+  "provider": {
+    "name": "Meta Platforms Ireland Limited",
+    "address": "Merrion Road, Dublin 4, D04 X2K5, Irland"
+  },
+  "purpose": {
+    "de": "Zeigt Beiträge von Instagram auf dieser Website. Meta erhält dabei IP-Adresse und Browserdaten und kann Cookies setzen.",
+    "en": "Shows Instagram posts on this website. Meta receives the IP address and browser data and may set cookies."
+  },
+  "privacy": "https://privacycenter.instagram.com/policy",
+  "cookies": [
+    {
+      "name": "csrftoken",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "mid",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "ig_did",
+      "duration": "13mo",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "instagram.com",
+    "cdninstagram.com"
+  ],
+  "patterns": [
+    "instagram.com/embed.js",
+    "instgrm.Embeds"
+  ],
+  "embed": {
+    "type": "social",
+    "label": {
+      "de": "Beitrag laden",
+      "en": "Load post"
+    }
+  },
+  "keywords": [
+    "instagram",
+    "meta",
+    "social media",
+    "beitrag",
+    "post"
+  ]
+}

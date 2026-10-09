@@ -1,0 +1,49 @@
+{
+  "id": "paypal",
+  "name": "PayPal",
+  "category": "necessary",
+  "kind": "script",
+  "provider": {
+    "name": "PayPal (Europe) S.à r.l. et Cie, S.C.A.",
+    "address": "22-24 Boulevard Royal, L-2449 Luxemburg, Luxemburg"
+  },
+  "purpose": {
+    "de": "Stellt die Zahlung mit PayPal im Shop bereit. PayPal setzt Cookies und erfasst Geräte- und Nutzungsdaten, um die Zahlung abzuwickeln und Betrug zu verhindern.",
+    "en": "Provides payment with PayPal in the shop. PayPal sets cookies and collects device and usage data to process the payment and prevent fraud."
+  },
+  "privacy": "https://www.paypal.com/webapps/mpp/ua/privacy-full",
+  "cookies": [
+    {
+      "name": "ts",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "ts_c",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "tsrce",
+      "duration": "3d",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "paypal.com",
+    "paypalobjects.com"
+  ],
+  "patterns": [
+    "paypal.com/sdk/js",
+    "paypalobjects.com/api/checkout"
+  ],
+  "plugins": [
+    "woocommerce-paypal-payments/woocommerce-paypal-payments.php"
+  ],
+  "keywords": [
+    "paypal",
+    "zahlung",
+    "payment",
+    "checkout"
+  ]
+}

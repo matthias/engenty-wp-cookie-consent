@@ -1,0 +1,55 @@
+{
+  "id": "recaptcha",
+  "name": "Google reCAPTCHA",
+  "category": "functional",
+  "kind": "script",
+  "provider": {
+    "name": "Google Ireland Limited",
+    "address": "Gordon House, Barrow Street, Dublin 4, Irland"
+  },
+  "purpose": {
+    "de": "Schützt Formulare vor Spam und Missbrauch. reCAPTCHA wertet dafür Verhalten sowie Geräte- und Browserdaten aus und setzt ein Cookie.",
+    "en": "Protects forms from spam and abuse. reCAPTCHA analyses behaviour as well as device and browser data for this and sets a cookie."
+  },
+  "privacy": "https://policies.google.com/privacy",
+  "cookies": [
+    {
+      "name": "_GRECAPTCHA",
+      "duration": "6mo",
+      "type": "http"
+    },
+    {
+      "name": "rc::c",
+      "duration": "session",
+      "type": "session"
+    }
+  ],
+  "hosts": [
+    "www.google.com",
+    "www.gstatic.com",
+    "recaptcha.net"
+  ],
+  "patterns": [
+    "google.com/recaptcha/",
+    "gstatic.com/recaptcha/",
+    "recaptcha.net/recaptcha/",
+    "grecaptcha."
+  ],
+  "strict": true,
+  "handles": [
+    "google-recaptcha",
+    "wpcf7-recaptcha"
+  ],
+  "plugins": [
+    "contact-form-7/wp-contact-form-7.php",
+    "google-captcha/google-captcha.php",
+    "advanced-google-recaptcha/advanced-google-recaptcha.php"
+  ],
+  "keywords": [
+    "recaptcha",
+    "captcha",
+    "spamschutz",
+    "spam protection",
+    "google"
+  ]
+}

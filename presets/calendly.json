@@ -1,0 +1,58 @@
+{
+  "id": "calendly",
+  "name": "Calendly",
+  "category": "functional",
+  "kind": "embed",
+  "provider": {
+    "name": "Calendly LLC",
+    "address": "115 E Main St, Ste A1B, Buford, GA 30518, USA"
+  },
+  "purpose": {
+    "de": "Zeigt einen Terminkalender von Calendly zur Online-Buchung. Calendly setzt Cookies und verarbeitet die bei der Buchung eingegebenen Daten.",
+    "en": "Shows a Calendly booking calendar. Calendly sets cookies and processes the data entered when booking."
+  },
+  "privacy": "https://calendly.com/legal/privacy-notice",
+  "cookies": [
+    {
+      "name": "__cf_bm",
+      "duration": "30min",
+      "type": "http"
+    },
+    {
+      "name": "_cfuvid",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "OptanonConsent",
+      "duration": "1y",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "calendly.com"
+  ],
+  "patterns": [
+    "assets.calendly.com/assets/external/widget.js",
+    "calendly-inline-widget",
+    "Calendly.initInlineWidget",
+    "Calendly.initPopupWidget",
+    "Calendly.initBadgeWidget"
+  ],
+  "embed": {
+    "type": "calendar",
+    "label": {
+      "de": "Kalender laden",
+      "en": "Load calendar"
+    }
+  },
+  "keywords": [
+    "calendly",
+    "termin",
+    "appointment",
+    "kalender",
+    "calendar",
+    "buchung",
+    "booking"
+  ]
+}

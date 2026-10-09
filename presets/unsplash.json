@@ -1,0 +1,31 @@
+{
+  "id": "unsplash",
+  "name": "Unsplash",
+  "category": "functional",
+  "kind": "image",
+  "provider": {
+    "name": "Unsplash Inc.",
+    "address": "1240 20 Ave SE, Suite 301, Calgary, AB T2G 1M8, Kanada"
+  },
+  "purpose": {
+    "de": "Lädt Bilder von Unsplash. Dabei werden IP-Adresse und Browserdaten an Unsplash übertragen.",
+    "en": "Loads images from Unsplash. This sends the IP address and browser data to Unsplash."
+  },
+  "privacy": "https://unsplash.com/privacy",
+  "cookies": [],
+  "hosts": [
+    "images.unsplash.com",
+    "plus.unsplash.com"
+  ],
+  "patterns": [
+    "images.unsplash.com/"
+  ],
+  "local": "image",
+  "keywords": [
+    "unsplash",
+    "bilder",
+    "images",
+    "fotos",
+    "photos"
+  ]
+}

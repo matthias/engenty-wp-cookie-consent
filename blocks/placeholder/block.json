@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cookie-dialog/placeholder",
+	"title": "Erst nach Einwilligung",
+	"category": "widgets",
+	"icon": "lock",
+	"description": "Was in diesem Block steht, lädt erst, wenn Besucher dem gewählten Dienst zustimmen. Bis dahin zeigt sich ein Platzhalter.",
+	"keywords": [ "cookie", "platzhalter", "einbettung", "embed", "consent" ],
+	"textdomain": "cookie-dialog",
+	"attributes": {
+		"service": { "type": "string", "default": "" }
+	},
+	"supports": { "html": false, "align": [ "wide", "full" ] },
+	"editorScript": "cookie-dialog-blocks"
+}

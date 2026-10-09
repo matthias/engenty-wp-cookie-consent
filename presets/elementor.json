@@ -1,0 +1,32 @@
+{
+  "id": "elementor",
+  "name": "Elementor",
+  "category": "necessary",
+  "kind": "core",
+  "provider": {
+    "name": "Betreiber dieser Website",
+    "address": ""
+  },
+  "purpose": {
+    "de": "Stellt Layouts und Elemente bereit, die mit dem Seitenbaukasten Elementor erstellt wurden. Für Pop-ups wird im Browser gespeichert, wie oft Seiten und Pop-ups angezeigt wurden.",
+    "en": "Provides layouts and elements built with the Elementor page builder. For pop-ups, it stores in the browser how often pages and pop-ups were shown."
+  },
+  "privacy": "",
+  "cookies": [
+    {
+      "name": "elementor",
+      "duration": "session",
+      "type": "session"
+    }
+  ],
+  "plugins": [
+    "elementor/elementor.php",
+    "elementor-pro/elementor-pro.php"
+  ],
+  "keywords": [
+    "elementor",
+    "page builder",
+    "seitenbaukasten",
+    "popup"
+  ]
+}

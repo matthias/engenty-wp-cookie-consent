@@ -1,0 +1,69 @@
+{
+  "id": "microsoft-clarity",
+  "name": "Microsoft Clarity",
+  "category": "statistics",
+  "kind": "script",
+  "provider": {
+    "name": "Microsoft Ireland Operations Limited",
+    "address": "One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irland"
+  },
+  "purpose": {
+    "de": "Zeichnet auf, wie die Website genutzt wird, etwa Klicks und Scrollen, und erstellt daraus Heatmaps und Sitzungsaufnahmen. Microsoft setzt dafür Cookies.",
+    "en": "Records how the website is used, such as clicks and scrolling, and turns this into heatmaps and session recordings. Microsoft sets cookies for this."
+  },
+  "privacy": "https://privacy.microsoft.com/privacystatement",
+  "cookies": [
+    {
+      "name": "_clck",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "_clsk",
+      "duration": "1d",
+      "type": "http"
+    },
+    {
+      "name": "CLID",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "MUID",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "ANONCHK",
+      "duration": "10min",
+      "type": "http"
+    },
+    {
+      "name": "MR",
+      "duration": "7d",
+      "type": "http"
+    },
+    {
+      "name": "SM",
+      "duration": "session",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "clarity.ms"
+  ],
+  "patterns": [
+    "clarity.ms/tag/",
+    "(c,l,a,r,i,t,y)"
+  ],
+  "plugins": [
+    "microsoft-clarity/clarity.php"
+  ],
+  "keywords": [
+    "clarity",
+    "microsoft",
+    "heatmap",
+    "aufzeichnung",
+    "recording"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "hcaptcha",
+  "name": "hCaptcha",
+  "category": "functional",
+  "kind": "script",
+  "provider": {
+    "name": "Intuition Machines, Inc.",
+    "address": "1065 SW 8th St #704, Miami, FL 33130, USA"
+  },
+  "purpose": {
+    "de": "Schützt Formulare vor Spam und Missbrauch. hCaptcha wertet dafür Geräte- und Browserdaten aus und setzt Cookies.",
+    "en": "Protects forms from spam and abuse. hCaptcha analyses device and browser data for this and sets cookies."
+  },
+  "privacy": "https://www.hcaptcha.com/privacy",
+  "cookies": [
+    {
+      "name": "hmt_id",
+      "duration": "30d",
+      "type": "http"
+    },
+    {
+      "name": "__cf_bm",
+      "duration": "30min",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "hcaptcha.com"
+  ],
+  "patterns": [
+    "hcaptcha.com/1/api.js"
+  ],
+  "plugins": [
+    "hcaptcha-for-forms-and-more/hcaptcha.php"
+  ],
+  "keywords": [
+    "hcaptcha",
+    "captcha",
+    "spamschutz",
+    "spam protection"
+  ]
+}

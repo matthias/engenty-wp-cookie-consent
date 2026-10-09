@@ -1,0 +1,32 @@
+{
+  "id": "polylang",
+  "name": "Polylang",
+  "category": "necessary",
+  "kind": "core",
+  "provider": {
+    "name": "Betreiber dieser Website",
+    "address": ""
+  },
+  "purpose": {
+    "de": "Merkt sich die gewählte Sprache der Website.",
+    "en": "Remembers the selected language of the website."
+  },
+  "privacy": "",
+  "cookies": [
+    {
+      "name": "pll_language",
+      "duration": "1y",
+      "type": "http"
+    }
+  ],
+  "plugins": [
+    "polylang/polylang.php",
+    "polylang-pro/polylang.php"
+  ],
+  "keywords": [
+    "sprache",
+    "language",
+    "mehrsprachig",
+    "multilingual"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+	"name": "engenty/cookie-dialog",
+	"description": "Cookie Dialog for WordPress",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"php": ">=8.1"
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^3.1",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"phpunit/phpunit": "^10.5"
+	},
+	"scripts": {
+		"lint": "phpcs",
+		"fix": "phpcbf",
+		"test": "phpunit"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}

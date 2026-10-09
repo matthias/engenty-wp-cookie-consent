@@ -1,0 +1,74 @@
+{
+  "id": "wordpress",
+  "name": "WordPress",
+  "category": "necessary",
+  "kind": "core",
+  "provider": {
+    "name": "Betreiber dieser Website",
+    "address": ""
+  },
+  "purpose": {
+    "de": "Hält angemeldete Benutzer eingeloggt und speichert Einstellungen der Verwaltungsoberfläche. Beim Kommentieren können Name, E-Mail-Adresse und Website gespeichert werden, damit sie nicht erneut eingegeben werden müssen.",
+    "en": "Keeps logged-in users signed in and stores settings of the admin area. When commenting, name, email address and website can be saved so they need not be entered again."
+  },
+  "privacy": "",
+  "cookies": [
+    {
+      "name": "wordpress_logged_in_*",
+      "duration": "14d",
+      "type": "http"
+    },
+    {
+      "name": "wordpress_sec_*",
+      "duration": "14d",
+      "type": "http"
+    },
+    {
+      "name": "wordpress_test_cookie",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "wp-settings-*",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "wp-settings-time-*",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "comment_author_*",
+      "duration": "347d",
+      "type": "http"
+    },
+    {
+      "name": "comment_author_email_*",
+      "duration": "347d",
+      "type": "http"
+    },
+    {
+      "name": "comment_author_url_*",
+      "duration": "347d",
+      "type": "http"
+    },
+    {
+      "name": "wp-postpass_*",
+      "duration": "10d",
+      "type": "http"
+    },
+    {
+      "name": "wp_lang",
+      "duration": "session",
+      "type": "http"
+    }
+  ],
+  "keywords": [
+    "wordpress",
+    "login",
+    "anmeldung",
+    "kommentare",
+    "comments"
+  ]
+}

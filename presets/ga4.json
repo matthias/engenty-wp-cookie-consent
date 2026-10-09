@@ -1,0 +1,62 @@
+{
+  "id": "ga4",
+  "name": "Google Analytics 4",
+  "category": "statistics",
+  "kind": "script",
+  "provider": {
+    "name": "Google Ireland Limited",
+    "address": "Gordon House, Barrow Street, Dublin 4, Irland"
+  },
+  "purpose": {
+    "de": "Erstellt Statistiken über die Nutzung der Website. Google Analytics setzt Cookies und erfasst aufgerufene Seiten, Herkunft, Gerät und Interaktionen.",
+    "en": "Creates statistics on how the website is used. Google Analytics sets cookies and records pages viewed, referrer, device and interactions."
+  },
+  "privacy": "https://policies.google.com/privacy",
+  "cookies": [
+    {
+      "name": "_ga",
+      "duration": "2y",
+      "type": "http"
+    },
+    {
+      "name": "_ga_*",
+      "duration": "2y",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "googletagmanager.com",
+    "google-analytics.com",
+    "analytics.google.com"
+  ],
+  "patterns": [
+    "gtag/js?id=G-",
+    "google-analytics.com/",
+    "analytics.google.com/",
+    "gtag('config', 'G-",
+    "gtag('config','G-",
+    "gtag(\"config\", \"G-",
+    "gtag(\"config\",\"G-"
+  ],
+  "strict": true,
+  "handles": [
+    "google_gtagjs"
+  ],
+  "plugins": [
+    "google-site-kit/google-site-kit.php",
+    "google-analytics-for-wordpress/googleanalytics.php",
+    "google-analytics-dashboard-for-wp/gadwp.php",
+    "ga-google-analytics/ga-google-analytics.php",
+    "woocommerce-google-analytics-integration/woocommerce-google-analytics-integration.php"
+  ],
+  "signals": [
+    "analytics_storage"
+  ],
+  "keywords": [
+    "analytics",
+    "statistik",
+    "statistics",
+    "google",
+    "tracking"
+  ]
+}

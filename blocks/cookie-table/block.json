@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cookie-dialog/cookie-table",
+	"title": "Cookie-Tabelle",
+	"category": "widgets",
+	"icon": "editor-table",
+	"description": "Alle Dienste und Cookies, nach Kategorien – für die Datenschutzerklärung. Hält sich selbst aktuell.",
+	"keywords": [ "cookie", "datenschutz", "privacy", "tabelle" ],
+	"textdomain": "cookie-dialog",
+	"attributes": {
+		"showId": { "type": "boolean", "default": true }
+	},
+	"supports": { "html": false, "align": [ "wide", "full" ] },
+	"editorScript": "cookie-dialog-blocks"
+}

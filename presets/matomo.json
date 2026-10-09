@@ -1,0 +1,53 @@
+{
+  "id": "matomo",
+  "name": "Matomo",
+  "category": "statistics",
+  "kind": "script",
+  "provider": {
+    "name": "InnoCraft Ltd",
+    "address": "7 Waterloo Quay, PO Box 625, 6140 Wellington, Neuseeland"
+  },
+  "purpose": {
+    "de": "Erstellt Statistiken über die Nutzung der Website. Matomo setzt Cookies und erfasst aufgerufene Seiten, Herkunft und Gerät.",
+    "en": "Creates statistics on how the website is used. Matomo sets cookies and records pages viewed, referrer and device."
+  },
+  "privacy": "https://matomo.org/privacy-policy/",
+  "cookies": [
+    {
+      "name": "_pk_id.*",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "_pk_ses.*",
+      "duration": "30min",
+      "type": "http"
+    },
+    {
+      "name": "_pk_ref.*",
+      "duration": "6mo",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "matomo.cloud",
+    "innocraft.cloud"
+  ],
+  "patterns": [
+    "matomo.js",
+    "piwik.js",
+    "matomo.php",
+    "piwik.php",
+    "_paq.push"
+  ],
+  "plugins": [
+    "wp-piwik/wp-piwik.php"
+  ],
+  "keywords": [
+    "matomo",
+    "piwik",
+    "analytics",
+    "statistik",
+    "statistics"
+  ]
+}

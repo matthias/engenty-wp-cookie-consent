@@ -1,0 +1,67 @@
+{
+  "id": "woocommerce-order-attribution",
+  "name": "WooCommerce Order Attribution",
+  "category": "statistics",
+  "kind": "script",
+  "provider": {
+    "name": "Betreiber dieser Website",
+    "address": ""
+  },
+  "purpose": {
+    "de": "Erfasst, über welche Quelle, Kampagne oder Anzeige ein Einkauf zustande kommt, und speichert diese Angaben bei der Bestellung im Shop.",
+    "en": "Records which source, campaign or ad led to a purchase and stores this with the order in the shop."
+  },
+  "privacy": "",
+  "cookies": [
+    {
+      "name": "sbjs_migrations",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "sbjs_current_add",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "sbjs_first_add",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "sbjs_current",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "sbjs_first",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "sbjs_udata",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "sbjs_session",
+      "duration": "30min",
+      "type": "http"
+    }
+  ],
+  "handles": [
+    "sourcebuster-js",
+    "wc-order-attribution"
+  ],
+  "plugins": [
+    "woocommerce/woocommerce.php"
+  ],
+  "keywords": [
+    "woocommerce",
+    "bestellung",
+    "order",
+    "attribution",
+    "kampagne",
+    "campaign"
+  ]
+}

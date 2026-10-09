@@ -1,0 +1,28 @@
+{
+  "id": "bunny-fonts",
+  "name": "Bunny Fonts",
+  "category": "functional",
+  "kind": "font",
+  "provider": {
+    "name": "BunnyWay d.o.o.",
+    "address": "Dunajska cesta 165, 1000 Ljubljana, Slowenien"
+  },
+  "purpose": {
+    "de": "Lädt Schriftarten von Bunny Fonts. Dabei wird die IP-Adresse an bunny.net übertragen; nach Angaben des Anbieters werden keine personenbezogenen Daten gespeichert und keine Cookies gesetzt.",
+    "en": "Loads fonts from Bunny Fonts. This sends the IP address to bunny.net; according to the provider, no personal data is stored and no cookies are set."
+  },
+  "privacy": "https://bunny.net/privacy",
+  "cookies": [],
+  "hosts": [
+    "fonts.bunny.net"
+  ],
+  "patterns": [
+    "fonts.bunny.net/css"
+  ],
+  "local": "css",
+  "keywords": [
+    "bunny fonts",
+    "schriftarten",
+    "fonts"
+  ]
+}

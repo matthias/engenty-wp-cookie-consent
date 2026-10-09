@@ -1,0 +1,52 @@
+{
+  "id": "microsoft-uet",
+  "name": "Microsoft Advertising (UET)",
+  "category": "marketing",
+  "kind": "script",
+  "provider": {
+    "name": "Microsoft Ireland Operations Limited",
+    "address": "One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irland"
+  },
+  "purpose": {
+    "de": "Misst den Erfolg von Werbeanzeigen in der Bing-Suche und im Microsoft-Werbenetzwerk und ermöglicht Remarketing. Microsoft setzt Cookies und erfasst besuchte Seiten und Conversions.",
+    "en": "Measures the success of ads in Bing search and the Microsoft advertising network and enables remarketing. Microsoft sets cookies and records pages visited and conversions."
+  },
+  "privacy": "https://privacy.microsoft.com/privacystatement",
+  "cookies": [
+    {
+      "name": "_uetsid",
+      "duration": "1d",
+      "type": "http"
+    },
+    {
+      "name": "_uetvid",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "MUID",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "_uetmsclkid",
+      "duration": "3mo",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "bat.bing.com"
+  ],
+  "patterns": [
+    "bat.bing.com/bat.js",
+    "new UET(",
+    "uetq"
+  ],
+  "keywords": [
+    "bing",
+    "microsoft",
+    "uet",
+    "werbung",
+    "ads"
+  ]
+}

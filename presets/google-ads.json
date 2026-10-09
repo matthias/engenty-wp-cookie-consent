@@ -1,0 +1,68 @@
+{
+  "id": "google-ads",
+  "name": "Google Ads",
+  "category": "marketing",
+  "kind": "script",
+  "provider": {
+    "name": "Google Ireland Limited",
+    "address": "Gordon House, Barrow Street, Dublin 4, Irland"
+  },
+  "purpose": {
+    "de": "Misst, ob nach dem Klick auf eine Google-Anzeige gekauft oder angefragt wird, und ermöglicht Remarketing. Google setzt Cookies und erfasst besuchte Seiten und Conversions.",
+    "en": "Measures whether a click on a Google ad leads to a purchase or enquiry and enables remarketing. Google sets cookies and records pages visited and conversions."
+  },
+  "privacy": "https://policies.google.com/privacy",
+  "cookies": [
+    {
+      "name": "_gcl_au",
+      "duration": "3mo",
+      "type": "http"
+    },
+    {
+      "name": "_gcl_aw",
+      "duration": "3mo",
+      "type": "http"
+    },
+    {
+      "name": "IDE",
+      "duration": "13mo",
+      "type": "http"
+    },
+    {
+      "name": "test_cookie",
+      "duration": "15min",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "googleadservices.com",
+    "doubleclick.net",
+    "googletagmanager.com"
+  ],
+  "patterns": [
+    "gtag/js?id=AW-",
+    "googleadservices.com/pagead/conversion",
+    "googleads.g.doubleclick.net/pagead/",
+    "gtag('config', 'AW-",
+    "gtag('config','AW-",
+    "gtag(\"config\", \"AW-",
+    "gtag(\"config\",\"AW-"
+  ],
+  "strict": true,
+  "plugins": [
+    "google-listings-and-ads/google-listings-and-ads.php",
+    "google-site-kit/google-site-kit.php"
+  ],
+  "signals": [
+    "ad_storage",
+    "ad_user_data",
+    "ad_personalization"
+  ],
+  "keywords": [
+    "google ads",
+    "adwords",
+    "conversion",
+    "remarketing",
+    "werbung"
+  ]
+}

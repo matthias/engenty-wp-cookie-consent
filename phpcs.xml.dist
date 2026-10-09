@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ruleset name="Cookie Dialog">
+	<description>WordPress coding standards for the plugin.</description>
+	<file>cookie-dialog.php</file>
+	<file>uninstall.php</file>
+	<file>includes</file>
+	<file>blocks</file>
+	<arg name="extensions" value="php"/>
+	<arg value="sp"/>
+	<config name="minimum_supported_wp_version" value="6.6"/>
+	<config name="testVersion" value="8.1-"/>
+	<rule ref="WordPress">
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
+	</rule>
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="cookie-dialog"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

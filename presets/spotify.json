@@ -1,0 +1,50 @@
+{
+  "id": "spotify",
+  "name": "Spotify",
+  "category": "marketing",
+  "kind": "embed",
+  "provider": {
+    "name": "Spotify AB",
+    "address": "Regeringsgatan 19, 111 53 Stockholm, Schweden"
+  },
+  "purpose": {
+    "de": "Spielt Musik und Podcasts von Spotify auf dieser Website ab. Spotify setzt Cookies und misst, was gehört wird.",
+    "en": "Plays Spotify music and podcasts on this website. Spotify sets cookies and measures what is played."
+  },
+  "privacy": "https://www.spotify.com/legal/privacy-policy/",
+  "cookies": [
+    {
+      "name": "sp_t",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "sp_landing",
+      "duration": "1d",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "open.spotify.com",
+    "spotifycdn.com",
+    "scdn.co"
+  ],
+  "patterns": [
+    "open.spotify.com/embed"
+  ],
+  "embed": {
+    "type": "audio",
+    "label": {
+      "de": "Audio laden",
+      "en": "Load audio"
+    },
+    "thumb": true
+  },
+  "keywords": [
+    "spotify",
+    "musik",
+    "music",
+    "podcast",
+    "audio"
+  ]
+}

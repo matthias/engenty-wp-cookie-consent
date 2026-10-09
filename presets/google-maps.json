@@ -1,0 +1,53 @@
+{
+  "id": "google-maps",
+  "name": "Google Maps",
+  "category": "functional",
+  "kind": "embed",
+  "provider": {
+    "name": "Google Ireland Limited",
+    "address": "Gordon House, Barrow Street, Dublin 4, Irland"
+  },
+  "purpose": {
+    "de": "Zeigt Karten von Google Maps auf dieser Website. Google erhält dabei IP-Adresse und Browserdaten und kann Cookies setzen.",
+    "en": "Shows Google Maps on this website. Google receives the IP address and browser data and may set cookies."
+  },
+  "privacy": "https://policies.google.com/privacy",
+  "cookies": [
+    {
+      "name": "NID",
+      "duration": "6mo",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "maps.google.com",
+    "maps.googleapis.com",
+    "maps.gstatic.com",
+    "www.google.com"
+  ],
+  "patterns": [
+    "google.com/maps/embed",
+    "/maps/embed?pb=",
+    "maps.google.com/maps",
+    "maps.googleapis.com/maps/api/"
+  ],
+  "strict": true,
+  "plugins": [
+    "wp-google-maps/wpGoogleMaps.php",
+    "wp-google-map-plugin/wp-google-map-plugin.php"
+  ],
+  "embed": {
+    "type": "map",
+    "label": {
+      "de": "Karte laden",
+      "en": "Load map"
+    }
+  },
+  "keywords": [
+    "google maps",
+    "karte",
+    "map",
+    "anfahrt",
+    "directions"
+  ]
+}

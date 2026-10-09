@@ -1,0 +1,42 @@
+{
+  "id": "trustindex",
+  "name": "Trustindex",
+  "category": "marketing",
+  "kind": "script",
+  "provider": {
+    "name": "Trustindex Ltd.",
+    "address": "Nyári Pál utca 15, 2724 Újlengyel, Ungarn"
+  },
+  "purpose": {
+    "de": "Zeigt Bewertungen von Plattformen wie Google oder Facebook auf der Website an. Beim Laden werden IP-Adresse und Browserdaten an Trustindex übertragen.",
+    "en": "Shows reviews from platforms such as Google or Facebook on the website. Loading them sends the IP address and browser data to Trustindex."
+  },
+  "privacy": "https://www.trustindex.io/privacy-policy/",
+  "cookies": [
+    {
+      "name": "ti-widget-closed-*",
+      "duration": "session",
+      "type": "session"
+    },
+    {
+      "name": "ti-cdn-url",
+      "duration": "session",
+      "type": "session"
+    }
+  ],
+  "hosts": [
+    "trustindex.io"
+  ],
+  "patterns": [
+    "cdn.trustindex.io/loader.js"
+  ],
+  "plugins": [
+    "wp-reviews-plugin-for-google/wp-reviews-plugin-for-google.php"
+  ],
+  "keywords": [
+    "trustindex",
+    "bewertungen",
+    "reviews",
+    "google reviews"
+  ]
+}

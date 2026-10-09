@@ -1,0 +1,53 @@
+{
+  "id": "vimeo",
+  "name": "Vimeo",
+  "category": "marketing",
+  "kind": "embed",
+  "provider": {
+    "name": "Vimeo.com, Inc.",
+    "address": "330 West 34th Street, 10th Floor, New York, NY 10001, USA"
+  },
+  "purpose": {
+    "de": "Zeigt Videos von Vimeo auf dieser Website. Vimeo setzt Cookies und misst, was angesehen wird.",
+    "en": "Shows Vimeo videos on this website. Vimeo sets cookies and measures what is watched."
+  },
+  "privacy": "https://vimeo.com/privacy",
+  "cookies": [
+    {
+      "name": "vuid",
+      "duration": "2y",
+      "type": "http"
+    },
+    {
+      "name": "__cf_bm",
+      "duration": "30min",
+      "type": "http"
+    },
+    {
+      "name": "cf_clearance",
+      "duration": "1y",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "vimeo.com",
+    "vimeocdn.com"
+  ],
+  "patterns": [
+    "player.vimeo.com/video/",
+    "player.vimeo.com/api/player.js"
+  ],
+  "embed": {
+    "type": "video",
+    "label": {
+      "de": "Video laden",
+      "en": "Load video"
+    },
+    "thumb": true
+  },
+  "keywords": [
+    "vimeo",
+    "video",
+    "videos"
+  ]
+}

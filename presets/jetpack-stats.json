@@ -1,0 +1,36 @@
+{
+  "id": "jetpack-stats",
+  "name": "Jetpack Stats",
+  "category": "statistics",
+  "kind": "script",
+  "provider": {
+    "name": "Aut O'Mattic A8C Ireland Ltd.",
+    "address": "Grand Canal Dock, 25 Herbert Pl, Dublin, D02 AY86, Irland"
+  },
+  "purpose": {
+    "de": "Erstellt Statistiken über die Nutzung der Website. Jetpack überträgt dafür aufgerufene Seiten, Herkunft, Browser und IP-Adresse an Automattic.",
+    "en": "Creates statistics on how the website is used. Jetpack sends pages viewed, referrer, browser and IP address to Automattic for this."
+  },
+  "privacy": "https://automattic.com/privacy/",
+  "cookies": [],
+  "hosts": [
+    "stats.wp.com",
+    "pixel.wp.com"
+  ],
+  "patterns": [
+    "stats.wp.com/",
+    "_stq.push"
+  ],
+  "handles": [
+    "jetpack-stats"
+  ],
+  "plugins": [
+    "jetpack/jetpack.php"
+  ],
+  "keywords": [
+    "jetpack",
+    "statistik",
+    "statistics",
+    "wordpress.com"
+  ]
+}

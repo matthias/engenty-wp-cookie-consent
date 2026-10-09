@@ -1,0 +1,46 @@
+{
+  "id": "wpml",
+  "name": "WPML",
+  "category": "necessary",
+  "kind": "core",
+  "provider": {
+    "name": "Betreiber dieser Website",
+    "address": ""
+  },
+  "purpose": {
+    "de": "Merkt sich die gewählte Sprache der Website und leitet, falls eingerichtet, auf die Sprache des Browsers weiter.",
+    "en": "Remembers the selected language of the website and, if set up, redirects to the browser's language."
+  },
+  "privacy": "",
+  "cookies": [
+    {
+      "name": "wp-wpml_current_language",
+      "duration": "1d",
+      "type": "http"
+    },
+    {
+      "name": "wp-wpml_current_admin_language_*",
+      "duration": "1d",
+      "type": "http"
+    },
+    {
+      "name": "_icl_visitor_lang_js",
+      "duration": "1d",
+      "type": "http"
+    },
+    {
+      "name": "wpml_browser_redirect_test",
+      "duration": "session",
+      "type": "http"
+    }
+  ],
+  "plugins": [
+    "sitepress-multilingual-cms/sitepress.php"
+  ],
+  "keywords": [
+    "sprache",
+    "language",
+    "mehrsprachig",
+    "multilingual"
+  ]
+}

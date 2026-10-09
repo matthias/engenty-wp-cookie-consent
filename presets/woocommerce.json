@@ -1,0 +1,63 @@
+{
+  "id": "woocommerce",
+  "name": "WooCommerce",
+  "category": "necessary",
+  "kind": "core",
+  "provider": {
+    "name": "Betreiber dieser Website",
+    "address": ""
+  },
+  "purpose": {
+    "de": "Stellt Warenkorb und Kasse des Shops bereit. Gespeichert werden der Inhalt des Warenkorbs und eine Sitzungs-ID, über die der Warenkorb wiedergefunden wird.",
+    "en": "Runs the shop's cart and checkout. Stores the cart contents and a session ID used to find the cart again."
+  },
+  "privacy": "",
+  "cookies": [
+    {
+      "name": "woocommerce_cart_hash",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "woocommerce_items_in_cart",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "wp_woocommerce_session_*",
+      "duration": "2d",
+      "type": "http"
+    },
+    {
+      "name": "woocommerce_recently_viewed",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "store_notice*",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "wc_cart_hash_*",
+      "duration": "session",
+      "type": "session"
+    },
+    {
+      "name": "wc_fragments_*",
+      "duration": "session",
+      "type": "session"
+    }
+  ],
+  "plugins": [
+    "woocommerce/woocommerce.php"
+  ],
+  "keywords": [
+    "woocommerce",
+    "shop",
+    "warenkorb",
+    "cart",
+    "kasse",
+    "checkout"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "cdnjs",
+  "name": "cdnjs",
+  "category": "functional",
+  "kind": "library",
+  "provider": {
+    "name": "Cloudflare, Inc.",
+    "address": "101 Townsend St, San Francisco, CA 94107, USA"
+  },
+  "purpose": {
+    "de": "Lädt JavaScript-Bibliotheken und Stylesheets vom öffentlichen CDN cdnjs. Dabei werden IP-Adresse und Browserdaten an Cloudflare übertragen.",
+    "en": "Loads JavaScript libraries and stylesheets from the public CDN cdnjs. This sends the IP address and browser data to Cloudflare."
+  },
+  "privacy": "https://www.cloudflare.com/privacypolicy/",
+  "cookies": [],
+  "hosts": [
+    "cdnjs.cloudflare.com"
+  ],
+  "patterns": [
+    "cdnjs.cloudflare.com/ajax/libs/"
+  ],
+  "local": "js",
+  "keywords": [
+    "cdnjs",
+    "cdn",
+    "javascript",
+    "bibliothek",
+    "library"
+  ]
+}

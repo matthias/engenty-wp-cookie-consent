@@ -1,0 +1,28 @@
+{
+  "id": "contact-form-7",
+  "name": "Contact Form 7",
+  "category": "necessary",
+  "kind": "core",
+  "provider": {
+    "name": "Betreiber dieser Website",
+    "address": ""
+  },
+  "purpose": {
+    "de": "Verarbeitet Eingaben in Kontaktformularen und sendet sie an den Betreiber dieser Website. Es werden keine Cookies gesetzt.",
+    "en": "Processes contact form entries and sends them to the operator of this website. No cookies are set."
+  },
+  "privacy": "",
+  "cookies": [],
+  "handles": [
+    "contact-form-7"
+  ],
+  "plugins": [
+    "contact-form-7/wp-contact-form-7.php"
+  ],
+  "keywords": [
+    "kontaktformular",
+    "contact form",
+    "formular",
+    "form"
+  ]
+}

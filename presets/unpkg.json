@@ -1,0 +1,30 @@
+{
+  "id": "unpkg",
+  "name": "UNPKG",
+  "category": "functional",
+  "kind": "library",
+  "provider": {
+    "name": "UNPKG / Cloudflare, Inc.",
+    "address": "101 Townsend St, San Francisco, CA 94107, USA"
+  },
+  "purpose": {
+    "de": "Lädt JavaScript-Bibliotheken vom öffentlichen CDN UNPKG. Dabei werden IP-Adresse und Browserdaten an Cloudflare übertragen, über dessen Netzwerk UNPKG ausgeliefert wird.",
+    "en": "Loads JavaScript libraries from the public CDN UNPKG. This sends the IP address and browser data to Cloudflare, whose network delivers UNPKG."
+  },
+  "privacy": "https://www.cloudflare.com/privacypolicy/",
+  "cookies": [],
+  "hosts": [
+    "unpkg.com"
+  ],
+  "patterns": [
+    "unpkg.com/"
+  ],
+  "local": "js",
+  "keywords": [
+    "unpkg",
+    "cdn",
+    "javascript",
+    "npm",
+    "library"
+  ]
+}

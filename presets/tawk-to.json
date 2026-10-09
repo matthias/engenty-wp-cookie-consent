@@ -1,0 +1,48 @@
+{
+  "id": "tawk-to",
+  "name": "tawk.to",
+  "category": "functional",
+  "kind": "script",
+  "provider": {
+    "name": "tawk.to inc.",
+    "address": "187 East Warm Springs Rd, SB298, Las Vegas, NV 89119, USA"
+  },
+  "purpose": {
+    "de": "Stellt einen Live-Chat bereit. tawk.to setzt Cookies, um wiederkehrende Besucher zu erkennen, und überträgt Chatnachrichten, besuchte Seiten und IP-Adresse an tawk.to.",
+    "en": "Provides a live chat. tawk.to sets cookies to recognise returning visitors and sends chat messages, pages visited and the IP address to tawk.to."
+  },
+  "privacy": "https://www.tawk.to/privacy-policy/",
+  "cookies": [
+    {
+      "name": "twk_uuid_*",
+      "duration": "6mo",
+      "type": "http"
+    },
+    {
+      "name": "TawkConnectionTime",
+      "duration": "session",
+      "type": "http"
+    },
+    {
+      "name": "twk_idm_key",
+      "duration": "session",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "tawk.to"
+  ],
+  "patterns": [
+    "embed.tawk.to/",
+    "Tawk_API"
+  ],
+  "plugins": [
+    "tawkto-live-chat/tawkto.php"
+  ],
+  "keywords": [
+    "tawk.to",
+    "chat",
+    "live chat",
+    "support"
+  ]
+}

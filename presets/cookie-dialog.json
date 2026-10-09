@@ -1,0 +1,29 @@
+{
+  "id": "cookie-dialog",
+  "name": "Cookie Dialog",
+  "category": "necessary",
+  "kind": "core",
+  "provider": {
+    "name": "Betreiber dieser Website",
+    "address": ""
+  },
+  "purpose": {
+    "de": "Speichert die Auswahl in diesem Dialog und eine zufällige Einwilligungs-ID. So gilt die Entscheidung bei weiteren Besuchen und lässt sich nachweisen.",
+    "en": "Stores the choice made in this dialog and a random consent ID, so the decision applies on later visits and can be documented."
+  },
+  "privacy": "",
+  "cookies": [
+    {
+      "name": "cookie_dialog",
+      "duration": "6mo",
+      "type": "http"
+    }
+  ],
+  "keywords": [
+    "cookie",
+    "einwilligung",
+    "consent",
+    "dsgvo",
+    "gdpr"
+  ]
+}

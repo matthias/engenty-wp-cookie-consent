@@ -1,0 +1,48 @@
+{
+  "id": "tiktok-embed",
+  "name": "TikTok",
+  "category": "marketing",
+  "kind": "embed",
+  "provider": {
+    "name": "TikTok Technology Limited",
+    "address": "10 Earlsfort Terrace, Dublin, D02 T380, Irland"
+  },
+  "purpose": {
+    "de": "Zeigt Videos von TikTok auf dieser Website. TikTok setzt Cookies und misst, was angesehen wird.",
+    "en": "Shows TikTok videos on this website. TikTok sets cookies and measures what is watched."
+  },
+  "privacy": "https://www.tiktok.com/legal/page/eea/privacy-policy/en",
+  "cookies": [
+    {
+      "name": "ttwid",
+      "duration": "1y",
+      "type": "http"
+    },
+    {
+      "name": "msToken",
+      "duration": "10d",
+      "type": "http"
+    }
+  ],
+  "hosts": [
+    "www.tiktok.com",
+    "tiktokw.eu",
+    "tiktokcdn.com",
+    "tiktokcdn-eu.com"
+  ],
+  "patterns": [
+    "tiktok.com/embed"
+  ],
+  "embed": {
+    "type": "video",
+    "label": {
+      "de": "Video laden",
+      "en": "Load video"
+    }
+  },
+  "keywords": [
+    "tiktok",
+    "video",
+    "social media"
+  ]
+}
