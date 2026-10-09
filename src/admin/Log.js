@@ -243,6 +243,16 @@ export default function Log( { state } ) {
 							) }
 						</div>
 					) : null }
+					{ s.total && s.languages.length > 1 ? (
+						<div className="cd-legend">
+							{ s.languages.map( ( [ lang, n ] ) => (
+								<span key={ lang || '-' }>
+									{ ( lang || '–' ).toUpperCase() }{ ' ' }
+									{ Math.round( ( 100 * n ) / s.total ) } %
+								</span>
+							) ) }
+						</div>
+					) : null }
 				</Card>
 			) : (
 				<Spinner />

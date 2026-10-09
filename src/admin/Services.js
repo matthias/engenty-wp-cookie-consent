@@ -1579,6 +1579,30 @@ export default function Services( { state, onState, save } ) {
 								onSave={ ( patch ) =>
 									saveCategory( cat.id, patch )
 								}
+								onMove={
+									cat.locked
+										? null
+										: ( step ) => {
+												const order = [
+													...config.categories,
+												];
+												const i = order.findIndex(
+													( c ) => c.id === cat.id
+												);
+												const j = i + step;
+												if (
+													j < 1 ||
+													j >= order.length
+												) {
+													return;
+												}
+												[ order[ i ], order[ j ] ] = [
+													order[ j ],
+													order[ i ],
+												];
+												save( { categories: order } );
+										  }
+								}
 								onRemove={ () => {
 									setEditCat( null );
 									save( {
@@ -1880,7 +1904,7 @@ export default function Services( { state, onState, save } ) {
 	);
 }
 
-function CategoryEdit( { cat, languages, empty, onSave, onRemove } ) {
+function CategoryEdit( { cat, languages, empty, onSave, onRemove, onMove } ) {
 	const [ lang, setLang ] = useState( languages[ 0 ] );
 	const [ name, setName ] = useState( cat.name?.[ lang ] || '' );
 	const [ desc, setDesc ] = useState( cat.description?.[ lang ] || '' );
@@ -1928,6 +1952,26 @@ function CategoryEdit( { cat, languages, empty, onSave, onRemove } ) {
 					}
 				/>
 			</Field>
+			{ onMove ? (
+				<div className="cd-row-inline">
+					<Button
+						kind="ghost"
+						size="sm"
+						icon="up"
+						onClick={ () => onMove( -1 ) }
+					>
+						{ __( 'Nach oben', 'cookie-dialog' ) }
+					</Button>
+					<Button
+						kind="ghost"
+						size="sm"
+						icon="down"
+						onClick={ () => onMove( 1 ) }
+					>
+						{ __( 'Nach unten', 'cookie-dialog' ) }
+					</Button>
+				</div>
+			) : null }
 			{ ! cat.locked &&
 			empty &&
 			! [ 'functional', 'statistics', 'marketing' ].includes( cat.id ) ? (
