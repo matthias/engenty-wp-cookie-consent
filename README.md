@@ -47,6 +47,9 @@ WP_PATH=/tmp/wp sh bin/smoke.sh
 WP_PATH=/tmp/wp vendor/bin/phpunit
 WP_URL=http://127.0.0.1:8920 npx playwright test
 npm run zip
+npm run build && npm run i18n   # POT, PO, MO and the JSON for the built scripts
 ```
+
+The admin's source strings are German; `languages/` holds English (US, UK). `make-json` gets a map because WP-CLI 2.12 turns `build/admin.js` into `build/a.js` when it strips `.min.js`, which would give the JSON the wrong name.
 
 `includes/` holds the PHP (one class per part, see the plan), `src/dialog` the dialog on the site (TypeScript, no framework), `src/admin` the admin app, `src/blocks` the blocks' editor, `presets/` the library.

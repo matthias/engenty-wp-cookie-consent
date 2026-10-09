@@ -9,7 +9,8 @@
 		"start": "wp-scripts start",
 		"lint:js": "wp-scripts lint-js src tests/e2e",
 		"test:e2e": "playwright test",
-		"zip": "npm run build && sh bin/zip.sh"
+		"zip": "npm run build && sh bin/zip.sh",
+		"i18n": "wp i18n make-pot . languages/cookie-dialog.pot --slug=cookie-dialog --domain=cookie-dialog --exclude=node_modules,vendor,src,tests,dist,test-results,presets,bin && wp i18n update-po languages/cookie-dialog.pot languages/ && wp i18n make-mo languages && wp i18n make-json languages --no-purge --use-map='{\"build/admin.js\":\"build/admin.min.js\",\"build/blocks.js\":\"build/blocks.js\"}'"
 	},
 	"devDependencies": {
 		"@playwright/test": "1.63.0",
