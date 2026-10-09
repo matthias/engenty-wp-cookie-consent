@@ -20,29 +20,27 @@ export const ENGENTY_KINDS = Object.keys( ENGENTIES );
 export const CORE_KINDS = [ 'round', 'drop', 'dome', 'flame', 'oval' ];
 
 /**
- * Cookie Dialog's own mark, not from the studio: the round engenty incognito – a fedora that moves
- * with the head and one smoked lens over its one eye, sized like the studio's goggles (eye r × 1.45).
+ * Cookie Dialog's own mark, not from the studio: the drop incognito – one pair of sunglasses for its
+ * one eye (a frame across the head, one smoked lens over the eye) and a fedora that sits on the tip
+ * and sways with it.
  */
 const INK = '#282623';
 const INCOGNITO =
-	'<g class="e-incognito">' +
-	`<path d="M25.5 58 H55 M81 58 H94.5" stroke="${ INK }" stroke-width="2.2" stroke-linecap="round"/>` +
-	`<circle cx="68" cy="58" r="11.6" fill="oklch(22% 0.02 260 / 0.78)" stroke="${ INK }" stroke-width="2.4"/>` +
-	'<path d="M60.8 55.7 A7.7 7.7 0 0 1 66.8 50.6" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity="0.8"/>' +
-	'<g transform="rotate(-8 60 20)"><g>' +
-	'<animateTransform attributeName="transform" type="translate" dur="3.6s" repeatCount="indefinite" values="0 0;0 5;0 0"/>' +
-	`<path d="M42 19 L44.5 6.5 Q46 2.5 50 3.5 Q60 7.5 70 3.5 Q74 2.5 75.5 6.5 L78 19 Z" fill="${ INK }"/>` +
-	'<path d="M43.2 18.6 L44.1 14.2 H75.9 L76.8 18.6 Z" fill="oklch(52% 0.03 70)"/>' +
-	`<ellipse cx="60" cy="20" rx="31" ry="4.6" fill="${ INK }"/>` +
-	'</g></g></g>';
+	`<path d="M34.5 45.5 H85.5" stroke="${ INK }" stroke-width="2.6" stroke-linecap="round"/>` +
+	`<path d="M48.5 45.5 H71.5 Q73.6 45.5 73.1 48.2 Q71.2 61.5 60 61.5 Q48.8 61.5 46.9 48.2 Q46.4 45.5 48.5 45.5 Z" fill="oklch(24% 0.02 260 / 0.88)" stroke="${ INK }" stroke-width="2.2" stroke-linejoin="round"/>` +
+	'<path d="M51.5 49.5 Q52.5 55 56.5 58" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity="0.75"/>' +
+	'<g><animateTransform attributeName="transform" type="translate" dur="4.4s" repeatCount="indefinite" values="0 0;-5 3;5 3;0 0"/>' +
+	`<path d="M46 30 L47.5 15 Q48.5 10.5 53 11.5 Q60 14.5 67 11.5 Q71.5 10.5 72.5 15 L74 30 Z" fill="${ INK }"/>` +
+	'<path d="M46.6 28.8 L47.2 23.6 H72.8 L73.4 28.8 Z" fill="oklch(52% 0.03 70)"/>' +
+	`<ellipse cx="60" cy="30" rx="25" ry="3.6" fill="${ INK }"/></g>`;
 
 /**
- * One engenty's SVG content; `incognito` is the round one with hat and lens.
+ * One engenty's SVG content; `incognito` is the drop with sunglasses and hat.
  * @param kind
  */
 export function engentyMarkup( kind ) {
 	if ( kind === 'incognito' ) {
-		return ENGENTIES.round.replace( /<\/g>$/, `${ INCOGNITO }</g>` );
+		return ENGENTIES.drop.replace( /<\/g>$/, `${ INCOGNITO }</g>` );
 	}
 	return ENGENTIES[ kind ] ?? ENGENTIES.round;
 }
