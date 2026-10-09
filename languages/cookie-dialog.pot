@@ -1,0 +1,2481 @@
+# Copyright (C) 2026 engenty
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Cookie Dialog 0.1.0\n"
+"Report-Msgid-Bugs-To: https://engenty.ai\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-09T06:07:41+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: cookie-dialog\n"
+
+#. Plugin Name of the plugin
+#: cookie-dialog.php
+#: includes/class-admin.php:184
+msgid "Cookie Dialog"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: cookie-dialog.php
+msgid "https://engenty.ai/cookie-dialog"
+msgstr ""
+
+#. Description of the plugin
+#: cookie-dialog.php
+msgid "A simple, beautiful cookie dialog for the EU: categories and services, scripts and embeds only after consent, a consent log, Google Consent Mode v2 – and an assistant that sets it up."
+msgstr ""
+
+#. Author of the plugin
+#: cookie-dialog.php
+msgid "engenty"
+msgstr ""
+
+#. Author URI of the plugin
+#: cookie-dialog.php
+msgid "https://engenty.ai"
+msgstr ""
+
+#: includes/class-admin.php:64
+#: build/admin.js:17
+msgid "Cookies"
+msgstr ""
+
+#: includes/class-admin.php:65
+#: includes/class-admin.php:137
+#: build/admin.js:16
+#: build/admin.js:18
+msgid "Start"
+msgstr ""
+
+#: includes/class-admin.php:66
+#: build/admin.js:17
+#: build/admin.js:19
+msgid "Dialog"
+msgstr ""
+
+#: includes/class-admin.php:67
+#: build/admin.js:20
+msgid "Dienste"
+msgstr ""
+
+#: includes/class-admin.php:68
+#: build/admin.js:9
+#: build/admin.js:15
+#: build/admin.js:22
+msgid "Protokoll"
+msgstr ""
+
+#: includes/class-admin.php:69
+#: build/admin.js:15
+#: build/admin.js:22
+#: build/blocks.js:1
+msgid "Einstellungen"
+msgstr ""
+
+#: includes/class-admin.php:79
+#: build/admin.js:23
+msgid "Cookie Dialog lädt …"
+msgstr ""
+
+#: includes/class-admin.php:138
+#: includes/class-admin.php:157
+msgid "Einrichten"
+msgstr ""
+
+#: includes/class-admin.php:154
+msgid "Cookie Dialog ist noch aus."
+msgstr ""
+
+#: includes/class-admin.php:155
+msgid "Bis du ihn einschaltest, ändert sich nichts an deiner Website."
+msgstr ""
+
+#: includes/class-admin.php:164
+msgid "Nicht erlaubt."
+msgstr ""
+
+#: includes/class-admin.php:187
+msgid "Cookie Dialog stores the visitor’s choice in the first-party cookie „cookie_dialog“ (consent ID, version, time, categories and services) for as long as set under Cookies › Einstellungen (6 months by default). Every decision is logged with the consent ID, the version of the dialog, language, source, the browser family and the IP address as a SHA-256 hash with a salt that changes daily; the log is deleted after 12 months by default. Insert the block „Cookie-Tabelle“ to list all services and cookies."
+msgstr ""
+
+#: includes/class-assistant.php:82
+msgid "Der Assistent braucht WordPress 7.0 oder neuer."
+msgstr ""
+
+#: includes/class-assistant.php:110
+msgid "Die Antwort war kein JSON. Versuch es noch einmal."
+msgstr ""
+
+#. translators: %s: what the person asked
+#: includes/class-assistant.php:466
+#: includes/class-assistant.php:468
+#, php-format
+msgid "Assistent: %s"
+msgstr ""
+
+#. translators: %s: what the person asked
+#: includes/class-assistant.php:466
+#: build/admin.js:1
+#: build/admin.js:2
+#: build/admin.js:22
+msgid "Assistent"
+msgstr ""
+
+#: includes/class-assistant.php:470
+msgid "Geändert"
+msgstr ""
+
+#. translators: %d: number of changes
+#: includes/class-assistant.php:472
+#, php-format
+msgid "%d Änderung"
+msgid_plural "%d Änderungen"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-assistant.php:503
+msgid "Das lässt sich nicht mehr zurücknehmen."
+msgstr ""
+
+#: includes/class-assistant.php:510
+msgid "Assistent: Änderung zurückgenommen"
+msgstr ""
+
+#: includes/class-assistant.php:511
+msgid "Zurückgenommen"
+msgstr ""
+
+#: includes/class-assistant.php:657
+#: includes/class-assistant.php:797
+msgid "Diese Aufgabe gibt es nicht."
+msgstr ""
+
+#: includes/class-assistant.php:684
+msgid "Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Connectors)."
+msgstr ""
+
+#: includes/class-assistant.php:709
+msgid "Die Übersetzung kam unvollständig zurück."
+msgstr ""
+
+#. translators: %s: language code
+#: includes/class-assistant.php:730
+#, php-format
+msgid "Texte auf %s"
+msgstr ""
+
+#. translators: %s: language code
+#: includes/class-assistant.php:732
+#, php-format
+msgid "Die Texte gibt es jetzt auf %s."
+msgstr ""
+
+#: includes/class-assistant.php:739
+msgid "Kein Text zurückgekommen."
+msgstr ""
+
+#: includes/class-assistant.php:742
+msgid "Text gekürzt"
+msgstr ""
+
+#: includes/class-assistant.php:743
+msgid "Gekürzt."
+msgstr ""
+
+#: includes/class-assistant.php:750
+#: includes/class-checks.php:516
+msgid "Diesen Host kennt die letzte Prüfung nicht."
+msgstr ""
+
+#. translators: %s: service name
+#: includes/class-assistant.php:761
+#, php-format
+msgid "Vorschlag: %s"
+msgstr ""
+
+#: includes/class-assistant.php:769
+msgid "Kein Absatz zurückgekommen."
+msgstr ""
+
+#: includes/class-assistant.php:773
+msgid "Der Absatz ist geschrieben."
+msgstr ""
+
+#: includes/class-assistant.php:791
+msgid "Texte im Ton der Website"
+msgstr ""
+
+#: includes/class-assistant.php:793
+msgid "Die Texte klingen jetzt wie deine Website."
+msgstr ""
+
+#. translators: %d: number of hosts
+#: includes/class-checks.php:58
+#, php-format
+msgid "%d Host bekommt vor der Einwilligung die IP-Adresse"
+msgid_plural "%d Hosts bekommen vor der Einwilligung die IP-Adresse"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-checks.php:59
+msgid "Schriften, Styles und Bilder kommen von deinem Server"
+msgstr ""
+
+#. translators: %s: hosts
+#: includes/class-checks.php:62
+#, php-format
+msgid "%s – kommen dann von deinem Server"
+msgstr ""
+
+#: includes/class-checks.php:63
+msgid "Kein Dritter sieht die IP-Adresse, bevor jemand zustimmt."
+msgstr ""
+
+#: includes/class-checks.php:67
+#: build/admin.js:20
+msgid "Lokal einbinden"
+msgstr ""
+
+#. translators: 1: date, 2: host
+#: includes/class-checks.php:83
+#, php-format
+msgid "Neues Skript seit %1$s: %2$s"
+msgstr ""
+
+#. translators: %s: host
+#: includes/class-checks.php:85
+#: build/admin.js:4
+#, php-format,js-format
+msgid "Skript unbekannt: %s"
+msgstr ""
+
+#. translators: 1: service, 2: purpose, 3: category
+#: includes/class-checks.php:88
+#: build/admin.js:20
+#, php-format,js-format
+msgid "Vorschlag: %1$s, %2$s → %3$s"
+msgstr ""
+
+#: includes/class-checks.php:89
+msgid "Lädt bis zur Zuordnung ohne Einwilligung. Ordne es einem Dienst zu."
+msgstr ""
+
+#: includes/class-checks.php:96
+#: build/admin.js:5
+#: build/admin.js:17
+#: build/admin.js:20
+msgid "Übernehmen"
+msgstr ""
+
+#: includes/class-checks.php:101
+#: build/admin.js:5
+#: build/admin.js:16
+#: build/admin.js:17
+#: build/admin.js:20
+msgid "Ändern"
+msgstr ""
+
+#. translators: %s: services
+#: includes/class-checks.php:124
+#, php-format
+msgid "Lädt trotzdem vor der Einwilligung: %s"
+msgstr ""
+
+#: includes/class-checks.php:125
+msgid "Dienste warten auf die Einwilligung"
+msgstr ""
+
+#: includes/class-checks.php:127
+msgid "Ein Skript lädt sie nach, das der Dialog nicht kennt. Trage das Einbinden als Snippet ein oder markiere das Tag mit data-cookie-service."
+msgstr ""
+
+#: includes/class-checks.php:128
+msgid "Kein Dienst lädt, bevor jemand zustimmt."
+msgstr ""
+
+#: includes/class-checks.php:132
+msgid "Ansehen"
+msgstr ""
+
+#. translators: %s: cookie names
+#: includes/class-checks.php:144
+#, php-format
+msgid "Cookies vor der Einwilligung: %s"
+msgstr ""
+
+#: includes/class-checks.php:145
+msgid "Vor der Einwilligung nur notwendige Cookies"
+msgstr ""
+
+#: includes/class-checks.php:147
+msgid "Der Server setzt sie beim ersten Besuch. Gehören sie zu einem notwendigen Dienst, trage sie dort ein."
+msgstr ""
+
+#: includes/class-checks.php:148
+msgid "Gelesen ohne Einwilligung: keine anderen Cookies."
+msgstr ""
+
+#: includes/class-checks.php:152
+#: build/admin.js:5
+#: build/admin.js:17
+#: build/admin.js:20
+msgid "Zuordnen"
+msgstr ""
+
+#: includes/class-checks.php:165
+#: build/admin.js:8
+msgid "Google Consent Mode v2"
+msgstr ""
+
+#: includes/class-checks.php:167
+msgid "Vor jedem Google-Tag · Tags warten auf Einwilligung"
+msgstr ""
+
+#: includes/class-checks.php:167
+msgid "Ein Google-Tag steht vor dem Consent-Mode-Standard – es kommt von einem anderen Plugin oder dem Theme."
+msgstr ""
+
+#: includes/class-checks.php:168
+msgid "Aus. Google verlangt ihn für Messung und Anzeigen im EWR."
+msgstr ""
+
+#: includes/class-checks.php:172
+msgid "Einschalten"
+msgstr ""
+
+#: includes/class-checks.php:188
+msgid "Keine Datenschutzerklärung gewählt"
+msgstr ""
+
+#: includes/class-checks.php:190
+msgid "Datenschutzerklärung nennt alle Dienste"
+msgstr ""
+
+#. translators: %s: services
+#: includes/class-checks.php:192
+#, php-format
+msgid "Die Datenschutzerklärung nennt %s nicht"
+msgstr ""
+
+#: includes/class-checks.php:194
+msgid "Der Dialog verlinkt sie, und dort steht die Cookie-Tabelle."
+msgstr ""
+
+#: includes/class-checks.php:195
+msgid "Die Cookie-Tabelle hält sich selbst aktuell."
+msgstr ""
+
+#: includes/class-checks.php:195
+msgid "Die Cookie-Tabelle und ein Absatz werden eingefügt."
+msgstr ""
+
+#: includes/class-checks.php:199
+#: includes/class-checks.php:222
+msgid "Seite wählen"
+msgstr ""
+
+#: includes/class-checks.php:204
+msgid "Einfügen"
+msgstr ""
+
+#: includes/class-checks.php:209
+msgid "Lesen"
+msgstr ""
+
+#: includes/class-checks.php:217
+msgid "Impressum verlinkt"
+msgstr ""
+
+#: includes/class-checks.php:217
+msgid "Kein Impressum gewählt"
+msgstr ""
+
+#: includes/class-checks.php:218
+msgid "Datenschutz und Impressum bleiben lesbar, der Dialog zeigt sich dort klein."
+msgstr ""
+
+#: includes/class-checks.php:231
+msgid "Widerruf so einfach wie die Einwilligung"
+msgstr ""
+
+#: includes/class-checks.php:231
+msgid "Der Dialog lässt sich nicht wieder öffnen"
+msgstr ""
+
+#: includes/class-checks.php:232
+msgid "Button, Link oder Block öffnen die Auswahl jederzeit."
+msgstr ""
+
+#: includes/class-checks.php:232
+msgid "Kein Button und kein Link zu #cookie-settings gefunden."
+msgstr ""
+
+#: includes/class-checks.php:236
+msgid "Button einschalten"
+msgstr ""
+
+#. translators: %s: contrast ratio, e.g. 7.2
+#. translators: %s: contrast ratio
+#: includes/class-checks.php:248
+#: build/admin.js:16
+#, php-format,js-format
+msgid "Kontrast %s : 1"
+msgstr ""
+
+#: includes/class-checks.php:249
+msgid "Texte und Buttons gut lesbar."
+msgstr ""
+
+#: includes/class-checks.php:249
+msgid "Unter 4,5 : 1 – schwer lesbar."
+msgstr ""
+
+#: includes/class-checks.php:253
+msgid "Farben anpassen"
+msgstr ""
+
+#. translators: %s: language code
+#: includes/class-checks.php:267
+#, php-format
+msgid "Sprache %s zeigt noch Englisch"
+msgstr ""
+
+#: includes/class-checks.php:268
+msgid "Der Assistent oder das Modell deines Browsers übersetzt die Texte."
+msgstr ""
+
+#: includes/class-checks.php:272
+msgid "Übersetzen"
+msgstr ""
+
+#: includes/class-checks.php:283
+msgid "Ablehnen so leicht wie Zustimmen"
+msgstr ""
+
+#: includes/class-checks.php:284
+msgid "Zwei gleiche Buttons auf der ersten Ebene, nichts vorausgewählt."
+msgstr ""
+
+#: includes/class-checks.php:290
+msgid "Protokoll mit Version"
+msgstr ""
+
+#. translators: %d: months
+#: includes/class-checks.php:292
+#, php-format
+msgid "IP-Adressen nur gehasht, gelöscht nach %d Monaten."
+msgstr ""
+
+#. translators: %s: time since the last scan, e.g. "2 days"
+#: includes/class-checks.php:302
+#, php-format
+msgid "Website gelesen vor %s"
+msgstr ""
+
+#: includes/class-checks.php:303
+msgid "Website noch nicht gelesen"
+msgstr ""
+
+#: includes/class-checks.php:304
+msgid "Jede Woche neu, damit neue Skripte auffallen."
+msgstr ""
+
+#: includes/class-checks.php:308
+#: build/admin.js:22
+msgid "Jetzt lesen"
+msgstr ""
+
+#. translators: %d: number of files
+#: includes/class-checks.php:507
+#, php-format
+msgid "%d Datei kommt jetzt von deinem Server."
+msgid_plural "%d Dateien kommen jetzt von deinem Server."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-checks.php:538
+msgid "Wähle einen Dienst oder gib ihm einen Namen."
+msgstr ""
+
+#. translators: 1: service, 2: category
+#: includes/class-checks.php:542
+#, php-format
+msgid "%1$s → %2$s"
+msgstr ""
+
+#: includes/class-checks.php:546
+msgid "Consent Mode v2 ist an."
+msgstr ""
+
+#: includes/class-checks.php:550
+msgid "Der Button zum Öffnen ist da."
+msgstr ""
+
+#: includes/class-checks.php:563
+msgid "Farben angepasst."
+msgstr ""
+
+#: includes/class-checks.php:570
+msgid "Website neu gelesen."
+msgstr ""
+
+#: includes/class-checks.php:572
+msgid "Diese Aktion gibt es nicht."
+msgstr ""
+
+#. translators: %s: service
+#: includes/class-checks.php:622
+#: includes/class-rest.php:257
+#: includes/class-rest.php:259
+#, php-format
+msgid "%s hinzugefügt"
+msgstr ""
+
+#: includes/class-checks.php:637
+msgid "Wähle zuerst die Datenschutzerklärung."
+msgstr ""
+
+#: includes/class-checks.php:656
+msgid "Cookie-Tabelle in die Datenschutzerklärung eingefügt"
+msgstr ""
+
+#: includes/class-checks.php:657
+msgid "Eingefügt. Die Tabelle hält sich selbst aktuell."
+msgstr ""
+
+#. translators: 1: version number, 2: what changed
+#: includes/class-consent.php:172
+#, php-format
+msgid "Version %1$d: %2$s – Besucher werden einmal neu gefragt"
+msgstr ""
+
+#. translators: 1: version number, 2: what changed
+#: includes/class-consent.php:172
+#: includes/class-consent.php:174
+msgid "Texte oder Dienste geändert"
+msgstr ""
+
+#. translators: 1: version number, 2: what changed
+#: includes/class-consent.php:174
+#, php-format
+msgid "Version %1$d: %2$s"
+msgstr ""
+
+#. translators: 1: HTTP status, 2: URL
+#: includes/class-resources.php:241
+#, php-format
+msgid "%1$d bei %2$s"
+msgstr ""
+
+#: includes/class-resources.php:278
+msgid "Die Datei liegt schon auf deinem Server."
+msgstr ""
+
+#: includes/class-resources.php:284
+msgid "Das Bild ließ sich nicht laden."
+msgstr ""
+
+#. translators: %s: service, e.g. Google Fonts
+#: includes/class-resources.php:437
+#, php-format
+msgid "%s kommt von deinem Server"
+msgstr ""
+
+#. translators: %s: service
+#: includes/class-resources.php:439
+#, php-format
+msgid "%s lokal eingebunden"
+msgstr ""
+
+#: includes/class-rest.php:198
+#: includes/class-rest.php:199
+msgid "Dialog eingeschaltet"
+msgstr ""
+
+#: includes/class-rest.php:204
+msgid "Dialog ausgeschaltet"
+msgstr ""
+
+#: includes/class-rest.php:249
+msgid "Diesen Dienst kennt die Bibliothek nicht."
+msgstr ""
+
+#: includes/class-rest.php:264
+msgid "Ein Dienst braucht einen Namen."
+msgstr ""
+
+#. translators: %s: service
+#: includes/class-rest.php:289
+#, php-format
+msgid "%s geändert"
+msgstr ""
+
+#. translators: %s: service
+#: includes/class-rest.php:306
+#: includes/class-rest.php:308
+#, php-format
+msgid "%s entfernt"
+msgstr ""
+
+#: includes/class-rest.php:361
+msgid "Diese Version gibt es nicht."
+msgstr ""
+
+#: includes/class-rest.php:373
+#: build/admin.js:12
+#: build/admin.js:13
+msgid "Was soll anders sein?"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Schließen"
+msgstr ""
+
+#: build/admin.js:1
+msgid "wie empfohlen"
+msgstr ""
+
+#: build/admin.js:1
+msgid "angepasst"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Connectors) – oder Chrome mit eingebautem Modell."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Nachricht an den Assistenten"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Senden"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Neu"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Rückgängig"
+msgstr ""
+
+#. translators: %d: version
+#: build/admin.js:2
+#: build/admin.js:17
+#, js-format
+msgid "Version %d"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Zurückgenommen."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Denkt nach …"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Sag dem Assistenten, was anders sein soll …"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Assistent aus – alles andere funktioniert. KI-Anbieter einrichten"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Empfohlen: Vercel AI Gateway"
+msgstr ""
+
+#: build/admin.js:2
+msgid "5 $ im Monat gratis, keine Kreditkarte · Plugin installieren, API Key holen, unter Einstellungen › Connectors einfügen · 3 Minuten"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Vercel-Plugin installieren"
+msgstr ""
+
+#: build/admin.js:2
+msgid "API Key"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Anderer Anbieter"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Der Assistent ist aus"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Dialog, Dienste, Blockieren, Protokoll und Google funktionieren ohne ihn. Für Texte im Ton deiner Website und den Chat braucht WordPress einen KI-Anbieter."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Einfaches übernimmt dein Browser"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Übersetzen, Zuordnen und den Datenschutz-Absatz schreibt das eingebaute Modell deines Browsers – ohne Einrichtung, nichts verlässt den Rechner. Für Texte in deinem Ton und den Chat braucht WordPress einen KI-Anbieter."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Der Assistent braucht WordPress 7.0"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Ab WordPress 7.0 denkt er über den KI-Anbieter, den du unter Einstellungen › Connectors einrichtest. Alles andere funktioniert schon jetzt."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Erste Ebene"
+msgstr ""
+
+#: build/admin.js:2
+#: build/admin.js:17
+msgid "Auswahl"
+msgstr ""
+
+#: build/admin.js:2
+#: build/admin.js:16
+#: build/admin.js:17
+msgid "Platzhalter"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Ebene"
+msgstr ""
+
+#: build/admin.js:2
+#: build/admin.js:21
+msgid "Sprache"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Gerät"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Desktop"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Handy"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Vorschau deiner Website mit dem Dialog"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Absatz für die Datenschutzerklärung"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Neu schreiben"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Für meine Website schreiben"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Mit Cookie-Tabelle einfügen"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Darunter kommt die Cookie-Tabelle: alle Dienste und Cookies, und sie hält sich selbst aktuell."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Noch kein eigener Absatz: eingefügt wird die Vorlage der Bibliothek. Der Assistent oder das Modell deines Browsers schreibt ihn für deine Website."
+msgstr ""
+
+#: build/admin.js:2
+msgid "unten links"
+msgstr ""
+
+#: build/admin.js:2
+msgid "unten rechts"
+msgstr ""
+
+#: build/admin.js:2
+msgid "unten in der Mitte"
+msgstr ""
+
+#: build/admin.js:2
+#: build/admin.js:15
+msgid "Box"
+msgstr ""
+
+#: build/admin.js:2
+#: build/admin.js:15
+msgid "Leiste"
+msgstr ""
+
+#: build/admin.js:2
+#: build/admin.js:15
+msgid "Fenster"
+msgstr ""
+
+#. translators: 1: services, 2: categories
+#: build/admin.js:3
+#, js-format
+msgid "%1$d Dienste in %2$d Kategorien"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Dienste ansehen"
+msgstr ""
+
+#. translators: 1: who suggests, 2: service, 3: purpose, 4: category
+#: build/admin.js:5
+#, js-format
+msgid "%1$s: %2$s, %3$s → %4$s"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Vorschlag deines Browsers"
+msgstr ""
+
+#: build/admin.js:5
+#: build/admin.js:12
+#: build/admin.js:17
+msgid "Vorschlag"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Lädt bis zur Zuordnung ohne Einwilligung"
+msgstr ""
+
+#. translators: %d: number of embeds
+#: build/admin.js:6
+#, js-format
+msgid "%d Einbettung wartet auf Einwilligung"
+msgid_plural "%d Einbettungen warten auf Einwilligung"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: services
+#: build/admin.js:7
+#, js-format
+msgid "%s – als Platzhalter mit Vorschaubild"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Bis zur Einwilligung steht dort ein Platzhalter in der Größe des Inhalts: „Laden“ lädt einmal, „Immer laden“ ist die Einwilligung für den Dienst. YouTube lädt danach über youtube-nocookie.com."
+msgstr ""
+
+#. translators: %d: number of things
+#: build/admin.js:8
+#, js-format
+msgid "%d Ding kommt von deinem Server statt von Dritten"
+msgid_plural "%d Dinge kommen von deinem Server statt von Dritten"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:8
+msgid "WordPress-Emoji aus"
+msgstr ""
+
+#: build/admin.js:8
+msgid "Schriften, Styles und Bilder von Dritten werden beim Einschalten auf deinen Server kopiert und die Verweise umgeschrieben – dann sieht kein Dritter die IP-Adresse deiner Besucher, und es braucht keine Einwilligung."
+msgstr ""
+
+#: build/admin.js:8
+msgid "Texte in deinem Ton"
+msgstr ""
+
+#: build/admin.js:8
+msgid "Standardtexte"
+msgstr ""
+
+#: build/admin.js:8
+#: build/admin.js:16
+msgid "per Sie"
+msgstr ""
+
+#: build/admin.js:8
+#: build/admin.js:16
+msgid "per du"
+msgstr ""
+
+#: build/admin.js:8
+msgid "mit einem KI-Anbieter in deinem Ton"
+msgstr ""
+
+#: build/admin.js:8
+msgid "Aussehen aus deinem Theme"
+msgstr ""
+
+#: build/admin.js:8
+msgid "dein Logo"
+msgstr ""
+
+#. translators: %s: Google services
+#: build/admin.js:9
+#, js-format
+msgid "Vor %s · Tags warten auf Einwilligung"
+msgstr ""
+
+#: build/admin.js:9
+#: build/admin.js:22
+msgid "Datenschutzerklärung"
+msgstr ""
+
+#. translators: %d: months
+#: build/admin.js:10
+#, js-format
+msgid "%d Monate · IP-Adressen nur gehasht"
+msgstr ""
+
+#. translators: %s: the site's host
+#: build/admin.js:11
+#, js-format
+msgid "Ich habe %s gelesen"
+msgstr ""
+
+#. translators: 1: pages, 2: scripts, 3: embeds, 4: plugins
+#: build/admin.js:12
+#, js-format
+msgid "%1$d Seiten, %2$d Skripte, %3$d Einbettungen, %4$d Plugins. Unten steht mein Vorschlag, rechts siehst du ihn auf deiner Startseite. Sag mir, was anders sein soll."
+msgstr ""
+
+#: build/admin.js:12
+msgid "Schreib per Sie"
+msgstr ""
+
+#: build/admin.js:12
+msgid "Dunkler Dialog"
+msgstr ""
+
+#: build/admin.js:12
+msgid "Wir nutzen keine Statistik mehr"
+msgstr ""
+
+#: build/admin.js:12
+msgid "Alles ist voreingestellt. Öffne eine Zeile, um sie zu prüfen."
+msgstr ""
+
+#: build/admin.js:12
+msgid "Neu lesen"
+msgstr ""
+
+#: build/admin.js:12
+msgid "So sieht es aus"
+msgstr ""
+
+#: build/admin.js:12
+msgid "Deine Startseite mit dem Dialog."
+msgstr ""
+
+#. translators: %d: open points
+#: build/admin.js:13
+#, js-format
+msgid "Bereit – %d Skript noch ohne Zuordnung."
+msgid_plural "Bereit – %d Skripte noch ohne Zuordnung."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:13
+msgid "Alles bereit."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Schalte ein …"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Dialog einschalten"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Bis dahin ändert sich nichts an deiner Website. Ausschalten geht jederzeit."
+msgstr ""
+
+#: build/admin.js:13
+msgid "Ich ändere Dialog, Dienste und Einstellungen. Jede Änderung siehst du als Karte und kannst sie zurücknehmen."
+msgstr ""
+
+#: build/admin.js:13
+msgid "z. B. „Füge Hotjar hinzu“"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Wie viele haben gestern abgelehnt?"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Übersetze auf Italienisch"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Mach den Dialog kleiner"
+msgstr ""
+
+#: build/admin.js:13
+msgid "Zu tun"
+msgstr ""
+
+#. translators: %s: time of the last scan
+#: build/admin.js:14
+#, js-format
+msgid "Aus der Prüfung %s. Ein Klick erledigt es."
+msgstr ""
+
+#: build/admin.js:14
+msgid "Jetzt prüfen"
+msgstr ""
+
+#: build/admin.js:14
+msgid "Alles in Ordnung"
+msgstr ""
+
+#: build/admin.js:14
+msgid "Jede Woche liest der Dialog deine Website neu und meldet sich hier."
+msgstr ""
+
+#. translators: %d: passed checks
+#: build/admin.js:15
+#, js-format
+msgid "%d Prüfung bestanden"
+msgid_plural "%d Prüfungen bestanden"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:15
+msgid "Letzte 30 Tage"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Entscheidungen"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Zuletzt"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Alle akzeptiert"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Eigene Auswahl"
+msgstr ""
+
+#: build/admin.js:15
+#: build/admin.js:17
+msgid "Nur notwendige"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Noch keine Entscheidungen. Sie erscheinen, sobald Besucher wählen."
+msgstr ""
+
+#: build/admin.js:15
+msgid "Hintergrund"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Text"
+msgstr ""
+
+#: build/admin.js:15
+#: build/blocks.js:1
+msgid "Button"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Button-Text"
+msgstr ""
+
+#: build/admin.js:15
+#: build/admin.js:16
+#: build/admin.js:22
+msgid "Links"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Titel"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Alle akzeptieren"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Titel der Auswahl"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Text der Auswahl"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Auswahl speichern"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Link Datenschutz"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Link Impressum"
+msgstr ""
+
+#: build/admin.js:15
+#: build/admin.js:22
+msgid "Button zum Öffnen"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Platzhalter: Laden"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Platzhalter: Immer laden"
+msgstr ""
+
+#: build/admin.js:15
+#: build/admin.js:22
+msgid "Position"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Mitte"
+msgstr ""
+
+#: build/admin.js:15
+#: build/admin.js:22
+msgid "Rechts"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Größe"
+msgstr ""
+
+#: build/admin.js:15
+msgid "Farben"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Vom Theme"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Dunkel"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Ecken"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Hell / dunkel"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Wie das Gerät"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Hell"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Schrift, Logo, Abdunkeln, Seite sperren"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Schrift"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Theme"
+msgstr ""
+
+#: build/admin.js:16
+msgid "System"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Eigene"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Schriftart (CSS)"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Schrift der Überschrift"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Leer: wie der Text."
+msgstr ""
+
+#: build/admin.js:16
+msgid "Logo"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Logo im Dialog"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Wählen"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Entfernen"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Seite abdunkeln"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Seite sperren"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Scrollen erst nach der Wahl – nur wenn es sein muss."
+msgstr ""
+
+#: build/admin.js:16
+msgid "„Cookie Dialog“ im Dialog nennen"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Ton"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Anrede (Deutsch)"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Anrede geändert"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Kürzer"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Im Ton meiner Website"
+msgstr ""
+
+#: build/admin.js:16
+msgid "„Kürzer“ macht dein Browser. Für den Ton deiner Website braucht WordPress einen KI-Anbieter."
+msgstr ""
+
+#: build/admin.js:16
+msgid "Dafür braucht WordPress einen KI-Anbieter – oder Chrome mit eingebautem Modell für „Kürzer“."
+msgstr ""
+
+#: build/admin.js:16
+#: build/admin.js:22
+msgid "Sprachen"
+msgstr ""
+
+#. translators: %s: language
+#: build/admin.js:16
+#, js-format
+msgid "%s entfernen"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Sprache hinzufügen"
+msgstr ""
+
+#: build/admin.js:16
+msgid "– Sprache wählen –"
+msgstr ""
+
+#: build/admin.js:16
+msgid "auf deiner Website"
+msgstr ""
+
+#. translators: %s: language
+#: build/admin.js:16
+#, js-format
+msgid "Auf %s übersetzen"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Seiten wählen"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Alle Texte als Liste"
+msgstr ""
+
+#: build/admin.js:16
+#: build/admin.js:18
+msgid "Texte geändert"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Sitzung"
+msgstr ""
+
+#: build/admin.js:16
+msgid "dauerhaft"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Min."
+msgstr ""
+
+#: build/admin.js:16
+msgid "Std."
+msgstr ""
+
+#: build/admin.js:16
+msgid "Tage"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Wochen"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Monate"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Jahre"
+msgstr ""
+
+#: build/admin.js:16
+msgid "immer aktiv"
+msgstr ""
+
+#: build/admin.js:16
+msgid "nie geladen"
+msgstr ""
+
+#: build/admin.js:16
+msgid "wartet auf Einwilligung"
+msgstr ""
+
+#: build/admin.js:16
+#: build/admin.js:17
+#: build/admin.js:20
+msgid "Eigener Dienst"
+msgstr ""
+
+#: build/admin.js:16
+msgid "Wirklich entfernen"
+msgstr ""
+
+#: build/admin.js:16
+#: build/admin.js:19
+#: build/admin.js:22
+msgid "Abbrechen"
+msgstr ""
+
+#. translators: %d: version
+#: build/admin.js:17
+#, js-format
+msgid "Gespeichert · gilt ab Version %d"
+msgstr ""
+
+#: build/admin.js:17
+#: build/admin.js:22
+msgid "Gespeichert"
+msgstr ""
+
+#: build/admin.js:17
+#: build/admin.js:20
+msgid "Fertig"
+msgstr ""
+
+#: build/admin.js:17
+msgid "aus der Bibliothek"
+msgstr ""
+
+#: build/admin.js:17
+msgid "eigener Dienst"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Im Dialog"
+msgstr ""
+
+#: build/admin.js:17
+msgid "So sehen Besucher den Dienst in der Auswahl."
+msgstr ""
+
+#: build/admin.js:17
+msgid "Zusammenfassung"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Name"
+msgstr ""
+
+#: build/admin.js:17
+#: build/admin.js:19
+msgid "Kategorie"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Anbieter"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Adresse des Anbieters"
+msgstr ""
+
+#. translators: %s: language
+#: build/admin.js:17
+#, js-format
+msgid "Zweck (%s)"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Datenschutzerklärung des Anbieters"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Dauer"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Art"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Cookie entfernen"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Cookie"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Zweck"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Datenschutz"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Setzt keine Cookies."
+msgstr ""
+
+#: build/admin.js:17
+msgid "Auf deiner Website"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Erkannt an"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Hosts"
+msgstr ""
+
+#: build/admin.js:17
+msgid "nur über Snippet oder data-cookie-service"
+msgstr ""
+
+#: build/admin.js:17
+#: build/admin.js:21
+msgid "Wo"
+msgstr ""
+
+#: build/admin.js:17
+msgid "bei der letzten Prüfung nicht gefunden"
+msgstr ""
+
+#: build/admin.js:17
+msgid "noch nicht gelesen"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Bis zur Einwilligung"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Die Schalter gelten für alle Einbettungen."
+msgstr ""
+
+#: build/admin.js:17
+msgid "Diese Karte kommt von"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Dieser Inhalt kommt von"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Laden"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Immer laden"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Vorschaubild und Titel über deinen Server"
+msgstr ""
+
+#: build/admin.js:17
+#: build/admin.js:22
+msgid "„Immer laden“ anbieten"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Danach über youtube-nocookie.com"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Adresse im Platzhalter"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Leer: aus der Karte gelesen."
+msgstr ""
+
+#: build/admin.js:17
+msgid "Google-Signale"
+msgstr ""
+
+#: build/admin.js:17
+msgid "keine eigenen – die Kategorie gibt sie"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Mit der Einwilligung für diesen Dienst gehen diese Signale an Google. Eine ganze Kategorie gibt ihre eigenen dazu (Statistik: analytics_storage, Marketing: die drei ad_*)."
+msgstr ""
+
+#: build/admin.js:17
+msgid "Anders einbinden"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Snippet, eigenes Skript-Tag, data-cookie-service"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Snippet"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Der Code des Anbieters. Das Plugin druckt ihn zurückgehalten und lädt ihn bei Einwilligung – ohne Neuladen. <noscript> fällt weg."
+msgstr ""
+
+#: build/admin.js:17
+msgid "Im Theme oder in einem Plugin"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Skript-Handles in WordPress"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Durch Komma getrennt. Diese Skripte warten auf die Einwilligung."
+msgstr ""
+
+#: build/admin.js:17
+msgid "Muster"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Teile von Adressen oder Code, an denen der Dienst erkannt wird."
+msgstr ""
+
+#: build/admin.js:17
+msgid "Seit"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Aus der Bibliothek"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Dienst suchen"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Als eigenen Dienst anlegen"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Beschreibung im Dialog"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Nach oben"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Nach unten"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Kategorie löschen"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Alle"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Widerruf"
+msgstr ""
+
+#: build/admin.js:17
+msgid "Widerruf · Nur notwendige"
+msgstr ""
+
+#. translators: 1: date, 2: note
+#: build/admin.js:18
+#, js-format
+msgid "Seit %1$s · %2$s"
+msgstr ""
+
+#: build/admin.js:18
+msgid "Das hat jede Person gesehen, die bei dieser Version entschieden hat – in allen Sprachen gespeichert."
+msgstr ""
+
+#: build/admin.js:18
+msgid "Kopiert"
+msgstr ""
+
+#: build/admin.js:18
+msgid "Kopieren"
+msgstr ""
+
+#: build/admin.js:18
+msgid "– keine –"
+msgstr ""
+
+#: build/admin.js:18
+msgid "Ich lese deine Website …"
+msgstr ""
+
+#: build/admin.js:18
+msgid "Startseite und bis zu 20 Seiten, als Besucher ohne Einwilligung: jedes Skript, jede Einbettung, jede Schrift von Dritten. Das dauert ein paar Sekunden."
+msgstr ""
+
+#: build/admin.js:18
+msgid "Aussehen"
+msgstr ""
+
+#: build/admin.js:18
+msgid "Aus deinem Theme. Ändere nur, was nicht passt."
+msgstr ""
+
+#: build/admin.js:18
+msgid "Texte"
+msgstr ""
+
+#: build/admin.js:18
+msgid "Klick auf einen Text in der Vorschau, um ihn zu ändern – oder sag dem Assistenten, wie er klingen soll."
+msgstr ""
+
+#. translators: %d: next version
+#: build/admin.js:19
+#, js-format
+msgid "Gespeichert, sobald du etwas änderst. Neue Texte werden Version %d – Besucher werden einmal neu gefragt."
+msgstr ""
+
+#: build/admin.js:19
+msgid "Gespeichert, sobald du etwas änderst. Auf der Website erscheint es, wenn du den Dialog einschaltest."
+msgstr ""
+
+#: build/admin.js:19
+msgid "Dienst oder Host suchen"
+msgstr ""
+
+#: build/admin.js:19
+#: build/blocks.js:1
+msgid "Dienst"
+msgstr ""
+
+#: build/admin.js:19
+msgid "Name der Kategorie"
+msgstr ""
+
+#: build/admin.js:19
+msgid "Beschreibung"
+msgstr ""
+
+#: build/admin.js:19
+msgid "Anlegen"
+msgstr ""
+
+#: build/admin.js:19
+msgid "Zu prüfen"
+msgstr ""
+
+#: build/admin.js:19
+msgid "Neu auf deiner Website und noch nicht im Dialog – lädt bis dahin ohne Einwilligung."
+msgstr ""
+
+#. translators: %s: date
+#: build/admin.js:19
+#, js-format
+msgid "seit %s"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Ohne sie funktioniert die Seite nicht. Immer aktiv."
+msgstr ""
+
+#: build/admin.js:20
+msgid "Bearbeiten"
+msgstr ""
+
+#. translators: %s: category
+#: build/admin.js:20
+#, js-format
+msgid "%s im Dialog anbieten"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Nicht im Dialog: Diese Dienste laden nie."
+msgstr ""
+
+#. translators: %d: cookies
+#: build/admin.js:20
+#, js-format
+msgid "%d Cookie"
+msgid_plural "%d Cookies"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:20
+msgid "kein Cookie"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Noch kein Dienst"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Unten aus der Bibliothek hinzufügen."
+msgstr ""
+
+#: build/admin.js:20
+msgid "Von deinem Server statt von Dritten"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Keine Einwilligung nötig – die Dateien liegen bei dir und werden wöchentlich geprüft."
+msgstr ""
+
+#: build/admin.js:20
+msgid "über den Server"
+msgstr ""
+
+#: build/admin.js:20
+msgid "lokal"
+msgstr ""
+
+#: build/admin.js:20
+msgid "aus"
+msgstr ""
+
+#: build/admin.js:20
+#: build/admin.js:22
+msgid "Über den Server"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Ausschalten"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Die letzte Prüfung hat keine Datei dieses Dienstes gefunden."
+msgstr ""
+
+#: build/admin.js:20
+msgid "Schriften"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Stylesheets"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Skript-Bibliothek – jetzt notwendig, Host in der Tabelle genannt"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Emoji-Skript von WordPress"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Bilder"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Avatare in Kommentaren"
+msgstr ""
+
+#: build/admin.js:20
+msgid "vorher"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Deine eigene Domain – etwa ein CDN. Als Auftragsverarbeiter notwendig."
+msgstr ""
+
+#: build/admin.js:20
+msgid "eigene Domain"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Hinzufügen"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Aus der Bibliothek: Anbieter, Zweck, Cookies und Texte sind schon da."
+msgstr ""
+
+#. translators: %d: more services
+#: build/admin.js:20
+#, js-format
+msgid "%d weitere"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Zeitraum"
+msgstr ""
+
+#: build/admin.js:20
+msgid "30 Tage"
+msgstr ""
+
+#: build/admin.js:20
+msgid "12 Monate"
+msgstr ""
+
+#: build/admin.js:20
+msgid "Alles"
+msgstr ""
+
+#. translators: %d: withdrawals
+#: build/admin.js:21
+#, js-format
+msgid "Entscheidungen · %d Widerrufe"
+msgstr ""
+
+#: build/admin.js:21
+msgid "Consent-ID suchen"
+msgstr ""
+
+#: build/admin.js:21
+msgid "Zeit"
+msgstr ""
+
+#: build/admin.js:21
+msgid "Consent-ID"
+msgstr ""
+
+#: build/admin.js:21
+msgid "Entscheidung"
+msgstr ""
+
+#: build/admin.js:21
+msgid "Version"
+msgstr ""
+
+#: build/admin.js:21
+msgid "Keine Entscheidung mit dieser Consent-ID."
+msgstr ""
+
+#: build/admin.js:21
+msgid "Noch keine Entscheidungen in diesem Zeitraum."
+msgstr ""
+
+#. translators: %d: months
+#: build/admin.js:22
+#, js-format
+msgid "Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d Monaten."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Frag zum Protokoll, z. B. „Wie viele haben gestern abgelehnt?“"
+msgstr ""
+
+#: build/admin.js:22
+msgid "überall"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Schweiz"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Gravatar über den Server"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Avatare aus"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Gravatar direkt"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Google"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Consent Mode v2"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Consent Mode aus"
+msgstr ""
+
+#: build/admin.js:22
+msgid "„Abgelehnt“ steht vor jedem Google-Tag; die Wahl geht als Update hinterher."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Modus"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Basic: Tags laden erst nach Einwilligung – empfohlen in DE und AT. Advanced: Tags laden und senden cookielose Pings."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Tag Manager"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Vom Plugin geladen, nach dem Standard. Eigener Container im Theme? Leer lassen."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Regionen mit „abgelehnt“"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Außerhalb darf Google ohne Wahl messen – der Dialog hält Tags trotzdem zurück."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Überall"
+msgstr ""
+
+#: build/admin.js:22
+msgid "URL-Passthrough"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Klick-IDs in Links weitergeben, solange Cookies abgelehnt sind."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Ads-Daten kürzen"
+msgstr ""
+
+#: build/admin.js:22
+msgid "IAB TCF 2.2 braucht nur, wer AdSense, Ad Manager oder AdMob nutzt."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Von Dritten"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Einbettungen als Platzhalter"
+msgstr ""
+
+#: build/admin.js:22
+msgid "nur bekannte Einbettungen"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Schriften lokal"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Emoji aus"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Unbekannte iframes als Platzhalter"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Auch Einbettungen, die die Bibliothek nicht kennt, laden erst auf Klick."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Vorschaubilder über deinen Server"
+msgstr ""
+
+#: build/admin.js:22
+msgid "YouTube, Vimeo, Spotify: Bild und Titel in der Mediathek, keine Verbindung zum Anbieter."
+msgstr ""
+
+#: build/admin.js:22
+msgid "YouTube über youtube-nocookie.com"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Avatare"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Aus"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Direkt"
+msgstr ""
+
+#: build/admin.js:22
+msgid "WordPress-Emoji-Skript laden"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Lädt Bilder von s.w.org. Browser zeigen Emoji längst selbst."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Hinweise an Dritte entfernen"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Was von deinem Server kommt, steht unter Dienste"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Gültigkeit"
+msgstr ""
+
+#. translators: %d: months
+#: build/admin.js:22
+#, js-format
+msgid "%d Monate"
+msgstr ""
+
+#: build/admin.js:22
+msgid "neu fragen, wenn Dienste sich ändern"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Global Privacy Control beachtet"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Wahl gilt"
+msgstr ""
+
+#: build/admin.js:22
+msgid "6 Monate empfiehlt die CNIL, bis 12 die DSK."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Neu fragen, wenn sich Texte oder Dienste ändern"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Neu fragen"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Global Privacy Control beachten"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Sendet der Browser das Signal, bleibt Marketing bei „Alle akzeptieren“ aus."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Erneut öffnen"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Button unten links"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Button unten rechts"
+msgstr ""
+
+#: build/admin.js:22
+msgid "kein Button"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Shortcode, Block und #cookie-settings"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Erscheint nach der ersten Wahl. Widerrufen muss so leicht sein wie Zustimmen."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Oder selbst platzieren – im Footer, im Menü, in der Datenschutzerklärung:"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Block: „Cookie-Einstellungen“. Im Menü: ein eigener Link auf #cookie-settings."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Seiten"
+msgstr ""
+
+#: build/admin.js:22
+msgid "keine Datenschutzerklärung"
+msgstr ""
+
+#: build/admin.js:22
+msgid "kein Impressum"
+msgstr ""
+
+#: build/admin.js:22
+msgid "dort nur klein"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Impressum"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Dort nur klein zeigen"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Damit man lesen kann, bevor man entscheidet."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Die Cookie-Tabelle für die Datenschutzerklärung: Block „Cookie-Tabelle“ oder"
+msgstr ""
+
+#. translators: %d: months
+#: build/admin.js:22
+#, js-format
+msgid "%d Monate · IP gehasht · CSV"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Aufbewahren"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Danach löscht ein täglicher Job die Einträge."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Gespeichert werden Consent-ID, Zeit, Wahl, Version, Sprache, Ort der Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich neuem Salz – nie die IP selbst."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Alles als CSV"
+msgstr ""
+
+#: build/admin.js:22
+msgid "kein KI-Anbieter"
+msgstr ""
+
+#: build/admin.js:22
+msgid "günstig"
+msgstr ""
+
+#: build/admin.js:22
+msgid "stark"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Einfaches im Browser"
+msgstr ""
+
+#: build/admin.js:22
+msgid "KI-Anbieter"
+msgstr ""
+
+#: build/admin.js:22
+msgid "WordPress verwaltet ihn unter Einstellungen › Connectors – ein API Key für alle Plugins."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Ab WordPress 7.0."
+msgstr ""
+
+#: build/admin.js:22
+msgid "keiner"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Connectors"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Empfohlen: Vercel AI Gateway – 5 $ im Monat gratis, ein API Key für die Modelle aller Anbieter."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Plugin installieren"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Modell"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Günstig reicht für alles hier: eine Einrichtung kostet etwa 4 Cent."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Günstig"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Stark"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Eigenes"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Modell-ID"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Einfache Aufgaben im Browser"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Dein Browser hat ein eingebautes Modell: Übersetzen, Kürzen, Zuordnen und der Datenschutz-Absatz laufen dort, nichts verlässt den Rechner."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Dieser Browser hat kein eingebautes Modell (Chrome ab 148, Edge)."
+msgstr ""
+
+#. translators: 1: tokens, 2: last model
+#: build/admin.js:22
+#, js-format
+msgid "Diesen Monat: %1$s Tokens · zuletzt %2$s"
+msgstr ""
+
+#: build/admin.js:22
+msgid "wie deine Website"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Der Dialog spricht die Sprache der Seite: mit Polylang oder WPML jede Sprache der Website, sonst die von WordPress. Texte und Übersetzungen bearbeitest du unter Dialog."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Sprachen deiner Website"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Texte und Sprachen"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Website lesen"
+msgstr ""
+
+#: build/admin.js:22
+msgid "jede Woche"
+msgstr ""
+
+#: build/admin.js:22
+msgid "nur von Hand"
+msgstr ""
+
+#. translators: %s: time
+#: build/admin.js:22
+#, js-format
+msgid "zuletzt %s"
+msgstr ""
+
+#. translators: %d: pages
+#: build/admin.js:22
+#, js-format
+msgid "%d Seiten"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Jede Woche neu lesen"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Neue Skripte erscheinen unter Dienste › Zu prüfen."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Ausschalten? Skripte laufen dann wieder ohne Einwilligung. Das Protokoll bleibt."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Dialog ausschalten"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Skripte laufen dann wieder ohne Einwilligung. Das Protokoll bleibt."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Zum Einschalten"
+msgstr ""
+
+#: build/admin.js:22
+msgid "Der Dialog ist noch aus."
+msgstr ""
+
+#: build/admin.js:22
+msgid "Speichert …"
+msgstr ""
+
+#. translators: %d: version
+#: build/admin.js:23
+#, js-format
+msgid "Live · Version %d"
+msgstr ""
+
+#: build/admin.js:23
+msgid "Auf der Website ansehen"
+msgstr ""
+
+#: build/admin.js:23
+msgid "Noch nicht live"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Beschriftung"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Leer: „Cookie-Einstellungen“ in der Sprache der Seite."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Darstellung"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Link"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Consent-ID und Link zu den Einstellungen"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Erst nach Einwilligung"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Lädt erst mit Einwilligung für"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "– wählen –"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Besucher sehen hier einen Platzhalter, bis sie dem Dienst zustimmen."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Wähle rechts den Dienst, dem Besucher zuerst zustimmen."
+msgstr ""
+
+#: blocks/cookie-table/block.json
+msgctxt "block title"
+msgid "Cookie-Tabelle"
+msgstr ""
+
+#: blocks/cookie-table/block.json
+msgctxt "block description"
+msgid "Alle Dienste und Cookies, nach Kategorien – für die Datenschutzerklärung. Hält sich selbst aktuell."
+msgstr ""
+
+#: blocks/cookie-table/block.json
+#: blocks/placeholder/block.json
+#: blocks/settings-button/block.json
+msgctxt "block keyword"
+msgid "cookie"
+msgstr ""
+
+#: blocks/cookie-table/block.json
+msgctxt "block keyword"
+msgid "datenschutz"
+msgstr ""
+
+#: blocks/cookie-table/block.json
+msgctxt "block keyword"
+msgid "privacy"
+msgstr ""
+
+#: blocks/cookie-table/block.json
+msgctxt "block keyword"
+msgid "tabelle"
+msgstr ""
+
+#: blocks/placeholder/block.json
+msgctxt "block title"
+msgid "Erst nach Einwilligung"
+msgstr ""
+
+#: blocks/placeholder/block.json
+msgctxt "block description"
+msgid "Was in diesem Block steht, lädt erst, wenn Besucher dem gewählten Dienst zustimmen. Bis dahin zeigt sich ein Platzhalter."
+msgstr ""
+
+#: blocks/placeholder/block.json
+msgctxt "block keyword"
+msgid "platzhalter"
+msgstr ""
+
+#: blocks/placeholder/block.json
+msgctxt "block keyword"
+msgid "einbettung"
+msgstr ""
+
+#: blocks/placeholder/block.json
+msgctxt "block keyword"
+msgid "embed"
+msgstr ""
+
+#: blocks/placeholder/block.json
+#: blocks/settings-button/block.json
+msgctxt "block keyword"
+msgid "consent"
+msgstr ""
+
+#: blocks/settings-button/block.json
+msgctxt "block title"
+msgid "Cookie-Einstellungen"
+msgstr ""
+
+#: blocks/settings-button/block.json
+msgctxt "block description"
+msgid "Ein Button oder Link, der die Cookie-Auswahl öffnet – für den Widerruf."
+msgstr ""
+
+#: blocks/settings-button/block.json
+msgctxt "block keyword"
+msgid "einwilligung"
+msgstr ""
+
+#: blocks/settings-button/block.json
+msgctxt "block keyword"
+msgid "widerruf"
+msgstr ""
