@@ -799,7 +799,7 @@ export default function Settings( { state, onState, save } ) {
 						hint={
 							a.wp
 								? __(
-										'WordPress verwaltet ihn unter Einstellungen › Connectors – ein API Key für alle Plugins.',
+										'WordPress verwaltet ihn unter Einstellungen › Konnektoren – ein API Key für alle Plugins.',
 										'cookie-dialog'
 								  )
 								: __( 'Ab WordPress 7.0.', 'cookie-dialog' )
@@ -815,7 +815,7 @@ export default function Settings( { state, onState, save } ) {
 							) }
 							{ a.wp ? (
 								<Button size="sm" href={ a.connectors }>
-									{ __( 'Connectors', 'cookie-dialog' ) }
+									{ __( 'Konnektoren', 'cookie-dialog' ) }
 								</Button>
 							) : null }
 						</span>

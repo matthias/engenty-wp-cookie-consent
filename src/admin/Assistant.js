@@ -7,7 +7,7 @@ import {
 	useState,
 } from '@wordpress/element';
 import { __, sprintf } from '@wordpress/i18n';
-import { boot, post, problem } from './api';
+import { post, problem } from './api';
 import { Button, Engenty, Icon, Notice, Spinner } from './ui';
 
 /* ------------------------------------------------------------------ the browser's model */
@@ -92,7 +92,7 @@ export async function runJob( job, input, onState ) {
 		if ( ready === 'unavailable' ) {
 			throw new Error(
 				__(
-					'Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Connectors) – oder Chrome mit eingebautem Modell.',
+					'Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren) – oder Chrome mit eingebautem Modell.',
 					'cookie-dialog'
 				)
 			);
@@ -269,7 +269,14 @@ export function ChatProvider( { state, onState, view, children } ) {
 
 export const useChat = () => useContext( ChatContext );
 
-function ChatInput( { placeholder, className = '' } ) {
+/**
+ * The line to type into; locked until WordPress has an AI provider.
+ * @param root0
+ * @param root0.placeholder What it suggests.
+ * @param root0.className
+ * @param root0.locked      No provider yet: it says so and takes nothing.
+ */
+function ChatInput( { placeholder, className = '', locked = false } ) {
 	const chat = useChat();
 	const [ text, setText ] = useState( '' );
 	const submit = ( e ) => {
@@ -278,28 +285,40 @@ function ChatInput( { placeholder, className = '' } ) {
 		setText( '' );
 	};
 	return (
-		<form className={ `cd-composer ${ className }` } onSubmit={ submit }>
+		<form
+			className={ `cd-composer${
+				locked ? ' is-locked' : ''
+			} ${ className }` }
+			onSubmit={ submit }
+		>
 			<input
 				type="text"
 				value={ text }
-				placeholder={ placeholder }
+				placeholder={
+					locked
+						? __(
+								'Wartet auf einen KI-Anbieter …',
+								'cookie-dialog'
+						  )
+						: placeholder
+				}
 				aria-label={ __(
 					'Nachricht an den Assistenten',
 					'cookie-dialog'
 				) }
 				onChange={ ( e ) => setText( e.target.value ) }
-				disabled={ chat.busy }
+				disabled={ locked || chat.busy }
 			/>
 			<button
 				type="submit"
 				className="cd-go"
 				aria-label={ __( 'Senden', 'cookie-dialog' ) }
-				disabled={ chat.busy || ! text.trim() }
+				disabled={ locked || chat.busy || ! text.trim() }
 			>
 				{ chat.busy ? (
 					<span className="cd-spinner__dot" />
 				) : (
-					<Icon name="send" size={ 15 } />
+					<Icon name={ locked ? 'lock' : 'send' } size={ 15 } />
 				) }
 			</button>
 		</form>
@@ -403,7 +422,9 @@ function Messages() {
  */
 function ChatHead( { mode, canSide, children } ) {
 	const chat = useChat();
-	const last = chat.state?.assistant?.last;
+	const last = chat.ready
+		? chat.state?.assistant?.last
+		: __( 'kein KI-Anbieter', 'cookie-dialog' );
 	return (
 		<div className="cd-chat__head">
 			<span className="cd-chat__who">
@@ -563,10 +584,11 @@ function usePresence( show ) {
  * an open, resizable column on the right that the page makes room for; closed, an engenty in the
  * bottom right corner opens it again. Between these it moves: the column slides in from the right,
  * the chat at the bottom rises, both shrink into the engenty when closed and grow out of it again.
- * Without a provider, one quiet line says so.
+ * Without a provider it sits in the same place with the input locked, and above the input what to
+ * set up in WordPress.
  * @param root0
  * @param root0.placeholder What the input suggests on this page.
- * @param root0.quiet       No line without a provider (Start explains it in its card).
+ * @param root0.quiet       Hidden without a provider (Start says it in its card).
  */
 export function ChatDock( { placeholder, quiet = false } ) {
 	const chat = useChat();
@@ -577,8 +599,9 @@ export function ChatDock( { placeholder, quiet = false } ) {
 	const canSide = width >= SIDE_FROM;
 	const { layout } = chat;
 	const mode = layout.mode === 'side' && canSide ? 'side' : 'bottom';
+	const locked = ! chat.ready;
 	let view = 'off';
-	if ( chat.ready ) {
+	if ( ! ( locked && quiet ) ) {
 		view = layout.open ? mode : 'avatar';
 	}
 	const sideOpen = view === 'side';
@@ -621,10 +644,7 @@ export function ChatDock( { placeholder, quiet = false } ) {
 			return undefined;
 		}
 		if ( ! el || view !== 'bottom' || ! ( 'ResizeObserver' in window ) ) {
-			app.style.setProperty(
-				'--cd-bottom',
-				view === 'off' && ! quiet ? '64px' : '0px'
-			);
+			app.style.setProperty( '--cd-bottom', '0px' );
 			return undefined;
 		}
 		const measure = () =>
@@ -636,7 +656,7 @@ export function ChatDock( { placeholder, quiet = false } ) {
 		const ro = new window.ResizeObserver( measure );
 		ro.observe( el );
 		return () => ro.disconnect();
-	}, [ view, quiet, bottomLayer.mounted ] );
+	}, [ view, bottomLayer.mounted ] );
 
 	// A folded history takes no focus.
 	useEffect( () => {
@@ -650,25 +670,7 @@ export function ChatDock( { placeholder, quiet = false } ) {
 		__( 'Sag dem Assistenten, was anders sein soll …', 'cookie-dialog' );
 
 	if ( view === 'off' ) {
-		return quiet ? (
-			<span ref={ node } hidden />
-		) : (
-			<div className="cd-bdock" ref={ node }>
-				<a
-					className="cd-bdock__off"
-					href={ `${ boot.admin }?page=cookie-dialog#assistant` }
-				>
-					<Engenty kind="drop" size={ 24 } dim />
-					<span>
-						{ __(
-							'Assistent aus – alles andere funktioniert. KI-Anbieter einrichten',
-							'cookie-dialog'
-						) }
-					</span>
-					<Icon name="chevron" size={ 14 } />
-				</a>
-			</div>
-		);
+		return <span ref={ node } hidden />;
 	}
 
 	const history = clamp( layout.history, HISTORY );
@@ -698,9 +700,15 @@ export function ChatDock( { placeholder, quiet = false } ) {
 						) }
 					/>
 					<ChatHead mode="side" canSide={ canSide } />
-					<Messages />
+					{ locked ? (
+						<div className="cd-chat__list is-locked">
+							<Setup />
+						</div>
+					) : (
+						<Messages />
+					) }
 					<div className="cd-side__foot">
-						<ChatInput placeholder={ text } />
+						<ChatInput placeholder={ text } locked={ locked } />
 					</div>
 				</aside>
 			) : null }
@@ -712,53 +720,67 @@ export function ChatDock( { placeholder, quiet = false } ) {
 					ref={ bottomRef }
 				>
 					<div className="cd-bdock__in">
-						<div className="cd-bdock__card">
-							{ showHistory ? (
-								<ResizeHandle
-									axis="y"
-									value={ history }
-									limits={ HISTORY }
-									onChange={ ( v ) =>
-										chat.setLayout( { history: v } )
-									}
-									label={ __(
-										'Höhe des Verlaufs',
-										'cookie-dialog'
-									) }
-								/>
-							) : null }
-							<ChatHead mode="bottom" canSide={ canSide }>
-								<button
-									type="button"
-									className={ `cd-icon-btn cd-fold${
+						{ locked ? (
+							<div className="cd-bdock__card">
+								<ChatHead mode="bottom" canSide={ canSide } />
+								<div className="cd-bdock__setup">
+									<Setup />
+								</div>
+								<ChatInput placeholder={ text } locked />
+							</div>
+						) : (
+							<div className="cd-bdock__card">
+								{ showHistory ? (
+									<ResizeHandle
+										axis="y"
+										value={ history }
+										limits={ HISTORY }
+										onChange={ ( v ) =>
+											chat.setLayout( { history: v } )
+										}
+										label={ __(
+											'Höhe des Verlaufs',
+											'cookie-dialog'
+										) }
+									/>
+								) : null }
+								<ChatHead mode="bottom" canSide={ canSide }>
+									<button
+										type="button"
+										className={ `cd-icon-btn cd-fold${
+											showHistory ? '' : ' is-folded'
+										}` }
+										title={ foldLabel }
+										aria-label={ foldLabel }
+										aria-expanded={
+											showHistory ? 'true' : 'false'
+										}
+										onClick={ () =>
+											chat.setLayout( {
+												folded: showHistory,
+											} )
+										}
+									>
+										<Icon name="down" size={ 16 } />
+									</button>
+								</ChatHead>
+								<div
+									className={ `cd-bdock__history${
 										showHistory ? '' : ' is-folded'
 									}` }
-									title={ foldLabel }
-									aria-label={ foldLabel }
-									aria-expanded={
-										showHistory ? 'true' : 'false'
+									style={ {
+										height: showHistory ? history : 0,
+									} }
+									aria-hidden={
+										showHistory ? undefined : 'true'
 									}
-									onClick={ () =>
-										chat.setLayout( {
-											folded: showHistory,
-										} )
-									}
+									ref={ historyRef }
 								>
-									<Icon name="down" size={ 16 } />
-								</button>
-							</ChatHead>
-							<div
-								className={ `cd-bdock__history${
-									showHistory ? '' : ' is-folded'
-								}` }
-								style={ { height: showHistory ? history : 0 } }
-								aria-hidden={ showHistory ? undefined : 'true' }
-								ref={ historyRef }
-							>
-								<Messages />
+									<Messages />
+								</div>
+								<ChatInput placeholder={ text } />
 							</div>
-							<ChatInput placeholder={ text } />
-						</div>
+						) }
 					</div>
 				</div>
 			) : null }
@@ -771,7 +793,7 @@ export function ChatDock( { placeholder, quiet = false } ) {
 					tabIndex={ view === 'avatar' ? undefined : -1 }
 					onClick={ () => chat.setLayout( { open: true } ) }
 				>
-					<Engenty kind="drop" size={ 44 } />
+					<Engenty kind="drop" size={ 44 } dim={ locked } />
 					{ chat.busy ? <span className="cd-avatar__busy" /> : null }
 				</button>
 			) : null }
@@ -779,44 +801,118 @@ export function ChatDock( { placeholder, quiet = false } ) {
 	);
 }
 
+/** How far a provider in Connectors is. */
+const OFFER_STATES = {
+	ready: __( 'eingerichtet', 'cookie-dialog' ),
+	key: __( 'API Key fehlt', 'cookie-dialog' ),
+	offline: __( 'antwortet nicht', 'cookie-dialog' ),
+	plugin: __( 'Plugin fehlt', 'cookie-dialog' ),
+};
+
 /**
- * Setting up a provider: Vercel AI Gateway in three steps, or another one under Connectors.
- * @param root0
- * @param root0.assistant
+ * What the chat needs before it opens, beside its locked input: WordPress keeps the AI provider under
+ * Einstellungen › Konnektoren – the providers it lists there, how far each is, and the way there.
  */
-function ProviderSteps( { assistant } ) {
+function Setup() {
+	const chat = useChat();
+	const browser = useBrowserModel();
+	const assistant = chat.state.assistant;
+	if ( ! assistant.wp ) {
+		return (
+			<div className="cd-setup">
+				<b className="cd-setup__title">
+					{ __( 'Der Chat braucht WordPress 7.0', 'cookie-dialog' ) }
+				</b>
+				<p>
+					{ __(
+						'Ab 7.0 denkt der Assistent mit dem KI-Anbieter, den du unter Einstellungen › Konnektoren einrichtest. Alles andere funktioniert schon jetzt.',
+						'cookie-dialog'
+					) }
+				</p>
+				<div className="cd-setup__actions">
+					<Button kind="primary" size="sm" href={ assistant.update }>
+						{ __( 'WordPress aktualisieren', 'cookie-dialog' ) }
+					</Button>
+				</div>
+			</div>
+		);
+	}
+	const offers = assistant.offers || [];
+	const hasVercel = offers.some( ( o ) => /vercel/i.test( o.id + o.name ) );
+	const hasBrowser =
+		assistant.browser && browser && browser !== 'unavailable';
 	return (
-		<div className="cd-steps3">
-			<div className="cd-steps3__text">
-				<b>{ __( 'Empfohlen: Vercel AI Gateway', 'cookie-dialog' ) }</b>
+		<div className="cd-setup">
+			<b className="cd-setup__title">
+				<Icon name="lock" size={ 13 } />{ ' ' }
+				{ __( 'Erst einen KI-Anbieter einrichten', 'cookie-dialog' ) }
+			</b>
+			<p>
+				{ __(
+					'Der Assistent denkt mit dem Anbieter, den du in WordPress unter Einstellungen › Konnektoren einrichtest – dein API Key bleibt dort. Dialog, Dienste und Blockieren funktionieren auch ohne.',
+					'cookie-dialog'
+				) }
+			</p>
+			{ offers.length ? (
+				<div className="cd-offers">
+					{ offers.map( ( o ) => (
+						<a
+							key={ o.id }
+							className={ `cd-offer is-${ o.state }` }
+							href={ assistant.connectors }
+						>
+							<span className="cd-offer__logo" aria-hidden="true">
+								{ o.logo ? (
+									<img src={ o.logo } alt="" />
+								) : (
+									o.name.slice( 0, 1 )
+								) }
+							</span>
+							{ o.name }
+							<span className="cd-offer__state">
+								{ OFFER_STATES[ o.state ] || '' }
+							</span>
+						</a>
+					) ) }
+				</div>
+			) : null }
+			<div className="cd-setup__actions">
+				<Button kind="primary" size="sm" href={ assistant.connectors }>
+					{ __( 'Konnektoren öffnen', 'cookie-dialog' ) }
+				</Button>
+				{ hasVercel ? null : (
+					<Button kind="ghost" size="sm" href={ assistant.vercel }>
+						{ __(
+							'Vercel AI Gateway installieren',
+							'cookie-dialog'
+						) }
+					</Button>
+				) }
+			</div>
+			{ hasVercel ? null : (
 				<span className="cd-fine">
 					{ __(
-						'5 $ im Monat gratis, keine Kreditkarte · Plugin installieren, API Key holen, unter Einstellungen › Connectors einfügen · 3 Minuten',
+						'Ohne Vertrag bei einem Anbieter: Vercel AI Gateway gibt 5 $ im Monat gratis, keine Kreditkarte.',
 						'cookie-dialog'
 					) }
 				</span>
-			</div>
-			<Button kind="primary" size="sm" href={ assistant.vercel }>
-				{ __( 'Vercel-Plugin installieren', 'cookie-dialog' ) }
-			</Button>
-			<Button
-				kind="ghost"
-				size="sm"
-				href="https://vercel.com/ai-gateway"
-				external
-			>
-				{ __( 'API Key', 'cookie-dialog' ) }
-			</Button>
-			<Button kind="ghost" size="sm" href={ assistant.connectors }>
-				{ __( 'Anderer Anbieter', 'cookie-dialog' ) }
-			</Button>
+			) }
+			{ hasBrowser ? (
+				<span className="cd-fine">
+					{ __(
+						'Bis dahin übersetzt und ordnet das eingebaute Modell deines Browsers zu – nichts verlässt den Rechner.',
+						'cookie-dialog'
+					) }
+				</span>
+			) : null }
 		</div>
 	);
 }
 
 /**
  * The assistant's card on Start: what it read, a line to type into and what to ask – the answers come
- * in the running chat at the bottom or on the side – or what it does without a provider.
+ * in the running chat at the bottom or on the side. Without a provider the line is locked and what to
+ * set up sits under it.
  * @param root0
  * @param root0.title
  * @param root0.text        A line under the title (optional).
@@ -832,73 +928,42 @@ export function AssistantCard( {
 	cardRef,
 } ) {
 	const chat = useChat();
-	const browser = useBrowserModel();
-	const assistant = chat.state.assistant;
-	if ( chat.ready ) {
-		return (
-			<div className="cd-acard" ref={ cardRef } id="assistant">
-				<span className="cd-acard__eng">
-					<Engenty kind="drop" size={ 52 } />
-				</span>
-				<span className="cd-kick">
-					<Icon name="sparkle" size={ 12 } />{ ' ' }
-					{ __( 'Assistent', 'cookie-dialog' ) }
-				</span>
-				<h2>{ title }</h2>
-				{ text ? <p>{ text }</p> : null }
-				<ChatInput
-					placeholder={ placeholder }
-					className="cd-composer--card"
-				/>
-				{ suggestions.length ? (
-					<div className="cd-sugg">
-						{ suggestions.map( ( s ) => (
-							<button
-								key={ s }
-								type="button"
-								onClick={ () => chat.send( s ) }
-								disabled={ chat.busy }
-							>
-								„{ s }“
-							</button>
-						) ) }
-					</div>
-				) : null }
-			</div>
-		);
-	}
-	const hasBrowser =
-		assistant.browser && browser && browser !== 'unavailable';
-	let heading = __( 'Der Assistent ist aus', 'cookie-dialog' );
-	let body = __(
-		'Dialog, Dienste, Blockieren, Protokoll und Google funktionieren ohne ihn. Für Texte im Ton deiner Website und den Chat braucht WordPress einen KI-Anbieter.',
-		'cookie-dialog'
-	);
-	if ( ! assistant.wp ) {
-		heading = __( 'Der Assistent braucht WordPress 7.0', 'cookie-dialog' );
-		body = __(
-			'Ab WordPress 7.0 denkt er über den KI-Anbieter, den du unter Einstellungen › Connectors einrichtest. Alles andere funktioniert schon jetzt.',
-			'cookie-dialog'
-		);
-	} else if ( hasBrowser ) {
-		heading = __( 'Einfaches übernimmt dein Browser', 'cookie-dialog' );
-		body = __(
-			'Übersetzen, Zuordnen und den Datenschutz-Absatz schreibt das eingebaute Modell deines Browsers – ohne Einrichtung, nichts verlässt den Rechner. Für Texte in deinem Ton und den Chat braucht WordPress einen KI-Anbieter.',
-			'cookie-dialog'
-		);
-	}
+	const locked = ! chat.ready;
 	return (
-		<div className="cd-acard is-off" ref={ cardRef } id="assistant">
+		<div
+			className={ `cd-acard${ locked ? ' is-off' : '' }` }
+			ref={ cardRef }
+			id="assistant"
+		>
 			<span className="cd-acard__eng">
-				<Engenty kind="drop" size={ 52 } dim />
+				<Engenty kind="drop" size={ 52 } dim={ locked } />
 			</span>
-			<span className="cd-kick is-off">
+			<span className={ `cd-kick${ locked ? ' is-off' : '' }` }>
 				<Icon name="sparkle" size={ 12 } />{ ' ' }
 				{ __( 'Assistent', 'cookie-dialog' ) }
 			</span>
-			<h2>{ heading }</h2>
-			<p>{ body }</p>
-			{ assistant.wp ? <ProviderSteps assistant={ assistant } /> : null }
+			<h2>{ title }</h2>
+			{ text ? <p>{ text }</p> : null }
+			<ChatInput
+				placeholder={ placeholder }
+				className="cd-composer--card"
+				locked={ locked }
+			/>
+			{ locked ? <Setup /> : null }
+			{ ! locked && suggestions.length ? (
+				<div className="cd-sugg">
+					{ suggestions.map( ( s ) => (
+						<button
+							key={ s }
+							type="button"
+							onClick={ () => chat.send( s ) }
+							disabled={ chat.busy }
+						>
+							„{ s }“
+						</button>
+					) ) }
+				</div>
+			) : null }
 		</div>
 	);
 }

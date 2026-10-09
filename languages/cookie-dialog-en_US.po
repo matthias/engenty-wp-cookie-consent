@@ -98,113 +98,109 @@ msgstr "Until you turn it on, nothing changes on your website."
 msgid "Nicht erlaubt."
 msgstr "Not allowed."
 
-#: includes/class-assistant.php:82
+#: includes/class-assistant.php:124
 msgid "Der Assistent braucht WordPress 7.0 oder neuer."
 msgstr "The assistant needs WordPress 7.0 or newer."
 
-#: includes/class-assistant.php:110
+#: includes/class-assistant.php:152
 msgid "Die Antwort war kein JSON. Versuch es noch einmal."
 msgstr "The answer was not JSON. Try again."
 
 #. translators: %s: what the person asked
-#: includes/class-assistant.php:466
-#: includes/class-assistant.php:468
+#: includes/class-assistant.php:508
+#: includes/class-assistant.php:510
 #, php-format
 msgid "Assistent: %s"
 msgstr "Assistant: %s"
 
 #. translators: %s: what the person asked
-#: includes/class-assistant.php:466
+#: includes/class-assistant.php:508
 #: build/admin.js:3
 #: build/admin.js:26
 msgid "Assistent"
 msgstr "Assistant"
 
-#: includes/class-assistant.php:470
+#: includes/class-assistant.php:512
 msgid "Geändert"
 msgstr "Changed"
 
 #. translators: %d: number of changes
-#: includes/class-assistant.php:472
+#: includes/class-assistant.php:514
 #, php-format
 msgid "%d Änderung"
 msgid_plural "%d Änderungen"
 msgstr[0] "%d change"
 msgstr[1] "%d changes"
 
-#: includes/class-assistant.php:503
+#: includes/class-assistant.php:545
 msgid "Das lässt sich nicht mehr zurücknehmen."
 msgstr "This can no longer be undone."
 
-#: includes/class-assistant.php:510
+#: includes/class-assistant.php:552
 msgid "Assistent: Änderung zurückgenommen"
 msgstr "Assistant: change undone"
 
-#: includes/class-assistant.php:511
+#: includes/class-assistant.php:553
 msgid "Zurückgenommen"
 msgstr "Undone"
 
-#: includes/class-assistant.php:657
-#: includes/class-assistant.php:797
+#: includes/class-assistant.php:699
+#: includes/class-assistant.php:839
 msgid "Diese Aufgabe gibt es nicht."
 msgstr "This task doesn’t exist."
 
-#: includes/class-assistant.php:684
-msgid "Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Connectors)."
-msgstr "For this, WordPress needs an AI provider (Settings › Connectors)."
-
-#: includes/class-assistant.php:709
+#: includes/class-assistant.php:751
 msgid "Die Übersetzung kam unvollständig zurück."
 msgstr "The translation came back incomplete."
 
 #. translators: %s: language code
-#: includes/class-assistant.php:730
+#: includes/class-assistant.php:772
 #, php-format
 msgid "Texte auf %s"
 msgstr "Texts in %s"
 
 #. translators: %s: language code
-#: includes/class-assistant.php:732
+#: includes/class-assistant.php:774
 #, php-format
 msgid "Die Texte gibt es jetzt auf %s."
 msgstr "The texts are now available in %s."
 
-#: includes/class-assistant.php:739
+#: includes/class-assistant.php:781
 msgid "Kein Text zurückgekommen."
 msgstr "No text came back."
 
-#: includes/class-assistant.php:742
+#: includes/class-assistant.php:784
 msgid "Text gekürzt"
 msgstr "Text shortened"
 
-#: includes/class-assistant.php:743
+#: includes/class-assistant.php:785
 msgid "Gekürzt."
 msgstr "Shortened."
 
-#: includes/class-assistant.php:750
+#: includes/class-assistant.php:792
 #: includes/class-checks.php:516
 msgid "Diesen Host kennt die letzte Prüfung nicht."
 msgstr "The last check didn’t find this host."
 
 #. translators: %s: service name
-#: includes/class-assistant.php:761
+#: includes/class-assistant.php:803
 #, php-format
 msgid "Vorschlag: %s"
 msgstr "Suggestion: %s"
 
-#: includes/class-assistant.php:769
+#: includes/class-assistant.php:811
 msgid "Kein Absatz zurückgekommen."
 msgstr "No paragraph came back."
 
-#: includes/class-assistant.php:773
+#: includes/class-assistant.php:815
 msgid "Der Absatz ist geschrieben."
 msgstr "The paragraph is written."
 
-#: includes/class-assistant.php:791
+#: includes/class-assistant.php:833
 msgid "Texte im Ton der Website"
 msgstr "Texts in the website’s tone"
 
-#: includes/class-assistant.php:793
+#: includes/class-assistant.php:835
 msgid "Die Texte klingen jetzt wie deine Website."
 msgstr "The texts now sound like your website."
 
@@ -632,10 +628,6 @@ msgid "angepasst"
 msgstr "customized"
 
 #: build/admin.js:2
-msgid "Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Connectors) – oder Chrome mit eingebautem Modell."
-msgstr "For this, WordPress needs an AI provider (Settings › Connectors) – or Chrome with its built-in model."
-
-#: build/admin.js:2
 msgid "Nachricht an den Assistenten"
 msgstr "Message to the assistant"
 
@@ -669,54 +661,6 @@ msgstr "Thinking …"
 #: build/admin.js:3
 msgid "Sag dem Assistenten, was anders sein soll …"
 msgstr "Tell the assistant what should be different …"
-
-#: build/admin.js:3
-msgid "Assistent aus – alles andere funktioniert. KI-Anbieter einrichten"
-msgstr "Assistant off – everything else works. Set up an AI provider"
-
-#: build/admin.js:3
-msgid "Empfohlen: Vercel AI Gateway"
-msgstr "Recommended: Vercel AI Gateway"
-
-#: build/admin.js:3
-msgid "5 $ im Monat gratis, keine Kreditkarte · Plugin installieren, API Key holen, unter Einstellungen › Connectors einfügen · 3 Minuten"
-msgstr "$5 a month free, no credit card · install the plugin, get an API key, paste it under Settings › Connectors · 3 minutes"
-
-#: build/admin.js:3
-msgid "Vercel-Plugin installieren"
-msgstr "Install the Vercel plugin"
-
-#: build/admin.js:3
-msgid "API Key"
-msgstr "API key"
-
-#: build/admin.js:3
-msgid "Anderer Anbieter"
-msgstr "Other provider"
-
-#: build/admin.js:3
-msgid "Der Assistent ist aus"
-msgstr "The assistant is off"
-
-#: build/admin.js:3
-msgid "Dialog, Dienste, Blockieren, Protokoll und Google funktionieren ohne ihn. Für Texte im Ton deiner Website und den Chat braucht WordPress einen KI-Anbieter."
-msgstr "Dialog, services, blocking, log and Google work without it. For texts in your website’s tone and the chat, WordPress needs an AI provider."
-
-#: build/admin.js:3
-msgid "Einfaches übernimmt dein Browser"
-msgstr "Your browser handles the simple things"
-
-#: build/admin.js:3
-msgid "Übersetzen, Zuordnen und den Datenschutz-Absatz schreibt das eingebaute Modell deines Browsers – ohne Einrichtung, nichts verlässt den Rechner. Für Texte in deinem Ton und den Chat braucht WordPress einen KI-Anbieter."
-msgstr "Your browser’s built-in model translates, assigns and writes the privacy paragraph – no setup, nothing leaves the computer. For texts in your tone and the chat, WordPress needs an AI provider."
-
-#: build/admin.js:3
-msgid "Der Assistent braucht WordPress 7.0"
-msgstr "The assistant needs WordPress 7.0"
-
-#: build/admin.js:3
-msgid "Ab WordPress 7.0 denkt er über den KI-Anbieter, den du unter Einstellungen › Connectors einrichtest. Alles andere funktioniert schon jetzt."
-msgstr "From WordPress 7.0, it thinks through the AI provider you set up under Settings › Connectors. Everything else already works."
 
 #: build/admin.js:3
 msgid "Erste Ebene"
@@ -2125,6 +2069,7 @@ msgstr "Stored are the consent ID, time, choice, version, language, where the de
 msgid "Alles als CSV"
 msgstr "Everything as CSV"
 
+#: build/admin.js:3
 #: build/admin.js:26
 msgid "kein KI-Anbieter"
 msgstr "no AI provider"
@@ -2146,20 +2091,12 @@ msgid "KI-Anbieter"
 msgstr "AI provider"
 
 #: build/admin.js:26
-msgid "WordPress verwaltet ihn unter Einstellungen › Connectors – ein API Key für alle Plugins."
-msgstr "WordPress manages it under Settings › Connectors – one API key for all plugins."
-
-#: build/admin.js:26
 msgid "Ab WordPress 7.0."
 msgstr "From WordPress 7.0."
 
 #: build/admin.js:26
 msgid "keiner"
 msgstr "none"
-
-#: build/admin.js:26
-msgid "Connectors"
-msgstr "Connectors"
 
 #: build/admin.js:26
 msgid "Empfohlen: Vercel AI Gateway – 5 $ im Monat gratis, ein API Key für die Modelle aller Anbieter."
@@ -2549,3 +2486,75 @@ msgstr "Tell me what should be different – e.g. “Use formal German (Sie)”"
 #: build/admin.js:15
 msgid "Ich ändere Dialog, Dienste und Einstellungen – z. B. „Füge Hotjar hinzu“"
 msgstr "I change the dialog, services and settings – e.g. “Add Hotjar”"
+
+#: includes/class-assistant.php:726
+msgid "Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren)."
+msgstr "For this, WordPress needs an AI provider (Settings › Connectors)."
+
+#: build/admin.js:2
+msgid "Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren) – oder Chrome mit eingebautem Modell."
+msgstr "For this, WordPress needs an AI provider (Settings › Connectors) – or Chrome with its built-in model."
+
+#: build/admin.js:2
+msgid "Wartet auf einen KI-Anbieter …"
+msgstr "Waiting for an AI provider …"
+
+#: build/admin.js:3
+msgid "eingerichtet"
+msgstr "set up"
+
+#: build/admin.js:3
+msgid "API Key fehlt"
+msgstr "API key missing"
+
+#: build/admin.js:3
+msgid "antwortet nicht"
+msgstr "not responding"
+
+#: build/admin.js:3
+msgid "Plugin fehlt"
+msgstr "plugin missing"
+
+#: build/admin.js:3
+msgid "Der Chat braucht WordPress 7.0"
+msgstr "The chat needs WordPress 7.0"
+
+#: build/admin.js:3
+msgid "Ab 7.0 denkt der Assistent mit dem KI-Anbieter, den du unter Einstellungen › Konnektoren einrichtest. Alles andere funktioniert schon jetzt."
+msgstr "From 7.0, the assistant thinks with the AI provider you set up under Settings › Connectors. Everything else already works."
+
+#: build/admin.js:3
+msgid "WordPress aktualisieren"
+msgstr "Update WordPress"
+
+#: build/admin.js:3
+msgid "Erst einen KI-Anbieter einrichten"
+msgstr "Set up an AI provider first"
+
+#: build/admin.js:3
+msgid "Der Assistent denkt mit dem Anbieter, den du in WordPress unter Einstellungen › Konnektoren einrichtest – dein API Key bleibt dort. Dialog, Dienste und Blockieren funktionieren auch ohne."
+msgstr "The assistant thinks with the provider you set up in WordPress under Settings › Connectors – your API key stays there. Dialog, services and blocking work without it."
+
+#: build/admin.js:3
+msgid "Konnektoren öffnen"
+msgstr "Open Connectors"
+
+#: build/admin.js:3
+msgid "Vercel AI Gateway installieren"
+msgstr "Install Vercel AI Gateway"
+
+#: build/admin.js:3
+msgid "Ohne Vertrag bei einem Anbieter: Vercel AI Gateway gibt 5 $ im Monat gratis, keine Kreditkarte."
+msgstr "No contract with a provider? Vercel AI Gateway gives $5 a month free, no credit card."
+
+#: build/admin.js:3
+msgid "Bis dahin übersetzt und ordnet das eingebaute Modell deines Browsers zu – nichts verlässt den Rechner."
+msgstr "Until then, your browser's built-in model translates and assigns – nothing leaves your computer."
+
+#: build/admin.js:26
+msgid "WordPress verwaltet ihn unter Einstellungen › Konnektoren – ein API Key für alle Plugins."
+msgstr "WordPress manages it under Settings › Connectors – one API key for all plugins."
+
+#: build/admin.js:26
+msgid "Konnektoren"
+msgstr "Connectors"

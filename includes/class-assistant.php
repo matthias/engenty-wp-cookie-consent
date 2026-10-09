@@ -2,7 +2,7 @@
 /**
  * The assistant thinks through WordPress: `wp_ai_client_prompt()` with a JSON answer – a message,
  * changes and cards – that PHP checks and applies. No key of its own: the provider is the one set
- * up under Einstellungen › Connectors. Simple jobs (translating, shortening, naming an unknown host,
+ * up under Einstellungen › Konnektoren. Simple jobs (translating, shortening, naming an unknown host,
  * the privacy paragraph) can also run in the admin's browser, in Chrome's or Edge's built-in model:
  * the admin app gets the same prompt and schema and posts the answer back.
  *
@@ -60,13 +60,55 @@ class Cookie_Dialog_Assistant {
 			'enabled'    => $has_wp && function_exists( 'wp_supports_ai' ) && wp_supports_ai(),
 			'ready'      => $ready,
 			'providers'  => $names,
+			'offers'     => self::offers(),
 			'last'       => is_array( $usage ) ? ( $usage['last'] ?? '' ) : '',
 			'tokens'     => is_array( $usage ) && ( $usage['month'] ?? '' ) === gmdate( 'Y-m' ) ? (int) ( $usage['tokens'] ?? 0 ) : 0,
 			'browser'    => (bool) $config['assistant']['browser'],
 			'model'      => $config['assistant']['model'],
-			'connectors' => admin_url( 'options-general.php?page=connectors' ),
+			'connectors' => admin_url( 'options-connectors.php' ),
 			'vercel'     => admin_url( 'plugin-install.php?s=' . rawurlencode( 'AI Provider for Vercel' ) . '&tab=search&type=term' ),
+			'update'     => admin_url( 'update-core.php' ),
 		);
+	}
+
+	/**
+	 * The AI providers WordPress lists under Einstellungen › Konnektoren, each with how far it is set
+	 * up: `ready`, `key` (the plugin is there, the API Key is missing), `offline` (needs no key but
+	 * does not answer, like Ollama when it is not running) or `plugin` (its plugin is not installed).
+	 *
+	 * @return array[] `id`, `name`, `logo`, `state`.
+	 */
+	private static function offers() {
+		if ( ! function_exists( 'wp_get_connectors' ) ) {
+			return array();
+		}
+		$offers = array();
+		try {
+			$registry = \WordPress\AiClient\AiClient::defaultRegistry();
+			foreach ( wp_get_connectors() as $id => $connector ) {
+				if ( 'ai_provider' !== ( $connector['type'] ?? '' ) ) {
+					continue;
+				}
+				$active = is_callable( $connector['plugin']['is_active'] ?? null ) ? (bool) call_user_func( $connector['plugin']['is_active'] ) : true;
+				$state  = 'plugin';
+				if ( $active && $registry->hasProvider( $id ) ) {
+					if ( $registry->isProviderConfigured( $id ) ) {
+						$state = 'ready';
+					} else {
+						$state = 'none' === ( $connector['authentication']['method'] ?? '' ) ? 'offline' : 'key';
+					}
+				}
+				$offers[] = array(
+					'id'    => (string) $id,
+					'name'  => (string) $connector['name'],
+					'logo'  => (string) ( $connector['logo_url'] ?? '' ),
+					'state' => $state,
+				);
+			}
+		} catch ( \Throwable $e ) {
+			return $offers;
+		}
+		return $offers;
 	}
 
 	/**
@@ -681,7 +723,7 @@ class Cookie_Dialog_Assistant {
 						'schema'  => $prompt['schema'],
 					);
 				}
-				return new WP_Error( 'cookie_dialog_no_provider', __( 'Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Connectors).', 'cookie-dialog' ) );
+				return new WP_Error( 'cookie_dialog_no_provider', __( 'Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren).', 'cookie-dialog' ) );
 			}
 			$result = self::generate( $prompt['system'], $prompt['prompt'], $prompt['schema'] );
 			if ( is_wp_error( $result ) ) {
