@@ -33,12 +33,12 @@ class Cookie_Dialog_Admin {
 	}
 
 	/**
-	 * The menu icon: the incognito drop – hat and sunglasses with one lens for its one eye – in WordPress' grey.
+	 * The menu icon: incognito – a hat, and glasses with one lens for the engenty's one eye, which looks out of it – in WordPress' grey.
 	 *
 	 * @return string
 	 */
 	private static function icon() {
-		$svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="14 8 92 92"><path fill="#a7aaad" fill-rule="evenodd" d="M39.2 34.8 Q60 37.2 80.8 34.8 Q90 48.2 90 66 Q90 96 60 98 Q30 96 30 66 Q30 48.2 39.2 34.8 Z M34.5 44.5 H85.5 V47.1 H72.9 Q71.2 61.5 60 61.5 Q48.8 61.5 47.1 47.1 H34.5 Z"/><path fill="#a7aaad" d="M51 49.2 Q52.2 55.4 56.6 58.6 L55.4 60 Q50.4 56.4 49.2 49.6 Z"/><path fill="#a7aaad" d="M46 30 L47.5 15 Q48.5 10.5 53 11.5 Q60 14.5 67 11.5 Q71.5 10.5 72.5 15 L74 30 Z"/><ellipse fill="#a7aaad" cx="60" cy="30" rx="25" ry="3.6"/></svg>';
+		$svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#a7aaad" d="M7.6 9.4 L9 4.3 Q9.3 3.3 10.3 3.6 L12 4.2 L13.7 3.6 Q14.7 3.3 15 4.3 L16.4 9.4 Z M3.2 10.3 H20.8 V12.1 H3.2 Z"/><path fill="#a7aaad" fill-rule="evenodd" d="M17 16.8 A5 5 0 1 0 7 16.8 A5 5 0 1 0 17 16.8 Z M15 16.8 A3 3 0 1 1 9 16.8 A3 3 0 1 1 15 16.8 Z"/><path fill="#a7aaad" d="M4.2 16 H7.2 V17.6 H4.2 Z M16.8 16 H19.8 V17.6 H16.8 Z"/><path fill="#a7aaad" d="M14.2 17.2 A1.5 1.5 0 1 0 11.2 17.2 A1.5 1.5 0 1 0 14.2 17.2 Z"/></svg>';
 		return 'data:image/svg+xml;base64,' . base64_encode( $svg ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
 	}
 
