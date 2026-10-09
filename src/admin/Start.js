@@ -597,13 +597,17 @@ function Before( { state, onState } ) {
 				text={ sprintf(
 					/* translators: 1: pages, 2: scripts, 3: embeds, 4: plugins */
 					__(
-						'%1$d Seiten, %2$d Skripte, %3$d Einbettungen, %4$d Plugins. Unten steht mein Vorschlag, rechts siehst du ihn auf deiner Startseite. Sag mir, was anders sein soll.',
+						'%1$d Seiten, %2$d Skripte, %3$d Einbettungen, %4$d Plugins. Unten steht mein Vorschlag, rechts siehst du ihn auf deiner Startseite.',
 						'cookie-dialog'
 					),
 					c.pages || 0,
 					c.scripts || 0,
 					c.embeds || 0,
 					c.plugins || 0
+				) }
+				placeholder={ __(
+					'Sag mir, was anders sein soll – z. B. „Schreib per Sie“',
+					'cookie-dialog'
 				) }
 				suggestions={ [
 					__( 'Schreib per Sie', 'cookie-dialog' ),
@@ -703,8 +707,8 @@ function Live( { state, onState } ) {
 		<>
 			<AssistantCard
 				title={ __( 'Was soll anders sein?', 'cookie-dialog' ) }
-				text={ __(
-					'Ich ändere Dialog, Dienste und Einstellungen. Jede Änderung siehst du als Karte und kannst sie zurücknehmen.',
+				placeholder={ __(
+					'Ich ändere Dialog, Dienste und Einstellungen – z. B. „Füge Hotjar hinzu“',
 					'cookie-dialog'
 				) }
 				suggestions={ [

@@ -914,12 +914,6 @@ msgstr "Privacy policy"
 msgid "Ich habe %s gelesen"
 msgstr "I’ve read %s"
 
-#. translators: 1: pages, 2: scripts, 3: embeds, 4: plugins
-#: build/admin.js:14
-#, js-format
-msgid "%1$d Seiten, %2$d Skripte, %3$d Einbettungen, %4$d Plugins. Unten steht mein Vorschlag, rechts siehst du ihn auf deiner Startseite. Sag mir, was anders sein soll."
-msgstr "%1$d pages, %2$d scripts, %3$d embeds, %4$d plugins. My suggestion is below; on the right you see it on your home page. Tell me what should be different."
-
 #: build/admin.js:14
 msgid "Schreib per Sie"
 msgstr "Write formally (Sie)"
@@ -971,10 +965,6 @@ msgstr "Turn on dialog"
 #: build/admin.js:15
 msgid "Bis dahin ändert sich nichts an deiner Website. Ausschalten geht jederzeit."
 msgstr "Until then, nothing changes on your website. You can turn it off at any time."
-
-#: build/admin.js:15
-msgid "Ich ändere Dialog, Dienste und Einstellungen. Jede Änderung siehst du als Karte und kannst sie zurücknehmen."
-msgstr "I change the dialog, services and settings. You see each change as a card and can undo it."
 
 #: build/admin.js:27
 msgid "z. B. „Füge Hotjar hinzu“"
@@ -2545,3 +2535,17 @@ msgstr "Collapse history"
 #: build/admin.js:3
 msgid "Verlauf zeigen"
 msgstr "Show history"
+
+#. translators: 1: pages, 2: scripts, 3: embeds, 4: plugins
+#: build/admin.js:14
+#, js-format
+msgid "%1$d Seiten, %2$d Skripte, %3$d Einbettungen, %4$d Plugins. Unten steht mein Vorschlag, rechts siehst du ihn auf deiner Startseite."
+msgstr "%1$d pages, %2$d scripts, %3$d embeds, %4$d plugins. My proposal is below; on the right you see it on your home page."
+
+#: build/admin.js:14
+msgid "Sag mir, was anders sein soll – z. B. „Schreib per Sie“"
+msgstr "Tell me what should be different – e.g. “Use formal German (Sie)”"
+
+#: build/admin.js:15
+msgid "Ich ändere Dialog, Dienste und Einstellungen – z. B. „Füge Hotjar hinzu“"
+msgstr "I change the dialog, services and settings – e.g. “Add Hotjar”"

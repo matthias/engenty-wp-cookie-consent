@@ -269,7 +269,7 @@ export function ChatProvider( { state, onState, view, children } ) {
 
 export const useChat = () => useContext( ChatContext );
 
-function ChatInput( { placeholder } ) {
+function ChatInput( { placeholder, className = '' } ) {
 	const chat = useChat();
 	const [ text, setText ] = useState( '' );
 	const submit = ( e ) => {
@@ -278,7 +278,7 @@ function ChatInput( { placeholder } ) {
 		setText( '' );
 	};
 	return (
-		<form className="cd-composer" onSubmit={ submit }>
+		<form className={ `cd-composer ${ className }` } onSubmit={ submit }>
 			<input
 				type="text"
 				value={ text }
@@ -815,15 +815,22 @@ function ProviderSteps( { assistant } ) {
 }
 
 /**
- * The assistant's card on Start: what it read and what to ask – the chat itself is at the bottom or on
- * the side – or what it does without a provider.
+ * The assistant's card on Start: what it read, a line to type into and what to ask – the answers come
+ * in the running chat at the bottom or on the side – or what it does without a provider.
  * @param root0
  * @param root0.title
- * @param root0.text
+ * @param root0.text        A line under the title (optional).
+ * @param root0.placeholder What the input says before anything is typed.
  * @param root0.suggestions
  * @param root0.cardRef
  */
-export function AssistantCard( { title, text, suggestions = [], cardRef } ) {
+export function AssistantCard( {
+	title,
+	text,
+	placeholder,
+	suggestions = [],
+	cardRef,
+} ) {
 	const chat = useChat();
 	const browser = useBrowserModel();
 	const assistant = chat.state.assistant;
@@ -838,7 +845,11 @@ export function AssistantCard( { title, text, suggestions = [], cardRef } ) {
 					{ __( 'Assistent', 'cookie-dialog' ) }
 				</span>
 				<h2>{ title }</h2>
-				<p>{ text }</p>
+				{ text ? <p>{ text }</p> : null }
+				<ChatInput
+					placeholder={ placeholder }
+					className="cd-composer--card"
+				/>
 				{ suggestions.length ? (
 					<div className="cd-sugg">
 						{ suggestions.map( ( s ) => (

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-09T06:40:00+00:00\n"
+"POT-Creation-Date: 2026-10-09T06:50:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: cookie-dialog\n"
@@ -712,7 +712,11 @@ msgid "Assistent aus – alles andere funktioniert. KI-Anbieter einrichten"
 msgstr ""
 
 #: build/admin.js:3
-msgid "Assistent öffnen"
+msgid "Verlauf einklappen"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Verlauf zeigen"
 msgstr ""
 
 #: build/admin.js:3
@@ -724,11 +728,7 @@ msgid "Höhe des Verlaufs"
 msgstr ""
 
 #: build/admin.js:3
-msgid "Verlauf einklappen"
-msgstr ""
-
-#: build/admin.js:3
-msgid "Verlauf zeigen"
+msgid "Assistent öffnen"
 msgstr ""
 
 #: build/admin.js:3
@@ -998,7 +998,11 @@ msgstr ""
 #. translators: 1: pages, 2: scripts, 3: embeds, 4: plugins
 #: build/admin.js:14
 #, js-format
-msgid "%1$d Seiten, %2$d Skripte, %3$d Einbettungen, %4$d Plugins. Unten steht mein Vorschlag, rechts siehst du ihn auf deiner Startseite. Sag mir, was anders sein soll."
+msgid "%1$d Seiten, %2$d Skripte, %3$d Einbettungen, %4$d Plugins. Unten steht mein Vorschlag, rechts siehst du ihn auf deiner Startseite."
+msgstr ""
+
+#: build/admin.js:14
+msgid "Sag mir, was anders sein soll – z. B. „Schreib per Sie“"
 msgstr ""
 
 #: build/admin.js:14
@@ -1054,7 +1058,7 @@ msgid "Bis dahin ändert sich nichts an deiner Website. Ausschalten geht jederze
 msgstr ""
 
 #: build/admin.js:15
-msgid "Ich ändere Dialog, Dienste und Einstellungen. Jede Änderung siehst du als Karte und kannst sie zurücknehmen."
+msgid "Ich ändere Dialog, Dienste und Einstellungen – z. B. „Füge Hotjar hinzu“"
 msgstr ""
 
 #: build/admin.js:15
