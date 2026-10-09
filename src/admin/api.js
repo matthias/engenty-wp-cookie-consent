@@ -1,4 +1,5 @@
 import apiFetch from '@wordpress/api-fetch';
+import { __ } from '@wordpress/i18n';
 
 export const boot = window.cookieDialogAdmin || {};
 
@@ -23,7 +24,8 @@ export function problem( error ) {
 			/^cookie_dialog_/,
 			''
 		),
-		message: error?.message || 'Das hat nicht geklappt.',
+		message:
+			error?.message || __( 'Das hat nicht geklappt.', 'cookie-dialog' ),
 	};
 }
 

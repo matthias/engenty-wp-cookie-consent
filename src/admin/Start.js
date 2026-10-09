@@ -10,7 +10,7 @@ import {
 	Drawer,
 	Engenty,
 	Icon,
-	LANGUAGES,
+	languageName,
 	LOCAL_KINDS,
 	Notice,
 	Row,
@@ -232,6 +232,10 @@ function Proposal( { state, onState } ) {
 			( s ) => s.category === id && ! LOCAL_KINDS.includes( s.kind )
 		),
 	] ).filter( ( [ , list ] ) => list.length );
+	const serviceCount = byCat.reduce(
+		( n, [ , list ] ) => n + list.length,
+		0
+	);
 	const embeds = config.services.filter( ( s ) => s.kind === 'embed' );
 	const third = state.checks.find( ( c ) => c.id === 'third_party' );
 	const localHosts =
@@ -254,7 +258,7 @@ function Proposal( { state, onState } ) {
 	];
 	const uniqueLocal = Array.from( new Set( localNames ) );
 	const langs = config.languages
-		.map( ( l ) => LANGUAGES[ l ] || l.toUpperCase() )
+		.map( ( l ) => languageName( l ) )
 		.join( ' · ' );
 	const d = config.design;
 	const google = config.services.filter( ( s ) => s.signals.length );
@@ -277,12 +281,25 @@ function Proposal( { state, onState } ) {
 		<Card pad0>
 			<Row
 				lead={ <Status ok /> }
-				title={ sprintf(
-					/* translators: 1: services, 2: categories */
-					__( '%1$d Dienste in %2$d Kategorien', 'cookie-dialog' ),
-					byCat.reduce( ( n, [ , list ] ) => n + list.length, 0 ),
+				title={ `${ sprintf(
+					/* translators: %d: services */
+					_n(
+						'%d Dienst',
+						'%d Dienste',
+						serviceCount,
+						'cookie-dialog'
+					),
+					serviceCount
+				) } ${ sprintf(
+					/* translators: %d: categories */
+					_n(
+						'in %d Kategorie',
+						'in %d Kategorien',
+						byCat.length,
+						'cookie-dialog'
+					),
 					byCat.length
-				) }
+				) }` }
 				sub={ byCat
 					.map(
 						( [ id, list ] ) =>
@@ -531,8 +548,10 @@ function Proposal( { state, onState } ) {
 				title={ __( 'Protokoll', 'cookie-dialog' ) }
 				sub={ sprintf(
 					/* translators: %d: months */
-					__(
+					_n(
+						'%d Monat · IP-Adressen nur gehasht',
 						'%d Monate · IP-Adressen nur gehasht',
+						config.log.months,
 						'cookie-dialog'
 					),
 					config.log.months

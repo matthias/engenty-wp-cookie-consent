@@ -184,7 +184,7 @@ class Cookie_Dialog_Admin {
 				__( 'Cookie Dialog', 'cookie-dialog' ),
 				wp_kses_post(
 					wpautop(
-						__( 'Cookie Dialog stores the visitor’s choice in the first-party cookie „cookie_dialog“ (consent ID, version, time, categories and services) for as long as set under Cookies › Einstellungen (6 months by default). Every decision is logged with the consent ID, the version of the dialog, language, source, the browser family and the IP address as a SHA-256 hash with a salt that changes daily; the log is deleted after 12 months by default. Insert the block „Cookie-Tabelle“ to list all services and cookies.', 'cookie-dialog' )
+						__( 'Cookie Dialog speichert die Wahl der Besucher im eigenen Cookie „cookie_dialog“ (Consent-ID, Version, Zeit, Kategorien und Dienste) so lange, wie unter Cookies › Einstellungen eingestellt (6 Monate, wenn nichts geändert wurde). Jede Entscheidung kommt ins Protokoll: Consent-ID, Version des Dialogs, Sprache, Ort der Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich neuem Salz; gelöscht nach 12 Monaten, wenn nichts geändert wurde. Der Block „Cookie-Tabelle“ listet alle Dienste und Cookies.', 'cookie-dialog' )
 					)
 				)
 			);

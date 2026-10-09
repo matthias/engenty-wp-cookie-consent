@@ -1859,8 +1859,11 @@ export default function Services( { state, onState, save } ) {
 							onClick={ () => setShowAll( true ) }
 						>
 							{ sprintf(
-								/* translators: %d: more services */ __(
+								/* translators: %d: more services */
+								_n(
+									'%d weiterer',
 									'%d weitere',
+									candidates.length - chips.length,
 									'cookie-dialog'
 								),
 								candidates.length - chips.length

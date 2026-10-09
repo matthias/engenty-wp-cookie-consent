@@ -289,7 +289,7 @@ class Cookie_Dialog_Checks {
 			'ok'    => true,
 			'title' => __( 'Protokoll mit Version', 'cookie-dialog' ),
 			/* translators: %d: months */
-			'text'  => sprintf( __( 'IP-Adressen nur gehasht, gelöscht nach %d Monaten.', 'cookie-dialog' ), (int) $config['log']['months'] ),
+			'text'  => sprintf( _n( 'IP-Adressen nur gehasht, gelöscht nach %d Monat.', 'IP-Adressen nur gehasht, gelöscht nach %d Monaten.', (int) $config['log']['months'], 'cookie-dialog' ), (int) $config['log']['months'] ),
 			'fixes' => array(),
 		);
 

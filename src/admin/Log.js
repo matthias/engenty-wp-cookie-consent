@@ -1,5 +1,5 @@
 import { useEffect, useState } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, _n, sprintf } from '@wordpress/i18n';
 import { api, boot, problem, query } from './api';
 import { Dock } from './Assistant';
 import { Split } from './Start';
@@ -376,8 +376,10 @@ export default function Log( { state } ) {
 			<p className="cd-fine">
 				{ sprintf(
 					/* translators: %d: months */
-					__(
+					_n(
+						'Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d Monat.',
 						'Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d Monaten.',
+						state.config.log.months,
 						'cookie-dialog'
 					),
 					state.config.log.months

@@ -1,6 +1,6 @@
 import { useEffect, useState } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, _n, _x, sprintf } from '@wordpress/i18n';
 import { boot, pageUrl, post, problem } from './api';
 import { Dock, useBrowserModel } from './Assistant';
 import {
@@ -8,7 +8,8 @@ import {
 	Button,
 	Card,
 	Chip,
-	LANGUAGES,
+	languageName,
+	months,
 	Line,
 	Notice,
 	Seg,
@@ -119,7 +120,7 @@ export default function Settings( { state, onState, save } ) {
 				.map(
 					( r ) =>
 						( {
-							EEA: 'EWR',
+							EEA: __( 'EWR', 'cookie-dialog' ),
 							UK: 'UK',
 							CH: __( 'Schweiz', 'cookie-dialog' ),
 						} )[ r ]
@@ -227,7 +228,7 @@ export default function Settings( { state, onState, save } ) {
 					>
 						<span className="cd-row-inline">
 							{ [
-								[ 'EEA', 'EWR' ],
+								[ 'EEA', __( 'EWR', 'cookie-dialog' ) ],
 								[ 'UK', 'UK' ],
 								[ 'CH', __( 'Schweiz', 'cookie-dialog' ) ],
 							].map( ( [ id, label ] ) => {
@@ -486,13 +487,7 @@ export default function Settings( { state, onState, save } ) {
 				<Accordion
 					title={ __( 'Gültigkeit', 'cookie-dialog' ) }
 					summary={ [
-						sprintf(
-							/* translators: %d: months */ __(
-								'%d Monate',
-								'cookie-dialog'
-							),
-							c.validity.months
-						),
+						months( c.validity.months ),
 						c.validity.reaskOnChange
 							? __(
 									'neu fragen, wenn Dienste sich ändern',
@@ -532,13 +527,7 @@ export default function Settings( { state, onState, save } ) {
 						>
 							{ [ 1, 3, 6, 9, 12 ].map( ( m ) => (
 								<option key={ m } value={ m }>
-									{ sprintf(
-										/* translators: %d: months */ __(
-											'%d Monate',
-											'cookie-dialog'
-										),
-										m
-									) }
+									{ months( m ) }
 								</option>
 							) ) }
 						</select>
@@ -621,7 +610,11 @@ export default function Settings( { state, onState, save } ) {
 							options={ [
 								{
 									value: 'left',
-									label: __( 'Links', 'cookie-dialog' ),
+									label: _x(
+										'Links',
+										'position',
+										'cookie-dialog'
+									),
 								},
 								{
 									value: 'right',
@@ -725,8 +718,11 @@ export default function Settings( { state, onState, save } ) {
 				<Accordion
 					title={ __( 'Protokoll', 'cookie-dialog' ) }
 					summary={ sprintf(
-						/* translators: %d: months */ __(
+						/* translators: %d: months */
+						_n(
+							'%d Monat · IP gehasht · CSV',
 							'%d Monate · IP gehasht · CSV',
+							c.log.months,
 							'cookie-dialog'
 						),
 						c.log.months
@@ -753,13 +749,7 @@ export default function Settings( { state, onState, save } ) {
 						>
 							{ [ 6, 12, 24, 36 ].map( ( m ) => (
 								<option key={ m } value={ m }>
-									{ sprintf(
-										/* translators: %d: months */ __(
-											'%d Monate',
-											'cookie-dialog'
-										),
-										m
-									) }
+									{ months( m ) }
 								</option>
 							) ) }
 						</select>
@@ -931,7 +921,7 @@ export default function Settings( { state, onState, save } ) {
 				<Accordion
 					title={ __( 'Sprachen', 'cookie-dialog' ) }
 					summary={ `${ c.languages
-						.map( ( l ) => LANGUAGES[ l ] || l.toUpperCase() )
+						.map( ( l ) => languageName( l ) )
 						.join( ', ' ) }${
 						state.siteLanguages.length > 1
 							? ` · ${ __(
@@ -973,7 +963,7 @@ export default function Settings( { state, onState, save } ) {
 											: 'warn'
 									}
 								>
-									{ LANGUAGES[ l ] || l.toUpperCase() }
+									{ languageName( l ) }
 								</Chip>
 							) ) }
 						</span>
@@ -999,8 +989,11 @@ export default function Settings( { state, onState, save } ) {
 							  )
 							: null,
 						sprintf(
-							/* translators: %d: pages */ __(
+							/* translators: %d: pages */
+							_n(
+								'%d Seite',
 								'%d Seiten',
+								state.scan.pages.length,
 								'cookie-dialog'
 							),
 							state.scan.pages.length

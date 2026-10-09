@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, _x, sprintf } from '@wordpress/i18n';
 import { pageUrl, problem } from './api';
 import { Dock, runJob, useBrowserModel } from './Assistant';
 import Preview from './Preview';
@@ -9,7 +9,8 @@ import {
 	Chip,
 	Field,
 	Icon,
-	LANGUAGES,
+	LANGUAGE_CODES,
+	languageName,
 	Line,
 	Notice,
 	Section,
@@ -151,7 +152,11 @@ function Looks( { state, design, setDesign } ) {
 						options={ [
 							{
 								value: 'left',
-								label: __( 'Links', 'cookie-dialog' ),
+								label: _x(
+									'Links',
+									'position',
+									'cookie-dialog'
+								),
 							},
 							{
 								value: 'center',
@@ -184,7 +189,7 @@ function Looks( { state, design, setDesign } ) {
 						icon={ ratio >= 4.5 ? 'check' : 'warn' }
 					>
 						{ sprintf(
-							/* translators: %s: contrast ratio */
+							/* translators: %s: contrast ratio, e.g. 7.2 */
 							__( 'Kontrast %s : 1', 'cookie-dialog' ),
 							ratio.toFixed( 1 ).replace( '.', ',' )
 						) }
@@ -436,7 +441,7 @@ function Texts( { state, onState, save } ) {
 		} );
 	};
 	const others = [
-		...new Set( [ ...state.siteLanguages, ...Object.keys( LANGUAGES ) ] ),
+		...new Set( [ ...state.siteLanguages, ...LANGUAGE_CODES ] ),
 	].filter( ( l ) => ! config.languages.includes( l ) );
 	return (
 		<Card className="cd-col cd-gap12">
@@ -525,7 +530,7 @@ function Texts( { state, onState, save } ) {
 								className="cd-chip__btn"
 								onClick={ () => setLang( l ) }
 							>
-								{ LANGUAGES[ l ] || l.toUpperCase() }
+								{ languageName( l ) }
 							</button>
 							{ config.languages.length > 1 ? (
 								<button
@@ -536,7 +541,7 @@ function Texts( { state, onState, save } ) {
 											'%s entfernen',
 											'cookie-dialog'
 										),
-										LANGUAGES[ l ] || l
+										languageName( l )
 									) }
 									onClick={ () =>
 										save( {
@@ -578,7 +583,7 @@ function Texts( { state, onState, save } ) {
 					</option>
 					{ others.map( ( l ) => (
 						<option key={ l } value={ l }>
-							{ LANGUAGES[ l ] || l.toUpperCase() }
+							{ languageName( l ) }
 							{ state.siteLanguages.includes( l )
 								? ` · ${ __(
 										'auf deiner Website',
@@ -602,7 +607,7 @@ function Texts( { state, onState, save } ) {
 								'Auf %s übersetzen',
 								'cookie-dialog'
 							),
-							LANGUAGES[ lang ] || lang
+							languageName( lang )
 						) }
 					</Button>
 				</div>

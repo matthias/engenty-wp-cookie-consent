@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { __, _n, sprintf } from '@wordpress/i18n';
 import { engentyMarkup } from './engenties';
 
 const ICONS = {
@@ -455,24 +455,54 @@ export const pick = ( map, lang = 'de' ) =>
 		  Object.values( map || {} )[ 0 ] ||
 		  '';
 
-export const LANGUAGES = {
-	de: 'Deutsch',
-	en: 'Englisch',
-	fr: 'Französisch',
-	it: 'Italienisch',
-	es: 'Spanisch',
-	nl: 'Niederländisch',
-	pl: 'Polnisch',
-	cs: 'Tschechisch',
-	sk: 'Slowakisch',
-	hu: 'Ungarisch',
-	sl: 'Slowenisch',
-	hr: 'Kroatisch',
-	pt: 'Portugiesisch',
-	da: 'Dänisch',
-	sv: 'Schwedisch',
-	fi: 'Finnisch',
-	ro: 'Rumänisch',
-	el: 'Griechisch',
-	tr: 'Türkisch',
-};
+/** Languages offered for the dialog; their names come from the browser in the admin's language. */
+export const LANGUAGE_CODES = [
+	'de',
+	'en',
+	'fr',
+	'it',
+	'es',
+	'nl',
+	'pl',
+	'cs',
+	'sk',
+	'hu',
+	'sl',
+	'hr',
+	'pt',
+	'da',
+	'sv',
+	'fi',
+	'ro',
+	'el',
+	'tr',
+];
+
+/**
+ * A language's name in the admin's language: „Englisch“, “English”.
+ * @param code
+ */
+export function languageName( code ) {
+	try {
+		const locale = ( window.cookieDialogAdmin?.locale || 'de' ).replace(
+			'_',
+			'-'
+		);
+		const name = new window.Intl.DisplayNames( [ locale ], {
+			type: 'language',
+		} ).of( code );
+		return name
+			? name.charAt( 0 ).toUpperCase() + name.slice( 1 )
+			: code.toUpperCase();
+	} catch {
+		return code.toUpperCase();
+	}
+}
+
+/**
+ * „6 Monate“, with the singular for one.
+ * @param n
+ */
+export const months = ( n ) =>
+	/* translators: %d: months */
+	sprintf( _n( '%d Monat', '%d Monate', n, 'cookie-dialog' ), n );
