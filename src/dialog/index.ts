@@ -19,6 +19,12 @@ type Service = {
 	hosts?: string[];
 };
 type Category = { id: string; name: string; desc: string; locked: boolean };
+/** One language's words, when visitors may pick the dialog's language. */
+type Localized = {
+	texts: Record< string, string >;
+	services: Service[];
+	categories: Category[];
+};
 type Colors = Record<
 	'background' | 'text' | 'button' | 'buttonText' | 'link',
 	string
@@ -41,6 +47,7 @@ type Design = {
 	buttons: 'same' | 'accept' | 'outline';
 	showTitle: boolean;
 	showLinks: boolean;
+	showLanguages: boolean;
 };
 type Preview = { layer: '1' | '2' | 'ph'; edit: boolean; lang: string };
 type SitePreview = {
@@ -56,6 +63,7 @@ type Config = {
 	lang: string;
 	site: string;
 	texts: Record< string, string >;
+	langs: Record< string, Localized > | false;
 	design: Design;
 	categories: Category[];
 	services: Service[];
@@ -91,6 +99,8 @@ declare global {
 }
 
 const COOKIE = 'cookie_dialog';
+/** The language a visitor picked in the dialog, kept in their browser. */
+const LANG_KEY = 'cookie-dialog-lang';
 const SIGNALS = [
 	'ad_storage',
 	'ad_user_data',
@@ -216,6 +226,7 @@ class CookieDialog {
 	}
 
 	start() {
+		this.pickedLang();
 		this.mount();
 		if ( this.c.preview ) {
 			this.preview( this.c.preview );
@@ -889,6 +900,7 @@ class CookieDialog {
 		return this.el( 'div', { class: 'cd-foot' }, [
 			extra || null,
 			this.el( 'span', { class: 'cd-foot__links' }, links ),
+			this.langPicker(),
 			this.c.design.branding
 				? this.el(
 						'a',
@@ -1371,7 +1383,7 @@ class CookieDialog {
 
 	onClick( e: Event ) {
 		const target = ( e.target as Element ).closest< HTMLElement >(
-			'[data-act], [data-cat], [data-svc], [data-open]'
+			'[data-act], [data-cat], [data-svc], [data-open], [data-lang]'
 		);
 		if (
 			! target ||
@@ -1379,6 +1391,20 @@ class CookieDialog {
 				this.c.preview.edit &&
 				target.closest( '[contenteditable="true"]' ) )
 		) {
+			return;
+		}
+		if ( target.dataset.lang ) {
+			const code = target.dataset.lang;
+			this.useLang( code );
+			try {
+				window.localStorage.setItem( LANG_KEY, code );
+			} catch {
+				// Without storage the language holds for this page.
+			}
+			this.render();
+			this.root
+				?.querySelector< HTMLElement >( `[data-lang="${ code }"]` )
+				?.focus( { preventScroll: true } );
 			return;
 		}
 		if ( target.dataset.open ) {
@@ -1530,6 +1556,91 @@ class CookieDialog {
 			this.root.appendChild( this.fab );
 		}
 		this.fab.hidden = ! this.choice || this.layer !== 0;
+	}
+
+	/* ---------- the dialog's language */
+
+	/** Whether visitors pick the dialog's language: switched on and more than one there. */
+	langChoice(): boolean {
+		return Boolean(
+			this.c.design.showLanguages &&
+				this.c.langs &&
+				Object.keys( this.c.langs ).length > 1
+		);
+	}
+
+	/** The language this visitor picked before, when there is a choice. */
+	pickedLang() {
+		if ( this.c.preview || ! this.langChoice() ) {
+			return;
+		}
+		let code: string | null = null;
+		try {
+			code = window.localStorage.getItem( LANG_KEY );
+		} catch {
+			code = null;
+		}
+		if ( code && code !== this.c.lang ) {
+			this.useLang( code );
+		}
+	}
+
+	/**
+	 * Texts, services and categories in another language; the log records it with the choice.
+	 * @param code
+	 */
+	useLang( code: string ) {
+		const words = this.c.langs ? this.c.langs[ code ] : null;
+		if ( ! words ) {
+			return;
+		}
+		this.c = {
+			...this.c,
+			lang: code,
+			texts: words.texts,
+			services: words.services,
+			categories: words.categories,
+		};
+		if ( this.fab ) {
+			this.fab.setAttribute( 'aria-label', this.t( 'reopen' ) );
+			this.fab.title = this.t( 'reopen' );
+		}
+	}
+
+	/** The languages as short codes, each with its own name for screen readers. */
+	langPicker(): HTMLElement | null {
+		if ( ! this.langChoice() || ! this.c.langs ) {
+			return null;
+		}
+		const name = ( code: string ) => {
+			try {
+				return (
+					new Intl.DisplayNames( [ code ], { type: 'language' } ).of(
+						code
+					) || code
+				);
+			} catch {
+				return code;
+			}
+		};
+		return this.el(
+			'span',
+			{ class: 'cd-langs' },
+			Object.keys( this.c.langs ).map( ( code ) =>
+				this.el(
+					'button',
+					{
+						type: 'button',
+						'data-lang': code,
+						lang: code,
+						title: name( code ),
+						'aria-label': name( code ),
+						'aria-pressed': code === this.c.lang ? 'true' : 'false',
+					},
+					[ code.toUpperCase() ]
+				)
+			)
+		);
 	}
 
 	/* ---------- the preview on the site */

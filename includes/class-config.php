@@ -86,35 +86,36 @@ class Cookie_Dialog_Config {
 			'reask'       => 0,
 			'setup'       => false,
 			'design'      => array(
-				'layout'     => 'box',
-				'position'   => 'left',
-				'size'       => 'm',
-				'scheme'     => 'light',
-				'colors'     => array(
+				'layout'        => 'box',
+				'position'      => 'left',
+				'size'          => 'm',
+				'scheme'        => 'light',
+				'colors'        => array(
 					'background' => '#ffffff',
 					'text'       => '#1b1b1b',
 					'button'     => '#1f3d2b',
 					'buttonText' => '#ffffff',
 					'link'       => '#1f3d2b',
 				),
-				'dark'       => array(
+				'dark'          => array(
 					'background' => '#1e1f1c',
 					'text'       => '#f4f1ea',
 					'button'     => '#e6c76f',
 					'buttonText' => '#1b1b1b',
 					'link'       => '#e6c76f',
 				),
-				'radius'     => 16,
-				'font'       => 'theme',
-				'fontFamily' => '',
-				'headFont'   => '',
-				'logo'       => '',
-				'backdrop'   => false,
-				'lock'       => false,
-				'branding'   => false,
-				'buttons'    => 'accept',
-				'showTitle'  => true,
-				'showLinks'  => true,
+				'radius'        => 16,
+				'font'          => 'theme',
+				'fontFamily'    => '',
+				'headFont'      => '',
+				'logo'          => '',
+				'backdrop'      => false,
+				'lock'          => false,
+				'branding'      => false,
+				'buttons'       => 'accept',
+				'showTitle'     => true,
+				'showLinks'     => true,
+				'showLanguages' => false,
 			),
 			'tone'        => array(
 				'address' => 'du',
@@ -775,11 +776,11 @@ class Cookie_Dialog_Config {
 		$design['fontFamily'] = self::font_family( $design['fontFamily'] ?? '' );
 		$design['headFont']   = self::font_family( $design['headFont'] ?? '' );
 		$design['logo']       = esc_url_raw( (string) ( $design['logo'] ?? '' ) );
-		foreach ( array( 'backdrop', 'lock', 'branding', 'showTitle', 'showLinks' ) as $flag ) {
+		foreach ( array( 'backdrop', 'lock', 'branding', 'showTitle', 'showLinks', 'showLanguages' ) as $flag ) {
 			$design[ $flag ] = ! empty( $design[ $flag ] );
 		}
 		$design['buttons'] = self::one_of( $design['buttons'] ?? '', array( 'same', 'accept', 'outline' ), 'accept' );
-		$c['design'] = array_intersect_key( $design, $d['design'] );
+		$c['design']       = array_intersect_key( $design, $d['design'] );
 
 		$c['tone'] = array(
 			'address' => self::one_of( $c['tone']['address'] ?? '', array( 'du', 'Sie' ), 'du' ),

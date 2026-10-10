@@ -313,6 +313,23 @@ function Looks( { state, design, setDesign } ) {
 					onChange={ ( showLinks ) => set( { showLinks } ) }
 				/>
 			</Line>
+			<Line
+				label={ __( 'Sprachauswahl zeigen', 'cookie-dialog' ) }
+				hint={
+					state.config.languages.length < 2
+						? __(
+								'Erst mit mehr als einer Sprache (Texte › Sprachen).',
+								'cookie-dialog'
+						  )
+						: null
+				}
+			>
+				<Switch
+					checked={ design.showLanguages }
+					label={ __( 'Sprachauswahl zeigen', 'cookie-dialog' ) }
+					onChange={ ( showLanguages ) => set( { showLanguages } ) }
+				/>
+			</Line>
 			<button
 				type="button"
 				className="cd-more"

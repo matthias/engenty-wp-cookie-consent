@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-10T14:02:10+00:00\n"
+"POT-Creation-Date: 2026-10-10T14:06:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: cookie-dialog\n"
@@ -566,15 +566,15 @@ msgstr ""
 msgid "Version %1$d: %2$s"
 msgstr ""
 
-#: includes/class-front.php:356
+#: includes/class-front.php:385
 msgid "Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder gespeichert noch protokolliert."
 msgstr ""
 
-#: includes/class-front.php:357
+#: includes/class-front.php:386
 msgid "Neu starten"
 msgstr ""
 
-#: includes/class-front.php:358
+#: includes/class-front.php:387
 msgid "Beenden"
 msgstr ""
 
@@ -1310,6 +1310,14 @@ msgstr ""
 
 #: build/admin.js:19
 msgid "Links zu Datenschutz und Impressum zeigen"
+msgstr ""
+
+#: build/admin.js:19
+msgid "Sprachauswahl zeigen"
+msgstr ""
+
+#: build/admin.js:19
+msgid "Erst mit mehr als einer Sprache (Texte › Sprachen)."
 msgstr ""
 
 #: build/admin.js:19

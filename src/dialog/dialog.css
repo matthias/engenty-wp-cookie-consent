@@ -185,6 +185,10 @@
 :host .cd-layer__foot .cd-foot { margin-top: 0; }
 :host .cd-foot__links { display: inline-flex; gap: 14px; }
 :host .cd-foot a { color: var(--cd-mute); }
+:host .cd-langs { display: inline-flex; gap: 2px; }
+:host .cd-langs button { appearance: none; border: 0; border-radius: 6px; padding: 2px 5px; background: transparent; color: var(--cd-mute); font: inherit; cursor: pointer; }
+:host .cd-langs button:hover { color: var(--cd-fg); }
+:host .cd-langs button[aria-pressed="true"] { color: var(--cd-fg); font-weight: 600; }
 :host .cd-brand { margin-left: auto; opacity: .7; }
 :host .cd-id { font-size: .92em; }
 

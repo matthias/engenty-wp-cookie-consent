@@ -275,18 +275,15 @@ class Cookie_Dialog_Front {
 	}
 
 	/**
-	 * What the dialog needs on the site: texts of this language, design, categories and services
-	 * as visitors see them, the Consent Mode mapping. Nothing about the visitor – page caches keep it.
+	 * The words of one language: the dialog's texts, the services and categories as visitors read them.
 	 *
-	 * @param array       $config Configuration.
-	 * @param string|null $lang   Language; the request's by default.
-	 * @return array
+	 * @param array  $config Configuration.
+	 * @param string $lang   Language.
+	 * @return array `texts`, `services`, `categories`, `serviceSignals`.
 	 */
-	public static function data( $config, $lang = null ) {
-		$preview = self::preview();
-		$lang    = $lang ?? ( $preview && $preview['lang'] && in_array( $preview['lang'], $config['languages'], true ) ? $preview['lang'] : Cookie_Dialog_Config::lang() );
-		$texts   = Cookie_Dialog_Config::texts( $lang, $config );
-		$type    = array_combine( array( 'http', 'local', 'session' ), $texts['types'] );
+	private static function localized( $config, $lang ) {
+		$texts = Cookie_Dialog_Config::texts( $lang, $config );
+		$type  = array_combine( array( 'http', 'local', 'session' ), $texts['types'] );
 
 		$services        = array();
 		$service_signals = array();
@@ -329,17 +326,49 @@ class Cookie_Dialog_Front {
 		}
 
 		return array(
+			'texts'          => $texts,
+			'services'       => $services,
+			'categories'     => $categories,
+			'serviceSignals' => $service_signals,
+		);
+	}
+
+	/**
+	 * What the dialog needs on the site: texts of this language, design, categories and services
+	 * as visitors see them, the Consent Mode mapping. Nothing about the visitor – page caches keep it.
+	 *
+	 * @param array       $config Configuration.
+	 * @param string|null $lang   Language; the request's by default.
+	 * @return array
+	 */
+	public static function data( $config, $lang = null ) {
+		$preview = self::preview();
+		$lang    = $lang ?? ( $preview && $preview['lang'] && in_array( $preview['lang'], $config['languages'], true ) ? $preview['lang'] : Cookie_Dialog_Config::lang() );
+		$here    = self::localized( $config, $lang );
+
+		// The language choice in the dialog switches without a reload: every language's words come along.
+		$langs = false;
+		if ( count( $config['languages'] ) > 1 && ( $config['design']['showLanguages'] || $preview ) ) {
+			$langs = array();
+			foreach ( $config['languages'] as $code ) {
+				$langs[ $code ] = $code === $lang ? $here : self::localized( $config, $code );
+				unset( $langs[ $code ]['serviceSignals'] );
+			}
+		}
+
+		return array(
 			'v'              => (int) $config['version'],
 			'reask'          => (int) $config['reask'],
 			'live'           => (bool) $config['live'],
 			'lang'           => $lang,
 			'site'           => wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES ),
-			'texts'          => $texts,
+			'texts'          => $here['texts'],
+			'langs'          => $langs,
 			'design'         => $config['design'],
-			'categories'     => $categories,
-			'services'       => $services,
+			'categories'     => $here['categories'],
+			'services'       => $here['services'],
 			'catSignals'     => Cookie_Dialog_Config::CATEGORY_SIGNALS,
-			'serviceSignals' => $service_signals,
+			'serviceSignals' => $here['serviceSignals'],
 			'consentMode'    => (bool) $config['google']['consentMode'],
 			'months'         => (int) $config['validity']['months'],
 			'gpc'            => (bool) $config['validity']['gpc'],
