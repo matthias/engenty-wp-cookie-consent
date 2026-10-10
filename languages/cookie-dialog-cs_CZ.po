@@ -1,0 +1,2782 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cookie Dialog 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cookie-dialog\n"
+"POT-Creation-Date: 2026-10-10T14:06:42+00:00\n"
+"PO-Revision-Date: 2026-10-10T14:06:42+00:00\n"
+"Last-Translator: engenty\n"
+"Language-Team: engenty\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Domain: cookie-dialog\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Plugin Name of the plugin
+#: cookie-dialog.php includes/class-admin.php:185
+msgid "Cookie Dialog"
+msgstr "Cookie Dialog"
+
+#. Plugin URI of the plugin
+#: cookie-dialog.php
+msgid "https://engenty.ai/cookie-dialog"
+msgstr "https://engenty.ai/cookie-dialog"
+
+#. Description of the plugin
+#: cookie-dialog.php
+msgid ""
+"A simple, beautiful cookie dialog for the EU: categories and services, "
+"scripts and embeds only after consent, a consent log, Google Consent Mode v2"
+" – and an assistant that sets it up."
+msgstr ""
+"Jednoduchý, hezký cookie dialog pro EU: kategorie a služby, skripty a "
+"vložený obsah až po souhlasu, protokol souhlasů, Google Consent Mode v2 – a "
+"asistent, který ho nastaví."
+
+#. Author of the plugin
+#: cookie-dialog.php
+msgid "engenty"
+msgstr "engenty"
+
+#. Author URI of the plugin
+#: cookie-dialog.php
+msgid "https://engenty.ai"
+msgstr "https://engenty.ai"
+
+#: includes/class-admin.php:64 build/admin.js:20
+msgid "Cookies"
+msgstr "Cookies"
+
+#: includes/class-admin.php:65 includes/class-admin.php:138 build/admin.js:19
+#: build/admin.js:21
+msgid "Start"
+msgstr "Start"
+
+#: includes/class-admin.php:66 build/admin.js:20 build/admin.js:22
+msgid "Dialog"
+msgstr "Dialog"
+
+#: includes/class-admin.php:67 build/admin.js:24
+msgid "Dienste"
+msgstr "Služby"
+
+#: includes/class-admin.php:68 build/admin.js:12 build/admin.js:18
+#: build/admin.js:26
+msgid "Protokoll"
+msgstr "Protokol"
+
+#: includes/class-admin.php:69 build/admin.js:18 build/admin.js:28
+#: build/blocks.js:1
+msgid "Einstellungen"
+msgstr "Nastavení"
+
+#: includes/class-admin.php:79 build/admin.js:29
+msgid "Cookie Dialog lädt …"
+msgstr "Cookie Dialog se načítá …"
+
+#: includes/class-admin.php:139 includes/class-admin.php:158
+msgid "Einrichten"
+msgstr "Nastavit"
+
+#: includes/class-admin.php:155
+msgid "Cookie Dialog ist noch aus."
+msgstr "Cookie Dialog je ještě vypnutý."
+
+#: includes/class-admin.php:156
+msgid "Bis du ihn einschaltest, ändert sich nichts an deiner Website."
+msgstr "Dokud ho nezapnete, na vašem webu se nic nezmění."
+
+#: includes/class-admin.php:165
+msgid "Nicht erlaubt."
+msgstr "Nepovoleno."
+
+#: includes/class-admin.php:188
+msgid ""
+"Cookie Dialog speichert die Wahl der Besucher im eigenen Cookie "
+"„cookie_dialog“ (Consent-ID, Version, Zeit, Kategorien und Dienste) so "
+"lange, wie unter Cookies › Einstellungen eingestellt (6 Monate, wenn nichts "
+"geändert wurde). Jede Entscheidung kommt ins Protokoll: Consent-ID, Version "
+"des Dialogs, Sprache, Ort der Entscheidung, Browser-Familie und die IP-"
+"Adresse als SHA-256 mit täglich neuem Salz; gelöscht nach 12 Monaten, wenn "
+"nichts geändert wurde. Der Block „Cookie-Tabelle“ listet alle Dienste und "
+"Cookies."
+msgstr ""
+"Cookie Dialog ukládá volbu návštěvníků ve vlastní cookie „cookie_dialog“ (ID"
+" souhlasu, verze, čas, kategorie a služby) tak dlouho, jak je nastaveno v "
+"Cookies › Nastavení (6 měsíců, pokud se nic nezměnilo). Každé rozhodnutí jde"
+" do protokolu: ID souhlasu, verze dialogu, jazyk, místo rozhodnutí, rodina "
+"prohlížeče a IP adresa jako SHA-256 s denně novou solí; smazáno po 12 "
+"měsících, pokud se nic nezměnilo. Blok „Tabulka cookies“ vypisuje všechny "
+"služby a cookies."
+
+#: includes/class-assistant.php:124
+msgid "Der Assistent braucht WordPress 7.0 oder neuer."
+msgstr "Asistent potřebuje WordPress 7.0 nebo novější."
+
+#: includes/class-assistant.php:152
+msgid "Die Antwort war kein JSON. Versuch es noch einmal."
+msgstr "Odpověď nebyla JSON. Zkuste to znovu."
+
+#. translators: %s: what the person asked
+#: includes/class-assistant.php:508 includes/class-assistant.php:510
+#, php-format
+msgid "Assistent: %s"
+msgstr "Asistent: %s"
+
+#. translators: %s: what the person asked
+#: includes/class-assistant.php:508 build/admin.js:4 build/admin.js:27
+msgid "Assistent"
+msgstr "Asistent"
+
+#: includes/class-assistant.php:512
+msgid "Geändert"
+msgstr "Změněno"
+
+#. translators: %d: number of changes
+#: includes/class-assistant.php:514
+#, php-format
+msgid "%d Änderung"
+msgid_plural "%d Änderungen"
+msgstr[0] "%d změna"
+msgstr[1] "%d změny"
+msgstr[2] "%d změn"
+
+#: includes/class-assistant.php:545
+msgid "Das lässt sich nicht mehr zurücknehmen."
+msgstr "To už nelze vzít zpět."
+
+#: includes/class-assistant.php:552
+msgid "Assistent: Änderung zurückgenommen"
+msgstr "Asistent: změna vzata zpět"
+
+#: includes/class-assistant.php:553
+msgid "Zurückgenommen"
+msgstr "Vzato zpět"
+
+#: includes/class-assistant.php:705 includes/class-assistant.php:850
+msgid "Diese Aufgabe gibt es nicht."
+msgstr "Tento úkol neexistuje."
+
+#: includes/class-assistant.php:737
+msgid ""
+"Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren)."
+msgstr "K tomu potřebuje WordPress poskytovatele AI (Nastavení › Konektory)."
+
+#: includes/class-assistant.php:762
+msgid "Die Übersetzung kam unvollständig zurück."
+msgstr "Překlad se vrátil neúplný."
+
+#. translators: %s: language code
+#: includes/class-assistant.php:783
+#, php-format
+msgid "Texte auf %s"
+msgstr "Texty v jazyce %s"
+
+#. translators: %s: language code
+#: includes/class-assistant.php:785
+#, php-format
+msgid "Die Texte gibt es jetzt auf %s."
+msgstr "Texty jsou teď k dispozici v jazyce %s."
+
+#: includes/class-assistant.php:792
+msgid "Kein Text zurückgekommen."
+msgstr "Nevrátil se žádný text."
+
+#: includes/class-assistant.php:795
+msgid "Text gekürzt"
+msgstr "Text zkrácen"
+
+#: includes/class-assistant.php:796
+msgid "Gekürzt."
+msgstr "Zkráceno."
+
+#: includes/class-assistant.php:803 includes/class-checks.php:516
+msgid "Diesen Host kennt die letzte Prüfung nicht."
+msgstr "Tento host poslední kontrola nezná."
+
+#. translators: %s: service name
+#: includes/class-assistant.php:814
+#, php-format
+msgid "Vorschlag: %s"
+msgstr "Návrh: %s"
+
+#: includes/class-assistant.php:822
+msgid "Kein Absatz zurückgekommen."
+msgstr "Nevrátil se žádný odstavec."
+
+#: includes/class-assistant.php:826
+msgid "Der Absatz ist geschrieben."
+msgstr "Odstavec je napsaný."
+
+#: includes/class-assistant.php:844
+msgid "Texte im Ton der Website"
+msgstr "Texty v tónu webu"
+
+#: includes/class-assistant.php:846
+msgid "Die Texte klingen jetzt wie deine Website."
+msgstr "Texty teď znějí jako váš web."
+
+#. translators: %d: number of hosts
+#: includes/class-checks.php:58
+#, php-format
+msgid "%d Host bekommt vor der Einwilligung die IP-Adresse"
+msgid_plural "%d Hosts bekommen vor der Einwilligung die IP-Adresse"
+msgstr[0] "%d host dostane IP adresu před souhlasem"
+msgstr[1] "%d hosty dostanou IP adresu před souhlasem"
+msgstr[2] "%d hostů dostane IP adresu před souhlasem"
+
+#: includes/class-checks.php:59
+msgid "Schriften, Styles und Bilder kommen von deinem Server"
+msgstr "Písma, styly a obrázky přicházejí z vašeho serveru"
+
+#. translators: %s: hosts
+#: includes/class-checks.php:62
+#, php-format
+msgid "%s – kommen dann von deinem Server"
+msgstr "%s – budou pak přicházet z vašeho serveru"
+
+#: includes/class-checks.php:63
+msgid "Kein Dritter sieht die IP-Adresse, bevor jemand zustimmt."
+msgstr "Žádná třetí strana nevidí IP adresu, dokud někdo nesouhlasí."
+
+#: includes/class-checks.php:67 build/admin.js:23
+msgid "Lokal einbinden"
+msgstr "Načítat lokálně"
+
+#. translators: 1: date, 2: host
+#: includes/class-checks.php:83
+#, php-format
+msgid "Neues Skript seit %1$s: %2$s"
+msgstr "Nový skript od %1$s: %2$s"
+
+#. translators: %s: host
+#: includes/class-checks.php:85 build/admin.js:7
+#, php-format, js-format
+msgid "Skript unbekannt: %s"
+msgstr "Neznámý skript: %s"
+
+#. translators: 1: service, 2: purpose, 3: category
+#: includes/class-checks.php:88 build/admin.js:23
+#, php-format, js-format
+msgid "Vorschlag: %1$s, %2$s → %3$s"
+msgstr "Návrh: %1$s (%2$s) → %3$s"
+
+#: includes/class-checks.php:89
+msgid "Lädt bis zur Zuordnung ohne Einwilligung. Ordne es einem Dienst zu."
+msgstr "Do přiřazení se načítá bez souhlasu. Přiřaďte ho ke službě."
+
+#: includes/class-checks.php:96 build/admin.js:8 build/admin.js:20
+#: build/admin.js:23
+msgid "Übernehmen"
+msgstr "Použít"
+
+#: includes/class-checks.php:101 build/admin.js:8 build/admin.js:19
+#: build/admin.js:20 build/admin.js:23
+msgid "Ändern"
+msgstr "Změnit"
+
+#. translators: %s: services
+#: includes/class-checks.php:124
+#, php-format
+msgid "Lädt trotzdem vor der Einwilligung: %s"
+msgstr "Přesto se načítá před souhlasem: %s"
+
+#: includes/class-checks.php:125
+msgid "Dienste warten auf die Einwilligung"
+msgstr "Služby čekají na souhlas"
+
+#: includes/class-checks.php:127
+msgid ""
+"Ein Skript lädt sie nach, das der Dialog nicht kennt. Trage das Einbinden "
+"als Snippet ein oder markiere das Tag mit data-cookie-service."
+msgstr ""
+"Načítá je skript, který dialog nezná. Zadejte vložení jako snippet nebo "
+"označte tag pomocí data-cookie-service."
+
+#: includes/class-checks.php:128
+msgid "Kein Dienst lädt, bevor jemand zustimmt."
+msgstr "Žádná služba se nenačte, dokud někdo nesouhlasí."
+
+#: includes/class-checks.php:132
+msgid "Ansehen"
+msgstr "Zobrazit"
+
+#. translators: %s: cookie names
+#: includes/class-checks.php:144
+#, php-format
+msgid "Cookies vor der Einwilligung: %s"
+msgstr "Cookies před souhlasem: %s"
+
+#: includes/class-checks.php:145
+msgid "Vor der Einwilligung nur notwendige Cookies"
+msgstr "Před souhlasem jen nezbytné cookies"
+
+#: includes/class-checks.php:147
+msgid ""
+"Der Server setzt sie beim ersten Besuch. Gehören sie zu einem notwendigen "
+"Dienst, trage sie dort ein."
+msgstr ""
+"Server je nastaví při první návštěvě. Pokud patří k nezbytné službě, zadejte"
+" je tam."
+
+#: includes/class-checks.php:148
+msgid "Gelesen ohne Einwilligung: keine anderen Cookies."
+msgstr "Čteno bez souhlasu: žádné další cookies."
+
+#: includes/class-checks.php:152 build/admin.js:8 build/admin.js:20
+#: build/admin.js:23
+msgid "Zuordnen"
+msgstr "Přiřadit"
+
+#: includes/class-checks.php:165 build/admin.js:11
+msgid "Google Consent Mode v2"
+msgstr "Google Consent Mode v2"
+
+#: includes/class-checks.php:167
+msgid "Vor jedem Google-Tag · Tags warten auf Einwilligung"
+msgstr "Před každým tagem Google · tagy čekají na souhlas"
+
+#: includes/class-checks.php:167
+msgid ""
+"Ein Google-Tag steht vor dem Consent-Mode-Standard – es kommt von einem "
+"anderen Plugin oder dem Theme."
+msgstr ""
+"Nějaký tag Google stojí před výchozím nastavením Consent Mode – pochází z "
+"jiného pluginu nebo ze šablony."
+
+#: includes/class-checks.php:168
+msgid "Aus. Google verlangt ihn für Messung und Anzeigen im EWR."
+msgstr "Vypnuto. Google ho vyžaduje pro měření a reklamy v EHP."
+
+#: includes/class-checks.php:172
+msgid "Einschalten"
+msgstr "Zapnout"
+
+#: includes/class-checks.php:188
+msgid "Keine Datenschutzerklärung gewählt"
+msgstr "Nejsou vybrány zásady ochrany osobních údajů"
+
+#: includes/class-checks.php:190
+msgid "Datenschutzerklärung nennt alle Dienste"
+msgstr "Zásady ochrany osobních údajů uvádějí všechny služby"
+
+#. translators: %s: services
+#: includes/class-checks.php:192
+#, php-format
+msgid "Die Datenschutzerklärung nennt %s nicht"
+msgstr "Zásady ochrany osobních údajů neuvádějí %s"
+
+#: includes/class-checks.php:194
+msgid "Der Dialog verlinkt sie, und dort steht die Cookie-Tabelle."
+msgstr "Dialog na ně odkazuje a je tam tabulka cookies."
+
+#: includes/class-checks.php:195
+msgid "Die Cookie-Tabelle hält sich selbst aktuell."
+msgstr "Tabulka cookies se sama udržuje aktuální."
+
+#: includes/class-checks.php:195
+msgid "Die Cookie-Tabelle und ein Absatz werden eingefügt."
+msgstr "Vloží se tabulka cookies a odstavec."
+
+#: includes/class-checks.php:199 includes/class-checks.php:222
+msgid "Seite wählen"
+msgstr "Vybrat stránku"
+
+#: includes/class-checks.php:204
+msgid "Einfügen"
+msgstr "Vložit"
+
+#: includes/class-checks.php:209
+msgid "Lesen"
+msgstr "Číst"
+
+#: includes/class-checks.php:217
+msgid "Impressum verlinkt"
+msgstr "Tiráž odkazována"
+
+#: includes/class-checks.php:217
+msgid "Kein Impressum gewählt"
+msgstr "Není vybrána tiráž"
+
+#: includes/class-checks.php:218
+msgid ""
+"Datenschutz und Impressum bleiben lesbar, der Dialog zeigt sich dort klein."
+msgstr ""
+"Ochrana osobních údajů a tiráž zůstávají čitelné, dialog se tam zobrazí "
+"malý."
+
+#: includes/class-checks.php:231
+msgid "Widerruf so einfach wie die Einwilligung"
+msgstr "Odvolání stejně snadné jako souhlas"
+
+#: includes/class-checks.php:231
+msgid "Der Dialog lässt sich nicht wieder öffnen"
+msgstr "Dialog nelze znovu otevřít"
+
+#: includes/class-checks.php:232
+msgid "Button, Link oder Block öffnen die Auswahl jederzeit."
+msgstr "Tlačítko, odkaz nebo blok otevřou výběr kdykoli."
+
+#: includes/class-checks.php:232
+msgid "Kein Button und kein Link zu #cookie-settings gefunden."
+msgstr "Nenalezeno žádné tlačítko ani odkaz na #cookie-settings."
+
+#: includes/class-checks.php:236
+msgid "Button einschalten"
+msgstr "Zapnout tlačítko"
+
+#. translators: %s: contrast ratio, e.g. 7.2
+#: includes/class-checks.php:248 build/admin.js:19
+#, php-format, js-format
+msgid "Kontrast %s : 1"
+msgstr "Kontrastní poměr %s : 1"
+
+#: includes/class-checks.php:249
+msgid "Texte und Buttons gut lesbar."
+msgstr "Texty a tlačítka dobře čitelné."
+
+#: includes/class-checks.php:249
+msgid "Unter 4,5 : 1 – schwer lesbar."
+msgstr "Pod 4,5 : 1 – špatně čitelné."
+
+#: includes/class-checks.php:253
+msgid "Farben anpassen"
+msgstr "Upravit barvy"
+
+#. translators: %s: language code
+#: includes/class-checks.php:267
+#, php-format
+msgid "Sprache %s zeigt noch Englisch"
+msgstr "Jazyk %s zatím ukazuje angličtinu"
+
+#: includes/class-checks.php:268
+msgid "Der Assistent oder das Modell deines Browsers übersetzt die Texte."
+msgstr "Texty přeloží asistent nebo model vašeho prohlížeče."
+
+#: includes/class-checks.php:272
+msgid "Übersetzen"
+msgstr "Přeložit"
+
+#: includes/class-checks.php:283
+msgid "Ablehnen so leicht wie Zustimmen"
+msgstr "Odmítnout stejně snadné jako přijmout"
+
+#: includes/class-checks.php:284
+msgid "Zwei gleiche Buttons auf der ersten Ebene, nichts vorausgewählt."
+msgstr "Dvě stejná tlačítka na první úrovni, nic předvybraného."
+
+#: includes/class-checks.php:290
+msgid "Protokoll mit Version"
+msgstr "Protokol s verzí"
+
+#. translators: %d: months
+#: includes/class-checks.php:292
+#, php-format
+msgid "IP-Adressen nur gehasht, gelöscht nach %d Monat."
+msgid_plural "IP-Adressen nur gehasht, gelöscht nach %d Monaten."
+msgstr[0] "IP adresy jen jako hash, smazáno po %d měsíci."
+msgstr[1] "IP adresy jen jako hash, smazáno po %d měsících."
+msgstr[2] "IP adresy jen jako hash, smazáno po %d měsících."
+
+#. translators: %s: time since the last scan, e.g. "2 days"
+#: includes/class-checks.php:302
+#, php-format
+msgid "Website gelesen vor %s"
+msgstr "Web přečten před %s"
+
+#: includes/class-checks.php:303
+msgid "Website noch nicht gelesen"
+msgstr "Web ještě nebyl přečten"
+
+#: includes/class-checks.php:304
+msgid "Jede Woche neu, damit neue Skripte auffallen."
+msgstr "Každý týden znovu, aby nové skripty neunikly."
+
+#: includes/class-checks.php:308 build/admin.js:28
+msgid "Jetzt lesen"
+msgstr "Přečíst teď"
+
+#. translators: %d: number of files
+#: includes/class-checks.php:507
+#, php-format
+msgid "%d Datei kommt jetzt von deinem Server."
+msgid_plural "%d Dateien kommen jetzt von deinem Server."
+msgstr[0] "%d soubor teď přichází z vašeho serveru."
+msgstr[1] "%d soubory teď přicházejí z vašeho serveru."
+msgstr[2] "%d souborů teď přichází z vašeho serveru."
+
+#: includes/class-checks.php:538
+msgid "Wähle einen Dienst oder gib ihm einen Namen."
+msgstr "Vyberte službu nebo jí dejte název."
+
+#. translators: 1: service, 2: category
+#: includes/class-checks.php:542
+#, php-format
+msgid "%1$s → %2$s"
+msgstr "%1$s → %2$s"
+
+#: includes/class-checks.php:546
+msgid "Consent Mode v2 ist an."
+msgstr "Consent Mode v2 je zapnutý."
+
+#: includes/class-checks.php:550
+msgid "Der Button zum Öffnen ist da."
+msgstr "Tlačítko pro otevření je na místě."
+
+#: includes/class-checks.php:563
+msgid "Farben angepasst."
+msgstr "Barvy upraveny."
+
+#: includes/class-checks.php:570
+msgid "Website neu gelesen."
+msgstr "Web znovu přečten."
+
+#: includes/class-checks.php:572
+msgid "Diese Aktion gibt es nicht."
+msgstr "Tato akce neexistuje."
+
+#. translators: %s: service
+#: includes/class-checks.php:622 includes/class-rest.php:257
+#: includes/class-rest.php:259
+#, php-format
+msgid "%s hinzugefügt"
+msgstr "%s přidáno"
+
+#: includes/class-checks.php:637
+msgid "Wähle zuerst die Datenschutzerklärung."
+msgstr "Nejdřív vyberte zásady ochrany osobních údajů."
+
+#: includes/class-checks.php:656
+msgid "Cookie-Tabelle in die Datenschutzerklärung eingefügt"
+msgstr "Tabulka cookies vložena do zásad ochrany osobních údajů"
+
+#: includes/class-checks.php:657
+msgid "Eingefügt. Die Tabelle hält sich selbst aktuell."
+msgstr "Vloženo. Tabulka se sama udržuje aktuální."
+
+#. translators: 1: version number, 2: what changed
+#: includes/class-consent.php:172
+#, php-format
+msgid "Version %1$d: %2$s – Besucher werden einmal neu gefragt"
+msgstr "Verze %1$d: %2$s – návštěvníci budou jednou znovu dotázáni"
+
+#. translators: 1: version number, 2: what changed
+#: includes/class-consent.php:172 includes/class-consent.php:174
+msgid "Texte oder Dienste geändert"
+msgstr "Texty nebo služby změněny"
+
+#. translators: 1: version number, 2: what changed
+#: includes/class-consent.php:174
+#, php-format
+msgid "Version %1$d: %2$s"
+msgstr "Verze %1$d: %2$s"
+
+#: includes/class-front.php:385
+msgid ""
+"Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder"
+" gespeichert noch protokolliert."
+msgstr ""
+"Náhled: tak vidí dialog nový návštěvník. Vaše volba tady se neukládá ani "
+"neprotokoluje."
+
+#: includes/class-front.php:386
+msgid "Neu starten"
+msgstr "Spustit znovu"
+
+#: includes/class-front.php:387
+msgid "Beenden"
+msgstr "Ukončit"
+
+#. translators: 1: HTTP status, 2: URL
+#: includes/class-resources.php:241
+#, php-format
+msgid "%1$d bei %2$s"
+msgstr "%1$d u %2$s"
+
+#: includes/class-resources.php:278
+msgid "Die Datei liegt schon auf deinem Server."
+msgstr "Soubor už je na vašem serveru."
+
+#: includes/class-resources.php:284
+msgid "Das Bild ließ sich nicht laden."
+msgstr "Obrázek se nepodařilo načíst."
+
+#. translators: %s: service, e.g. Google Fonts
+#: includes/class-resources.php:437
+#, php-format
+msgid "%s kommt von deinem Server"
+msgstr "%s přichází z vašeho serveru"
+
+#. translators: %s: service
+#: includes/class-resources.php:439
+#, php-format
+msgid "%s lokal eingebunden"
+msgstr "%s načítáno lokálně"
+
+#: includes/class-rest.php:198 includes/class-rest.php:199
+msgid "Dialog eingeschaltet"
+msgstr "Dialog zapnut"
+
+#: includes/class-rest.php:204
+msgid "Dialog ausgeschaltet"
+msgstr "Dialog vypnut"
+
+#: includes/class-rest.php:249
+msgid "Diesen Dienst kennt die Bibliothek nicht."
+msgstr "Tuto službu knihovna nezná."
+
+#: includes/class-rest.php:264
+msgid "Ein Dienst braucht einen Namen."
+msgstr "Služba potřebuje název."
+
+#. translators: %s: service
+#: includes/class-rest.php:289
+#, php-format
+msgid "%s geändert"
+msgstr "%s změněno"
+
+#. translators: %s: service
+#: includes/class-rest.php:306 includes/class-rest.php:308
+#, php-format
+msgid "%s entfernt"
+msgstr "%s odebráno"
+
+#: includes/class-rest.php:361
+msgid "Diese Version gibt es nicht."
+msgstr "Tato verze neexistuje."
+
+#: includes/class-rest.php:373 build/admin.js:16
+msgid "Was soll anders sein?"
+msgstr "Co má být jinak?"
+
+#: build/admin.js:1
+msgid "Das hat nicht geklappt."
+msgstr "To se nepodařilo."
+
+#: build/admin.js:1 build/admin.js:4
+msgid "Schließen"
+msgstr "Zavřít"
+
+#: build/admin.js:1
+msgid "wie empfohlen"
+msgstr "podle doporučení"
+
+#: build/admin.js:1
+msgid "angepasst"
+msgstr "upraveno"
+
+#. translators: %d: months
+#: build/admin.js:2
+#, js-format
+msgid "%d Monat"
+msgid_plural "%d Monate"
+msgstr[0] "%d měsíc"
+msgstr[1] "%d měsíce"
+msgstr[2] "%d měsíců"
+
+#: build/admin.js:2
+msgid ""
+"Das Modell deines Browsers hat das nicht geschafft. Mit einem KI-Anbieter "
+"(Einstellungen › Konnektoren) klappt es."
+msgstr ""
+"Model vašeho prohlížeče to nezvládl. S poskytovatelem AI (Nastavení › "
+"Konektory) to půjde."
+
+#: build/admin.js:2
+msgid ""
+"Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren) – "
+"oder Chrome mit eingebautem Modell."
+msgstr ""
+"K tomu potřebuje WordPress poskytovatele AI (Nastavení › Konektory) – nebo "
+"Chrome s vestavěným modelem."
+
+#. translators: %s: language name
+#: build/admin.js:3
+#, js-format
+msgid ""
+"Das Modell deines Browsers schreibt nicht auf %s. Mit einem KI-Anbieter "
+"(Einstellungen › Konnektoren) klappt es."
+msgstr ""
+"Model vašeho prohlížeče nepíše v jazyce %s. S poskytovatelem AI (Nastavení ›"
+" Konektory) to půjde."
+
+#: build/admin.js:3
+msgid "Zeigen, was einzurichten ist"
+msgstr "Ukázat, co je třeba nastavit"
+
+#: build/admin.js:3 build/admin.js:4
+msgid "Hinweis ausblenden"
+msgstr "Skrýt upozornění"
+
+#: build/admin.js:3
+msgid "Wartet auf einen KI-Anbieter …"
+msgstr "Čeká na poskytovatele AI …"
+
+#: build/admin.js:3
+msgid "Nachricht an den Assistenten"
+msgstr "Zpráva asistentovi"
+
+#: build/admin.js:3
+msgid "Senden"
+msgstr "Odeslat"
+
+#: build/admin.js:3
+msgid ""
+"Sag, was anders sein soll – ich ändere Dialog, Dienste und Einstellungen. "
+"Jede Änderung kommt als Karte und lässt sich zurücknehmen."
+msgstr ""
+"Řekněte, co má být jinak – změním dialog, služby a nastavení. Každá změna "
+"přijde jako karta a lze ji vzít zpět."
+
+#: build/admin.js:3
+msgid "Rückgängig"
+msgstr "Zpět"
+
+#. translators: %d: version
+#: build/admin.js:4 build/admin.js:20
+#, js-format
+msgid "Version %d"
+msgstr "Verze %d"
+
+#: build/admin.js:4
+msgid "Zurückgenommen."
+msgstr "Vzato zpět."
+
+#: build/admin.js:4
+msgid "Denkt nach …"
+msgstr "Přemýšlí …"
+
+#: build/admin.js:4 build/admin.js:27
+msgid "kein KI-Anbieter"
+msgstr "žádný poskytovatel AI"
+
+#: build/admin.js:4
+msgid "Neu"
+msgstr "Nový"
+
+#: build/admin.js:4
+msgid "Unten anzeigen"
+msgstr "Zobrazit dole"
+
+#: build/admin.js:4
+msgid "In der Seitenleiste anzeigen"
+msgstr "Zobrazit v postranním panelu"
+
+#: build/admin.js:4
+msgid "Sag dem Assistenten, was anders sein soll …"
+msgstr "Řekněte asistentovi, co má být jinak …"
+
+#: build/admin.js:4
+msgid "Verlauf einklappen"
+msgstr "Sbalit historii"
+
+#: build/admin.js:4
+msgid "Verlauf zeigen"
+msgstr "Zobrazit historii"
+
+#: build/admin.js:4
+msgid "Breite des Assistenten"
+msgstr "Šířka asistenta"
+
+#: build/admin.js:4
+msgid "Höhe des Verlaufs"
+msgstr "Výška historie"
+
+#: build/admin.js:4
+msgid "Assistent öffnen"
+msgstr "Otevřít asistenta"
+
+#: build/admin.js:4
+msgid "eingerichtet"
+msgstr "nastaveno"
+
+#: build/admin.js:4
+msgid "API Key fehlt"
+msgstr "chybí API klíč"
+
+#: build/admin.js:4
+msgid "antwortet nicht"
+msgstr "neodpovídá"
+
+#: build/admin.js:4
+msgid "Plugin fehlt"
+msgstr "chybí plugin"
+
+#: build/admin.js:4
+msgid "Der Chat braucht WordPress 7.0"
+msgstr "Chat potřebuje WordPress 7.0"
+
+#: build/admin.js:4
+msgid ""
+"Ab 7.0 denkt der Assistent mit dem KI-Anbieter, den du unter Einstellungen ›"
+" Konnektoren einrichtest. Alles andere funktioniert schon jetzt."
+msgstr ""
+"Od verze 7.0 přemýšlí asistent s poskytovatelem AI, kterého nastavíte v "
+"Nastavení › Konektory. Všechno ostatní funguje už teď."
+
+#: build/admin.js:4
+msgid "WordPress aktualisieren"
+msgstr "Aktualizovat WordPress"
+
+#: build/admin.js:4
+msgid "Erst einen KI-Anbieter einrichten"
+msgstr "Nejdřív nastavte poskytovatele AI"
+
+#: build/admin.js:4
+msgid ""
+"Der Assistent denkt mit dem Anbieter, den du in WordPress unter "
+"Einstellungen › Konnektoren einrichtest – dein API Key bleibt dort. Dialog, "
+"Dienste und Blockieren funktionieren auch ohne."
+msgstr ""
+"Asistent přemýšlí s poskytovatelem, kterého nastavíte ve WordPressu v "
+"Nastavení › Konektory – váš API klíč zůstává tam. Dialog, služby a blokování"
+" fungují i bez něj."
+
+#: build/admin.js:4
+msgid "Konnektoren öffnen"
+msgstr "Otevřít Konektory"
+
+#: build/admin.js:4
+msgid "Vercel AI Gateway installieren"
+msgstr "Instalovat Vercel AI Gateway"
+
+#: build/admin.js:4
+msgid ""
+"Ohne Vertrag bei einem Anbieter: Vercel AI Gateway gibt 5 $ im Monat gratis,"
+" keine Kreditkarte."
+msgstr ""
+"Bez smlouvy s poskytovatelem: Vercel AI Gateway dává 5 $ měsíčně zdarma, bez"
+" platební karty."
+
+#: build/admin.js:4
+msgid ""
+"Bis dahin übersetzt und ordnet das eingebaute Modell deines Browsers zu – "
+"nichts verlässt den Rechner."
+msgstr ""
+"Do té doby překládá a přiřazuje vestavěný model vašeho prohlížeče – nic "
+"neopouští počítač."
+
+#: build/admin.js:4
+msgid "Erste Ebene"
+msgstr "První úroveň"
+
+#: build/admin.js:4 build/admin.js:20
+msgid "Auswahl"
+msgstr "Výběr"
+
+#: build/admin.js:4 build/admin.js:19 build/admin.js:20
+msgid "Platzhalter"
+msgstr "Zástupný prvek"
+
+#: build/admin.js:4
+msgid "Ebene"
+msgstr "Úroveň"
+
+#: build/admin.js:4 build/admin.js:25
+msgid "Sprache"
+msgstr "Jazyk"
+
+#: build/admin.js:4 build/admin.js:19
+msgid "Gerät"
+msgstr "Zařízení"
+
+#: build/admin.js:4
+msgid "Desktop"
+msgstr "Počítač"
+
+#: build/admin.js:4
+msgid "Handy"
+msgstr "Mobil"
+
+#: build/admin.js:4
+msgid "Vorschau deiner Website mit dem Dialog"
+msgstr "Náhled vašeho webu s dialogem"
+
+#: build/admin.js:4
+msgid "Absatz für die Datenschutzerklärung"
+msgstr "Odstavec pro zásady ochrany osobních údajů"
+
+#: build/admin.js:4
+msgid "Neu schreiben"
+msgstr "Napsat znovu"
+
+#: build/admin.js:4
+msgid "Für meine Website schreiben"
+msgstr "Napsat pro můj web"
+
+#: build/admin.js:4
+msgid "Mit Cookie-Tabelle einfügen"
+msgstr "Vložit s tabulkou cookies"
+
+#: build/admin.js:4
+msgid ""
+"Darunter kommt die Cookie-Tabelle: alle Dienste und Cookies, und sie hält "
+"sich selbst aktuell."
+msgstr ""
+"Pod něj přijde tabulka cookies: všechny služby a cookies, a sama se udržuje "
+"aktuální."
+
+#: build/admin.js:4
+msgid ""
+"Noch kein eigener Absatz: eingefügt wird die Vorlage der Bibliothek. Der "
+"Assistent oder das Modell deines Browsers schreibt ihn für deine Website."
+msgstr ""
+"Zatím žádný vlastní odstavec: vloží se vzor z knihovny. Asistent nebo model "
+"vašeho prohlížeče ho napíše pro váš web."
+
+#: build/admin.js:4
+msgid "unten links"
+msgstr "vlevo dole"
+
+#: build/admin.js:4
+msgid "unten rechts"
+msgstr "vpravo dole"
+
+#: build/admin.js:4
+msgid "unten in der Mitte"
+msgstr "dole uprostřed"
+
+#: build/admin.js:4 build/admin.js:18
+msgid "Box"
+msgstr "Box"
+
+#: build/admin.js:4 build/admin.js:18
+msgid "Leiste"
+msgstr "Lišta"
+
+#: build/admin.js:4 build/admin.js:18
+msgid "Fenster"
+msgstr "Okno"
+
+#. translators: %d: services
+#: build/admin.js:5
+#, js-format
+msgid "%d Dienst"
+msgid_plural "%d Dienste"
+msgstr[0] "%d služba"
+msgstr[1] "%d služby"
+msgstr[2] "%d služeb"
+
+#. translators: %d: categories
+#: build/admin.js:6
+#, js-format
+msgid "in %d Kategorie"
+msgid_plural "in %d Kategorien"
+msgstr[0] "v %d kategorii"
+msgstr[1] "ve %d kategoriích"
+msgstr[2] "v %d kategoriích"
+
+#: build/admin.js:6
+msgid "Dienste ansehen"
+msgstr "Zobrazit služby"
+
+#. translators: 1: who suggests, 2: service, 3: purpose, 4: category
+#: build/admin.js:8
+#, js-format
+msgid "%1$s: %2$s, %3$s → %4$s"
+msgstr "%1$s: %2$s, %3$s → %4$s"
+
+#: build/admin.js:8
+msgid "Vorschlag deines Browsers"
+msgstr "Návrh vašeho prohlížeče"
+
+#: build/admin.js:8 build/admin.js:15 build/admin.js:20
+msgid "Vorschlag"
+msgstr "Návrh"
+
+#: build/admin.js:8
+msgid "Lädt bis zur Zuordnung ohne Einwilligung"
+msgstr "Do přiřazení se načítá bez souhlasu"
+
+#. translators: %d: number of embeds
+#: build/admin.js:9
+#, js-format
+msgid "%d Einbettung wartet auf Einwilligung"
+msgid_plural "%d Einbettungen warten auf Einwilligung"
+msgstr[0] "%d vložený obsah čeká na souhlas"
+msgstr[1] "%d vložené obsahy čekají na souhlas"
+msgstr[2] "%d vložených obsahů čeká na souhlas"
+
+#. translators: %s: services
+#: build/admin.js:10
+#, js-format
+msgid "%s – als Platzhalter mit Vorschaubild"
+msgstr "%s – jako zástupný prvek s náhledovým obrázkem"
+
+#: build/admin.js:10
+msgid ""
+"Bis zur Einwilligung steht dort ein Platzhalter in der Größe des Inhalts: "
+"„Laden“ lädt einmal, „Immer laden“ ist die Einwilligung für den Dienst. "
+"YouTube lädt danach über youtube-nocookie.com."
+msgstr ""
+"Do souhlasu tam stojí zástupný prvek ve velikosti obsahu: „Načíst“ načte "
+"jednou, „Načítat vždy“ je souhlas pro službu. YouTube se pak načítá přes "
+"youtube-nocookie.com."
+
+#. translators: %d: number of things
+#: build/admin.js:11
+#, js-format
+msgid "%d Ding kommt von deinem Server statt von Dritten"
+msgid_plural "%d Dinge kommen von deinem Server statt von Dritten"
+msgstr[0] "%d věc přichází z vašeho serveru místo od třetích stran"
+msgstr[1] "%d věci přicházejí z vašeho serveru místo od třetích stran"
+msgstr[2] "%d věcí přichází z vašeho serveru místo od třetích stran"
+
+#: build/admin.js:11
+msgid "WordPress-Emoji aus"
+msgstr "Emoji WordPressu vypnuto"
+
+#: build/admin.js:11
+msgid ""
+"Schriften, Styles und Bilder von Dritten werden beim Einschalten auf deinen "
+"Server kopiert und die Verweise umgeschrieben – dann sieht kein Dritter die "
+"IP-Adresse deiner Besucher, und es braucht keine Einwilligung."
+msgstr ""
+"Při zapnutí se písma, styly a obrázky třetích stran zkopírují na váš server "
+"a odkazy se přepíší – pak žádná třetí strana nevidí IP adresu vašich "
+"návštěvníků a není potřeba souhlas."
+
+#: build/admin.js:11
+msgid "Texte in deinem Ton"
+msgstr "Texty ve vašem tónu"
+
+#: build/admin.js:11
+msgid "Standardtexte"
+msgstr "Výchozí texty"
+
+#: build/admin.js:11 build/admin.js:19
+msgid "per Sie"
+msgstr "vykání"
+
+#: build/admin.js:11 build/admin.js:19
+msgid "per du"
+msgstr "tykání"
+
+#: build/admin.js:11
+msgid "mit einem KI-Anbieter in deinem Ton"
+msgstr "s poskytovatelem AI ve vašem tónu"
+
+#: build/admin.js:11
+msgid "Aussehen aus deinem Theme"
+msgstr "Vzhled z vaší šablony"
+
+#: build/admin.js:11
+msgid "dein Logo"
+msgstr "vaše logo"
+
+#. translators: %s: Google services
+#: build/admin.js:12
+#, js-format
+msgid "Vor %s · Tags warten auf Einwilligung"
+msgstr "Před %s · tagy čekají na souhlas"
+
+#: build/admin.js:12 build/admin.js:26
+msgid "Datenschutzerklärung"
+msgstr "Zásady ochrany osobních údajů"
+
+#. translators: %d: months
+#: build/admin.js:13
+#, js-format
+msgid "%d Monat · IP-Adressen nur gehasht"
+msgid_plural "%d Monate · IP-Adressen nur gehasht"
+msgstr[0] "%d měsíc · IP adresy jen jako hash"
+msgstr[1] "%d měsíce · IP adresy jen jako hash"
+msgstr[2] "%d měsíců · IP adresy jen jako hash"
+
+#. translators: %s: the site's host
+#: build/admin.js:14
+#, js-format
+msgid "Ich habe %s gelesen"
+msgstr "Přečetl jsem %s"
+
+#. translators: 1: pages, 2: scripts, 3: embeds, 4: plugins
+#: build/admin.js:15
+#, js-format
+msgid ""
+"%1$d Seiten, %2$d Skripte, %3$d Einbettungen, %4$d Plugins. Unten steht mein"
+" Vorschlag, rechts siehst du ihn auf deiner Startseite."
+msgstr ""
+"%1$d stránek, %2$d skriptů, %3$d vložených obsahů, %4$d pluginů. Dole je můj"
+" návrh, vpravo ho vidíte na své úvodní stránce."
+
+#: build/admin.js:15
+msgid "Sag mir, was anders sein soll – z. B. „Schreib per Sie“"
+msgstr "Řekněte mi, co má být jinak – např. „Používejte vykání“"
+
+#: build/admin.js:15
+msgid "Schreib per Sie"
+msgstr "Používejte vykání"
+
+#: build/admin.js:15
+msgid "Dunkler Dialog"
+msgstr "Tmavý dialog"
+
+#: build/admin.js:15
+msgid "Wir nutzen keine Statistik mehr"
+msgstr "Statistiku už nepoužíváme"
+
+#: build/admin.js:15
+msgid "Alles ist voreingestellt. Öffne eine Zeile, um sie zu prüfen."
+msgstr "Všechno je přednastavené. Otevřete řádek a zkontrolujte ho."
+
+#: build/admin.js:15
+msgid "Neu lesen"
+msgstr "Přečíst znovu"
+
+#: build/admin.js:15
+msgid "So sieht es aus"
+msgstr "Tak to vypadá"
+
+#: build/admin.js:15
+msgid "Deine Startseite mit dem Dialog."
+msgstr "Vaše úvodní stránka s dialogem."
+
+#. translators: %d: open points
+#: build/admin.js:16
+#, js-format
+msgid "Bereit – %d Skript noch ohne Zuordnung."
+msgid_plural "Bereit – %d Skripte noch ohne Zuordnung."
+msgstr[0] "Připraveno – %d skript ještě bez přiřazení."
+msgstr[1] "Připraveno – %d skripty ještě bez přiřazení."
+msgstr[2] "Připraveno – %d skriptů ještě bez přiřazení."
+
+#: build/admin.js:16
+msgid "Alles bereit."
+msgstr "Všechno připraveno."
+
+#: build/admin.js:16
+msgid "Schalte ein …"
+msgstr "Zapínám …"
+
+#: build/admin.js:16
+msgid "Dialog einschalten"
+msgstr "Zapnout dialog"
+
+#: build/admin.js:16
+msgid ""
+"Bis dahin ändert sich nichts an deiner Website. Ausschalten geht jederzeit."
+msgstr "Do té doby se na vašem webu nic nezmění. Vypnout ho můžete kdykoli."
+
+#: build/admin.js:16
+msgid ""
+"Ich ändere Dialog, Dienste und Einstellungen – z. B. „Füge Hotjar hinzu“"
+msgstr "Měním dialog, služby a nastavení – např. „Přidejte Hotjar“"
+
+#: build/admin.js:16
+msgid "Wie viele haben gestern abgelehnt?"
+msgstr "Kolik lidí včera odmítlo?"
+
+#: build/admin.js:16
+msgid "Übersetze auf Italienisch"
+msgstr "Přeložte do italštiny"
+
+#: build/admin.js:16
+msgid "Mach den Dialog kleiner"
+msgstr "Zmenšete dialog"
+
+#: build/admin.js:16
+msgid "Zu tun"
+msgstr "Co udělat"
+
+#. translators: %s: time of the last scan
+#: build/admin.js:17
+#, js-format
+msgid "Aus der Prüfung %s. Ein Klick erledigt es."
+msgstr "Z kontroly %s. Jedno kliknutí to vyřídí."
+
+#: build/admin.js:17
+msgid "Jetzt prüfen"
+msgstr "Zkontrolovat teď"
+
+#: build/admin.js:17
+msgid "Alles in Ordnung"
+msgstr "Všechno v pořádku"
+
+#: build/admin.js:17
+msgid "Jede Woche liest der Dialog deine Website neu und meldet sich hier."
+msgstr "Každý týden dialog znovu přečte váš web a ozve se tady."
+
+#. translators: %d: passed checks
+#: build/admin.js:18
+#, js-format
+msgid "%d Prüfung bestanden"
+msgid_plural "%d Prüfungen bestanden"
+msgstr[0] "%d kontrola splněna"
+msgstr[1] "%d kontroly splněny"
+msgstr[2] "%d kontrol splněno"
+
+#: build/admin.js:18
+msgid "Letzte 30 Tage"
+msgstr "Posledních 30 dní"
+
+#: build/admin.js:18
+msgid "Entscheidungen"
+msgstr "Rozhodnutí"
+
+#: build/admin.js:18
+msgid "Zuletzt"
+msgstr "Naposledy"
+
+#: build/admin.js:18
+msgid "Alle akzeptiert"
+msgstr "Přijato vše"
+
+#: build/admin.js:18
+msgid "Eigene Auswahl"
+msgstr "Vlastní výběr"
+
+#: build/admin.js:18 build/admin.js:20
+msgid "Nur notwendige"
+msgstr "Pouze nezbytné"
+
+#: build/admin.js:18
+msgid "Noch keine Entscheidungen. Sie erscheinen, sobald Besucher wählen."
+msgstr "Zatím žádná rozhodnutí. Objeví se, jakmile návštěvníci zvolí."
+
+#: build/admin.js:18
+msgid "Hintergrund"
+msgstr "Pozadí"
+
+#: build/admin.js:18
+msgid "Text"
+msgstr "Text"
+
+#: build/admin.js:18 build/blocks.js:1
+msgid "Button"
+msgstr "Tlačítko"
+
+#: build/admin.js:18
+msgid "Button-Text"
+msgstr "Text tlačítka"
+
+#: build/admin.js:18 build/admin.js:19
+msgid "Links"
+msgstr "Odkazy"
+
+#: build/admin.js:18
+msgid "Titel"
+msgstr "Název"
+
+#: build/admin.js:18
+msgid "Alle akzeptieren"
+msgstr "Přijmout vše"
+
+#: build/admin.js:18
+msgid "Titel der Auswahl"
+msgstr "Název výběru"
+
+#: build/admin.js:18
+msgid "Text der Auswahl"
+msgstr "Text výběru"
+
+#: build/admin.js:18
+msgid "Auswahl speichern"
+msgstr "Uložit výběr"
+
+#: build/admin.js:18
+msgid "Link Datenschutz"
+msgstr "Odkaz na ochranu osobních údajů"
+
+#: build/admin.js:18
+msgid "Link Impressum"
+msgstr "Odkaz na tiráž"
+
+#: build/admin.js:18 build/admin.js:26
+msgid "Button zum Öffnen"
+msgstr "Tlačítko pro otevření"
+
+#: build/admin.js:18
+msgid "Platzhalter: Laden"
+msgstr "Zástupný prvek: Načíst"
+
+#: build/admin.js:18
+msgid "Platzhalter: Immer laden"
+msgstr "Zástupný prvek: Načítat vždy"
+
+#: build/admin.js:18 build/admin.js:26
+msgid "Position"
+msgstr "Pozice"
+
+#: build/admin.js:18 build/admin.js:26
+msgctxt "position"
+msgid "Links"
+msgstr "Vlevo"
+
+#: build/admin.js:18
+msgid "Mitte"
+msgstr "Uprostřed"
+
+#: build/admin.js:18 build/admin.js:26
+msgid "Rechts"
+msgstr "Vpravo"
+
+#: build/admin.js:18
+msgid "Größe"
+msgstr "Velikost"
+
+#: build/admin.js:18
+msgid "Farben"
+msgstr "Barvy"
+
+#: build/admin.js:19
+msgid "Vom Theme"
+msgstr "Ze šablony"
+
+#: build/admin.js:19
+msgid "Dunkel"
+msgstr "Tmavé"
+
+#: build/admin.js:19
+msgid "Ecken"
+msgstr "Rohy"
+
+#: build/admin.js:19
+msgid "Hell / dunkel"
+msgstr "Světlé / tmavé"
+
+#: build/admin.js:19
+msgid "Hell"
+msgstr "Světlé"
+
+#: build/admin.js:19
+msgid "Buttons"
+msgstr "Tlačítka"
+
+#: build/admin.js:19
+msgid "Gleich"
+msgstr "Stejná"
+
+#: build/admin.js:19
+msgid "Akzeptieren betont"
+msgstr "Přijmout zvýrazněné"
+
+#: build/admin.js:19
+msgid "Umrandet"
+msgstr "Orámovaná"
+
+#: build/admin.js:19
+msgid "Titel zeigen"
+msgstr "Zobrazit název"
+
+#: build/admin.js:19
+msgid "Links zu Datenschutz und Impressum zeigen"
+msgstr "Zobrazit odkazy na ochranu osobních údajů a tiráž"
+
+#: build/admin.js:19
+msgid "Sprachauswahl zeigen"
+msgstr "Zobrazit výběr jazyka"
+
+#: build/admin.js:19
+msgid "Erst mit mehr als einer Sprache (Texte › Sprachen)."
+msgstr "Až s více než jedním jazykem (Texty › Jazyky)."
+
+#: build/admin.js:19
+msgid "Schrift, Logo, Abdunkeln, Seite sperren"
+msgstr "Písmo, logo, ztmavení, zamknutí stránky"
+
+#: build/admin.js:19
+msgid "Schrift"
+msgstr "Písmo"
+
+#: build/admin.js:19
+msgid "Theme"
+msgstr "Šablona"
+
+#: build/admin.js:19
+msgid "System"
+msgstr "Systémové"
+
+#: build/admin.js:19
+msgid "Eigene"
+msgstr "Vlastní"
+
+#: build/admin.js:19
+msgid "Schriftart (CSS)"
+msgstr "Rodina písma (CSS)"
+
+#: build/admin.js:19
+msgid "Schrift der Überschrift"
+msgstr "Písmo nadpisu"
+
+#: build/admin.js:19
+msgid "Leer: wie der Text."
+msgstr "Prázdné: jako text."
+
+#: build/admin.js:19
+msgid "Logo"
+msgstr "Logo"
+
+#: build/admin.js:19
+msgid "Logo im Dialog"
+msgstr "Logo v dialogu"
+
+#: build/admin.js:19
+msgid "Wählen"
+msgstr "Vybrat"
+
+#: build/admin.js:19
+msgid "Entfernen"
+msgstr "Odebrat"
+
+#: build/admin.js:19
+msgid "Seite abdunkeln"
+msgstr "Ztmavit stránku"
+
+#: build/admin.js:19
+msgid "Seite sperren"
+msgstr "Zamknout stránku"
+
+#: build/admin.js:19
+msgid "Scrollen erst nach der Wahl – nur wenn es sein muss."
+msgstr "Posouvání až po volbě – jen když to musí být."
+
+#: build/admin.js:19
+msgid "„Cookie Dialog“ im Dialog nennen"
+msgstr "Zmínit „Cookie Dialog“ v dialogu"
+
+#: build/admin.js:19
+msgid "Ton"
+msgstr "Tón"
+
+#: build/admin.js:19
+msgid "Anrede (Deutsch)"
+msgstr "Oslovení (němčina)"
+
+#: build/admin.js:19
+msgid "Anrede geändert"
+msgstr "Oslovení změněno"
+
+#: build/admin.js:19
+msgid "Kürzer"
+msgstr "Kratší"
+
+#: build/admin.js:19
+msgid "Im Ton meiner Website"
+msgstr "V tónu mého webu"
+
+#: build/admin.js:19
+msgid ""
+"„Kürzer“ macht dein Browser. Für den Ton deiner Website braucht WordPress "
+"einen KI-Anbieter."
+msgstr ""
+"„Kratší“ zvládne váš prohlížeč. Pro tón vašeho webu potřebuje WordPress "
+"poskytovatele AI."
+
+#: build/admin.js:19
+msgid ""
+"Dafür braucht WordPress einen KI-Anbieter – oder Chrome mit eingebautem "
+"Modell für „Kürzer“."
+msgstr ""
+"K tomu potřebuje WordPress poskytovatele AI – nebo Chrome s vestavěným "
+"modelem pro „Kratší“."
+
+#: build/admin.js:19 build/admin.js:27
+msgid "Sprachen"
+msgstr "Jazyky"
+
+#. translators: %s: language
+#: build/admin.js:19
+#, js-format
+msgid "%s entfernen"
+msgstr "Odebrat %s"
+
+#: build/admin.js:19
+msgid "Sprache hinzufügen"
+msgstr "Přidat jazyk"
+
+#: build/admin.js:19
+msgid "– Sprache wählen –"
+msgstr "– vyberte jazyk –"
+
+#: build/admin.js:19
+msgid "auf deiner Website"
+msgstr "na vašem webu"
+
+#. translators: %s: language
+#: build/admin.js:19
+#, js-format
+msgid "Auf %s übersetzen"
+msgstr "Přeložit do jazyka %s"
+
+#: build/admin.js:19
+msgid "Seiten wählen"
+msgstr "Vybrat stránky"
+
+#: build/admin.js:19
+msgid "Alle Texte als Liste"
+msgstr "Všechny texty jako seznam"
+
+#: build/admin.js:19 build/admin.js:21
+msgid "Texte geändert"
+msgstr "Texty změněny"
+
+#: build/admin.js:19
+msgid "Sitzung"
+msgstr "Relace"
+
+#: build/admin.js:19
+msgid "dauerhaft"
+msgstr "trvalé"
+
+#: build/admin.js:19
+msgid "Min."
+msgstr "min"
+
+#: build/admin.js:19
+msgid "Std."
+msgstr "hod."
+
+#: build/admin.js:19
+msgid "Tage"
+msgstr "dní"
+
+#: build/admin.js:19
+msgid "Wochen"
+msgstr "týdnů"
+
+#: build/admin.js:19
+msgid "Monate"
+msgstr "měsíců"
+
+#: build/admin.js:19
+msgid "Jahre"
+msgstr "let"
+
+#: build/admin.js:19
+msgid "immer aktiv"
+msgstr "vždy aktivní"
+
+#: build/admin.js:19
+msgid "nie geladen"
+msgstr "nikdy nenačteno"
+
+#: build/admin.js:19
+msgid "wartet auf Einwilligung"
+msgstr "čeká na souhlas"
+
+#: build/admin.js:19 build/admin.js:20 build/admin.js:24
+msgid "Eigener Dienst"
+msgstr "Vlastní služba"
+
+#: build/admin.js:19
+msgid "Wirklich entfernen"
+msgstr "Opravdu odebrat"
+
+#: build/admin.js:19 build/admin.js:22 build/admin.js:28
+msgid "Abbrechen"
+msgstr "Zrušit"
+
+#. translators: %d: version
+#: build/admin.js:20
+#, js-format
+msgid "Gespeichert · gilt ab Version %d"
+msgstr "Uloženo · platí od verze %d"
+
+#: build/admin.js:20 build/admin.js:28
+msgid "Gespeichert"
+msgstr "Uloženo"
+
+#: build/admin.js:20 build/admin.js:23
+msgid "Fertig"
+msgstr "Hotovo"
+
+#: build/admin.js:20
+msgid "aus der Bibliothek"
+msgstr "z knihovny"
+
+#: build/admin.js:20
+msgid "eigener Dienst"
+msgstr "vlastní služba"
+
+#: build/admin.js:20
+msgid "Im Dialog"
+msgstr "V dialogu"
+
+#: build/admin.js:20
+msgid "So sehen Besucher den Dienst in der Auswahl."
+msgstr "Tak vidí návštěvníci službu ve výběru."
+
+#: build/admin.js:20
+msgid "Zusammenfassung"
+msgstr "Shrnutí"
+
+#: build/admin.js:20
+msgid "Name"
+msgstr "Název"
+
+#: build/admin.js:20 build/admin.js:22
+msgid "Kategorie"
+msgstr "Kategorie"
+
+#: build/admin.js:20
+msgid "Anbieter"
+msgstr "Poskytovatel"
+
+#: build/admin.js:20
+msgid "Adresse des Anbieters"
+msgstr "Adresa poskytovatele"
+
+#. translators: %s: language
+#: build/admin.js:20
+#, js-format
+msgid "Zweck (%s)"
+msgstr "Účel (%s)"
+
+#: build/admin.js:20
+msgid "Datenschutzerklärung des Anbieters"
+msgstr "Zásady ochrany osobních údajů poskytovatele"
+
+#: build/admin.js:20
+msgid "Dauer"
+msgstr "Doba platnosti"
+
+#: build/admin.js:20
+msgid "Art"
+msgstr "Typ"
+
+#: build/admin.js:20
+msgid "Cookie entfernen"
+msgstr "Odebrat cookie"
+
+#: build/admin.js:20
+msgid "Cookie"
+msgstr "Cookie"
+
+#: build/admin.js:20
+msgid "Zweck"
+msgstr "Účel"
+
+#: build/admin.js:20
+msgid "Datenschutz"
+msgstr "Ochrana osobních údajů"
+
+#: build/admin.js:20
+msgid "Setzt keine Cookies."
+msgstr "Nenastavuje žádné cookies."
+
+#: build/admin.js:20
+msgid "Auf deiner Website"
+msgstr "Na vašem webu"
+
+#: build/admin.js:20
+msgid "Erkannt an"
+msgstr "Rozpoznáno podle"
+
+#: build/admin.js:20
+msgid "Hosts"
+msgstr "Hosty"
+
+#: build/admin.js:20
+msgid "nur über Snippet oder data-cookie-service"
+msgstr "jen přes snippet nebo data-cookie-service"
+
+#: build/admin.js:20 build/admin.js:25
+msgid "Wo"
+msgstr "Kde"
+
+#: build/admin.js:20
+msgid "bei der letzten Prüfung nicht gefunden"
+msgstr "při poslední kontrole nenalezeno"
+
+#: build/admin.js:20
+msgid "noch nicht gelesen"
+msgstr "ještě nepřečteno"
+
+#: build/admin.js:20
+msgid "Bis zur Einwilligung"
+msgstr "Do souhlasu"
+
+#: build/admin.js:20
+msgid "Die Schalter gelten für alle Einbettungen."
+msgstr "Přepínače platí pro všechny vložené obsahy."
+
+#: build/admin.js:20
+msgid "Diese Karte kommt von"
+msgstr "Tato mapa pochází od"
+
+#: build/admin.js:20
+msgid "Dieser Inhalt kommt von"
+msgstr "Tento obsah pochází od"
+
+#: build/admin.js:20
+msgid "Laden"
+msgstr "Načíst"
+
+#: build/admin.js:20
+msgid "Immer laden"
+msgstr "Načítat vždy"
+
+#: build/admin.js:20
+msgid "Vorschaubild und Titel über deinen Server"
+msgstr "Náhledový obrázek a název přes váš server"
+
+#: build/admin.js:20 build/admin.js:26
+msgid "„Immer laden“ anbieten"
+msgstr "Nabízet „Načítat vždy“"
+
+#: build/admin.js:20
+msgid "Danach über youtube-nocookie.com"
+msgstr "Potom přes youtube-nocookie.com"
+
+#: build/admin.js:20
+msgid "Adresse im Platzhalter"
+msgstr "Adresa v zástupném prvku"
+
+#: build/admin.js:20
+msgid "Leer: aus der Karte gelesen."
+msgstr "Prázdné: načteno z mapy."
+
+#: build/admin.js:20
+msgid "Google-Signale"
+msgstr "Signály Google"
+
+#: build/admin.js:20
+msgid "keine eigenen – die Kategorie gibt sie"
+msgstr "žádné vlastní – dává je kategorie"
+
+#: build/admin.js:20
+msgid ""
+"Mit der Einwilligung für diesen Dienst gehen diese Signale an Google. Eine "
+"ganze Kategorie gibt ihre eigenen dazu (Statistik: analytics_storage, "
+"Marketing: die drei ad_*)."
+msgstr ""
+"Se souhlasem pro tuto službu jdou tyto signály do Google. Celá kategorie "
+"přidává své vlastní (Statistika: analytics_storage, Marketing: tři ad_*)."
+
+#: build/admin.js:20
+msgid "Anders einbinden"
+msgstr "Vložit jinak"
+
+#: build/admin.js:20
+msgid "Snippet, eigenes Skript-Tag, data-cookie-service"
+msgstr "Snippet, vlastní tag skriptu, data-cookie-service"
+
+#: build/admin.js:20
+msgid "Snippet"
+msgstr "Snippet"
+
+#: build/admin.js:20
+msgid ""
+"Der Code des Anbieters. Das Plugin druckt ihn zurückgehalten und lädt ihn "
+"bei Einwilligung – ohne Neuladen. <noscript> fällt weg."
+msgstr ""
+"Kód poskytovatele. Plugin ho vytiskne pozdržený a načte ho při souhlasu – "
+"bez znovunačtení stránky. <noscript> odpadá."
+
+#: build/admin.js:20
+msgid "Im Theme oder in einem Plugin"
+msgstr "V šabloně nebo v pluginu"
+
+#: build/admin.js:20
+msgid "Skript-Handles in WordPress"
+msgstr "Handle skriptů ve WordPressu"
+
+#: build/admin.js:20
+msgid "Durch Komma getrennt. Diese Skripte warten auf die Einwilligung."
+msgstr "Oddělené čárkou. Tyto skripty čekají na souhlas."
+
+#: build/admin.js:20
+msgid "Muster"
+msgstr "Vzory"
+
+#: build/admin.js:20
+msgid "Teile von Adressen oder Code, an denen der Dienst erkannt wird."
+msgstr "Části adres nebo kódu, podle kterých se služba pozná."
+
+#: build/admin.js:20
+msgid "Seit"
+msgstr "Od"
+
+#: build/admin.js:20
+msgid "Aus der Bibliothek"
+msgstr "Z knihovny"
+
+#: build/admin.js:20
+msgid "Dienst suchen"
+msgstr "Hledat službu"
+
+#: build/admin.js:20
+msgid "Als eigenen Dienst anlegen"
+msgstr "Založit jako vlastní službu"
+
+#: build/admin.js:20
+msgid "Beschreibung im Dialog"
+msgstr "Popis v dialogu"
+
+#: build/admin.js:20
+msgid "Nach oben"
+msgstr "Nahoru"
+
+#: build/admin.js:20
+msgid "Nach unten"
+msgstr "Dolů"
+
+#: build/admin.js:20
+msgid "Kategorie löschen"
+msgstr "Smazat kategorii"
+
+#: build/admin.js:20
+msgid "Alle"
+msgstr "Vše"
+
+#: build/admin.js:20
+msgid "Widerruf"
+msgstr "Odvolání"
+
+#: build/admin.js:20
+msgid "Widerruf · Nur notwendige"
+msgstr "Odvolání · Pouze nezbytné"
+
+#. translators: 1: date, 2: note
+#: build/admin.js:21
+#, js-format
+msgid "Seit %1$s · %2$s"
+msgstr "Od %1$s · %2$s"
+
+#: build/admin.js:21
+msgid ""
+"Das hat jede Person gesehen, die bei dieser Version entschieden hat – in "
+"allen Sprachen gespeichert."
+msgstr ""
+"Toto viděl každý, kdo se rozhodl u této verze – uloženo ve všech jazycích."
+
+#: build/admin.js:21
+msgid "Kopiert"
+msgstr "Zkopírováno"
+
+#: build/admin.js:21
+msgid "Kopieren"
+msgstr "Kopírovat"
+
+#: build/admin.js:21
+msgid "– keine –"
+msgstr "– žádné –"
+
+#: build/admin.js:21
+msgid "Ich lese deine Website …"
+msgstr "Čtu váš web …"
+
+#: build/admin.js:21
+msgid ""
+"Startseite und bis zu 20 Seiten, als Besucher ohne Einwilligung: jedes "
+"Skript, jede Einbettung, jede Schrift von Dritten. Das dauert ein paar "
+"Sekunden."
+msgstr ""
+"Úvodní stránka a až 20 stránek, jako návštěvník bez souhlasu: každý skript, "
+"každý vložený obsah, každé písmo třetích stran. Trvá to pár sekund."
+
+#: build/admin.js:21
+msgid "Aussehen"
+msgstr "Vzhled"
+
+#: build/admin.js:21
+msgid "Aus deinem Theme. Ändere nur, was nicht passt."
+msgstr "Z vaší šablony. Změňte jen to, co nesedí."
+
+#: build/admin.js:21
+msgid "Texte"
+msgstr "Texty"
+
+#: build/admin.js:21
+msgid ""
+"Klick auf einen Text in der Vorschau, um ihn zu ändern – oder sag dem "
+"Assistenten, wie er klingen soll."
+msgstr ""
+"Klikněte na text v náhledu a změňte ho – nebo řekněte asistentovi, jak má "
+"znít."
+
+#. translators: %d: next version
+#: build/admin.js:22
+#, js-format
+msgid ""
+"Gespeichert, sobald du etwas änderst. Neue Texte werden Version %d – "
+"Besucher werden einmal neu gefragt."
+msgstr ""
+"Uloženo, jakmile něco změníte. Nové texty budou verze %d – návštěvníci budou"
+" jednou znovu dotázáni."
+
+#: build/admin.js:22
+msgid ""
+"Gespeichert, sobald du etwas änderst. Auf der Website erscheint es, wenn du "
+"den Dialog einschaltest."
+msgstr ""
+"Uloženo, jakmile něco změníte. Na webu se to objeví, když dialog zapnete."
+
+#: build/admin.js:22
+msgid "Dienst oder Host suchen"
+msgstr "Hledat službu nebo host"
+
+#: build/admin.js:22 build/blocks.js:1
+msgid "Dienst"
+msgstr "Služba"
+
+#: build/admin.js:22
+msgid "Name der Kategorie"
+msgstr "Název kategorie"
+
+#: build/admin.js:22
+msgid "Beschreibung"
+msgstr "Popis"
+
+#: build/admin.js:22
+msgid "Anlegen"
+msgstr "Založit"
+
+#: build/admin.js:22
+msgid "Zu prüfen"
+msgstr "Ke kontrole"
+
+#: build/admin.js:22
+msgid ""
+"Neu auf deiner Website und noch nicht im Dialog – lädt bis dahin ohne "
+"Einwilligung."
+msgstr ""
+"Nové na vašem webu a ještě ne v dialogu – do té doby se načítá bez souhlasu."
+
+#. translators: %s: date
+#: build/admin.js:22
+#, js-format
+msgid "seit %s"
+msgstr "od %s"
+
+#: build/admin.js:23
+msgid "Ohne sie funktioniert die Seite nicht. Immer aktiv."
+msgstr "Bez nich web nefunguje. Vždy aktivní."
+
+#: build/admin.js:23
+msgid "Bearbeiten"
+msgstr "Upravit"
+
+#. translators: %s: category
+#: build/admin.js:23
+#, js-format
+msgid "%s im Dialog anbieten"
+msgstr "Nabízet %s v dialogu"
+
+#: build/admin.js:23
+msgid "Nicht im Dialog: Diese Dienste laden nie."
+msgstr "Není v dialogu: tyto služby se nikdy nenačtou."
+
+#. translators: %d: cookies
+#: build/admin.js:23
+#, js-format
+msgid "%d Cookie"
+msgid_plural "%d Cookies"
+msgstr[0] "%d cookie"
+msgstr[1] "%d cookies"
+msgstr[2] "%d cookies"
+
+#: build/admin.js:23
+msgid "kein Cookie"
+msgstr "žádné cookies"
+
+#: build/admin.js:23
+msgid "Noch kein Dienst"
+msgstr "Zatím žádná služba"
+
+#: build/admin.js:23
+msgid "Unten aus der Bibliothek hinzufügen."
+msgstr "Přidejte ji dole z knihovny."
+
+#: build/admin.js:23
+msgid "Von deinem Server statt von Dritten"
+msgstr "Z vašeho serveru místo od třetích stran"
+
+#: build/admin.js:23
+msgid ""
+"Keine Einwilligung nötig – die Dateien liegen bei dir und werden wöchentlich"
+" geprüft."
+msgstr ""
+"Není potřeba souhlas – soubory jsou u vás a kontrolují se každý týden."
+
+#: build/admin.js:23
+msgid "über den Server"
+msgstr "přes server"
+
+#: build/admin.js:23
+msgid "lokal"
+msgstr "lokálně"
+
+#: build/admin.js:23
+msgid "aus"
+msgstr "vypnuto"
+
+#: build/admin.js:23 build/admin.js:26
+msgid "Über den Server"
+msgstr "Přes server"
+
+#: build/admin.js:23
+msgid "Ausschalten"
+msgstr "Vypnout"
+
+#: build/admin.js:23
+msgid "Die letzte Prüfung hat keine Datei dieses Dienstes gefunden."
+msgstr "Poslední kontrola nenašla žádný soubor této služby."
+
+#: build/admin.js:23
+msgid "Schriften"
+msgstr "Písma"
+
+#: build/admin.js:23
+msgid "Stylesheets"
+msgstr "Styly"
+
+#: build/admin.js:23
+msgid "Skript-Bibliothek – jetzt notwendig, Host in der Tabelle genannt"
+msgstr "Knihovna skriptů – teď nezbytná, host uveden v tabulce"
+
+#: build/admin.js:23
+msgid "Emoji-Skript von WordPress"
+msgstr "Skript emoji z WordPressu"
+
+#: build/admin.js:23
+msgid "Bilder"
+msgstr "Obrázky"
+
+#: build/admin.js:23
+msgid "Avatare in Kommentaren"
+msgstr "Avatary v komentářích"
+
+#: build/admin.js:23
+msgid "vorher"
+msgstr "dříve"
+
+#: build/admin.js:23
+msgid "Deine eigene Domain – etwa ein CDN. Als Auftragsverarbeiter notwendig."
+msgstr "Vaše vlastní doména – třeba CDN. Jako zpracovatel nezbytná."
+
+#: build/admin.js:23
+msgid "eigene Domain"
+msgstr "vlastní doména"
+
+#: build/admin.js:23
+msgid "Hinzufügen"
+msgstr "Přidat"
+
+#: build/admin.js:23
+msgid "Aus der Bibliothek: Anbieter, Zweck, Cookies und Texte sind schon da."
+msgstr "Z knihovny: poskytovatel, účel, cookies a texty už jsou vyplněné."
+
+#. translators: %d: more services
+#: build/admin.js:24
+#, js-format
+msgid "%d weiterer"
+msgid_plural "%d weitere"
+msgstr[0] "%d další"
+msgstr[1] "%d další"
+msgstr[2] "%d dalších"
+
+#: build/admin.js:24
+msgid "Zeitraum"
+msgstr "Období"
+
+#: build/admin.js:24
+msgid "30 Tage"
+msgstr "30 dní"
+
+#: build/admin.js:24
+msgid "12 Monate"
+msgstr "12 měsíců"
+
+#: build/admin.js:24
+msgid "Alles"
+msgstr "Vše"
+
+#. translators: %d: withdrawals
+#: build/admin.js:25
+#, js-format
+msgid "Entscheidungen · %d Widerrufe"
+msgstr "Rozhodnutí · odvolání: %d"
+
+#: build/admin.js:25
+msgid "Consent-ID suchen"
+msgstr "Hledat ID souhlasu"
+
+#: build/admin.js:25
+msgid "Zeit"
+msgstr "Čas"
+
+#: build/admin.js:25
+msgid "Consent-ID"
+msgstr "ID souhlasu"
+
+#: build/admin.js:25
+msgid "Entscheidung"
+msgstr "Rozhodnutí"
+
+#: build/admin.js:25
+msgid "Version"
+msgstr "Verze"
+
+#: build/admin.js:25
+msgid "Keine Entscheidung mit dieser Consent-ID."
+msgstr "Žádné rozhodnutí s tímto ID souhlasu."
+
+#: build/admin.js:25
+msgid "Noch keine Entscheidungen in diesem Zeitraum."
+msgstr "Zatím žádná rozhodnutí v tomto období."
+
+#. translators: %d: months
+#: build/admin.js:26
+#, js-format
+msgid ""
+"Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der "
+"Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d Monat."
+msgid_plural ""
+"Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der "
+"Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d "
+"Monaten."
+msgstr[0] ""
+"Každý řádek drží verzi dialogu, kterou osoba viděla – důkaz podle čl. 7 "
+"GDPR. IP adresy jen jako hash, smazáno po %d měsíci."
+msgstr[1] ""
+"Každý řádek drží verzi dialogu, kterou osoba viděla – důkaz podle čl. 7 "
+"GDPR. IP adresy jen jako hash, smazáno po %d měsících."
+msgstr[2] ""
+"Každý řádek drží verzi dialogu, kterou osoba viděla – důkaz podle čl. 7 "
+"GDPR. IP adresy jen jako hash, smazáno po %d měsících."
+
+#: build/admin.js:26
+msgid "überall"
+msgstr "všude"
+
+#: build/admin.js:26
+msgid "EWR"
+msgstr "EHP"
+
+#: build/admin.js:26
+msgid "Schweiz"
+msgstr "Švýcarsko"
+
+#: build/admin.js:26
+msgid "Gravatar über den Server"
+msgstr "Gravatar přes server"
+
+#: build/admin.js:26
+msgid "Avatare aus"
+msgstr "Avatary vypnuté"
+
+#: build/admin.js:26
+msgid "Gravatar direkt"
+msgstr "Gravatar přímo"
+
+#: build/admin.js:26
+msgid "Google"
+msgstr "Google"
+
+#: build/admin.js:26
+msgid "Consent Mode v2"
+msgstr "Consent Mode v2"
+
+#: build/admin.js:26
+msgid "Consent Mode aus"
+msgstr "Consent Mode vypnutý"
+
+#: build/admin.js:26
+msgid ""
+"„Abgelehnt“ steht vor jedem Google-Tag; die Wahl geht als Update hinterher."
+msgstr ""
+"„Odmítnuto“ stojí před každým tagem Google; volba následuje jako "
+"aktualizace."
+
+#: build/admin.js:26
+msgid "Modus"
+msgstr "Režim"
+
+#: build/admin.js:26
+msgid ""
+"Basic: Tags laden erst nach Einwilligung – empfohlen in DE und AT. Advanced:"
+" Tags laden und senden cookielose Pings."
+msgstr ""
+"Basic: tagy se načtou až po souhlasu – doporučeno v Německu a Rakousku. "
+"Advanced: tagy se načtou a posílají pingy bez cookies."
+
+#: build/admin.js:26
+msgid "Tag Manager"
+msgstr "Tag Manager"
+
+#: build/admin.js:26
+msgid ""
+"Vom Plugin geladen, nach dem Standard. Eigener Container im Theme? Leer "
+"lassen."
+msgstr ""
+"Načítá plugin, po výchozím nastavení. Vlastní kontejner v šabloně? Nechte "
+"prázdné."
+
+#: build/admin.js:26
+msgid "Regionen mit „abgelehnt“"
+msgstr "Regiony s „odmítnuto“"
+
+#: build/admin.js:26
+msgid ""
+"Außerhalb darf Google ohne Wahl messen – der Dialog hält Tags trotzdem "
+"zurück."
+msgstr "Mimo ně smí Google měřit bez volby – dialog tagy přesto zadržuje."
+
+#: build/admin.js:26
+msgid "Überall"
+msgstr "Všude"
+
+#: build/admin.js:26
+msgid "URL-Passthrough"
+msgstr "Předávání URL (passthrough)"
+
+#: build/admin.js:26
+msgid "Klick-IDs in Links weitergeben, solange Cookies abgelehnt sind."
+msgstr "Předávat ID kliknutí v odkazech, dokud jsou cookies odmítnuté."
+
+#: build/admin.js:26
+msgid "Ads-Daten kürzen"
+msgstr "Zkrátit data reklam"
+
+#: build/admin.js:26
+msgid "IAB TCF 2.2 braucht nur, wer AdSense, Ad Manager oder AdMob nutzt."
+msgstr ""
+"IAB TCF 2.2 potřebuje jen ten, kdo používá AdSense, Ad Manager nebo AdMob."
+
+#: build/admin.js:26
+msgid "Von Dritten"
+msgstr "Od třetích stran"
+
+#: build/admin.js:26
+msgid "Einbettungen als Platzhalter"
+msgstr "Vložený obsah jako zástupné prvky"
+
+#: build/admin.js:26
+msgid "nur bekannte Einbettungen"
+msgstr "jen známý vložený obsah"
+
+#: build/admin.js:26
+msgid "Schriften lokal"
+msgstr "Písma lokálně"
+
+#: build/admin.js:26
+msgid "Emoji aus"
+msgstr "Emoji vypnuto"
+
+#: build/admin.js:26
+msgid "Unbekannte iframes als Platzhalter"
+msgstr "Neznámé iframy jako zástupné prvky"
+
+#: build/admin.js:26
+msgid ""
+"Auch Einbettungen, die die Bibliothek nicht kennt, laden erst auf Klick."
+msgstr "I vložený obsah, který knihovna nezná, se načte až po kliknutí."
+
+#: build/admin.js:26
+msgid "Vorschaubilder über deinen Server"
+msgstr "Náhledové obrázky přes váš server"
+
+#: build/admin.js:26
+msgid ""
+"YouTube, Vimeo, Spotify: Bild und Titel in der Mediathek, keine Verbindung "
+"zum Anbieter."
+msgstr ""
+"YouTube, Vimeo, Spotify: obrázek a název v knihovně médií, žádné spojení s "
+"poskytovatelem."
+
+#: build/admin.js:26
+msgid "YouTube über youtube-nocookie.com"
+msgstr "YouTube přes youtube-nocookie.com"
+
+#: build/admin.js:26
+msgid "Avatare"
+msgstr "Avatary"
+
+#: build/admin.js:26
+msgid "Aus"
+msgstr "Vypnuto"
+
+#: build/admin.js:26
+msgid "Direkt"
+msgstr "Přímo"
+
+#: build/admin.js:26
+msgid "WordPress-Emoji-Skript laden"
+msgstr "Načítat skript emoji z WordPressu"
+
+#: build/admin.js:26
+msgid "Lädt Bilder von s.w.org. Browser zeigen Emoji längst selbst."
+msgstr "Načítá obrázky z s.w.org. Prohlížeče už dávno zobrazují emoji samy."
+
+#: build/admin.js:26
+msgid "Hinweise an Dritte entfernen"
+msgstr "Odebrat odkazy (resource hints) na třetí strany"
+
+#: build/admin.js:26
+msgid "Was von deinem Server kommt, steht unter Dienste"
+msgstr "Co přichází z vašeho serveru, je uvedeno pod Služby"
+
+#: build/admin.js:26
+msgid "Gültigkeit"
+msgstr "Platnost"
+
+#: build/admin.js:26
+msgid "neu fragen, wenn Dienste sich ändern"
+msgstr "znovu se zeptat, když se služby změní"
+
+#: build/admin.js:26
+msgid "Global Privacy Control beachtet"
+msgstr "Global Privacy Control respektován"
+
+#: build/admin.js:26
+msgid "Wahl gilt"
+msgstr "Volba platí"
+
+#: build/admin.js:26
+msgid "6 Monate empfiehlt die CNIL, bis 12 die DSK."
+msgstr "6 měsíců doporučuje CNIL, až 12 DSK."
+
+#: build/admin.js:26
+msgid "Neu fragen, wenn sich Texte oder Dienste ändern"
+msgstr "Znovu se zeptat, když se změní texty nebo služby"
+
+#: build/admin.js:26
+msgid "Neu fragen"
+msgstr "Znovu se zeptat"
+
+#: build/admin.js:26
+msgid "Global Privacy Control beachten"
+msgstr "Respektovat Global Privacy Control"
+
+#: build/admin.js:26
+msgid ""
+"Sendet der Browser das Signal, bleibt Marketing bei „Alle akzeptieren“ aus."
+msgstr ""
+"Pokud prohlížeč pošle signál, marketing zůstane při „Přijmout vše“ vypnutý."
+
+#: build/admin.js:26
+msgid "Erneut öffnen"
+msgstr "Znovu otevřít"
+
+#: build/admin.js:26
+msgid "Button unten links"
+msgstr "Tlačítko vlevo dole"
+
+#: build/admin.js:26
+msgid "Button unten rechts"
+msgstr "Tlačítko vpravo dole"
+
+#: build/admin.js:26
+msgid "kein Button"
+msgstr "žádné tlačítko"
+
+#: build/admin.js:26
+msgid "Shortcode, Block und #cookie-settings"
+msgstr "Shortcode, blok a #cookie-settings"
+
+#: build/admin.js:26
+msgid ""
+"Erscheint nach der ersten Wahl. Widerrufen muss so leicht sein wie "
+"Zustimmen."
+msgstr ""
+"Objeví se po první volbě. Odvolat musí být stejně snadné jako souhlasit."
+
+#: build/admin.js:26
+msgid ""
+"Oder selbst platzieren – im Footer, im Menü, in der Datenschutzerklärung:"
+msgstr ""
+"Nebo umístěte sami – v zápatí, v menu, v zásadách ochrany osobních údajů:"
+
+#: build/admin.js:26
+msgid ""
+"Block: „Cookie-Einstellungen“. Im Menü: ein eigener Link auf #cookie-"
+"settings."
+msgstr "Blok: „Nastavení cookies“. V menu: vlastní odkaz na #cookie-settings."
+
+#: build/admin.js:26
+msgid "Seiten"
+msgstr "Stránky"
+
+#: build/admin.js:26
+msgid "keine Datenschutzerklärung"
+msgstr "žádné zásady ochrany osobních údajů"
+
+#: build/admin.js:26
+msgid "kein Impressum"
+msgstr "žádná tiráž"
+
+#: build/admin.js:26
+msgid "dort nur klein"
+msgstr "tam jen malý"
+
+#: build/admin.js:26
+msgid "Impressum"
+msgstr "Tiráž"
+
+#: build/admin.js:26
+msgid "Dort nur klein zeigen"
+msgstr "Tam zobrazit jen malý"
+
+#: build/admin.js:26
+msgid "Damit man lesen kann, bevor man entscheidet."
+msgstr "Aby se dalo číst, než se člověk rozhodne."
+
+#: build/admin.js:26
+msgid ""
+"Die Cookie-Tabelle für die Datenschutzerklärung: Block „Cookie-Tabelle“ oder"
+msgstr ""
+"Tabulka cookies pro zásady ochrany osobních údajů: blok „Tabulka cookies“ "
+"nebo"
+
+#. translators: %d: months
+#: build/admin.js:27
+#, js-format
+msgid "%d Monat · IP gehasht · CSV"
+msgid_plural "%d Monate · IP gehasht · CSV"
+msgstr[0] "%d měsíc · IP jako hash · CSV"
+msgstr[1] "%d měsíce · IP jako hash · CSV"
+msgstr[2] "%d měsíců · IP jako hash · CSV"
+
+#: build/admin.js:27
+msgid "Aufbewahren"
+msgstr "Uchovávat"
+
+#: build/admin.js:27
+msgid "Danach löscht ein täglicher Job die Einträge."
+msgstr "Potom záznamy smaže denní úloha."
+
+#: build/admin.js:27
+msgid ""
+"Gespeichert werden Consent-ID, Zeit, Wahl, Version, Sprache, Ort der "
+"Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich "
+"neuem Salz – nie die IP selbst."
+msgstr ""
+"Ukládá se ID souhlasu, čas, volba, verze, jazyk, místo rozhodnutí, rodina "
+"prohlížeče a IP adresa jako SHA-256 s denně novou solí – nikdy IP samotná."
+
+#: build/admin.js:27
+msgid "Alles als CSV"
+msgstr "Vše jako CSV"
+
+#: build/admin.js:27
+msgid "günstig"
+msgstr "levný"
+
+#: build/admin.js:27
+msgid "stark"
+msgstr "silný"
+
+#: build/admin.js:27
+msgid "Einfaches im Browser"
+msgstr "Jednoduché věci v prohlížeči"
+
+#: build/admin.js:27
+msgid "KI-Anbieter"
+msgstr "Poskytovatel AI"
+
+#: build/admin.js:27
+msgid ""
+"WordPress verwaltet ihn unter Einstellungen › Konnektoren – ein API Key für "
+"alle Plugins."
+msgstr ""
+"WordPress ho spravuje v Nastavení › Konektory – jeden API klíč pro všechny "
+"pluginy."
+
+#: build/admin.js:27
+msgid "Ab WordPress 7.0."
+msgstr "Od WordPressu 7.0."
+
+#: build/admin.js:27
+msgid "keiner"
+msgstr "žádný"
+
+#: build/admin.js:27
+msgid "Konnektoren"
+msgstr "Konektory"
+
+#: build/admin.js:27
+msgid ""
+"Empfohlen: Vercel AI Gateway – 5 $ im Monat gratis, ein API Key für die "
+"Modelle aller Anbieter."
+msgstr ""
+"Doporučeno: Vercel AI Gateway – 5 $ měsíčně zdarma, jeden API klíč pro "
+"modely všech poskytovatelů."
+
+#: build/admin.js:27
+msgid "Plugin installieren"
+msgstr "Instalovat plugin"
+
+#: build/admin.js:27
+msgid "Modell"
+msgstr "Model"
+
+#: build/admin.js:27
+msgid "Günstig reicht für alles hier: eine Einrichtung kostet etwa 4 Cent."
+msgstr "Levný stačí na všechno tady: jedno nastavení stojí asi 4 centy."
+
+#: build/admin.js:27
+msgid "Günstig"
+msgstr "Levný"
+
+#: build/admin.js:27
+msgid "Stark"
+msgstr "Silný"
+
+#: build/admin.js:27
+msgid "Eigenes"
+msgstr "Vlastní"
+
+#: build/admin.js:27
+msgid "Modell-ID"
+msgstr "ID modelu"
+
+#: build/admin.js:27
+msgid "Einfache Aufgaben im Browser"
+msgstr "Jednoduché úkoly v prohlížeči"
+
+#: build/admin.js:27
+msgid ""
+"Dein Browser hat ein eingebautes Modell: Übersetzen, Kürzen, Zuordnen und "
+"der Datenschutz-Absatz laufen dort, nichts verlässt den Rechner."
+msgstr ""
+"Váš prohlížeč má vestavěný model: překlad, krácení, přiřazování a odstavec o"
+" ochraně osobních údajů běží tam, nic neopouští počítač."
+
+#: build/admin.js:27
+msgid "Dieser Browser hat kein eingebautes Modell (Chrome ab 148, Edge)."
+msgstr "Tento prohlížeč nemá vestavěný model (Chrome od verze 148, Edge)."
+
+#. translators: 1: tokens, 2: last model
+#: build/admin.js:27
+#, js-format
+msgid "Diesen Monat: %1$s Tokens · zuletzt %2$s"
+msgstr "Tento měsíc: %1$s tokenů · naposledy %2$s"
+
+#: build/admin.js:27
+msgid "wie deine Website"
+msgstr "jako váš web"
+
+#: build/admin.js:27
+msgid ""
+"Der Dialog spricht die Sprache der Seite: mit Polylang oder WPML jede "
+"Sprache der Website, sonst die von WordPress. Texte und Übersetzungen "
+"bearbeitest du unter Dialog."
+msgstr ""
+"Dialog mluví jazykem stránky: s Polylangem nebo WPML každým jazykem webu, "
+"jinak jazykem WordPressu. Texty a překlady upravujete pod Dialog."
+
+#: build/admin.js:27
+msgid "Sprachen deiner Website"
+msgstr "Jazyky vašeho webu"
+
+#: build/admin.js:27
+msgid "Texte und Sprachen"
+msgstr "Texty a jazyky"
+
+#: build/admin.js:27
+msgid "Website lesen"
+msgstr "Číst web"
+
+#: build/admin.js:27
+msgid "jede Woche"
+msgstr "každý týden"
+
+#: build/admin.js:27
+msgid "nur von Hand"
+msgstr "jen ručně"
+
+#. translators: %s: time
+#: build/admin.js:27
+#, js-format
+msgid "zuletzt %s"
+msgstr "naposledy %s"
+
+#. translators: %d: pages
+#: build/admin.js:28
+#, js-format
+msgid "%d Seite"
+msgid_plural "%d Seiten"
+msgstr[0] "%d stránka"
+msgstr[1] "%d stránky"
+msgstr[2] "%d stránek"
+
+#: build/admin.js:28
+msgid "Jede Woche neu lesen"
+msgstr "Číst znovu každý týden"
+
+#: build/admin.js:28
+msgid "Neue Skripte erscheinen unter Dienste › Zu prüfen."
+msgstr "Nové skripty se objeví pod Služby › Ke kontrole."
+
+#: build/admin.js:28
+msgid ""
+"Ausschalten? Skripte laufen dann wieder ohne Einwilligung. Das Protokoll "
+"bleibt."
+msgstr "Vypnout? Skripty pak zase poběží bez souhlasu. Protokol zůstane."
+
+#: build/admin.js:28
+msgid "Dialog ausschalten"
+msgstr "Vypnout dialog"
+
+#: build/admin.js:28
+msgid "Skripte laufen dann wieder ohne Einwilligung. Das Protokoll bleibt."
+msgstr "Skripty pak zase poběží bez souhlasu. Protokol zůstane."
+
+#: build/admin.js:28
+msgid "Zum Einschalten"
+msgstr "K zapnutí"
+
+#: build/admin.js:28
+msgid "Der Dialog ist noch aus."
+msgstr "Dialog je ještě vypnutý."
+
+#: build/admin.js:28
+msgid "z. B. „Füge Hotjar hinzu“"
+msgstr "např. „Přidejte Hotjar“"
+
+#: build/admin.js:28
+msgid "Frag zum Protokoll, z. B. „Wie viele haben gestern abgelehnt?“"
+msgstr "Zeptejte se na protokol, např. „Kolik lidí včera odmítlo?“"
+
+#: build/admin.js:28
+msgid "Speichert …"
+msgstr "Ukládání …"
+
+#. translators: %d: version
+#: build/admin.js:29
+#, js-format
+msgid "Live · Version %d"
+msgstr "Živě · verze %d"
+
+#: build/admin.js:29
+msgid "Auf der Website ansehen"
+msgstr "Zobrazit na webu"
+
+#: build/admin.js:29
+msgid "Noch nicht live"
+msgstr "Ještě není živě"
+
+#: build/blocks.js:1
+msgid "Beschriftung"
+msgstr "Popisek"
+
+#: build/blocks.js:1
+msgid "Leer: „Cookie-Einstellungen“ in der Sprache der Seite."
+msgstr "Prázdné: „Nastavení cookies“ v jazyce stránky."
+
+#: build/blocks.js:1
+msgid "Darstellung"
+msgstr "Podoba"
+
+#: build/blocks.js:1
+msgid "Link"
+msgstr "Odkaz"
+
+#: build/blocks.js:1
+msgid "Consent-ID und Link zu den Einstellungen"
+msgstr "ID souhlasu a odkaz na nastavení"
+
+#: build/blocks.js:1
+msgid "Erst nach Einwilligung"
+msgstr "Až po souhlasu"
+
+#: build/blocks.js:1
+msgid "Lädt erst mit Einwilligung für"
+msgstr "Načte se až se souhlasem pro"
+
+#: build/blocks.js:1
+msgid "– wählen –"
+msgstr "– vyberte –"
+
+#: build/blocks.js:1
+msgid "Besucher sehen hier einen Platzhalter, bis sie dem Dienst zustimmen."
+msgstr "Návštěvníci tu vidí zástupný prvek, dokud službě nedají souhlas."
+
+#: build/blocks.js:1
+msgid "Wähle rechts den Dienst, dem Besucher zuerst zustimmen."
+msgstr "Vpravo vyberte službu, se kterou musí návštěvníci nejdřív souhlasit."
+
+#: blocks/cookie-table/block.json
+msgctxt "block title"
+msgid "Cookie-Tabelle"
+msgstr "Tabulka cookies"
+
+#: blocks/cookie-table/block.json
+msgctxt "block description"
+msgid ""
+"Alle Dienste und Cookies, nach Kategorien – für die Datenschutzerklärung. "
+"Hält sich selbst aktuell."
+msgstr ""
+"Všechny služby a cookies, podle kategorií – pro zásady ochrany osobních "
+"údajů. Sama se udržuje aktuální."
+
+#: blocks/cookie-table/block.json blocks/placeholder/block.json
+#: blocks/settings-button/block.json
+msgctxt "block keyword"
+msgid "cookie"
+msgstr "cookie"
+
+#: blocks/cookie-table/block.json
+msgctxt "block keyword"
+msgid "datenschutz"
+msgstr "ochrana údajů"
+
+#: blocks/cookie-table/block.json
+msgctxt "block keyword"
+msgid "privacy"
+msgstr "soukromí"
+
+#: blocks/cookie-table/block.json
+msgctxt "block keyword"
+msgid "tabelle"
+msgstr "tabulka"
+
+#: blocks/placeholder/block.json
+msgctxt "block title"
+msgid "Erst nach Einwilligung"
+msgstr "Až po souhlasu"
+
+#: blocks/placeholder/block.json
+msgctxt "block description"
+msgid ""
+"Was in diesem Block steht, lädt erst, wenn Besucher dem gewählten Dienst "
+"zustimmen. Bis dahin zeigt sich ein Platzhalter."
+msgstr ""
+"Co je v tomto bloku, se načte až tehdy, když návštěvníci dají souhlas "
+"vybrané službě. Do té doby se zobrazuje zástupný prvek."
+
+#: blocks/placeholder/block.json
+msgctxt "block keyword"
+msgid "platzhalter"
+msgstr "zástupný prvek"
+
+#: blocks/placeholder/block.json
+msgctxt "block keyword"
+msgid "einbettung"
+msgstr "vložení"
+
+#: blocks/placeholder/block.json
+msgctxt "block keyword"
+msgid "embed"
+msgstr "embed"
+
+#: blocks/placeholder/block.json blocks/settings-button/block.json
+msgctxt "block keyword"
+msgid "consent"
+msgstr "souhlas"
+
+#: blocks/settings-button/block.json
+msgctxt "block title"
+msgid "Cookie-Einstellungen"
+msgstr "Nastavení cookies"
+
+#: blocks/settings-button/block.json
+msgctxt "block description"
+msgid ""
+"Ein Button oder Link, der die Cookie-Auswahl öffnet – für den Widerruf."
+msgstr ""
+"Tlačítko nebo odkaz, který otevře výběr cookies – pro odvolání souhlasu."
+
+#: blocks/settings-button/block.json
+msgctxt "block keyword"
+msgid "einwilligung"
+msgstr "souhlas"
+
+#: blocks/settings-button/block.json
+msgctxt "block keyword"
+msgid "widerruf"
+msgstr "odvolání"
