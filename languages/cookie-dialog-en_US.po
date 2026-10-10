@@ -687,6 +687,7 @@ msgid "Sprache"
 msgstr "Language"
 
 #: build/admin.js:3
+#: build/admin.js:18
 msgid "Gerät"
 msgstr "Device"
 
@@ -1085,10 +1086,6 @@ msgstr "Corners"
 #: build/admin.js:18
 msgid "Hell / dunkel"
 msgstr "Light / dark"
-
-#: build/admin.js:18
-msgid "Wie das Gerät"
-msgstr "Like the device"
 
 #: build/admin.js:18
 msgid "Hell"

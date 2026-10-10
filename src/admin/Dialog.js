@@ -257,7 +257,7 @@ function Looks( { state, design, setDesign } ) {
 					options={ [
 						{
 							value: 'auto',
-							label: __( 'Wie das Gerät', 'cookie-dialog' ),
+							label: __( 'Gerät', 'cookie-dialog' ),
 						},
 						{
 							value: 'light',

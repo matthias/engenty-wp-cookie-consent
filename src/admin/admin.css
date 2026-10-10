@@ -161,9 +161,9 @@ button.cd-row__main { cursor: pointer; }
 .cd-muted { color: var(--cd-ink-3); }
 .cd-small { font-size: 13px; }
 .cd-nowrap { white-space: nowrap; }
-.cd-line { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.cd-line__label { display: flex; flex-direction: column; gap: 2px; }
-.cd-line__control { flex: none; display: flex; align-items: center; }
+.cd-line { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.cd-line__label { flex: 1 1 0; min-width: 96px; display: flex; flex-direction: column; gap: 2px; }
+.cd-line__control { flex: none; max-width: 100%; display: flex; align-items: center; }
 
 /* Fields. */
 .cd-field { display: flex; flex-direction: column; gap: 6px; }
