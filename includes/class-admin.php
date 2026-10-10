@@ -100,6 +100,7 @@ class Cookie_Dialog_Admin {
 			'admin'     => admin_url( 'admin.php' ),
 			'version'   => COOKIE_DIALOG_VERSION,
 			'home'      => home_url( '/' ),
+			'site'      => add_query_arg( 'cookie-dialog', 'preview', home_url( '/' ) ),
 			'preview'   => add_query_arg( 'cookie-dialog-preview', '1', home_url( '/' ) ),
 			'csv'       => wp_nonce_url( admin_url( 'admin-post.php?action=cookie_dialog_csv' ), 'cookie_dialog_csv' ),
 			'locale'    => get_user_locale(),

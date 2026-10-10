@@ -108,7 +108,7 @@ function Top( { view, state, saving, savedAt } ) {
 								c.version
 							) }
 						</span>
-						<Button size="sm" href={ boot.home } external>
+						<Button size="sm" href={ boot.site } external>
 							{ __( 'Auf der Website ansehen', 'cookie-dialog' ) }
 						</Button>
 					</>

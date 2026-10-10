@@ -15,7 +15,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: cookie-dialog.php
-#: includes/class-admin.php:184
+#: includes/class-admin.php:185
 msgid "Cookie Dialog"
 msgstr "Cookie Dialog"
 
@@ -45,7 +45,7 @@ msgid "Cookies"
 msgstr "Cookies"
 
 #: includes/class-admin.php:65
-#: includes/class-admin.php:137
+#: includes/class-admin.php:138
 #: build/admin.js:19
 #: build/admin.js:21
 msgid "Start"
@@ -81,20 +81,20 @@ msgstr "Settings"
 msgid "Cookie Dialog lädt …"
 msgstr "Cookie Dialog is loading …"
 
-#: includes/class-admin.php:138
-#: includes/class-admin.php:157
+#: includes/class-admin.php:139
+#: includes/class-admin.php:158
 msgid "Einrichten"
 msgstr "Set up"
 
-#: includes/class-admin.php:154
+#: includes/class-admin.php:155
 msgid "Cookie Dialog ist noch aus."
 msgstr "Cookie Dialog is still off."
 
-#: includes/class-admin.php:155
+#: includes/class-admin.php:156
 msgid "Bis du ihn einschaltest, ändert sich nichts an deiner Website."
 msgstr "Until you turn it on, nothing changes on your website."
 
-#: includes/class-admin.php:164
+#: includes/class-admin.php:165
 msgid "Nicht erlaubt."
 msgstr "Not allowed."
 
@@ -2348,7 +2348,7 @@ msgctxt "block keyword"
 msgid "widerruf"
 msgstr "withdraw"
 
-#: includes/class-admin.php:187
+#: includes/class-admin.php:188
 msgid "Cookie Dialog speichert die Wahl der Besucher im eigenen Cookie „cookie_dialog“ (Consent-ID, Version, Zeit, Kategorien und Dienste) so lange, wie unter Cookies › Einstellungen eingestellt (6 Monate, wenn nichts geändert wurde). Jede Entscheidung kommt ins Protokoll: Consent-ID, Version des Dialogs, Sprache, Ort der Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich neuem Salz; gelöscht nach 12 Monaten, wenn nichts geändert wurde. Der Block „Cookie-Tabelle“ listet alle Dienste und Cookies."
 msgstr "Cookie Dialog stores the visitor’s choice in its own cookie “cookie_dialog” (consent ID, version, time, categories and services) for as long as set under Cookies › Settings (6 months unless changed). Every decision goes into the log: consent ID, version of the dialog, language, where it was made, browser family and the IP address as SHA-256 with a salt that changes daily; deleted after 12 months unless changed. The block “Cookie table” lists all services and cookies."
 
@@ -2598,3 +2598,15 @@ msgstr "Your browser's model could not do this. With an AI provider (Settings �
 #, js-format
 msgid "Das Modell deines Browsers schreibt nicht auf %s. Mit einem KI-Anbieter (Einstellungen › Konnektoren) klappt es."
 msgstr "Your browser's model does not write %s. With an AI provider (Settings › Connectors) it works."
+
+#: includes/class-front.php:356
+msgid "Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder gespeichert noch protokolliert."
+msgstr "Preview: this is how a new visitor sees the dialog. Your choice here is neither stored nor logged."
+
+#: includes/class-front.php:357
+msgid "Neu starten"
+msgstr "Start again"
+
+#: includes/class-front.php:358
+msgid "Beenden"
+msgstr "End"

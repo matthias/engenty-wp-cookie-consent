@@ -9,13 +9,17 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Nothing changes on the site until the dialog is switched on – except in the admin's preview,
- * which only the person who manages the site sees.
+ * Nothing changes on the site until the dialog is switched on – except in the previews, which only
+ * the person who manages the site sees: the admin's frame and `?cookie-dialog=preview` on the site.
  */
 class Cookie_Dialog_Front {
 
+	/** The session cookie that keeps the preview on the site while the admin clicks around. */
+	const PREVIEW_COOKIE = 'cookie_dialog_preview';
+
 	/** Hooks the head, the scripts and the footer. */
 	public static function init() {
+		add_action( 'template_redirect', array( __CLASS__, 'preview_switch' ) );
 		add_action( 'wp_head', array( __CLASS__, 'head' ), -1000 );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'assets' ) );
 		add_action( 'wp_footer', array( __CLASS__, 'footer_snippets' ), 5 );
@@ -36,7 +40,50 @@ class Cookie_Dialog_Front {
 		 *
 		 * @param bool $active Whether it shows.
 		 */
-		return (bool) apply_filters( 'cookie_dialog_active', Cookie_Dialog_Config::live() || self::preview() );
+		return (bool) apply_filters( 'cookie_dialog_active', Cookie_Dialog_Config::live() || self::preview() || self::site_preview() );
+	}
+
+	/**
+	 * The preview on the site: the dialog as a new visitor sees it – also before it is switched on,
+	 * whatever the admin chose – and nothing is stored. `?cookie-dialog=preview` starts it,
+	 * `?cookie-dialog=end` ends it; in between a session cookie keeps it on every page.
+	 *
+	 * @return bool
+	 */
+	public static function site_preview() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return false;
+		}
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only view for administrators.
+		$ask = isset( $_GET['cookie-dialog'] ) ? sanitize_key( wp_unslash( $_GET['cookie-dialog'] ) ) : '';
+		if ( 'end' === $ask ) {
+			return false;
+		}
+		return 'preview' === $ask || ! empty( $_COOKIE[ self::PREVIEW_COOKIE ] );
+	}
+
+	/** Starts or ends the preview on the site. */
+	public static function preview_switch() {
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- only switches a view for administrators.
+		$ask = isset( $_GET['cookie-dialog'] ) ? sanitize_key( wp_unslash( $_GET['cookie-dialog'] ) ) : '';
+		if ( ! in_array( $ask, array( 'preview', 'end' ), true ) || ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+		$cookie = array(
+			'path'     => COOKIEPATH ? COOKIEPATH : '/',
+			'secure'   => is_ssl(),
+			'httponly' => true,
+			'samesite' => 'Lax',
+		);
+		if ( 'preview' === $ask ) {
+			setcookie( self::PREVIEW_COOKIE, '1', array( 'expires' => 0 ) + $cookie );
+			$_COOKIE[ self::PREVIEW_COOKIE ] = '1';
+			return;
+		}
+		setcookie( self::PREVIEW_COOKIE, '', array( 'expires' => time() - YEAR_IN_SECONDS ) + $cookie );
+		unset( $_COOKIE[ self::PREVIEW_COOKIE ] );
+		wp_safe_redirect( remove_query_arg( 'cookie-dialog' ) );
+		exit;
 	}
 
 	/**
@@ -64,7 +111,7 @@ class Cookie_Dialog_Front {
 	 * @return bool
 	 */
 	public static function admin_bar( $show ) {
-		return self::preview() ? false : $show;
+		return self::preview() || self::site_preview() ? false : $show;
 	}
 
 	/**
@@ -100,8 +147,9 @@ class Cookie_Dialog_Front {
 			}
 			$js .= 'gtag("set","ads_data_redaction",' . ( $g['adsRedaction'] ? 'true' : 'false' ) . ');';
 			$js .= 'gtag("set","url_passthrough",' . ( $g['urlPassthrough'] ? 'true' : 'false' ) . ');';
-			// A returning visitor's choice, before any tag: the same rules the dialog applies.
-			$js .= sprintf(
+			// A returning visitor's choice, before any tag: the same rules the dialog applies. Not in the
+			// preview on the site, where the admin is a new visitor.
+			$js .= self::site_preview() ? '' : sprintf(
 				'(function(){try{var m=document.cookie.match(/(?:^|; )%1$s=([^;]*)/);if(!m)return;var c=JSON.parse(decodeURIComponent(m[1]));if(!c||c.v<%2$d||c.t<Date.now()/1e3-%3$d)return;var cs=%4$s,ss=%5$s,u={};(c.c||[]).forEach(function(k){(cs[k]||[]).forEach(function(s){u[s]="granted"})});(c.s||[]).forEach(function(k){(ss[k]||[]).forEach(function(s){u[s]="granted"})});if(Object.keys(u).length)gtag("consent","update",u)}catch(e){}})();',
 				COOKIE_DIALOG_COOKIE,
 				(int) $config['reask'],
@@ -303,6 +351,13 @@ class Cookie_Dialog_Front {
 			'nocookie'       => (bool) $config['thirdParty']['nocookie'],
 			'rest'           => rest_url( 'cookie-dialog/v1/consent' ),
 			'preview'        => $preview ? $preview : false,
+			// Only for a logged-in admin, whom page caches leave out.
+			'sitePreview'    => self::site_preview() ? array(
+				'note'    => __( 'Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder gespeichert noch protokolliert.', 'cookie-dialog' ),
+				'restart' => __( 'Neu starten', 'cookie-dialog' ),
+				'end'     => __( 'Beenden', 'cookie-dialog' ),
+				'endUrl'  => add_query_arg( 'cookie-dialog', 'end' ),
+			) : false,
 		);
 	}
 }

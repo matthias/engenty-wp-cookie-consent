@@ -43,6 +43,12 @@ type Design = {
 	showLinks: boolean;
 };
 type Preview = { layer: '1' | '2' | 'ph'; edit: boolean; lang: string };
+type SitePreview = {
+	note: string;
+	restart: string;
+	end: string;
+	endUrl: string;
+};
 type Config = {
 	v: number;
 	reask: number;
@@ -66,6 +72,7 @@ type Config = {
 	nocookie: boolean;
 	rest: string;
 	preview: Preview | false;
+	sitePreview: SitePreview | false;
 };
 type Decision = 'all' | 'necessary' | 'custom' | 'service';
 type Source = 'dialog' | 'settings' | 'placeholder' | 'withdraw';
@@ -103,15 +110,30 @@ try {
 
 /* ------------------------------------------------------------------ choice */
 
-function readChoice( c: Config ): Choice | null {
+/** The preview on the site keeps its choice in this tab only, never in the cookie. */
+const PREVIEW_KEY = 'cookie-dialog-preview';
+
+function storedChoice( c: Config ): string | null {
+	if ( c.sitePreview ) {
+		try {
+			return window.sessionStorage.getItem( PREVIEW_KEY );
+		} catch {
+			return null;
+		}
+	}
 	const m = document.cookie.match(
 		new RegExp( `(?:^|; )${ COOKIE }=([^;]*)` )
 	);
-	if ( ! m ) {
+	return m ? decodeURIComponent( m[ 1 ] ) : null;
+}
+
+function readChoice( c: Config ): Choice | null {
+	const raw = storedChoice( c );
+	if ( ! raw ) {
 		return null;
 	}
 	try {
-		const data = JSON.parse( decodeURIComponent( m[ 1 ] ) ) as Choice;
+		const data = JSON.parse( raw ) as Choice;
 		const maxAge = c.months * 30 * 86400;
 		if (
 			! data ||
@@ -130,6 +152,17 @@ function readChoice( c: Config ): Choice | null {
 }
 
 function writeChoice( c: Config, choice: Choice ) {
+	if ( c.sitePreview ) {
+		try {
+			window.sessionStorage.setItem(
+				PREVIEW_KEY,
+				JSON.stringify( choice )
+			);
+		} catch {
+			// Without storage the preview's choice holds for this page only.
+		}
+		return;
+	}
 	const secure = location.protocol === 'https:' ? '; Secure' : '';
 	document.cookie = `${ COOKIE }=${ encodeURIComponent(
 		JSON.stringify( choice )
@@ -187,6 +220,9 @@ class CookieDialog {
 		if ( this.c.preview ) {
 			this.preview( this.c.preview );
 			return;
+		}
+		if ( this.c.sitePreview ) {
+			this.previewBar( this.c.sitePreview );
 		}
 		if ( this.choice ) {
 			this.apply( null );
@@ -294,6 +330,10 @@ class CookieDialog {
 	 * @param ids
 	 */
 	forget( ids: string[] ) {
+		// The preview leaves the admin's own cookies alone.
+		if ( this.c.sitePreview ) {
+			return;
+		}
 		const names: string[] = [];
 		const keys: string[] = [];
 		this.c.services
@@ -360,6 +400,10 @@ class CookieDialog {
 	save( choice: Choice, decision: Decision, source: Source ) {
 		this.choice = choice;
 		writeChoice( this.c, choice );
+		if ( this.c.sitePreview ) {
+			this.idsFill();
+			return;
+		}
 		try {
 			window
 				.fetch( this.c.rest, {
@@ -1486,6 +1530,44 @@ class CookieDialog {
 			this.root.appendChild( this.fab );
 		}
 		this.fab.hidden = ! this.choice || this.layer !== 0;
+	}
+
+	/* ---------- the preview on the site */
+
+	/**
+	 * A line at the top while the admin looks at the site as a new visitor: start again with no
+	 * choice, or end the preview.
+	 * @param p
+	 */
+	previewBar( p: SitePreview ) {
+		const host = document.createElement( 'div' );
+		host.setAttribute( 'data-cookie-dialog', 'preview' );
+		const root = host.attachShadow( { mode: 'open' } );
+		const style = document.createElement( 'style' );
+		style.textContent =
+			':host{all:initial}.bar{position:fixed;z-index:2147483646;top:10px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;max-width:calc(100vw - 24px);padding:6px 6px 6px 14px;border-radius:999px;background:#282623;color:#f7f5f2;font:500 13px/1.3 system-ui,sans-serif;box-shadow:0 6px 24px rgba(0,0,0,.25)}span{flex:1;min-width:0}button,a{flex:none;border:0;border-radius:999px;padding:6px 12px;font:inherit;cursor:pointer;text-decoration:none}button{background:rgba(255,255,255,.14);color:inherit}a{background:#f7f5f2;color:#282623}';
+		const restart = document.createElement( 'button' );
+		restart.type = 'button';
+		restart.textContent = p.restart;
+		restart.addEventListener( 'click', () => {
+			try {
+				window.sessionStorage.removeItem( PREVIEW_KEY );
+			} catch {
+				// Nothing kept: the page starts fresh anyway.
+			}
+			window.location.reload();
+		} );
+		const end = document.createElement( 'a' );
+		end.href = p.endUrl;
+		end.textContent = p.end;
+		const note = document.createElement( 'span' );
+		note.textContent = p.note;
+		const bar = document.createElement( 'div' );
+		bar.className = 'bar';
+		bar.setAttribute( 'role', 'status' );
+		bar.append( note, restart, end );
+		root.append( style, bar );
+		document.body.append( host );
 	}
 
 	/* ---------- the admin's preview */

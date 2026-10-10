@@ -9,14 +9,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-10T13:59:41+00:00\n"
+"POT-Creation-Date: 2026-10-10T14:02:10+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: cookie-dialog\n"
 
 #. Plugin Name of the plugin
 #: cookie-dialog.php
-#: includes/class-admin.php:184
+#: includes/class-admin.php:185
 msgid "Cookie Dialog"
 msgstr ""
 
@@ -46,7 +46,7 @@ msgid "Cookies"
 msgstr ""
 
 #: includes/class-admin.php:65
-#: includes/class-admin.php:137
+#: includes/class-admin.php:138
 #: build/admin.js:19
 #: build/admin.js:21
 msgid "Start"
@@ -82,24 +82,24 @@ msgstr ""
 msgid "Cookie Dialog lädt …"
 msgstr ""
 
-#: includes/class-admin.php:138
-#: includes/class-admin.php:157
+#: includes/class-admin.php:139
+#: includes/class-admin.php:158
 msgid "Einrichten"
 msgstr ""
 
-#: includes/class-admin.php:154
+#: includes/class-admin.php:155
 msgid "Cookie Dialog ist noch aus."
 msgstr ""
 
-#: includes/class-admin.php:155
+#: includes/class-admin.php:156
 msgid "Bis du ihn einschaltest, ändert sich nichts an deiner Website."
 msgstr ""
 
-#: includes/class-admin.php:164
+#: includes/class-admin.php:165
 msgid "Nicht erlaubt."
 msgstr ""
 
-#: includes/class-admin.php:187
+#: includes/class-admin.php:188
 msgid "Cookie Dialog speichert die Wahl der Besucher im eigenen Cookie „cookie_dialog“ (Consent-ID, Version, Zeit, Kategorien und Dienste) so lange, wie unter Cookies › Einstellungen eingestellt (6 Monate, wenn nichts geändert wurde). Jede Entscheidung kommt ins Protokoll: Consent-ID, Version des Dialogs, Sprache, Ort der Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich neuem Salz; gelöscht nach 12 Monaten, wenn nichts geändert wurde. Der Block „Cookie-Tabelle“ listet alle Dienste und Cookies."
 msgstr ""
 
@@ -564,6 +564,18 @@ msgstr ""
 #: includes/class-consent.php:174
 #, php-format
 msgid "Version %1$d: %2$s"
+msgstr ""
+
+#: includes/class-front.php:356
+msgid "Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder gespeichert noch protokolliert."
+msgstr ""
+
+#: includes/class-front.php:357
+msgid "Neu starten"
+msgstr ""
+
+#: includes/class-front.php:358
+msgid "Beenden"
 msgstr ""
 
 #. translators: 1: HTTP status, 2: URL
