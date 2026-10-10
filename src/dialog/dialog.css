@@ -163,6 +163,7 @@
 :host .cd-btn:hover { filter: brightness(1.07); }
 :host .cd-btn--sec { background: transparent; color: var(--cd-fg); }
 :host .cd-btn--sec:hover { background: var(--cd-soft); filter: none; }
+:host .cd-sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 :host .cd-link {
 	appearance: none;
 	display: inline-flex;

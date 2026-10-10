@@ -38,6 +38,9 @@ type Design = {
 	backdrop: boolean;
 	lock: boolean;
 	branding: boolean;
+	buttons: 'same' | 'accept' | 'outline';
+	showTitle: boolean;
+	showLinks: boolean;
 };
 type Preview = { layer: '1' | '2' | 'ph'; edit: boolean; lang: string };
 type Config = {
@@ -822,16 +825,17 @@ class CookieDialog {
 		] );
 	}
 
-	foot( extra?: Node | null ): HTMLElement {
+	foot( extra?: Node | null, first = false ): HTMLElement {
 		const links: HTMLElement[] = [];
-		if ( this.c.privacy ) {
+		const shown = ! first || this.c.design.showLinks;
+		if ( shown && this.c.privacy ) {
 			links.push(
 				this.el( 'a', { href: this.c.privacy }, [
 					this.t( 'privacy' ),
 				] )
 			);
 		}
-		if ( this.c.imprint ) {
+		if ( shown && this.c.imprint ) {
 			links.push(
 				this.el( 'a', { href: this.c.imprint }, [
 					this.t( 'imprint' ),
@@ -877,17 +881,28 @@ class CookieDialog {
 		return ! this.c.small && ( d.layout === 'modal' || d.lock );
 	}
 
+	/**
+	 * A button's class by the chosen style: both filled, accept filled and only necessary outlined,
+	 * or every button outlined.
+	 * @param main Whether it is the button the style fills (accept on the first layer, save on the second).
+	 */
+	btn( main: boolean ): string {
+		const { buttons } = this.c.design;
+		const filled = buttons === 'same' || ( buttons === 'accept' && main );
+		return filled ? 'cd-btn' : 'cd-btn cd-btn--sec';
+	}
+
 	layer1(): HTMLElement {
 		const accept = this.el(
 			'button',
-			{ type: 'button', class: 'cd-btn', 'data-act': 'all' },
+			{ type: 'button', class: this.btn( true ), 'data-act': 'all' },
 			[ this.t( 'accept' ) ]
 		);
 		const reject = this.el(
 			'button',
 			{
 				type: 'button',
-				class: 'cd-btn cd-btn--sec',
+				class: this.btn( false ),
 				'data-act': 'necessary',
 			},
 			[ this.t( 'reject' ) ]
@@ -902,9 +917,16 @@ class CookieDialog {
 		this.editable( settings, 'settings' );
 		const bar = this.c.design.layout === 'bar' && ! this.c.small;
 		const title = this.editable(
-			this.el( 'h2', { id: 'cd-t', class: 'cd-title' }, [
-				this.t( 'title' ),
-			] ),
+			this.el(
+				'h2',
+				{
+					id: 'cd-t',
+					class: this.c.design.showTitle
+						? 'cd-title'
+						: 'cd-title cd-sr',
+				},
+				[ this.t( 'title' ) ]
+			),
 			'title'
 		);
 		const text = this.editable(
@@ -929,7 +951,7 @@ class CookieDialog {
 						title,
 						text,
 						gpc,
-						this.foot(),
+						this.foot( null, true ),
 					] ),
 					this.el( 'div', { class: 'cd-bar__btns' }, [
 						settings,
@@ -955,7 +977,7 @@ class CookieDialog {
 				gpc,
 				this.el( 'div', { class: 'cd-btns' }, [ accept, reject ] ),
 				settings,
-				this.foot(),
+				this.foot( null, true ),
 			]
 		);
 	}
@@ -1168,7 +1190,7 @@ class CookieDialog {
 								'button',
 								{
 									type: 'button',
-									class: 'cd-btn',
+									class: this.btn( true ),
 									'data-act': 'save',
 								},
 								[ t( 'save' ) ]

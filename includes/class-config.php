@@ -112,6 +112,9 @@ class Cookie_Dialog_Config {
 				'backdrop'   => false,
 				'lock'       => false,
 				'branding'   => false,
+				'buttons'    => 'accept',
+				'showTitle'  => true,
+				'showLinks'  => true,
 			),
 			'tone'        => array(
 				'address' => 'du',
@@ -772,9 +775,10 @@ class Cookie_Dialog_Config {
 		$design['fontFamily'] = self::font_family( $design['fontFamily'] ?? '' );
 		$design['headFont']   = self::font_family( $design['headFont'] ?? '' );
 		$design['logo']       = esc_url_raw( (string) ( $design['logo'] ?? '' ) );
-		foreach ( array( 'backdrop', 'lock', 'branding' ) as $flag ) {
+		foreach ( array( 'backdrop', 'lock', 'branding', 'showTitle', 'showLinks' ) as $flag ) {
 			$design[ $flag ] = ! empty( $design[ $flag ] );
 		}
+		$design['buttons'] = self::one_of( $design['buttons'] ?? '', array( 'same', 'accept', 'outline' ), 'accept' );
 		$c['design'] = array_intersect_key( $design, $d['design'] );
 
 		$c['tone'] = array(

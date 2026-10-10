@@ -2567,3 +2567,27 @@ msgstr "Show what to set up"
 #: build/admin.js:3
 msgid "Hinweis ausblenden"
 msgstr "Hide notice"
+
+#: build/admin.js:18
+msgid "Buttons"
+msgstr "Buttons"
+
+#: build/admin.js:18
+msgid "Gleich"
+msgstr "Same"
+
+#: build/admin.js:18
+msgid "Akzeptieren betont"
+msgstr "Accept highlighted"
+
+#: build/admin.js:18
+msgid "Umrandet"
+msgstr "Outlined"
+
+#: build/admin.js:18
+msgid "Titel zeigen"
+msgstr "Show title"
+
+#: build/admin.js:18
+msgid "Links zu Datenschutz und Impressum zeigen"
+msgstr "Show privacy and imprint links"

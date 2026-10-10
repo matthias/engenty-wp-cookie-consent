@@ -270,6 +270,49 @@ function Looks( { state, design, setDesign } ) {
 					] }
 				/>
 			</Line>
+			<Line label={ __( 'Buttons', 'cookie-dialog' ) }>
+				<Seg
+					value={ design.buttons }
+					onChange={ ( buttons ) => set( { buttons } ) }
+					label={ __( 'Buttons', 'cookie-dialog' ) }
+					options={ [
+						{
+							value: 'same',
+							label: __( 'Gleich', 'cookie-dialog' ),
+						},
+						{
+							value: 'accept',
+							label: __( 'Akzeptieren betont', 'cookie-dialog' ),
+						},
+						{
+							value: 'outline',
+							label: __( 'Umrandet', 'cookie-dialog' ),
+						},
+					] }
+				/>
+			</Line>
+			<Line label={ __( 'Titel zeigen', 'cookie-dialog' ) }>
+				<Switch
+					checked={ design.showTitle }
+					label={ __( 'Titel zeigen', 'cookie-dialog' ) }
+					onChange={ ( showTitle ) => set( { showTitle } ) }
+				/>
+			</Line>
+			<Line
+				label={ __(
+					'Links zu Datenschutz und Impressum zeigen',
+					'cookie-dialog'
+				) }
+			>
+				<Switch
+					checked={ design.showLinks }
+					label={ __(
+						'Links zu Datenschutz und Impressum zeigen',
+						'cookie-dialog'
+					) }
+					onChange={ ( showLinks ) => set( { showLinks } ) }
+				/>
+			</Line>
 			<button
 				type="button"
 				className="cd-more"
