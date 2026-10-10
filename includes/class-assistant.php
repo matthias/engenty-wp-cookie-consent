@@ -581,9 +581,15 @@ class Cookie_Dialog_Assistant {
 					$texts[ $k ] = str_replace( $site, '{site}', $v );
 				}
 				return array(
-					'system' => 'You translate the texts of a cookie consent dialog. Keep the meaning exact and the tone; keep placeholders like {site}, {service}, {provider} and %d unchanged; keep it short. Answer with JSON only.',
-					'prompt' => 'Translate from ' . $source . ' to the language with the code "' . $lang . '". Texts: ' . wp_json_encode( $texts, JSON_UNESCAPED_UNICODE ) . ' Categories: ' . wp_json_encode( $cats, JSON_UNESCAPED_UNICODE ),
-					'schema' => array(
+					'source'  => $source,
+					'target'  => $lang,
+					'strings' => array(
+						'texts'      => $texts,
+						'categories' => $cats,
+					),
+					'system'  => 'You translate the texts of a cookie consent dialog. Keep the meaning exact and the tone; keep placeholders like {site}, {service}, {provider} and %d unchanged; keep it short. Answer with JSON only.',
+					'prompt'  => 'Translate from ' . $source . ' to the language with the code "' . $lang . '". Texts: ' . wp_json_encode( $texts, JSON_UNESCAPED_UNICODE ) . ' Categories: ' . wp_json_encode( $cats, JSON_UNESCAPED_UNICODE ),
+					'schema'  => array(
 						'type'       => 'object',
 						'properties' => array(
 							'texts'      => array(
@@ -716,11 +722,16 @@ class Cookie_Dialog_Assistant {
 			$status = self::status();
 			if ( ! $status['ready'] ) {
 				if ( in_array( $job, self::SIMPLE, true ) && $status['browser'] ) {
+					// The browser's model gets the prompt; for translating also the texts themselves, which
+					// Chrome's Translator takes one by one.
 					return array(
 						'browser' => true,
 						'system'  => $prompt['system'],
 						'prompt'  => $prompt['prompt'],
 						'schema'  => $prompt['schema'],
+						'source'  => $prompt['source'] ?? null,
+						'target'  => $prompt['target'] ?? null,
+						'strings' => $prompt['strings'] ?? null,
 					);
 				}
 				return new WP_Error( 'cookie_dialog_no_provider', __( 'Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren).', 'cookie-dialog' ) );

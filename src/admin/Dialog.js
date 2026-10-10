@@ -474,11 +474,14 @@ function Texts( { state, onState, save } ) {
 	const simple =
 		state.assistant.ready ||
 		( state.assistant.browser && browser && browser !== 'unavailable' );
+	// Translating also works with Chrome's Translator alone.
+	const translates =
+		simple || ( state.assistant.browser && Boolean( window.Translator ) );
 	const texts = state.texts[ lang ] || {};
 	const addLanguage = ( code ) => {
 		setAdding( false );
 		save( { languages: [ ...config.languages, code ] } ).then( () => {
-			if ( code !== 'de' && code !== 'en' && simple ) {
+			if ( code !== 'de' && code !== 'en' && translates ) {
 				job( 'translate', { lang: code } );
 			}
 		} );
@@ -642,7 +645,7 @@ function Texts( { state, onState, save } ) {
 					<Button
 						size="sm"
 						busy={ busy === 'translate' }
-						disabled={ ! simple }
+						disabled={ ! translates }
 						onClick={ () => job( 'translate', { lang } ) }
 					>
 						{ sprintf(
