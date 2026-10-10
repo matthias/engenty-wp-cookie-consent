@@ -12,6 +12,8 @@ module.exports = defineConfig( {
 		viewport: { width: 1280, height: 800 },
 		locale: 'de-DE',
 		// Locally the installed Chrome will do (PW_CHANNEL=chrome); CI installs Playwright's own.
-		...( process.env.PW_CHANNEL ? { channel: process.env.PW_CHANNEL } : {} ),
+		...( process.env.PW_CHANNEL
+			? { channel: process.env.PW_CHANNEL }
+			: {} ),
 	},
 } );
