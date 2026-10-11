@@ -568,15 +568,15 @@ msgstr "Tekstejä tai palveluja muutettu"
 msgid "Version %1$d: %2$s"
 msgstr "Versio %1$d: %2$s"
 
-#: includes/class-front.php:385
+#: includes/class-front.php:387
 msgid "Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder gespeichert noch protokolliert."
 msgstr "Esikatselu: näin uusi kävijä näkee dialogin. Valintaasi täällä ei tallenneta eikä kirjata lokiin."
 
-#: includes/class-front.php:386
+#: includes/class-front.php:388
 msgid "Neu starten"
 msgstr "Aloita alusta"
 
-#: includes/class-front.php:387
+#: includes/class-front.php:389
 msgid "Beenden"
 msgstr "Lopeta"
 
@@ -2625,7 +2625,7 @@ msgctxt "block keyword"
 msgid "widerruf"
 msgstr "peruutus"
 
-#: includes/class-config.php:767
+#: includes/class-config.php:774
 #: build/admin.js:28
 msgid "In dieser Datei sind keine Einstellungen von Cookie Dialog."
 msgstr "Tässä tiedostossa ei ole Cookie Dialogin asetuksia."
@@ -2692,6 +2692,14 @@ msgstr "Dialogi on käytössä: jos kävijöiden lukema muuttuu, voimaan tulee u
 msgid "%s übernommen."
 msgstr "%s tuotu."
 
-#: includes/class-config.php:674
+#: includes/class-config.php:681
 msgid "WordPress-Cookies an die Website angepasst"
 msgstr "WordPressin evästeet sovitettu sivustoon"
+
+#: includes/class-front.php:385
+msgid "Vorschau"
+msgstr "Esikatselu"
+
+#: includes/class-front.php:386
+msgid "wie ein neuer Besucher – nichts wird gespeichert"
+msgstr "kuin uusi kävijä – mitään ei tallenneta"

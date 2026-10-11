@@ -382,7 +382,9 @@ class Cookie_Dialog_Front {
 			'preview'        => $preview ? $preview : false,
 			// Only for a logged-in admin, whom page caches leave out.
 			'sitePreview'    => self::site_preview() ? array(
-				'note'    => __( 'Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder gespeichert noch protokolliert.', 'cookie-dialog' ),
+				'label'   => __( 'Vorschau', 'cookie-dialog' ),
+				'note'    => __( 'wie ein neuer Besucher – nichts wird gespeichert', 'cookie-dialog' ),
+				'title'   => __( 'Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder gespeichert noch protokolliert.', 'cookie-dialog' ),
 				'restart' => __( 'Neu starten', 'cookie-dialog' ),
 				'end'     => __( 'Beenden', 'cookie-dialog' ),
 				'endUrl'  => add_query_arg( 'cookie-dialog', 'end' ),

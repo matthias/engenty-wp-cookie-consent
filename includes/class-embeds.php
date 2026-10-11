@@ -19,6 +19,7 @@ class Cookie_Dialog_Embeds {
 	/** Hooks oEmbed output and the thumbnail job. */
 	public static function init() {
 		add_filter( 'embed_oembed_html', array( __CLASS__, 'oembed' ), 999, 2 );
+		add_filter( 'do_shortcode_tag', array( __CLASS__, 'feed' ), 999, 2 );
 		add_action( 'cookie_dialog_thumb', array( __CLASS__, 'fetch_thumb' ), 10, 2 );
 	}
 
@@ -43,6 +44,26 @@ class Cookie_Dialog_Embeds {
 		}
 		$attrs = preg_match( '#<iframe\b([^>]*)>#i', (string) $html, $m ) ? Cookie_Dialog_Html::attrs( $m[1] ) : array();
 		return self::placeholder( (string) $html, $service, $src, $attrs );
+	}
+
+	/**
+	 * The feed of Smash Balloon's Instagram Feed as one placeholder. Its script stays: without the feed
+	 * on the page it asks nothing of Instagram; loaded, the feed starts it again (sbi_init).
+	 *
+	 * @param string $output The shortcode's HTML.
+	 * @param string $tag    The shortcode.
+	 * @return string
+	 */
+	public static function feed( $output, $tag ) {
+		if ( 'instagram-feed' !== $tag || ! Cookie_Dialog_Front::active() || false === strpos( (string) $output, 'sb_instagram' ) ) {
+			return $output;
+		}
+		$service = Cookie_Dialog_Config::service( 'instagram' );
+		if ( ! $service || ! Cookie_Dialog_Config::is_held( $service ) ) {
+			return $output;
+		}
+		$start = '<script>window.sbi_init&&window.sbi_init();</script>';
+		return self::placeholder( (string) $output . $start, $service, 'https://www.instagram.com/', array(), true );
 	}
 
 	/**
@@ -107,9 +128,10 @@ class Cookie_Dialog_Embeds {
 	 * @param array|null $service The service, or null for an unknown third party.
 	 * @param string     $src     The embed's address.
 	 * @param array      $attrs   The iframe's attributes (width, height, title).
+	 * @param bool       $feed    Several posts of the service (a feed), not one embed.
 	 * @return string
 	 */
-	public static function placeholder( $html, $service, $src, $attrs = array() ) {
+	public static function placeholder( $html, $service, $src, $attrs = array(), $feed = false ) {
 		$config = Cookie_Dialog_Config::get();
 		$lang   = Cookie_Dialog_Config::lang();
 		$texts  = Cookie_Dialog_Config::texts( $lang );
@@ -133,7 +155,7 @@ class Cookie_Dialog_Embeds {
 		if ( $service && ! empty( $service['embed']['thumb'] ) && $config['thirdParty']['thumbnails'] ) {
 			$thumb = self::thumb( $src );
 		}
-		$title = $thumb && ! empty( $thumb['title'] ) ? $thumb['title'] : $fill( $texts[ self::TITLE[ $type ] ?? 'phOther' ] );
+		$title = $thumb && ! empty( $thumb['title'] ) ? $thumb['title'] : $fill( $texts[ $feed ? 'phFeed' : ( self::TITLE[ $type ] ?? 'phOther' ) ] );
 		$text  = $fill( $service && $service['cookies'] ? $texts['phCookies'] : $texts['phText'] );
 
 		$width  = isset( $attrs['width'] ) && is_numeric( $attrs['width'] ) ? (int) $attrs['width'] : 0;
@@ -159,6 +181,7 @@ class Cookie_Dialog_Embeds {
 		}
 
 		$label  = $service && ! empty( $service['embed']['label'] ) ? Cookie_Dialog_Config::pick( $service['embed']['label'], $lang ) : $texts['phLoad'];
+		$label  = $feed ? $texts['phFeedLoad'] : $label;
 		$always = $service && $config['thirdParty']['always'];
 
 		$out  = sprintf(

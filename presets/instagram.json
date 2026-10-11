@@ -37,9 +37,6 @@
     "instagram.com/embed.js",
     "instgrm.Embeds"
   ],
-  "handles": [
-    "sbi_scripts"
-  ],
   "plugins": [
     "instagram-feed/instagram-feed.php",
     "instagram-feed-pro/instagram-feed.php"

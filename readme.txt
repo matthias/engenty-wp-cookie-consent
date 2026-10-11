@@ -27,6 +27,9 @@ Cookie Dialog reads your website as a visitor without consent, proposes the whol
 = 0.2.1 =
 * WordPress names the comment cookies only where the site shows a comment form (the scan looks for one), and wp-postpass_* only with a password-protected post.
 * The arrow beside the number of services sits in the middle of the line.
+* The Instagram feed of Smash Balloon's Instagram Feed waits as a placeholder with „Beiträge laden“ and „Immer laden“, like a video; loaded, the feed starts by itself.
+* A placeholder whose embed brings a script ran that script twice when loaded.
+* The preview bar on the site is one short line at the top.
 
 = 0.2.0 =
 * Export and import under Settings: the settings as a JSON file from one site to another, e.g. from staging to live. The site keeps whether the dialog is on and its log; privacy policy and imprint are found by their address.

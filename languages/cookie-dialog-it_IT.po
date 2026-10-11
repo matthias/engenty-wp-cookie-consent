@@ -568,15 +568,15 @@ msgstr "Testi o servizi modificati"
 msgid "Version %1$d: %2$s"
 msgstr "Versione %1$d: %2$s"
 
-#: includes/class-front.php:385
+#: includes/class-front.php:387
 msgid "Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder gespeichert noch protokolliert."
 msgstr "Anteprima: così un nuovo visitatore vede il dialogo. La tua scelta qui non viene né salvata né registrata."
 
-#: includes/class-front.php:386
+#: includes/class-front.php:388
 msgid "Neu starten"
 msgstr "Ricomincia"
 
-#: includes/class-front.php:387
+#: includes/class-front.php:389
 msgid "Beenden"
 msgstr "Termina"
 
@@ -2625,7 +2625,7 @@ msgctxt "block keyword"
 msgid "widerruf"
 msgstr "revoca"
 
-#: includes/class-config.php:767
+#: includes/class-config.php:774
 #: build/admin.js:28
 msgid "In dieser Datei sind keine Einstellungen von Cookie Dialog."
 msgstr "Questo file non contiene impostazioni di Cookie Dialog."
@@ -2692,6 +2692,14 @@ msgstr "Il dialogo è acceso: se cambia ciò che leggono i visitatori, vale una 
 msgid "%s übernommen."
 msgstr "%s importato."
 
-#: includes/class-config.php:674
+#: includes/class-config.php:681
 msgid "WordPress-Cookies an die Website angepasst"
 msgstr "Cookie di WordPress adattati al sito"
+
+#: includes/class-front.php:385
+msgid "Vorschau"
+msgstr "Anteprima"
+
+#: includes/class-front.php:386
+msgid "wie ein neuer Besucher – nichts wird gespeichert"
+msgstr "come un nuovo visitatore – non si salva nulla"

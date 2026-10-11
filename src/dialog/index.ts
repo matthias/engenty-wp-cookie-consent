@@ -51,7 +51,9 @@ type Design = {
 };
 type Preview = { layer: '1' | '2' | 'ph'; edit: boolean; lang: string };
 type SitePreview = {
+	label: string;
 	note: string;
+	title: string;
 	restart: string;
 	end: string;
 	endUrl: string;
@@ -585,16 +587,20 @@ class CookieDialog {
 			this.once.add( ph.dataset.cookieService );
 		}
 		const frag = tpl.content.cloneNode( true ) as DocumentFragment;
-		const scripts = Array.from( frag.querySelectorAll( 'script' ) );
-		ph.replaceWith( frag );
-		scripts.forEach( ( old ) => {
+		// New script elements before the fragment goes in: a script cloned from the template would run
+		// as it is inserted, and a copy made afterwards a second time.
+		frag.querySelectorAll( 'script' ).forEach( ( old ) => {
 			const el = document.createElement( 'script' );
 			Array.from( old.attributes ).forEach( ( a ) =>
 				el.setAttribute( a.name, a.value )
 			);
+			if ( el.src ) {
+				el.async = false;
+			}
 			el.text = old.text;
 			old.replaceWith( el );
 		} );
+		ph.replaceWith( frag );
 	}
 
 	/** Iframes a script adds later, for a service that waits, become placeholders. */
@@ -1655,8 +1661,10 @@ class CookieDialog {
 		host.setAttribute( 'data-cookie-dialog', 'preview' );
 		const root = host.attachShadow( { mode: 'open' } );
 		const style = document.createElement( 'style' );
+		// One line at the top, as narrow as its words: left and right 0 with auto margins, not left 50%
+		// (that halves the width it may take and wrapped the note into three lines).
 		style.textContent =
-			':host{all:initial}.bar{position:fixed;z-index:2147483646;top:10px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;max-width:calc(100vw - 24px);padding:6px 6px 6px 14px;border-radius:999px;background:#282623;color:#f7f5f2;font:500 13px/1.3 system-ui,sans-serif;box-shadow:0 6px 24px rgba(0,0,0,.25)}span{flex:1;min-width:0}button,a{flex:none;border:0;border-radius:999px;padding:6px 12px;font:inherit;cursor:pointer;text-decoration:none}button{background:rgba(255,255,255,.14);color:inherit}a{background:#f7f5f2;color:#282623}';
+			':host{all:initial}.bar{position:fixed;z-index:2147483646;top:10px;left:0;right:0;margin:0 auto;width:max-content;max-width:calc(100vw - 24px);box-sizing:border-box;display:flex;align-items:center;gap:8px;padding:4px 4px 4px 12px;border-radius:999px;background:rgba(40,38,35,.94);color:#f7f5f2;font:500 12.5px/1.2 system-ui,sans-serif;box-shadow:0 4px 16px rgba(0,0,0,.22)}b{flex:none;display:inline-flex;align-items:center;gap:6px;font-weight:650}b::before{content:"";width:7px;height:7px;border-radius:50%;background:#e9c46a}span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:rgba(247,245,242,.75)}button,a{flex:none;border:0;border-radius:999px;padding:5px 10px;font:inherit;cursor:pointer;text-decoration:none}button{background:rgba(255,255,255,.14);color:inherit}button:hover{background:rgba(255,255,255,.22)}a{background:#f7f5f2;color:#282623}@media (max-width:560px){span{display:none}}';
 		const restart = document.createElement( 'button' );
 		restart.type = 'button';
 		restart.textContent = p.restart;
@@ -1671,12 +1679,15 @@ class CookieDialog {
 		const end = document.createElement( 'a' );
 		end.href = p.endUrl;
 		end.textContent = p.end;
+		const label = document.createElement( 'b' );
+		label.textContent = p.label;
 		const note = document.createElement( 'span' );
 		note.textContent = p.note;
 		const bar = document.createElement( 'div' );
 		bar.className = 'bar';
+		bar.title = p.title;
 		bar.setAttribute( 'role', 'status' );
-		bar.append( note, restart, end );
+		bar.append( label, note, restart, end );
 		root.append( style, bar );
 		document.body.append( host );
 	}

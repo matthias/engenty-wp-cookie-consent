@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-11T20:49:31+00:00\n"
+"POT-Creation-Date: 2026-10-11T21:00:18+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: cookie-dialog\n"
@@ -550,11 +550,11 @@ msgstr ""
 msgid "Eingefügt. Die Tabelle hält sich selbst aktuell."
 msgstr ""
 
-#: includes/class-config.php:674
+#: includes/class-config.php:681
 msgid "WordPress-Cookies an die Website angepasst"
 msgstr ""
 
-#: includes/class-config.php:767
+#: includes/class-config.php:774
 #: build/admin.js:28
 msgid "In dieser Datei sind keine Einstellungen von Cookie Dialog."
 msgstr ""
@@ -578,14 +578,22 @@ msgid "Version %1$d: %2$s"
 msgstr ""
 
 #: includes/class-front.php:385
-msgid "Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder gespeichert noch protokolliert."
+msgid "Vorschau"
 msgstr ""
 
 #: includes/class-front.php:386
-msgid "Neu starten"
+msgid "wie ein neuer Besucher – nichts wird gespeichert"
 msgstr ""
 
 #: includes/class-front.php:387
+msgid "Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder gespeichert noch protokolliert."
+msgstr ""
+
+#: includes/class-front.php:388
+msgid "Neu starten"
+msgstr ""
+
+#: includes/class-front.php:389
 msgid "Beenden"
 msgstr ""
 

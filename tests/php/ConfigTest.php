@@ -60,7 +60,7 @@ class ConfigTest extends Cookie_Dialog_TestCase {
 	public function test_media_is_a_category_of_its_own_and_always_there() {
 		$this->assertSame( 'media', Cookie_Dialog_Config::preset( 'youtube' )['category'] );
 		$this->assertSame( 'media', Cookie_Dialog_Config::preset( 'instagram' )['category'] );
-		$this->assertContains( 'sbi_scripts', Cookie_Dialog_Config::preset( 'instagram' )['handles'] );
+		$this->assertContains( 'instagram-feed/instagram-feed.php', Cookie_Dialog_Config::preset( 'instagram' )['plugins'] );
 		$old               = Cookie_Dialog_Config::defaults();
 		$old['categories'] = array_values( array_filter( $old['categories'], static fn( $c ) => 'media' !== $c['id'] ) );
 		$old['services']   = array( Cookie_Dialog_Config::service_from_preset( Cookie_Dialog_Config::preset( 'vimeo' ) ) );

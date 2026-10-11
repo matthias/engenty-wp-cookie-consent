@@ -568,15 +568,15 @@ msgstr "Texter eller tjänster ändrade"
 msgid "Version %1$d: %2$s"
 msgstr "Version %1$d – %2$s"
 
-#: includes/class-front.php:385
+#: includes/class-front.php:387
 msgid "Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder gespeichert noch protokolliert."
 msgstr "Förhandsgranskning: så ser en ny besökare dialogen. Ditt val här sparas inte och loggas inte."
 
-#: includes/class-front.php:386
+#: includes/class-front.php:388
 msgid "Neu starten"
 msgstr "Börja om"
 
-#: includes/class-front.php:387
+#: includes/class-front.php:389
 msgid "Beenden"
 msgstr "Avsluta"
 
@@ -2625,7 +2625,7 @@ msgctxt "block keyword"
 msgid "widerruf"
 msgstr "återkalla"
 
-#: includes/class-config.php:767
+#: includes/class-config.php:774
 #: build/admin.js:28
 msgid "In dieser Datei sind keine Einstellungen von Cookie Dialog."
 msgstr "Den här filen innehåller inga inställningar från Cookie Dialog."
@@ -2692,6 +2692,14 @@ msgstr "Dialogen är påslagen: ändras det besökarna läser gäller en ny vers
 msgid "%s übernommen."
 msgstr "%s importerad."
 
-#: includes/class-config.php:674
+#: includes/class-config.php:681
 msgid "WordPress-Cookies an die Website angepasst"
 msgstr "WordPress-cookies anpassade till webbplatsen"
+
+#: includes/class-front.php:385
+msgid "Vorschau"
+msgstr "Förhandsvisning"
+
+#: includes/class-front.php:386
+msgid "wie ein neuer Besucher – nichts wird gespeichert"
+msgstr "som en ny besökare – inget sparas"

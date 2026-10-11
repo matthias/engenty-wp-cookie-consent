@@ -572,15 +572,15 @@ msgstr "Texty nebo služby změněny"
 msgid "Version %1$d: %2$s"
 msgstr "Verze %1$d: %2$s"
 
-#: includes/class-front.php:385
+#: includes/class-front.php:387
 msgid "Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder gespeichert noch protokolliert."
 msgstr "Náhled: tak vidí dialog nový návštěvník. Vaše volba tady se neukládá ani neprotokoluje."
 
-#: includes/class-front.php:386
+#: includes/class-front.php:388
 msgid "Neu starten"
 msgstr "Spustit znovu"
 
-#: includes/class-front.php:387
+#: includes/class-front.php:389
 msgid "Beenden"
 msgstr "Ukončit"
 
@@ -2642,7 +2642,7 @@ msgctxt "block keyword"
 msgid "widerruf"
 msgstr "odvolání"
 
-#: includes/class-config.php:767
+#: includes/class-config.php:774
 #: build/admin.js:28
 msgid "In dieser Datei sind keine Einstellungen von Cookie Dialog."
 msgstr "Tento soubor neobsahuje nastavení Cookie Dialog."
@@ -2709,6 +2709,14 @@ msgstr "Dialog je zapnutý: změní-li se to, co návštěvníci čtou, platí n
 msgid "%s übernommen."
 msgstr "%s importován."
 
-#: includes/class-config.php:674
+#: includes/class-config.php:681
 msgid "WordPress-Cookies an die Website angepasst"
 msgstr "Cookies WordPressu přizpůsobeny webu"
+
+#: includes/class-front.php:385
+msgid "Vorschau"
+msgstr "Náhled"
+
+#: includes/class-front.php:386
+msgid "wie ein neuer Besucher – nichts wird gespeichert"
+msgstr "jako nový návštěvník – nic se neukládá"
