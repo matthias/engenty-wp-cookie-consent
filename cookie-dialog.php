@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Cookie Dialog
- * Plugin URI:        https://engenty.ai/cookie-dialog
+ * Plugin URI:        https://engenty.ai/wordpress-plugins/cookie-dialog
  * Description:       A simple, beautiful cookie dialog for the EU: categories and services, scripts and embeds only after consent, a consent log, Google Consent Mode v2 – and an assistant that sets it up.
  * Version:           0.2.1
  * Requires at least: 6.6

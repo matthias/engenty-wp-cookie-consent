@@ -20,11 +20,6 @@ msgstr ""
 msgid "Cookie Dialog"
 msgstr "Cookie Dialog"
 
-#. Plugin URI of the plugin
-#: cookie-dialog.php
-msgid "https://engenty.ai/cookie-dialog"
-msgstr "https://engenty.ai/cookie-dialog"
-
 #. Description of the plugin
 #: cookie-dialog.php
 msgid "A simple, beautiful cookie dialog for the EU: categories and services, scripts and embeds only after consent, a consent log, Google Consent Mode v2 – and an assistant that sets it up."
@@ -1397,10 +1392,6 @@ msgid "Scrollen erst nach der Wahl – nur wenn es sein muss."
 msgstr "Posouvání až po volbě – jen když to musí být."
 
 #: build/admin.js:19
-msgid "„Cookie Dialog“ im Dialog nennen"
-msgstr "Zmínit „Cookie Dialog“ v dialogu"
-
-#: build/admin.js:19
 msgid "Ton"
 msgstr "Tón"
 
@@ -2720,3 +2711,12 @@ msgstr "Náhled"
 #: includes/class-front.php:386
 msgid "wie ein neuer Besucher – nichts wird gespeichert"
 msgstr "jako nový návštěvník – nic se neukládá"
+
+#. Plugin URI of the plugin
+#: cookie-dialog.php
+msgid "https://engenty.ai/wordpress-plugins/cookie-dialog"
+msgstr "https://engenty.ai/wordpress-plugins/cookie-dialog"
+
+#: build/admin.js:19
+msgid "„engenty Cookie Dialog“ im Dialog nennen"
+msgstr "Zmínit „engenty Cookie Dialog“ v dialogu"

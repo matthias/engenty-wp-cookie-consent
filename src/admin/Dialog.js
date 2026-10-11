@@ -448,14 +448,14 @@ function Looks( { state, design, setDesign } ) {
 					</Line>
 					<Line
 						label={ __(
-							'„Cookie Dialog“ im Dialog nennen',
+							'„engenty Cookie Dialog“ im Dialog nennen',
 							'cookie-dialog'
 						) }
 					>
 						<Switch
 							checked={ design.branding }
 							label={ __(
-								'„Cookie Dialog“ im Dialog nennen',
+								'„engenty Cookie Dialog“ im Dialog nennen',
 								'cookie-dialog'
 							) }
 							onChange={ ( branding ) => set( { branding } ) }

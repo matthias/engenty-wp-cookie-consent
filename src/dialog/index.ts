@@ -5,7 +5,15 @@
  */
 import './dialog.css';
 
-type Choice = { id: string; v: number; t: number; c: string[]; s: string[] };
+// `p`: only services allowed on a placeholder so far – the dialog still asks for the rest.
+type Choice = {
+	id: string;
+	v: number;
+	t: number;
+	c: string[];
+	s: string[];
+	p?: 1;
+};
 type Service = {
 	id: string;
 	name: string;
@@ -239,7 +247,8 @@ class CookieDialog {
 		}
 		if ( this.choice ) {
 			this.apply( null );
-		} else {
+		}
+		if ( ! this.choice || this.choice.p ) {
 			this.show( 1 );
 		}
 		this.idsFill();
@@ -301,6 +310,10 @@ class CookieDialog {
 			}
 		} );
 		const prev = this.choice;
+		// What was allowed on a placeholder before the first decision stays allowed.
+		if ( prev?.p && decision !== 'custom' ) {
+			prev.s.forEach( ( id ) => services.add( id ) );
+		}
 		const choice: Choice = {
 			id: prev?.id || uuid(),
 			v: this.c.v,
@@ -394,6 +407,7 @@ class CookieDialog {
 			return;
 		}
 		const prev = this.choice;
+		// Only this service: before a decision in the dialog it stays open for the rest.
 		const choice: Choice = prev
 			? { ...prev, s: Array.from( new Set( [ ...prev.s, id ] ) ) }
 			: {
@@ -402,11 +416,14 @@ class CookieDialog {
 					t: Math.floor( Date.now() / 1000 ),
 					c: [ 'necessary' ],
 					s: [ id ],
+					p: 1,
 			  };
 		choice.v = this.c.v;
 		choice.t = Math.floor( Date.now() / 1000 );
 		this.save( choice, 'service', 'placeholder' );
-		this.close();
+		if ( ! choice.p ) {
+			this.close();
+		}
 		this.apply( prev );
 	}
 
@@ -912,11 +929,14 @@ class CookieDialog {
 						'a',
 						{
 							class: 'cd-brand',
-							href: 'https://engenty.ai/cookie-dialog',
+							// The plugin's page on engenty.ai, in German for German.
+							href: `https://engenty.ai/${
+								this.c.lang === 'de' ? 'de/' : ''
+							}wordpress-plugins/cookie-dialog`,
 							target: '_blank',
 							rel: 'noopener',
 						},
-						[ 'Cookie Dialog' ]
+						[ 'engenty Cookie Dialog' ]
 				  )
 				: null,
 		] );

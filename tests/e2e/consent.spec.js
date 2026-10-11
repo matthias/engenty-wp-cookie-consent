@@ -169,6 +169,20 @@ test( '„Immer laden“ is consent for that service, logged from the placeholde
 	await expect(
 		page.locator( 'iframe[src*="youtube-nocookie.com"]' )
 	).toHaveCount( 1 );
+	// Only YouTube: the dialog still asks for the rest, on the next page too.
+	const reject = dialog( page ).getByRole( 'button', {
+		name: 'Nur notwendige',
+	} );
+	await expect( reject ).toBeVisible();
+	await page.reload();
+	await expect( reject ).toBeVisible();
+	await expect(
+		page.locator( 'iframe[src*="youtube-nocookie.com"]' )
+	).toHaveCount( 1 );
+	await reject.click();
+	const decided = await choice( context );
+	expect( decided.s ).toContain( 'youtube' );
+	expect( decided.p ).toBeUndefined();
 } );
 
 test( 'the page is the same for every visitor', async ( { request } ) => {
