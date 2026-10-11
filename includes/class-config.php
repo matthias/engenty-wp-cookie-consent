@@ -20,6 +20,9 @@ class Cookie_Dialog_Config {
 
 	const CATEGORIES = array( 'necessary', 'functional', 'media', 'statistics', 'marketing' );
 
+	/** The preset of WordPress' own cookies. */
+	const CORE = 'wordpress'; // phpcs:ignore WordPress.WP.CapitalPDangit -- an ID.
+
 	/** Kinds of a service that the site serves itself instead of a third party. */
 	const LOCAL_KINDS = array( 'font', 'style', 'library', 'image', 'avatar' );
 
@@ -292,6 +295,8 @@ class Cookie_Dialog_Config {
 				'phVideo'      => 'Dieses Video kommt von {service}.',
 				'phMap'        => 'Diese Karte kommt von {service}.',
 				'phSocial'     => 'Dieser Beitrag kommt von {service}.',
+				'phFeed'       => 'Diese Beiträge kommen von {service}.',
+				'phFeedLoad'   => 'Beiträge laden',
 				'phAudio'      => 'Dieser Inhalt kommt von {service}.',
 				'phOther'      => 'Dieser Inhalt kommt von {service}.',
 				'phText'       => 'Mit dem Laden werden Daten an {provider} übertragen.',
@@ -333,6 +338,8 @@ class Cookie_Dialog_Config {
 			'phVideo'      => 'This video comes from {service}.',
 			'phMap'        => 'This map comes from {service}.',
 			'phSocial'     => 'This post comes from {service}.',
+			'phFeed'       => 'These posts come from {service}.',
+			'phFeedLoad'   => 'Load posts',
 			'phAudio'      => 'This content comes from {service}.',
 			'phOther'      => 'This content comes from {service}.',
 			'phText'       => 'Loading it sends data to {provider}.',
@@ -621,7 +628,7 @@ class Cookie_Dialog_Config {
 		if ( in_array( $service['kind'], self::LOCAL_KINDS, true ) ) {
 			$service['local'] = false;
 		}
-		if ( 'wordpress' === $preset['id'] ) {
+		if ( self::CORE === $preset['id'] ) {
 			$service = self::core( $service );
 		}
 		return self::sanitize_service( $service );
@@ -632,12 +639,12 @@ class Cookie_Dialog_Config {
 	 * them) only where the last scan saw a comment form, wp-postpass_* only with a password-protected
 	 * post. Before any scan the comments count as offered. Purposes someone wrote stay.
 	 *
-	 * @param array $service The service of the preset wordpress.
+	 * @param array $service The service of the preset CORE.
 	 * @return array
 	 */
 	public static function core( array $service ) {
 		global $wpdb;
-		$preset = self::preset( 'wordpress' );
+		$preset = self::preset( self::CORE );
 		if ( ! $preset ) {
 			return $service;
 		}
@@ -667,7 +674,7 @@ class Cookie_Dialog_Config {
 	public static function sync_core() {
 		$config = self::get();
 		foreach ( $config['services'] as $i => $service ) {
-			if ( 'wordpress' === $service['preset'] ) {
+			if ( self::CORE === $service['preset'] ) {
 				$core = self::sanitize_service( self::core( $service ) );
 				if ( $core['cookies'] !== $service['cookies'] || $core['purpose'] !== $service['purpose'] ) {
 					$config['services'][ $i ] = $core;
