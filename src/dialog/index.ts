@@ -1266,8 +1266,8 @@ class CookieDialog {
 				] ),
 				this.el( 'div', { class: 'cd-layer__body' }, cats ),
 				this.el( 'div', { class: 'cd-layer__foot' }, [
-					// As on the first layer – accept, only necessary – and saving the own choice as a plain
-					// outlined button after them.
+					// As on the first layer – accept, only necessary – and saving the own choice after them,
+					// filled only where the style makes every button the same.
 					this.el( 'div', { class: 'cd-btns cd-btns--3' }, [
 						this.el(
 							'button',
@@ -1292,7 +1292,7 @@ class CookieDialog {
 								'button',
 								{
 									type: 'button',
-									class: 'cd-btn cd-btn--sec',
+									class: this.btn( false ),
 									'data-act': 'save',
 								},
 								[ t( 'save' ) ]
