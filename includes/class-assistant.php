@@ -128,10 +128,11 @@ class Cookie_Dialog_Assistant {
 		$builder = wp_ai_client_prompt( $prompt )
 			->using_system_instruction( $system )
 			->using_model_preference( ...$models )
-			->using_temperature( 0.3 )
-			->using_max_tokens( 6000 )
-			->as_json_response( $schema );
-		$result  = $builder->generate_text_result();
+			// No temperature: OpenAI's reasoning models (gpt-5, gpt-5-mini) refuse the parameter. Room for
+			// their reasoning, which counts against the limit too.
+			->using_max_tokens( 16000 )
+			->as_json_response( self::strict( $schema ) );
+		$result = $builder->generate_text_result();
 		if ( is_wp_error( $result ) ) {
 			return $result;
 		}
@@ -149,7 +150,115 @@ class Cookie_Dialog_Assistant {
 			return new WP_Error( 'cookie_dialog_ai', $e->getMessage() );
 		}
 		$data = self::decode( $text );
-		return null === $data ? new WP_Error( 'cookie_dialog_ai_json', __( 'Die Antwort war kein JSON. Versuch es noch einmal.', 'cookie-dialog' ) ) : $data;
+		return null === $data ? new WP_Error( 'cookie_dialog_ai_json', __( 'Die Antwort war kein JSON. Versuch es noch einmal.', 'cookie-dialog' ) ) : (array) self::loose( $data, $schema );
+	}
+
+	/**
+	 * A schema as providers check it strictly (OpenAI's structured outputs, and the strictest the
+	 * others ask): every object closed and with all its properties required, an optional one may be
+	 * null, a map becomes a list of key and value, a union of types an anyOf.
+	 *
+	 * @param array $schema   The schema as written here.
+	 * @param bool  $nullable Whether the value may be missing (null).
+	 * @return array
+	 */
+	public static function strict( array $schema, $nullable = false ) {
+		$type = $schema['type'] ?? null;
+		if ( 'object' === $type && is_array( $schema['additionalProperties'] ?? null ) && empty( $schema['properties'] ) ) {
+			$out = array(
+				'type'  => 'array',
+				'items' => array(
+					'type'                 => 'object',
+					'properties'           => array(
+						'key'   => array( 'type' => 'string' ),
+						'value' => self::strict( $schema['additionalProperties'] ),
+					),
+					'required'             => array( 'key', 'value' ),
+					'additionalProperties' => false,
+				),
+			);
+		} elseif ( 'object' === $type ) {
+			$required   = (array) ( $schema['required'] ?? array() );
+			$properties = array();
+			foreach ( (array) ( $schema['properties'] ?? array() ) as $key => $property ) {
+				$properties[ $key ] = self::strict( $property, ! in_array( $key, $required, true ) );
+			}
+			$out = array(
+				'type'                 => 'object',
+				'properties'           => $properties ? $properties : new stdClass(),
+				'required'             => array_keys( $properties ),
+				'additionalProperties' => false,
+			);
+		} elseif ( 'array' === $type ) {
+			$out          = $schema;
+			$out['items'] = self::strict( (array) ( $schema['items'] ?? array( 'type' => 'string' ) ) );
+		} elseif ( is_array( $type ) ) {
+			$out = array(
+				'anyOf' => array_map(
+					static fn( $t ) => 'array' === $t ? array(
+						'type'  => 'array',
+						'items' => array( 'type' => 'string' ),
+					) : array( 'type' => $t ),
+					$type
+				),
+			);
+		} else {
+			$out = $schema;
+		}
+		if ( ! $nullable ) {
+			return $out;
+		}
+		if ( isset( $out['anyOf'] ) ) {
+			$out['anyOf'][] = array( 'type' => 'null' );
+			return $out;
+		}
+		if ( in_array( $out['type'] ?? '', array( 'object', 'array' ), true ) ) {
+			return array( 'anyOf' => array( $out, array( 'type' => 'null' ) ) );
+		}
+		$out['type'] = array( $out['type'] ?? 'string', 'null' );
+		if ( isset( $out['enum'] ) ) {
+			$out['enum'][] = null;
+		}
+		return $out;
+	}
+
+	/**
+	 * An answer to a strict() schema in the shape the schema here describes: lists of key and value
+	 * back to maps, missing (null) values left out.
+	 *
+	 * @param mixed $value  The answer.
+	 * @param array $schema The schema as written here.
+	 * @return mixed
+	 */
+	public static function loose( $value, array $schema ) {
+		$type = $schema['type'] ?? null;
+		if ( 'object' === $type && is_array( $schema['additionalProperties'] ?? null ) && empty( $schema['properties'] ) ) {
+			if ( ! is_array( $value ) || ! array_is_list( $value ) ) {
+				return $value;
+			}
+			$map = array();
+			foreach ( $value as $pair ) {
+				if ( is_array( $pair ) && isset( $pair['key'] ) && array_key_exists( 'value', $pair ) ) {
+					$map[ (string) $pair['key'] ] = self::loose( $pair['value'], $schema['additionalProperties'] );
+				}
+			}
+			return $map;
+		}
+		if ( 'object' === $type && is_array( $value ) ) {
+			$out = array();
+			foreach ( $value as $key => $item ) {
+				if ( null === $item ) {
+					continue;
+				}
+				$property    = $schema['properties'][ $key ] ?? null;
+				$out[ $key ] = is_array( $property ) ? self::loose( $item, $property ) : $item;
+			}
+			return $out;
+		}
+		if ( 'array' === $type && is_array( $value ) && is_array( $schema['items'] ?? null ) ) {
+			return array_map( static fn( $item ) => self::loose( $item, $schema['items'] ), $value );
+		}
+		return $value;
 	}
 
 	/**
@@ -186,6 +295,7 @@ class Cookie_Dialog_Assistant {
 	 */
 	private static function context() {
 		$config = Cookie_Dialog_Config::get();
+		$scan   = Cookie_Dialog_Scanner::result();
 		$texts  = array();
 		foreach ( $config['languages'] as $lang ) {
 			$t              = Cookie_Dialog_Config::texts( $lang, $config );
@@ -223,6 +333,25 @@ class Cookie_Dialog_Assistant {
 			'reopen'     => $config['reopen'],
 			'thirdParty' => $config['thirdParty'],
 			'log'        => $config['log'],
+			// What the last scan saw the site load from third parties, and where.
+			'scan'       => array(
+				'at'      => $scan['at'] ? gmdate( 'Y-m-d H:i', (int) $scan['at'] ) . ' UTC' : null,
+				'pages'   => count( $scan['pages'] ),
+				'hosts'   => array_values(
+					array_map(
+						static fn( $h ) => array(
+							'host'    => $h['host'],
+							'service' => $h['service'],
+							'kinds'   => $h['kinds'],
+							'pages'   => array_slice( (array) $h['pages'], 0, 3 ),
+							'urls'    => array_slice( array_column( (array) $h['urls'], 'url' ), 0, 2 ),
+							'held'    => (bool) $h['held'],
+						),
+						$scan['hosts']
+					)
+				),
+				'cookies' => array_column( $scan['cookies'], 'name' ),
+			),
 		);
 	}
 
@@ -307,7 +436,7 @@ class Cookie_Dialog_Assistant {
 				'Operations: {"op":"set","path":"design.colors.button","value":"#1f3d2b"} for settings (paths: design.layout box|bar|modal, design.position left|right|center, design.size s|m|l, design.scheme light|dark|auto, design.radius 0-32, design.colors.{background,text,button,buttonText,link} and design.dark.* as hex, design.buttons same|accept|outline (both buttons filled, accept filled and only necessary outlined, both outlined), design.showTitle and design.showLinks true|false (the title and the privacy and imprint links on the first layer), design.showLanguages true|false (visitors pick the language of the dialog when there are several), design.backdrop, design.lock, tone.address du|Sie, tone.style, google.mode basic|advanced, google.gtm, google.consentMode, google.regions [EEA,UK,CH], google.everywhere, validity.months 1-12, reopen.button, reopen.position left|right, log.months, thirdParty.*); {"op":"text","lang":"de","key":"title","value":"…"} for one dialog text (keys: title, text, accept, reject, settings, save, layerTitle, layerText, privacy, imprint); {"op":"texts","lang":"it","texts":{…}} to add or translate a language (all keys above); {"op":"remove_language","lang":"it"}; {"op":"add_service","preset":"hotjar"} from the library, or {"op":"add_service","name":"…","category":"…","provider":"…","purpose":"…","hosts":["…"]} for one the library lacks; {"op":"remove_service","id":"…"}; {"op":"service","id":"…","category":"…","purpose":"…","lang":"de"}; {"op":"category","id":"statistics","lang":"de","name":"…","description":"…"}; {"op":"privacy_text","lang":"de","value":"<h2>…</h2><p>…</p>"} for the cookie paragraph of the privacy policy.',
 				'Rules you never break, even when asked: rejecting stays as easy as accepting (the plugin always shows "accept all" and "only necessary" as two equal buttons on the first layer); nothing is pre-selected; texts do not pressure, guilt or mislead; necessary services stay necessary only when the site cannot work without them; Consent Mode stays on when Google services are used. When asked for something that breaks them, explain why in one sentence and offer what is allowed.',
 				'Texts on the site use {site} for the site name. Keep dialog texts short: a title of a few words, a text of two sentences.',
-				'For questions (numbers, what loads, what a setting does) answer from the context and return no changes. Do not invent services, cookies or numbers.',
+				'For questions (numbers, what loads, what a setting does) answer from the context and return no changes. Do not invent services, cookies or numbers. What the site loads and where is in context.config.scan (the last scan: hosts with the pages and URLs they load on); a service or host that is not there was not seen on the site, say so. The library only lists services the plugin knows, not what the site uses.',
 				'The person is on the admin page "' . $view . '".',
 			)
 		);
