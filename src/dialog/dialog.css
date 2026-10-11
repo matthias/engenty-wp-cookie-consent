@@ -222,9 +222,10 @@
 	cursor: pointer;
 }
 :host .cd-cat__toggle b { flex: 1; font-weight: 500; font-size: 1.03em; }
-:host .cd-cat__n { font-size: .86em; color: var(--cd-mute); white-space: nowrap; }
-:host .cd-cat__n::after { content: "⌄"; margin-left: 6px; display: inline-block; transition: transform .15s; }
-:host .cd-cat__toggle[aria-expanded="true"] .cd-cat__n::after { transform: rotate(180deg); }
+:host .cd-cat__n { display: inline-flex; align-items: center; gap: 8px; font-size: .86em; color: var(--cd-mute); white-space: nowrap; }
+/* Drawn, not a glyph: "⌄" sits below the middle of the line in most fonts. */
+:host .cd-cat__n::after { content: ""; width: 6px; height: 6px; border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: translateY(-2px) rotate(45deg); transition: transform .15s; }
+:host .cd-cat__toggle[aria-expanded="true"] .cd-cat__n::after { transform: translateY(2px) rotate(225deg); }
 :host .cd-cat__desc { margin: 4px 56px 0 0; font-size: .93em; color: var(--cd-mute); }
 :host .cd-cat__svcs { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
 :host .cd-cat__svcs[hidden] { display: none; }
