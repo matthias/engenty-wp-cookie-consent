@@ -2625,7 +2625,7 @@ msgctxt "block keyword"
 msgid "widerruf"
 msgstr "peruutus"
 
-#: includes/class-config.php:700
+#: includes/class-config.php:767
 #: build/admin.js:28
 msgid "In dieser Datei sind keine Einstellungen von Cookie Dialog."
 msgstr "Tässä tiedostossa ei ole Cookie Dialogin asetuksia."
@@ -2691,3 +2691,7 @@ msgstr "Dialogi on käytössä: jos kävijöiden lukema muuttuu, voimaan tulee u
 #, js-format
 msgid "%s übernommen."
 msgstr "%s tuotu."
+
+#: includes/class-config.php:674
+msgid "WordPress-Cookies an die Website angepasst"
+msgstr "WordPressin evästeet sovitettu sivustoon"

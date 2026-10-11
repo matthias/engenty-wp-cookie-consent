@@ -8,8 +8,12 @@
     "address": ""
   },
   "purpose": {
-    "de": "Hält angemeldete Benutzer eingeloggt und speichert Einstellungen der Verwaltungsoberfläche. Beim Kommentieren können Name, E-Mail-Adresse und Website gespeichert werden, damit sie nicht erneut eingegeben werden müssen.",
-    "en": "Keeps logged-in users signed in and stores settings of the admin area. When commenting, name, email address and website can be saved so they need not be entered again."
+    "de": "Hält angemeldete Benutzer eingeloggt und speichert Einstellungen der Verwaltungsoberfläche.",
+    "en": "Keeps logged-in users signed in and stores settings of the admin area."
+  },
+  "comments": {
+    "de": "Beim Kommentieren können Name, E-Mail-Adresse und Website gespeichert werden, damit sie nicht erneut eingegeben werden müssen.",
+    "en": "When commenting, name, email address and website can be saved so they need not be entered again."
   },
   "privacy": "",
   "cookies": [

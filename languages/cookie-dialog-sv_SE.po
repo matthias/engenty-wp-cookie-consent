@@ -2625,7 +2625,7 @@ msgctxt "block keyword"
 msgid "widerruf"
 msgstr "återkalla"
 
-#: includes/class-config.php:700
+#: includes/class-config.php:767
 #: build/admin.js:28
 msgid "In dieser Datei sind keine Einstellungen von Cookie Dialog."
 msgstr "Den här filen innehåller inga inställningar från Cookie Dialog."
@@ -2691,3 +2691,7 @@ msgstr "Dialogen är påslagen: ändras det besökarna läser gäller en ny vers
 #, js-format
 msgid "%s übernommen."
 msgstr "%s importerad."
+
+#: includes/class-config.php:674
+msgid "WordPress-Cookies an die Website angepasst"
+msgstr "WordPress-cookies anpassade till webbplatsen"

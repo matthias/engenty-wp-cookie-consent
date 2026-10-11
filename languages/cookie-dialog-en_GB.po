@@ -2624,7 +2624,7 @@ msgstr "Show language choice"
 msgid "Erst mit mehr als einer Sprache (Texte › Sprachen)."
 msgstr "Only with more than one language (Texts › Languages)."
 
-#: includes/class-config.php:700
+#: includes/class-config.php:767
 #: build/admin.js:28
 msgid "In dieser Datei sind keine Einstellungen von Cookie Dialog."
 msgstr "This file holds no Cookie Dialog settings."
@@ -2690,3 +2690,7 @@ msgstr "The dialog is on: if what visitors read changes, a new version applies."
 #, js-format
 msgid "%s übernommen."
 msgstr "%s imported."
+
+#: includes/class-config.php:674
+msgid "WordPress-Cookies an die Website angepasst"
+msgstr "WordPress cookies matched to the site"

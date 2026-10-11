@@ -2625,7 +2625,7 @@ msgctxt "block keyword"
 msgid "widerruf"
 msgstr "retirada"
 
-#: includes/class-config.php:700
+#: includes/class-config.php:767
 #: build/admin.js:28
 msgid "In dieser Datei sind keine Einstellungen von Cookie Dialog."
 msgstr "Este ficheiro não contém definições do Cookie Dialog."
@@ -2691,3 +2691,7 @@ msgstr "O diálogo está ligado: se mudar o que os visitantes leem, aplica-se um
 #, js-format
 msgid "%s übernommen."
 msgstr "%s importado."
+
+#: includes/class-config.php:674
+msgid "WordPress-Cookies an die Website angepasst"
+msgstr "Cookies do WordPress ajustados ao site"

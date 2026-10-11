@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-11T19:40:53+00:00\n"
+"POT-Creation-Date: 2026-10-11T20:49:31+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: cookie-dialog\n"
@@ -550,7 +550,11 @@ msgstr ""
 msgid "Eingefügt. Die Tabelle hält sich selbst aktuell."
 msgstr ""
 
-#: includes/class-config.php:700
+#: includes/class-config.php:674
+msgid "WordPress-Cookies an die Website angepasst"
+msgstr ""
+
+#: includes/class-config.php:767
 #: build/admin.js:28
 msgid "In dieser Datei sind keine Einstellungen von Cookie Dialog."
 msgstr ""

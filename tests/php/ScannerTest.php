@@ -26,6 +26,23 @@ class ScannerTest extends Cookie_Dialog_TestCase {
 		);
 	}
 
+	public function test_comment_cookies_only_where_the_site_shows_a_comment_form() {
+		$this->configure( array() );
+		$home   = home_url( '/' );
+		$result = Cookie_Dialog_Scanner::run( 20, array( $home => $this->page( '<main><p>No comments here.</p></main>' ) ) );
+		$this->assertFalse( $result['comments'] );
+		$config = Cookie_Dialog_Config::save( Cookie_Dialog_Scanner::propose( $result ) );
+		$names  = array_column( Cookie_Dialog_Config::service( 'wordpress', $config )['cookies'], 'name' );
+		$this->assertContains( 'wordpress_logged_in_*', $names );
+		$this->assertNotContains( 'comment_author_*', $names );
+		$this->assertStringNotContainsString( 'Kommentieren', Cookie_Dialog_Config::service( 'wordpress', $config )['purpose']['de'] );
+
+		Cookie_Dialog_Scanner::run( 20, array( $home => $this->page( '<form action="' . site_url( '/wp-comments-post.php' ) . '" id="commentform"></form>' ) ) );
+		$wordpress = Cookie_Dialog_Config::service( 'wordpress' );
+		$this->assertContains( 'comment_author_*', array_column( $wordpress['cookies'], 'name' ) );
+		$this->assertStringContainsString( 'Kommentieren', $wordpress['purpose']['de'] );
+	}
+
 	public function test_hosts_by_kind_held_or_loaded_and_the_proposal() {
 		$this->configure( array() );
 		$home   = home_url( '/' );

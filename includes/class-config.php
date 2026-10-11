@@ -621,7 +621,61 @@ class Cookie_Dialog_Config {
 		if ( in_array( $service['kind'], self::LOCAL_KINDS, true ) ) {
 			$service['local'] = false;
 		}
+		if ( 'wordpress' === $preset['id'] ) {
+			$service = self::core( $service );
+		}
 		return self::sanitize_service( $service );
+	}
+
+	/**
+	 * WordPress' own cookies as far as the site uses them: the comment cookies (and the sentence about
+	 * them) only where the last scan saw a comment form, wp-postpass_* only with a password-protected
+	 * post. Before any scan the comments count as offered. Purposes someone wrote stay.
+	 *
+	 * @param array $service The service of the preset wordpress.
+	 * @return array
+	 */
+	public static function core( array $service ) {
+		global $wpdb;
+		$preset = self::preset( 'wordpress' );
+		if ( ! $preset ) {
+			return $service;
+		}
+		$scan     = Cookie_Dialog_Scanner::result();
+		$comments = ! $scan['at'] || ! empty( $scan['comments'] );
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery -- one row, whether any exists.
+		$passwords = (bool) $wpdb->get_var( "SELECT ID FROM {$wpdb->posts} WHERE post_status = 'publish' AND post_password <> '' LIMIT 1" );
+		$optional  = static fn( $name ) => str_starts_with( $name, 'comment_author' ) || str_starts_with( $name, 'wp-postpass' );
+		$cookies   = array_values( array_filter( (array) ( $service['cookies'] ?? array() ), static fn( $c ) => ! $optional( (string) ( $c['name'] ?? '' ) ) ) );
+		foreach ( $preset['cookies'] as $cookie ) {
+			if ( ( $comments && str_starts_with( $cookie['name'], 'comment_author' ) ) || ( $passwords && str_starts_with( $cookie['name'], 'wp-postpass' ) ) ) {
+				$cookies[] = $cookie;
+			}
+		}
+		$service['cookies'] = $cookies;
+		foreach ( $preset['purpose'] as $lang => $base ) {
+			$with = $base . ' ' . ( $preset['comments'][ $lang ] ?? '' );
+			$now  = $service['purpose'][ $lang ] ?? $base;
+			if ( $now === $base || $now === $with ) {
+				$service['purpose'][ $lang ] = $comments ? $with : $base;
+			}
+		}
+		return $service;
+	}
+
+	/** After a scan: the WordPress service follows what the site uses. */
+	public static function sync_core() {
+		$config = self::get();
+		foreach ( $config['services'] as $i => $service ) {
+			if ( 'wordpress' === $service['preset'] ) {
+				$core = self::sanitize_service( self::core( $service ) );
+				if ( $core['cookies'] !== $service['cookies'] || $core['purpose'] !== $service['purpose'] ) {
+					$config['services'][ $i ] = $core;
+					self::save( $config, __( 'WordPress-Cookies an die Website angepasst', 'cookie-dialog' ) );
+				}
+				return;
+			}
+		}
 	}
 
 	/**

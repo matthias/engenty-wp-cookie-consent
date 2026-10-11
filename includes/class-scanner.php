@@ -46,6 +46,7 @@ class Cookie_Dialog_Scanner {
 				'theme'       => array(),
 				'consentMode' => null,
 				'reopen'      => false,
+				'comments'    => false,
 				'privacy'     => array(),
 				'errors'      => array(),
 				'counts'      => array(),
@@ -211,6 +212,7 @@ class Cookie_Dialog_Scanner {
 		$found   = array();
 		$cm      = null;
 		$reopen  = false;
+		$comment = false;
 		$inline  = array();
 		$home    = strtolower( (string) wp_parse_url( home_url(), PHP_URL_HOST ) );
 
@@ -243,6 +245,10 @@ class Cookie_Dialog_Scanner {
 			}
 			if ( preg_match( '/#cookie-settings|data-cookie-settings|cookie-dialog-settings/', $body ) || ( $config['live'] && $config['reopen']['button'] ) ) {
 				$reopen = true;
+			}
+			// A comment form: the theme shows comments, whatever Settings › Discussion says.
+			if ( preg_match( '#wp-comments-post\.php|id=["\']commentform["\']#', $body ) ) {
+				$comment = true;
 			}
 			foreach ( Cookie_Dialog_Html::assets( $body ) as $asset ) {
 				if ( 'inline' === $asset['kind'] ) {
@@ -313,6 +319,7 @@ class Cookie_Dialog_Scanner {
 			'theme'       => self::theme(),
 			'consentMode' => $cm,
 			'reopen'      => $reopen,
+			'comments'    => $comment,
 			'privacy'     => self::privacy_mentions( $config ),
 			'errors'      => $errors,
 			'counts'      => array(
@@ -323,6 +330,7 @@ class Cookie_Dialog_Scanner {
 			),
 		);
 		update_option( self::RESULT, $result, false );
+		Cookie_Dialog_Config::sync_core();
 		return $result;
 	}
 
