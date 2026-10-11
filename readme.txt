@@ -4,7 +4,7 @@ Tags: cookie, consent, gdpr, dsgvo, cookie banner
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 0.2.0
+Stable tag: 0.2.1
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,6 +23,10 @@ Cookie Dialog reads your website as a visitor without consent, proposes the whol
 * The assistant uses the AI provider set up under Settings › Connectors (WordPress 7.0+). Simple jobs run in your browser's built-in model. Everything else works without AI.
 
 == Changelog ==
+
+= 0.2.1 =
+* WordPress names the comment cookies only where the site shows a comment form (the scan looks for one), and wp-postpass_* only with a password-protected post.
+* The arrow beside the number of services sits in the middle of the line.
 
 = 0.2.0 =
 * Export and import under Settings: the settings as a JSON file from one site to another, e.g. from staging to live. The site keeps whether the dialog is on and its log; privacy policy and imprint are found by their address.
