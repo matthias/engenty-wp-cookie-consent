@@ -298,7 +298,9 @@
 :host .cd-fab--right { right: 20px; }
 
 /* The admin's preview: texts are changed where they stand. */
-:host .cd-editable { cursor: text; border-radius: 6px; outline: 2px dashed transparent; outline-offset: 4px; transition: outline-color .15s; }
+:host .cd-editable { cursor: text; outline: 2px dashed transparent; outline-offset: 4px; transition: outline-color .15s; }
+/* A button keeps its own corners while its text is editable in the admin's preview. */
+:host .cd-editable:not(.cd-btn) { border-radius: 6px; }
 :host .cd-editable:hover { outline-color: #c43700; }
 :host .cd-editable[contenteditable="true"] { outline: 2px solid #c43700; }
 :host .cd-ph-stage { position: fixed; inset: 0; z-index: var(--cd-z); display: flex; align-items: center; justify-content: center; padding: 48px; background: rgba(251, 250, 247, .7); }
