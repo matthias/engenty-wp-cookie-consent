@@ -1,7 +1,7 @@
 {
   "id": "loom",
   "name": "Loom",
-  "category": "functional",
+  "category": "media",
   "kind": "embed",
   "provider": {
     "name": "Atlassian Pty Ltd",

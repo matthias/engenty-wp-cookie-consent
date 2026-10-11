@@ -1,7 +1,7 @@
 {
   "id": "spotify",
   "name": "Spotify",
-  "category": "marketing",
+  "category": "media",
   "kind": "embed",
   "provider": {
     "name": "Spotify AB",

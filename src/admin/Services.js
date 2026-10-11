@@ -1975,7 +1975,9 @@ function CategoryEdit( { cat, languages, empty, onSave, onRemove, onMove } ) {
 			) : null }
 			{ ! cat.locked &&
 			empty &&
-			! [ 'functional', 'statistics', 'marketing' ].includes( cat.id ) ? (
+			! [ 'functional', 'media', 'statistics', 'marketing' ].includes(
+				cat.id
+			) ? (
 				<div>
 					<Button kind="danger" size="sm" onClick={ onRemove }>
 						{ __( 'Kategorie löschen', 'cookie-dialog' ) }

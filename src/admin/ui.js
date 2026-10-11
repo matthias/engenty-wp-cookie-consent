@@ -445,6 +445,7 @@ export function when( iso, withTime = true ) {
 export const CATEGORY_ORDER = [
 	'necessary',
 	'functional',
+	'media',
 	'statistics',
 	'marketing',
 ];

@@ -1,7 +1,7 @@
 {
   "id": "google-maps",
   "name": "Google Maps",
-  "category": "functional",
+  "category": "media",
   "kind": "embed",
   "provider": {
     "name": "Google Ireland Limited",

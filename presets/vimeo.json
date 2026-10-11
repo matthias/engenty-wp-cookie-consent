@@ -1,7 +1,7 @@
 {
   "id": "vimeo",
   "name": "Vimeo",
-  "category": "marketing",
+  "category": "media",
   "kind": "embed",
   "provider": {
     "name": "Vimeo.com, Inc.",

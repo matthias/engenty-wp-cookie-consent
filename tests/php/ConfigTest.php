@@ -57,6 +57,18 @@ class ConfigTest extends Cookie_Dialog_TestCase {
 		$this->assertSame( '1 Tag', Cookie_Dialog_Config::duration( '1d', $texts ) );
 	}
 
+	public function test_media_is_a_category_of_its_own_and_always_there() {
+		$this->assertSame( 'media', Cookie_Dialog_Config::preset( 'youtube' )['category'] );
+		$this->assertSame( 'media', Cookie_Dialog_Config::preset( 'instagram' )['category'] );
+		$this->assertContains( 'sbi_scripts', Cookie_Dialog_Config::preset( 'instagram' )['handles'] );
+		$old               = Cookie_Dialog_Config::defaults();
+		$old['categories'] = array_values( array_filter( $old['categories'], static fn( $c ) => 'media' !== $c['id'] ) );
+		$old['services']   = array( Cookie_Dialog_Config::service_from_preset( Cookie_Dialog_Config::preset( 'vimeo' ) ) );
+		$config            = Cookie_Dialog_Config::sanitize( $old );
+		$this->assertContains( 'media', array_column( $config['categories'], 'id' ) );
+		$this->assertSame( 'media', $config['services'][0]['category'] );
+	}
+
 	public function test_library_presets_are_complete() {
 		$library = Cookie_Dialog_Config::library();
 		$this->assertGreaterThanOrEqual( 50, count( $library ) );

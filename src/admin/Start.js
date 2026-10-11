@@ -21,7 +21,13 @@ import {
 	when,
 } from './ui';
 
-const CAT_ORDER = [ 'necessary', 'functional', 'statistics', 'marketing' ];
+const CAT_ORDER = [
+	'necessary',
+	'functional',
+	'media',
+	'statistics',
+	'marketing',
+];
 
 function catName( config, id ) {
 	return (

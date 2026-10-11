@@ -1,7 +1,7 @@
 {
   "id": "wistia",
   "name": "Wistia",
-  "category": "functional",
+  "category": "media",
   "kind": "embed",
   "provider": {
     "name": "Wistia, Inc.",

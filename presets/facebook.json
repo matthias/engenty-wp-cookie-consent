@@ -1,7 +1,7 @@
 {
   "id": "facebook",
   "name": "Facebook",
-  "category": "marketing",
+  "category": "media",
   "kind": "embed",
   "provider": {
     "name": "Meta Platforms Ireland Limited",

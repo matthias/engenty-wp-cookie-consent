@@ -1,7 +1,7 @@
 {
   "id": "youtube",
   "name": "YouTube",
-  "category": "marketing",
+  "category": "media",
   "kind": "embed",
   "provider": {
     "name": "Google Ireland Limited",

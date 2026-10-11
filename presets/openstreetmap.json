@@ -1,7 +1,7 @@
 {
   "id": "openstreetmap",
   "name": "OpenStreetMap",
-  "category": "functional",
+  "category": "media",
   "kind": "embed",
   "provider": {
     "name": "OpenStreetMap Foundation",

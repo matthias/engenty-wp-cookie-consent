@@ -638,7 +638,7 @@ class Cookie_Dialog_Assistant {
 							'provider' => $str,
 							'category' => array(
 								'type' => 'string',
-								'enum' => array( 'necessary', 'functional', 'statistics', 'marketing' ),
+								'enum' => Cookie_Dialog_Config::CATEGORIES,
 							),
 							'purpose'  => $str,
 						),

@@ -18,7 +18,7 @@ class Cookie_Dialog_Config {
 	const OPTION  = 'cookie_dialog';
 	const HISTORY = 'cookie_dialog_history';
 
-	const CATEGORIES = array( 'necessary', 'functional', 'statistics', 'marketing' );
+	const CATEGORIES = array( 'necessary', 'functional', 'media', 'statistics', 'marketing' );
 
 	/** Kinds of a service that the site serves itself instead of a third party. */
 	const LOCAL_KINDS = array( 'font', 'style', 'library', 'image', 'avatar' );
@@ -174,7 +174,7 @@ class Cookie_Dialog_Config {
 	}
 
 	/**
-	 * The four categories every dialog starts with.
+	 * The five categories every dialog starts with; they are always there.
 	 *
 	 * @return array
 	 */
@@ -202,8 +202,21 @@ class Cookie_Dialog_Config {
 					'en' => 'Functional',
 				),
 				'description' => array(
-					'de' => 'Inhalte und Funktionen anderer Anbieter, etwa Karten und Spam-Schutz.',
-					'en' => 'Content and features from other providers, such as maps and spam protection.',
+					'de' => 'Funktionen anderer Anbieter, etwa Spam-Schutz, Chat oder Terminbuchung.',
+					'en' => 'Features from other providers, such as spam protection, chat or booking.',
+				),
+			),
+			array(
+				'id'          => 'media',
+				'locked'      => false,
+				'enabled'     => true,
+				'name'        => array(
+					'de' => 'Externe Medien',
+					'en' => 'External media',
+				),
+				'description' => array(
+					'de' => 'Videos, Karten und Beiträge von anderen Plattformen. Erst mit Zustimmung laden sie vom Anbieter.',
+					'en' => 'Videos, maps and posts from other platforms. Only with consent do they load from the provider.',
 				),
 			),
 			array(
@@ -228,8 +241,8 @@ class Cookie_Dialog_Config {
 					'en' => 'Marketing',
 				),
 				'description' => array(
-					'de' => 'Videos und Beiträge von Plattformen und die Messung unserer Anzeigen.',
-					'en' => 'Videos and posts from platforms and measuring our ads.',
+					'de' => 'Messen, wie unsere Anzeigen wirken, und Werbung, die passt.',
+					'en' => 'Measuring how our ads work, and ads that fit.',
 				),
 			),
 		);
@@ -962,8 +975,10 @@ class Cookie_Dialog_Config {
 				'description' => self::lang_map( $cat['description'] ?? array() ),
 			);
 		}
-		if ( ! isset( $seen['necessary'] ) ) {
-			array_unshift( $out, self::default_categories()[0] );
+		foreach ( self::default_categories() as $default ) {
+			if ( ! isset( $seen[ $default['id'] ] ) ) {
+				$out[] = $default;
+			}
 		}
 		usort( $out, static fn( $a, $b ) => ( 'necessary' === $b['id'] ) <=> ( 'necessary' === $a['id'] ) );
 		return $out;

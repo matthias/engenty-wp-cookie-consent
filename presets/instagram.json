@@ -1,7 +1,7 @@
 {
   "id": "instagram",
   "name": "Instagram",
-  "category": "marketing",
+  "category": "media",
   "kind": "embed",
   "provider": {
     "name": "Meta Platforms Ireland Limited",
@@ -36,6 +36,13 @@
   "patterns": [
     "instagram.com/embed.js",
     "instgrm.Embeds"
+  ],
+  "handles": [
+    "sbi_scripts"
+  ],
+  "plugins": [
+    "instagram-feed/instagram-feed.php",
+    "instagram-feed-pro/instagram-feed.php"
   ],
   "embed": {
     "type": "social",

@@ -1,7 +1,7 @@
 {
   "id": "tiktok-embed",
   "name": "TikTok",
-  "category": "marketing",
+  "category": "media",
   "kind": "embed",
   "provider": {
     "name": "TikTok Technology Limited",

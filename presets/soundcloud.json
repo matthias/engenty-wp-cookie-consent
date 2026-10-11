@@ -1,7 +1,7 @@
 {
   "id": "soundcloud",
   "name": "SoundCloud",
-  "category": "marketing",
+  "category": "media",
   "kind": "embed",
   "provider": {
     "name": "SoundCloud Global Limited & Co. KG",

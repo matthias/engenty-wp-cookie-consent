@@ -180,7 +180,6 @@
 	text-underline-offset: 3px;
 	cursor: pointer;
 }
-:host .cd-link::after { content: "›"; text-decoration: none; display: inline-block; }
 :host .cd-foot { display: flex; gap: 14px; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-top: 14px; font-size: .86em; color: var(--cd-mute); }
 :host .cd-layer__foot .cd-foot { margin-top: 0; }
 :host .cd-foot__links { display: inline-flex; gap: 14px; }
