@@ -966,7 +966,7 @@ class CookieDialog {
 	/**
 	 * A button's class by the chosen style: both filled, accept filled and only necessary outlined,
 	 * or every button outlined.
-	 * @param main Whether it is the button the style fills (accept on the first layer, save on the second).
+	 * @param main Whether it is the button the style fills (accept, on both layers).
 	 */
 	btn( main: boolean ): string {
 		const { buttons } = this.c.design;
@@ -1266,32 +1266,33 @@ class CookieDialog {
 				] ),
 				this.el( 'div', { class: 'cd-layer__body' }, cats ),
 				this.el( 'div', { class: 'cd-layer__foot' }, [
-					// Only necessary, all, save: saving the own choice comes last, where the eye ends.
+					// As on the first layer – accept, only necessary – and saving the own choice as a plain
+					// outlined button after them.
 					this.el( 'div', { class: 'cd-btns cd-btns--3' }, [
 						this.el(
 							'button',
 							{
 								type: 'button',
-								class: 'cd-btn cd-btn--sec',
-								'data-act': 'necessary',
+								class: this.btn( true ),
+								'data-act': 'all',
 							},
-							[ t( 'reject' ) ]
+							[ t( 'accept' ) ]
 						),
 						this.el(
 							'button',
 							{
 								type: 'button',
-								class: 'cd-btn cd-btn--sec',
-								'data-act': 'all',
+								class: this.btn( false ),
+								'data-act': 'necessary',
 							},
-							[ t( 'accept' ) ]
+							[ t( 'reject' ) ]
 						),
 						this.editable(
 							this.el(
 								'button',
 								{
 									type: 'button',
-									class: this.btn( true ),
+									class: 'cd-btn cd-btn--sec',
 									'data-act': 'save',
 								},
 								[ t( 'save' ) ]
