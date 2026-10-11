@@ -1266,7 +1266,26 @@ class CookieDialog {
 				] ),
 				this.el( 'div', { class: 'cd-layer__body' }, cats ),
 				this.el( 'div', { class: 'cd-layer__foot' }, [
+					// Only necessary, all, save: saving the own choice comes last, where the eye ends.
 					this.el( 'div', { class: 'cd-btns cd-btns--3' }, [
+						this.el(
+							'button',
+							{
+								type: 'button',
+								class: 'cd-btn cd-btn--sec',
+								'data-act': 'necessary',
+							},
+							[ t( 'reject' ) ]
+						),
+						this.el(
+							'button',
+							{
+								type: 'button',
+								class: 'cd-btn cd-btn--sec',
+								'data-act': 'all',
+							},
+							[ t( 'accept' ) ]
+						),
 						this.editable(
 							this.el(
 								'button',
@@ -1278,24 +1297,6 @@ class CookieDialog {
 								[ t( 'save' ) ]
 							),
 							'save'
-						),
-						this.el(
-							'button',
-							{
-								type: 'button',
-								class: 'cd-btn cd-btn--sec',
-								'data-act': 'all',
-							},
-							[ t( 'accept' ) ]
-						),
-						this.el(
-							'button',
-							{
-								type: 'button',
-								class: 'cd-btn cd-btn--sec',
-								'data-act': 'necessary',
-							},
-							[ t( 'reject' ) ]
 						),
 					] ),
 					this.foot( id ),
