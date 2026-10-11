@@ -4,7 +4,7 @@ Tags: cookie, consent, gdpr, dsgvo, cookie banner
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 0.1.0
+Stable tag: 0.2.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,6 +23,18 @@ Cookie Dialog reads your website as a visitor without consent, proposes the whol
 * The assistant uses the AI provider set up under Settings › Connectors (WordPress 7.0+). Simple jobs run in your browser's built-in model. Everything else works without AI.
 
 == Changelog ==
+
+= 0.2.0 =
+* Export and import under Settings: the settings as a JSON file from one site to another, e.g. from staging to live. The site keeps whether the dialog is on and its log; privacy policy and imprint are found by their address.
+* A preview on the site: `?cookie-dialog=preview` shows the dialog to an admin as a new visitor sees it, also before it is switched on; nothing is stored or logged.
+* Look: button style (both filled, accept emphasised, both outlined), switches for the title and for the links to privacy policy and imprint.
+* A category of its own for external media: videos, maps and posts from other platforms (YouTube, Vimeo, Google Maps, Instagram and others) no longer sit in Marketing.
+* The Instagram feed of Smash Balloon's Instagram Feed waits for consent to Instagram.
+* Visitors can pick the language of the dialog when there is more than one.
+* The assistant translates in the browser with Chrome's built-in Translator.
+* Admin and dialog in eleven more languages: French, Spanish, Italian, Dutch, Portuguese, Polish, Swedish, Danish, Norwegian, Finnish and Czech.
+* The link to the settings on the first layer has no arrow.
+* Fixed: the log's CSV download answered 403.
 
 = 0.1.0 =
 * First release.
