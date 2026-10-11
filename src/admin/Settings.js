@@ -1,4 +1,4 @@
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect, useRef, useState } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
 import { __, _n, _x, sprintf } from '@wordpress/i18n';
 import { boot, pageUrl, post, problem } from './api';
@@ -101,6 +101,10 @@ export default function Settings( { state, onState, save } ) {
 	const [ busy, setBusy ] = useState( null );
 	const [ error, setError ] = useState( null );
 	const [ gtm, setGtm ] = useState( c.google.gtm );
+	const [ file, setFile ] = useState( null );
+	const [ imported, setImported ] = useState( null );
+	const [ failed, setFailed ] = useState( null );
+	const picker = useRef();
 
 	useEffect( () => setGtm( c.google.gtm ), [ c.google.gtm ] );
 	useEffect( () => {
@@ -143,6 +147,55 @@ export default function Settings( { state, onState, save } ) {
 			setBusy( null );
 		}
 	};
+
+	const read = ( event ) => {
+		const chosen = event.target.files?.[ 0 ];
+		event.target.value = '';
+		setFailed( null );
+		setImported( null );
+		if ( ! chosen ) {
+			return;
+		}
+		chosen
+			.text()
+			.then( ( text ) => {
+				const data = JSON.parse( text );
+				if ( data?.plugin !== 'cookie-dialog' || ! data.config ) {
+					throw new Error( 'not ours' );
+				}
+				setFile( { name: chosen.name, data } );
+			} )
+			.catch( () => {
+				setFile( null );
+				setFailed(
+					__(
+						'In dieser Datei sind keine Einstellungen von Cookie Dialog.',
+						'cookie-dialog'
+					)
+				);
+			} );
+	};
+	const take = async () => {
+		setBusy( 'import' );
+		setFailed( null );
+		try {
+			onState( await post( '/import', { data: file.data } ) );
+			setImported( file.name );
+			setFile( null );
+		} catch ( e ) {
+			setFailed( problem( e ).message );
+		} finally {
+			setBusy( null );
+		}
+	};
+	let from = '';
+	if ( file ) {
+		try {
+			from = new URL( file.data.site ).host;
+		} catch {
+			from = '';
+		}
+	}
 
 	return (
 		<>
@@ -1062,6 +1115,118 @@ export default function Settings( { state, onState, save } ) {
 					>
 						{ __( 'Jetzt lesen', 'cookie-dialog' ) }
 					</Button>
+				</Accordion>
+
+				<Accordion
+					title={ __( 'Export und Import', 'cookie-dialog' ) }
+					summary={ __(
+						'Die Einstellungen als Datei, etwa von Staging auf Live',
+						'cookie-dialog'
+					) }
+					open={ open === 'transfer' }
+					onToggle={ () => toggle( 'transfer' ) }
+				>
+					<Line
+						label={ __( 'Exportieren', 'cookie-dialog' ) }
+						hint={ __(
+							'Dialog, Texte, Dienste und Einstellungen als JSON-Datei – ohne Protokoll.',
+							'cookie-dialog'
+						) }
+					>
+						<Button size="sm" icon="download" href={ boot.export }>
+							{ __( 'Datei laden', 'cookie-dialog' ) }
+						</Button>
+					</Line>
+					<Line
+						label={ __( 'Importieren', 'cookie-dialog' ) }
+						hint={ __(
+							'Ersetzt Dialog, Texte, Dienste und Einstellungen. Ob der Dialog an ist und das Protokoll bleiben; Datenschutzerklärung und Impressum werden über ihre Adresse zugeordnet.',
+							'cookie-dialog'
+						) }
+					>
+						<input
+							ref={ picker }
+							type="file"
+							accept=".json,application/json"
+							hidden
+							onChange={ read }
+						/>
+						<Button
+							size="sm"
+							onClick={ () => picker.current?.click() }
+						>
+							{ __( 'Datei wählen …', 'cookie-dialog' ) }
+						</Button>
+					</Line>
+					{ file ? (
+						<div className="cd-confirm">
+							<p>
+								<b>{ file.name }</b>
+								<br />
+								{ [
+									from
+										? sprintf(
+												/* translators: %s: host, e.g. staging.example.com */
+												__( 'von %s', 'cookie-dialog' ),
+												from
+										  )
+										: null,
+									file.data.exported
+										? when( file.data.exported )
+										: null,
+									sprintf(
+										/* translators: %d: number of services */
+										_n(
+											'%d Dienst',
+											'%d Dienste',
+											file.data.config.services?.length ||
+												0,
+											'cookie-dialog'
+										),
+										file.data.config.services?.length || 0
+									),
+									( file.data.config.languages || [] )
+										.map( ( l ) => languageName( l ) )
+										.join( ', ' ),
+								]
+									.filter( Boolean )
+									.join( ' · ' ) }
+							</p>
+							{ c.live ? (
+								<p className="cd-fine">
+									{ __(
+										'Der Dialog ist an: Ändert sich, was Besucher lesen, gilt eine neue Version.',
+										'cookie-dialog'
+									) }
+								</p>
+							) : null }
+							<span className="cd-row-inline">
+								<Button
+									kind="primary"
+									busy={ busy === 'import' }
+									onClick={ take }
+								>
+									{ __( 'Übernehmen', 'cookie-dialog' ) }
+								</Button>
+								<Button
+									kind="ghost"
+									onClick={ () => setFile( null ) }
+								>
+									{ __( 'Abbrechen', 'cookie-dialog' ) }
+								</Button>
+							</span>
+						</div>
+					) : null }
+					{ failed ? <Notice tone="error">{ failed }</Notice> : null }
+					{ imported ? (
+						<Notice tone="success">
+							{ sprintf(
+								/* translators: %s: file name */
+								__( '%s übernommen.', 'cookie-dialog' ),
+								imported
+							) }
+						</Notice>
+					) : null }
 				</Accordion>
 			</Card>
 			{ error ? <Notice tone="error">{ error }</Notice> : null }

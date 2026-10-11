@@ -28,6 +28,7 @@ class Cookie_Dialog_Admin {
 		add_action( 'admin_notices', array( __CLASS__, 'notices' ) );
 		add_action( 'admin_init', array( __CLASS__, 'after_activation' ) );
 		add_action( 'admin_post_cookie_dialog_csv', array( __CLASS__, 'csv' ) );
+		add_action( 'admin_post_cookie_dialog_export', array( __CLASS__, 'export' ) );
 		add_filter( 'plugin_action_links_' . plugin_basename( COOKIE_DIALOG_FILE ), array( __CLASS__, 'action_links' ) );
 		add_action( 'admin_init', array( __CLASS__, 'privacy_guide' ) );
 	}
@@ -102,7 +103,9 @@ class Cookie_Dialog_Admin {
 			'home'      => home_url( '/' ),
 			'site'      => add_query_arg( 'cookie-dialog', 'preview', home_url( '/' ) ),
 			'preview'   => add_query_arg( 'cookie-dialog-preview', '1', home_url( '/' ) ),
-			'csv'       => wp_nonce_url( admin_url( 'admin-post.php?action=cookie_dialog_csv' ), 'cookie_dialog_csv' ),
+			// Not wp_nonce_url(): it escapes & for HTML, and the nonce would not arrive from JS.
+			'csv'       => add_query_arg( '_wpnonce', wp_create_nonce( 'cookie_dialog_csv' ), admin_url( 'admin-post.php?action=cookie_dialog_csv' ) ),
+			'export'    => add_query_arg( '_wpnonce', wp_create_nonce( 'cookie_dialog_export' ), admin_url( 'admin-post.php?action=cookie_dialog_export' ) ),
 			'locale'    => get_user_locale(),
 			'wpVersion' => get_bloginfo( 'version' ),
 			'user'      => wp_get_current_user()->display_name,
@@ -175,6 +178,20 @@ class Cookie_Dialog_Admin {
 		header( 'Content-Type: text/csv; charset=utf-8' );
 		header( 'Content-Disposition: attachment; filename=cookie-dialog-' . gmdate( 'Y-m-d' ) . '.csv' );
 		Cookie_Dialog_Consent::csv( $args );
+		exit;
+	}
+
+	/** The configuration as a JSON file, for Einstellungen › Export und Import on another site. */
+	public static function export() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( esc_html__( 'Nicht erlaubt.', 'cookie-dialog' ), 403 );
+		}
+		check_admin_referer( 'cookie_dialog_export' );
+		$host = sanitize_file_name( (string) wp_parse_url( home_url(), PHP_URL_HOST ) );
+		nocache_headers();
+		header( 'Content-Type: application/json; charset=utf-8' );
+		header( 'Content-Disposition: attachment; filename=cookie-dialog-' . $host . '-' . gmdate( 'Y-m-d' ) . '.json' );
+		echo wp_json_encode( Cookie_Dialog_Config::export(), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- a JSON file.
 		exit;
 	}
 

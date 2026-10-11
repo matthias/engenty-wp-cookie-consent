@@ -363,6 +363,16 @@ export function Accordion( {
 	onToggle,
 	children,
 } ) {
+	// Without `recommended` the topic has nothing to recommend: no dot, no chip.
+	let dot = ' is-plain';
+	let chip = null;
+	if ( recommended ) {
+		dot = '';
+		chip = <Chip>{ __( 'wie empfohlen', 'cookie-dialog' ) }</Chip>;
+	} else if ( undefined !== recommended ) {
+		dot = ' is-amber';
+		chip = <Chip tone="amber">{ __( 'angepasst', 'cookie-dialog' ) }</Chip>;
+	}
 	return (
 		<div className={ `cd-acc${ open ? ' is-open' : '' }` }>
 			<button
@@ -371,18 +381,10 @@ export function Accordion( {
 				aria-expanded={ open ? 'true' : 'false' }
 				onClick={ onToggle }
 			>
-				<span
-					className={ `cd-dot${ recommended ? '' : ' is-amber' }` }
-				/>
+				<span className={ `cd-dot${ dot }` } />
 				<b>{ title }</b>
 				<span className="cd-acc__sum">{ summary }</span>
-				{ recommended ? (
-					<Chip>{ __( 'wie empfohlen', 'cookie-dialog' ) }</Chip>
-				) : (
-					<Chip tone="amber">
-						{ __( 'angepasst', 'cookie-dialog' ) }
-					</Chip>
-				) }
+				{ chip }
 				<Icon name={ open ? 'down' : 'chevron' } size={ 16 } />
 			</button>
 			{ open ? <div className="cd-acc__body">{ children }</div> : null }

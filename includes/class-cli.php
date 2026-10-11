@@ -27,13 +27,8 @@ class Cookie_Dialog_Cli {
 	 * @param array $assoc Named.
 	 */
 	public function export( $args, $assoc ) {
-		$data = array(
-			'plugin'   => 'cookie-dialog',
-			'version'  => COOKIE_DIALOG_VERSION,
-			'exported' => gmdate( 'c' ),
-			'config'   => Cookie_Dialog_Config::get(),
-			'versions' => array_map( static fn( $v ) => Cookie_Dialog_Consent::version( (int) $v['version'] ), Cookie_Dialog_Consent::versions() ),
-		);
+		$data             = Cookie_Dialog_Config::export();
+		$data['versions'] = array_map( static fn( $v ) => Cookie_Dialog_Consent::version( (int) $v['version'] ), Cookie_Dialog_Consent::versions() );
 		if ( isset( $assoc['with-log'] ) ) {
 			$data['log'] = Cookie_Dialog_Consent::rows(
 				array(
@@ -52,7 +47,8 @@ class Cookie_Dialog_Cli {
 	}
 
 	/**
-	 * Imports a configuration exported before (not the log, not the versions).
+	 * Imports a configuration exported before (not the log, not the versions). The site keeps whether the
+	 * dialog is on; the privacy policy and the imprint are matched by their address.
 	 *
 	 * ## OPTIONS
 	 *
@@ -63,17 +59,12 @@ class Cookie_Dialog_Cli {
 	 */
 	public function import( $args ) {
 		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
-		$data = json_decode( (string) file_get_contents( $args[0] ), true );
-		if ( ! is_array( $data['config'] ?? null ) ) {
+		$data  = json_decode( (string) file_get_contents( $args[0] ), true );
+		$saved = Cookie_Dialog_Config::import( $data, 'Import' );
+		if ( is_wp_error( $saved ) ) {
 			WP_CLI::error( 'No configuration in this file.' );
 		}
-		$config            = $data['config'];
-		$current           = Cookie_Dialog_Config::get();
-		$config['live']    = $current['live'];
-		$config['version'] = $current['version'];
-		$config['reask']   = $current['reask'];
-		Cookie_Dialog_Config::save( $config, 'Import' );
-		WP_CLI::success( 'Imported.' );
+		WP_CLI::success( sprintf( 'Imported: %d services, privacy policy page %d, imprint page %d.', count( $saved['services'] ), $saved['pages']['privacy'], $saved['pages']['imprint'] ) );
 	}
 
 	/**

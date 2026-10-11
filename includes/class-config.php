@@ -665,6 +665,55 @@ class Cookie_Dialog_Config {
 	}
 
 	/**
+	 * The configuration as a file for another site, e.g. from staging to live. The privacy policy and
+	 * the imprint go by their address: their IDs differ from site to site.
+	 *
+	 * @return array
+	 */
+	public static function export() {
+		$config = self::get();
+		$pages  = array();
+		foreach ( array( 'privacy', 'imprint' ) as $key ) {
+			$id            = (int) $config['pages'][ $key ];
+			$pages[ $key ] = $id && get_post( $id ) ? get_page_uri( $id ) : '';
+		}
+		return array(
+			'plugin'   => 'cookie-dialog',
+			'version'  => COOKIE_DIALOG_VERSION,
+			'exported' => gmdate( 'c' ),
+			'site'     => home_url( '/' ),
+			'pages'    => $pages,
+			'config'   => $config,
+		);
+	}
+
+	/**
+	 * Takes the configuration of an export. The site keeps whether the dialog is on, its version and
+	 * the log; a page only where one with the same address is published here, else the site's own.
+	 *
+	 * @param mixed  $data An export.
+	 * @param string $note What changed, for the history.
+	 * @return array|WP_Error The saved configuration.
+	 */
+	public static function import( $data, $note = '' ) {
+		if ( ! is_array( $data ) || 'cookie-dialog' !== ( $data['plugin'] ?? '' ) || ! is_array( $data['config'] ?? null ) ) {
+			return new WP_Error( 'cookie_dialog_import', __( 'In dieser Datei sind keine Einstellungen von Cookie Dialog.', 'cookie-dialog' ), array( 'status' => 400 ) );
+		}
+		$config  = $data['config'];
+		$current = self::get();
+		foreach ( array( 'live', 'version', 'reask' ) as $key ) {
+			$config[ $key ] = $current[ $key ];
+		}
+		$config['pages'] = is_array( $config['pages'] ?? null ) ? $config['pages'] : array();
+		foreach ( array( 'privacy', 'imprint' ) as $key ) {
+			$path                    = (string) ( $data['pages'][ $key ] ?? '' );
+			$page                    = '' !== $path ? get_page_by_path( $path ) : null;
+			$config['pages'][ $key ] = $page && 'publish' === $page->post_status ? (int) $page->ID : (int) $current['pages'][ $key ];
+		}
+		return self::save( $config, $note );
+	}
+
+	/**
 	 * A line in "Zuletzt".
 	 *
 	 * @param string $text What happened.

@@ -62,6 +62,7 @@
 .cd-pill-status.is-live { background: var(--cd-moss-tint); color: var(--cd-moss); }
 .cd-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cd-moss); flex: none; display: inline-block; }
 .cd-dot.is-amber { background: #d99a00; }
+.cd-dot.is-plain { visibility: hidden; }
 .cd-main { flex: 1; width: 100%; max-width: 1180px; margin: 0 auto; padding: 16px 28px calc(var(--cd-bottom, 96px) + 32px); display: flex; flex-direction: column; gap: 24px; }
 
 .cd-icon { flex: none; }

@@ -1,22 +1,22 @@
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: Cookie Dialog 0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cookie-dialog\n"
-"POT-Creation-Date: 2026-10-10T14:06:42+00:00\n"
-"PO-Revision-Date: 2026-10-10T14:06:42+00:00\n"
 "Last-Translator: engenty\n"
 "Language-Team: engenty\n"
-"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-10T14:06:42+00:00\n"
+"PO-Revision-Date: 2026-10-10T14:06:42+00:00\n"
+"Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: cookie-dialog\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
 #. Plugin Name of the plugin
-#: cookie-dialog.php includes/class-admin.php:185
+#: cookie-dialog.php
+#: includes/class-admin.php:202
 msgid "Cookie Dialog"
 msgstr "Cookie Dialog"
 
@@ -27,14 +27,8 @@ msgstr "https://engenty.ai/cookie-dialog"
 
 #. Description of the plugin
 #: cookie-dialog.php
-msgid ""
-"A simple, beautiful cookie dialog for the EU: categories and services, "
-"scripts and embeds only after consent, a consent log, Google Consent Mode v2"
-" – and an assistant that sets it up."
-msgstr ""
-"Un diálogo de cookies sencillo y bonito para la UE: categorías y servicios, "
-"scripts e incrustaciones solo tras el consentimiento, un registro de "
-"consentimientos, Google Consent Mode v2 – y un asistente que lo configura."
+msgid "A simple, beautiful cookie dialog for the EU: categories and services, scripts and embeds only after consent, a consent log, Google Consent Mode v2 – and an assistant that sets it up."
+msgstr "Un diálogo de cookies sencillo y bonito para la UE: categorías y servicios, scripts e incrustaciones solo tras el consentimiento, un registro de consentimientos, Google Consent Mode v2 – y un asistente que lo configura."
 
 #. Author of the plugin
 #: cookie-dialog.php
@@ -46,72 +40,69 @@ msgstr "engenty"
 msgid "https://engenty.ai"
 msgstr "https://engenty.ai"
 
-#: includes/class-admin.php:64 build/admin.js:20
+#: includes/class-admin.php:65
+#: build/admin.js:20
 msgid "Cookies"
 msgstr "Cookies"
 
-#: includes/class-admin.php:65 includes/class-admin.php:138 build/admin.js:19
+#: includes/class-admin.php:66
+#: includes/class-admin.php:141
+#: build/admin.js:19
 #: build/admin.js:21
 msgid "Start"
 msgstr "Inicio"
 
-#: includes/class-admin.php:66 build/admin.js:20 build/admin.js:22
+#: includes/class-admin.php:67
+#: build/admin.js:20
+#: build/admin.js:22
 msgid "Dialog"
 msgstr "Diálogo"
 
-#: includes/class-admin.php:67 build/admin.js:24
+#: includes/class-admin.php:68
+#: build/admin.js:24
 msgid "Dienste"
 msgstr "Servicios"
 
-#: includes/class-admin.php:68 build/admin.js:12 build/admin.js:18
+#: includes/class-admin.php:69
+#: build/admin.js:12
+#: build/admin.js:18
 #: build/admin.js:26
 msgid "Protokoll"
 msgstr "Registro"
 
-#: includes/class-admin.php:69 build/admin.js:18 build/admin.js:28
+#: includes/class-admin.php:70
+#: build/admin.js:18
+#: build/admin.js:31
 #: build/blocks.js:1
 msgid "Einstellungen"
 msgstr "Ajustes"
 
-#: includes/class-admin.php:79 build/admin.js:29
+#: includes/class-admin.php:80
+#: build/admin.js:32
 msgid "Cookie Dialog lädt …"
 msgstr "Cookie Dialog se está cargando …"
 
-#: includes/class-admin.php:139 includes/class-admin.php:158
+#: includes/class-admin.php:142
+#: includes/class-admin.php:161
 msgid "Einrichten"
 msgstr "Configurar"
 
-#: includes/class-admin.php:155
+#: includes/class-admin.php:158
 msgid "Cookie Dialog ist noch aus."
 msgstr "Cookie Dialog aún está desactivado."
 
-#: includes/class-admin.php:156
+#: includes/class-admin.php:159
 msgid "Bis du ihn einschaltest, ändert sich nichts an deiner Website."
 msgstr "Hasta que lo actives, nada cambia en tu web."
 
-#: includes/class-admin.php:165
+#: includes/class-admin.php:168
+#: includes/class-admin.php:187
 msgid "Nicht erlaubt."
 msgstr "No permitido."
 
-#: includes/class-admin.php:188
-msgid ""
-"Cookie Dialog speichert die Wahl der Besucher im eigenen Cookie "
-"„cookie_dialog“ (Consent-ID, Version, Zeit, Kategorien und Dienste) so "
-"lange, wie unter Cookies › Einstellungen eingestellt (6 Monate, wenn nichts "
-"geändert wurde). Jede Entscheidung kommt ins Protokoll: Consent-ID, Version "
-"des Dialogs, Sprache, Ort der Entscheidung, Browser-Familie und die IP-"
-"Adresse als SHA-256 mit täglich neuem Salz; gelöscht nach 12 Monaten, wenn "
-"nichts geändert wurde. Der Block „Cookie-Tabelle“ listet alle Dienste und "
-"Cookies."
-msgstr ""
-"Cookie Dialog guarda la elección de los visitantes en su propia cookie "
-"«cookie_dialog» (ID de consentimiento, versión, hora, categorías y "
-"servicios) durante el tiempo configurado en Cookies › Ajustes (6 meses si no"
-" se ha cambiado nada). Cada decisión va al registro: ID de consentimiento, "
-"versión del diálogo, idioma, lugar de la decisión, familia de navegador y la"
-" dirección IP como SHA-256 con una sal que cambia a diario; se borra a los "
-"12 meses si no se ha cambiado nada. El bloque «Tabla de cookies» lista todos"
-" los servicios y cookies."
+#: includes/class-admin.php:205
+msgid "Cookie Dialog speichert die Wahl der Besucher im eigenen Cookie „cookie_dialog“ (Consent-ID, Version, Zeit, Kategorien und Dienste) so lange, wie unter Cookies › Einstellungen eingestellt (6 Monate, wenn nichts geändert wurde). Jede Entscheidung kommt ins Protokoll: Consent-ID, Version des Dialogs, Sprache, Ort der Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich neuem Salz; gelöscht nach 12 Monaten, wenn nichts geändert wurde. Der Block „Cookie-Tabelle“ listet alle Dienste und Cookies."
+msgstr "Cookie Dialog guarda la elección de los visitantes en su propia cookie «cookie_dialog» (ID de consentimiento, versión, hora, categorías y servicios) durante el tiempo configurado en Cookies › Ajustes (6 meses si no se ha cambiado nada). Cada decisión va al registro: ID de consentimiento, versión del diálogo, idioma, lugar de la decisión, familia de navegador y la dirección IP como SHA-256 con una sal que cambia a diario; se borra a los 12 meses si no se ha cambiado nada. El bloque «Tabla de cookies» lista todos los servicios y cookies."
 
 #: includes/class-assistant.php:124
 msgid "Der Assistent braucht WordPress 7.0 oder neuer."
@@ -122,13 +113,16 @@ msgid "Die Antwort war kein JSON. Versuch es noch einmal."
 msgstr "La respuesta no era JSON. Inténtalo de nuevo."
 
 #. translators: %s: what the person asked
-#: includes/class-assistant.php:508 includes/class-assistant.php:510
+#: includes/class-assistant.php:508
+#: includes/class-assistant.php:510
 #, php-format
 msgid "Assistent: %s"
 msgstr "Asistente: %s"
 
 #. translators: %s: what the person asked
-#: includes/class-assistant.php:508 build/admin.js:4 build/admin.js:27
+#: includes/class-assistant.php:508
+#: build/admin.js:4
+#: build/admin.js:27
 msgid "Assistent"
 msgstr "Asistente"
 
@@ -156,15 +150,14 @@ msgstr "Asistente: cambio deshecho"
 msgid "Zurückgenommen"
 msgstr "Deshecho"
 
-#: includes/class-assistant.php:705 includes/class-assistant.php:850
+#: includes/class-assistant.php:705
+#: includes/class-assistant.php:850
 msgid "Diese Aufgabe gibt es nicht."
 msgstr "Esta tarea no existe."
 
 #: includes/class-assistant.php:737
-msgid ""
-"Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren)."
-msgstr ""
-"Para esto, WordPress necesita un proveedor de IA (Ajustes › Connectors)."
+msgid "Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren)."
+msgstr "Para esto, WordPress necesita un proveedor de IA (Ajustes › Connectors)."
 
 #: includes/class-assistant.php:762
 msgid "Die Übersetzung kam unvollständig zurück."
@@ -194,7 +187,8 @@ msgstr "Texto acortado"
 msgid "Gekürzt."
 msgstr "Acortado."
 
-#: includes/class-assistant.php:803 includes/class-checks.php:516
+#: includes/class-assistant.php:803
+#: includes/class-checks.php:516
 msgid "Diesen Host kennt die letzte Prüfung nicht."
 msgstr "La última comprobación no conoce este host."
 
@@ -240,10 +234,10 @@ msgstr "%s – vendrán entonces de tu servidor"
 
 #: includes/class-checks.php:63
 msgid "Kein Dritter sieht die IP-Adresse, bevor jemand zustimmt."
-msgstr ""
-"Ningún tercero ve la dirección IP antes de que alguien dé su consentimiento."
+msgstr "Ningún tercero ve la dirección IP antes de que alguien dé su consentimiento."
 
-#: includes/class-checks.php:67 build/admin.js:23
+#: includes/class-checks.php:67
+#: build/admin.js:23
 msgid "Lokal einbinden"
 msgstr "Servir en local"
 
@@ -254,29 +248,36 @@ msgid "Neues Skript seit %1$s: %2$s"
 msgstr "Script nuevo desde %1$s: %2$s"
 
 #. translators: %s: host
-#: includes/class-checks.php:85 build/admin.js:7
-#, php-format, js-format
+#: includes/class-checks.php:85
+#: build/admin.js:7
+#, php-format,js-format
 msgid "Skript unbekannt: %s"
 msgstr "Script desconocido: %s"
 
 #. translators: 1: service, 2: purpose, 3: category
-#: includes/class-checks.php:88 build/admin.js:23
-#, php-format, js-format
+#: includes/class-checks.php:88
+#: build/admin.js:23
+#, php-format,js-format
 msgid "Vorschlag: %1$s, %2$s → %3$s"
 msgstr "Sugerencia: %1$s, %2$s → %3$s"
 
 #: includes/class-checks.php:89
 msgid "Lädt bis zur Zuordnung ohne Einwilligung. Ordne es einem Dienst zu."
-msgstr ""
-"Se carga sin consentimiento hasta que se asigne. Asígnalo a un servicio."
+msgstr "Se carga sin consentimiento hasta que se asigne. Asígnalo a un servicio."
 
-#: includes/class-checks.php:96 build/admin.js:8 build/admin.js:20
+#: includes/class-checks.php:96
+#: build/admin.js:8
+#: build/admin.js:20
 #: build/admin.js:23
+#: build/admin.js:30
 msgid "Übernehmen"
 msgstr "Aplicar"
 
-#: includes/class-checks.php:101 build/admin.js:8 build/admin.js:19
-#: build/admin.js:20 build/admin.js:23
+#: includes/class-checks.php:101
+#: build/admin.js:8
+#: build/admin.js:19
+#: build/admin.js:20
+#: build/admin.js:23
 msgid "Ändern"
 msgstr "Cambiar"
 
@@ -291,12 +292,8 @@ msgid "Dienste warten auf die Einwilligung"
 msgstr "Los servicios esperan al consentimiento"
 
 #: includes/class-checks.php:127
-msgid ""
-"Ein Skript lädt sie nach, das der Dialog nicht kennt. Trage das Einbinden "
-"als Snippet ein oder markiere das Tag mit data-cookie-service."
-msgstr ""
-"Los carga un script que el diálogo no conoce. Añade el código de inserción "
-"como fragmento o marca la etiqueta con data-cookie-service."
+msgid "Ein Skript lädt sie nach, das der Dialog nicht kennt. Trage das Einbinden als Snippet ein oder markiere das Tag mit data-cookie-service."
+msgstr "Los carga un script que el diálogo no conoce. Añade el código de inserción como fragmento o marca la etiqueta con data-cookie-service."
 
 #: includes/class-checks.php:128
 msgid "Kein Dienst lädt, bevor jemand zustimmt."
@@ -317,43 +314,36 @@ msgid "Vor der Einwilligung nur notwendige Cookies"
 msgstr "Antes del consentimiento, solo cookies necesarias"
 
 #: includes/class-checks.php:147
-msgid ""
-"Der Server setzt sie beim ersten Besuch. Gehören sie zu einem notwendigen "
-"Dienst, trage sie dort ein."
-msgstr ""
-"El servidor las establece en la primera visita. Si pertenecen a un servicio "
-"necesario, anótalas allí."
+msgid "Der Server setzt sie beim ersten Besuch. Gehören sie zu einem notwendigen Dienst, trage sie dort ein."
+msgstr "El servidor las establece en la primera visita. Si pertenecen a un servicio necesario, anótalas allí."
 
 #: includes/class-checks.php:148
 msgid "Gelesen ohne Einwilligung: keine anderen Cookies."
 msgstr "Leídas sin consentimiento: ninguna otra cookie."
 
-#: includes/class-checks.php:152 build/admin.js:8 build/admin.js:20
+#: includes/class-checks.php:152
+#: build/admin.js:8
+#: build/admin.js:20
 #: build/admin.js:23
 msgid "Zuordnen"
 msgstr "Asignar"
 
-#: includes/class-checks.php:165 build/admin.js:11
+#: includes/class-checks.php:165
+#: build/admin.js:11
 msgid "Google Consent Mode v2"
 msgstr "Google Consent Mode v2"
 
 #: includes/class-checks.php:167
 msgid "Vor jedem Google-Tag · Tags warten auf Einwilligung"
-msgstr ""
-"Antes de cada etiqueta de Google · las etiquetas esperan al consentimiento"
+msgstr "Antes de cada etiqueta de Google · las etiquetas esperan al consentimiento"
 
 #: includes/class-checks.php:167
-msgid ""
-"Ein Google-Tag steht vor dem Consent-Mode-Standard – es kommt von einem "
-"anderen Plugin oder dem Theme."
-msgstr ""
-"Una etiqueta de Google va antes del valor por defecto del Consent Mode – "
-"viene de otro plugin o del tema."
+msgid "Ein Google-Tag steht vor dem Consent-Mode-Standard – es kommt von einem anderen Plugin oder dem Theme."
+msgstr "Una etiqueta de Google va antes del valor por defecto del Consent Mode – viene de otro plugin o del tema."
 
 #: includes/class-checks.php:168
 msgid "Aus. Google verlangt ihn für Messung und Anzeigen im EWR."
-msgstr ""
-"Desactivado. Google lo exige para la medición y los anuncios en el EEE."
+msgstr "Desactivado. Google lo exige para la medición y los anuncios en el EEE."
 
 #: includes/class-checks.php:172
 msgid "Einschalten"
@@ -385,7 +375,8 @@ msgstr "La tabla de cookies se mantiene actualizada por sí sola."
 msgid "Die Cookie-Tabelle und ein Absatz werden eingefügt."
 msgstr "Se insertan la tabla de cookies y un párrafo."
 
-#: includes/class-checks.php:199 includes/class-checks.php:222
+#: includes/class-checks.php:199
+#: includes/class-checks.php:222
 msgid "Seite wählen"
 msgstr "Elegir página"
 
@@ -406,11 +397,8 @@ msgid "Kein Impressum gewählt"
 msgstr "No se ha elegido ningún aviso legal"
 
 #: includes/class-checks.php:218
-msgid ""
-"Datenschutz und Impressum bleiben lesbar, der Dialog zeigt sich dort klein."
-msgstr ""
-"La política de privacidad y el aviso legal siguen legibles; allí el diálogo "
-"se muestra pequeño."
+msgid "Datenschutz und Impressum bleiben lesbar, der Dialog zeigt sich dort klein."
+msgstr "La política de privacidad y el aviso legal siguen legibles; allí el diálogo se muestra pequeño."
 
 #: includes/class-checks.php:231
 msgid "Widerruf so einfach wie die Einwilligung"
@@ -422,8 +410,7 @@ msgstr "El diálogo no se puede volver a abrir"
 
 #: includes/class-checks.php:232
 msgid "Button, Link oder Block öffnen die Auswahl jederzeit."
-msgstr ""
-"Un botón, un enlace o un bloque abren la selección en cualquier momento."
+msgstr "Un botón, un enlace o un bloque abren la selección en cualquier momento."
 
 #: includes/class-checks.php:232
 msgid "Kein Button und kein Link zu #cookie-settings gefunden."
@@ -434,8 +421,9 @@ msgid "Button einschalten"
 msgstr "Activar botón"
 
 #. translators: %s: contrast ratio, e.g. 7.2
-#: includes/class-checks.php:248 build/admin.js:19
-#, php-format, js-format
+#: includes/class-checks.php:248
+#: build/admin.js:19
+#, php-format,js-format
 msgid "Kontrast %s : 1"
 msgstr "Contraste %s : 1"
 
@@ -499,7 +487,8 @@ msgstr "Web aún sin leer"
 msgid "Jede Woche neu, damit neue Skripte auffallen."
 msgstr "Cada semana de nuevo, para que destaquen los scripts nuevos."
 
-#: includes/class-checks.php:308 build/admin.js:28
+#: includes/class-checks.php:308
+#: build/admin.js:28
 msgid "Jetzt lesen"
 msgstr "Leer ahora"
 
@@ -542,8 +531,9 @@ msgid "Diese Aktion gibt es nicht."
 msgstr "Esta acción no existe."
 
 #. translators: %s: service
-#: includes/class-checks.php:622 includes/class-rest.php:257
-#: includes/class-rest.php:259
+#: includes/class-checks.php:622
+#: includes/class-rest.php:284
+#: includes/class-rest.php:286
 #, php-format
 msgid "%s hinzugefügt"
 msgstr "%s añadido"
@@ -567,7 +557,8 @@ msgid "Version %1$d: %2$s – Besucher werden einmal neu gefragt"
 msgstr "Versión %1$d: %2$s – se vuelve a preguntar una vez a los visitantes"
 
 #. translators: 1: version number, 2: what changed
-#: includes/class-consent.php:172 includes/class-consent.php:174
+#: includes/class-consent.php:172
+#: includes/class-consent.php:174
 msgid "Texte oder Dienste geändert"
 msgstr "Textos o servicios cambiados"
 
@@ -578,12 +569,8 @@ msgid "Version %1$d: %2$s"
 msgstr "Versión %1$d: %2$s"
 
 #: includes/class-front.php:385
-msgid ""
-"Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder"
-" gespeichert noch protokolliert."
-msgstr ""
-"Vista previa: así ve el diálogo un visitante nuevo. Tu elección aquí no se "
-"guarda ni se registra."
+msgid "Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder gespeichert noch protokolliert."
+msgstr "Vista previa: así ve el diálogo un visitante nuevo. Tu elección aquí no se guarda ni se registra."
 
 #: includes/class-front.php:386
 msgid "Neu starten"
@@ -619,39 +606,42 @@ msgstr "%s viene de tu servidor"
 msgid "%s lokal eingebunden"
 msgstr "%s servido en local"
 
-#: includes/class-rest.php:198 includes/class-rest.php:199
+#: includes/class-rest.php:225
+#: includes/class-rest.php:226
 msgid "Dialog eingeschaltet"
 msgstr "Diálogo activado"
 
-#: includes/class-rest.php:204
+#: includes/class-rest.php:231
 msgid "Dialog ausgeschaltet"
 msgstr "Diálogo desactivado"
 
-#: includes/class-rest.php:249
+#: includes/class-rest.php:276
 msgid "Diesen Dienst kennt die Bibliothek nicht."
 msgstr "La biblioteca no conoce este servicio."
 
-#: includes/class-rest.php:264
+#: includes/class-rest.php:291
 msgid "Ein Dienst braucht einen Namen."
 msgstr "Un servicio necesita un nombre."
 
 #. translators: %s: service
-#: includes/class-rest.php:289
+#: includes/class-rest.php:316
 #, php-format
 msgid "%s geändert"
 msgstr "%s cambiado"
 
 #. translators: %s: service
-#: includes/class-rest.php:306 includes/class-rest.php:308
+#: includes/class-rest.php:333
+#: includes/class-rest.php:335
 #, php-format
 msgid "%s entfernt"
 msgstr "%s eliminado"
 
-#: includes/class-rest.php:361
+#: includes/class-rest.php:388
 msgid "Diese Version gibt es nicht."
 msgstr "Esta versión no existe."
 
-#: includes/class-rest.php:373 build/admin.js:16
+#: includes/class-rest.php:400
+#: build/admin.js:16
 msgid "Was soll anders sein?"
 msgstr "¿Qué debería ser diferente?"
 
@@ -659,7 +649,8 @@ msgstr "¿Qué debería ser diferente?"
 msgid "Das hat nicht geklappt."
 msgstr "Eso no ha funcionado."
 
-#: build/admin.js:1 build/admin.js:4
+#: build/admin.js:1
+#: build/admin.js:4
 msgid "Schließen"
 msgstr "Cerrar"
 
@@ -680,36 +671,25 @@ msgstr[0] "%d mes"
 msgstr[1] "%d meses"
 
 #: build/admin.js:2
-msgid ""
-"Das Modell deines Browsers hat das nicht geschafft. Mit einem KI-Anbieter "
-"(Einstellungen › Konnektoren) klappt es."
-msgstr ""
-"El modelo de tu navegador no ha podido con esto. Con un proveedor de IA "
-"(Ajustes › Connectors) funciona."
+msgid "Das Modell deines Browsers hat das nicht geschafft. Mit einem KI-Anbieter (Einstellungen › Konnektoren) klappt es."
+msgstr "El modelo de tu navegador no ha podido con esto. Con un proveedor de IA (Ajustes › Connectors) funciona."
 
 #: build/admin.js:2
-msgid ""
-"Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren) – "
-"oder Chrome mit eingebautem Modell."
-msgstr ""
-"Para esto, WordPress necesita un proveedor de IA (Ajustes › Connectors) – o "
-"Chrome con su modelo integrado."
+msgid "Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren) – oder Chrome mit eingebautem Modell."
+msgstr "Para esto, WordPress necesita un proveedor de IA (Ajustes › Connectors) – o Chrome con su modelo integrado."
 
 #. translators: %s: language name
 #: build/admin.js:3
 #, js-format
-msgid ""
-"Das Modell deines Browsers schreibt nicht auf %s. Mit einem KI-Anbieter "
-"(Einstellungen › Konnektoren) klappt es."
-msgstr ""
-"El modelo de tu navegador no escribe en %s. Con un proveedor de IA (Ajustes "
-"› Connectors) funciona."
+msgid "Das Modell deines Browsers schreibt nicht auf %s. Mit einem KI-Anbieter (Einstellungen › Konnektoren) klappt es."
+msgstr "El modelo de tu navegador no escribe en %s. Con un proveedor de IA (Ajustes › Connectors) funciona."
 
 #: build/admin.js:3
 msgid "Zeigen, was einzurichten ist"
 msgstr "Mostrar qué hay que configurar"
 
-#: build/admin.js:3 build/admin.js:4
+#: build/admin.js:3
+#: build/admin.js:4
 msgid "Hinweis ausblenden"
 msgstr "Ocultar aviso"
 
@@ -726,19 +706,16 @@ msgid "Senden"
 msgstr "Enviar"
 
 #: build/admin.js:3
-msgid ""
-"Sag, was anders sein soll – ich ändere Dialog, Dienste und Einstellungen. "
-"Jede Änderung kommt als Karte und lässt sich zurücknehmen."
-msgstr ""
-"Dime qué debería ser diferente – yo cambio el diálogo, los servicios y los "
-"ajustes. Cada cambio llega como una tarjeta y se puede deshacer."
+msgid "Sag, was anders sein soll – ich ändere Dialog, Dienste und Einstellungen. Jede Änderung kommt als Karte und lässt sich zurücknehmen."
+msgstr "Dime qué debería ser diferente – yo cambio el diálogo, los servicios y los ajustes. Cada cambio llega como una tarjeta y se puede deshacer."
 
 #: build/admin.js:3
 msgid "Rückgängig"
 msgstr "Deshacer"
 
 #. translators: %d: version
-#: build/admin.js:4 build/admin.js:20
+#: build/admin.js:4
+#: build/admin.js:20
 #, js-format
 msgid "Version %d"
 msgstr "Versión %d"
@@ -751,7 +728,8 @@ msgstr "Deshecho."
 msgid "Denkt nach …"
 msgstr "Pensando …"
 
-#: build/admin.js:4 build/admin.js:27
+#: build/admin.js:4
+#: build/admin.js:27
 msgid "kein KI-Anbieter"
 msgstr "sin proveedor de IA"
 
@@ -812,12 +790,8 @@ msgid "Der Chat braucht WordPress 7.0"
 msgstr "El chat necesita WordPress 7.0"
 
 #: build/admin.js:4
-msgid ""
-"Ab 7.0 denkt der Assistent mit dem KI-Anbieter, den du unter Einstellungen ›"
-" Konnektoren einrichtest. Alles andere funktioniert schon jetzt."
-msgstr ""
-"A partir de la 7.0, el asistente piensa con el proveedor de IA que "
-"configures en Ajustes › Connectors. Todo lo demás ya funciona."
+msgid "Ab 7.0 denkt der Assistent mit dem KI-Anbieter, den du unter Einstellungen › Konnektoren einrichtest. Alles andere funktioniert schon jetzt."
+msgstr "A partir de la 7.0, el asistente piensa con el proveedor de IA que configures en Ajustes › Connectors. Todo lo demás ya funciona."
 
 #: build/admin.js:4
 msgid "WordPress aktualisieren"
@@ -828,14 +802,8 @@ msgid "Erst einen KI-Anbieter einrichten"
 msgstr "Configura primero un proveedor de IA"
 
 #: build/admin.js:4
-msgid ""
-"Der Assistent denkt mit dem Anbieter, den du in WordPress unter "
-"Einstellungen › Konnektoren einrichtest – dein API Key bleibt dort. Dialog, "
-"Dienste und Blockieren funktionieren auch ohne."
-msgstr ""
-"El asistente piensa con el proveedor que configures en WordPress en Ajustes "
-"› Connectors – tu clave de API se queda allí. El diálogo, los servicios y el"
-" bloqueo funcionan también sin él."
+msgid "Der Assistent denkt mit dem Anbieter, den du in WordPress unter Einstellungen › Konnektoren einrichtest – dein API Key bleibt dort. Dialog, Dienste und Blockieren funktionieren auch ohne."
+msgstr "El asistente piensa con el proveedor que configures en WordPress en Ajustes › Connectors – tu clave de API se queda allí. El diálogo, los servicios y el bloqueo funcionan también sin él."
 
 #: build/admin.js:4
 msgid "Konnektoren öffnen"
@@ -846,30 +814,25 @@ msgid "Vercel AI Gateway installieren"
 msgstr "Instalar Vercel AI Gateway"
 
 #: build/admin.js:4
-msgid ""
-"Ohne Vertrag bei einem Anbieter: Vercel AI Gateway gibt 5 $ im Monat gratis,"
-" keine Kreditkarte."
-msgstr ""
-"Sin contrato con ningún proveedor: Vercel AI Gateway regala 5 $ al mes, sin "
-"tarjeta de crédito."
+msgid "Ohne Vertrag bei einem Anbieter: Vercel AI Gateway gibt 5 $ im Monat gratis, keine Kreditkarte."
+msgstr "Sin contrato con ningún proveedor: Vercel AI Gateway regala 5 $ al mes, sin tarjeta de crédito."
 
 #: build/admin.js:4
-msgid ""
-"Bis dahin übersetzt und ordnet das eingebaute Modell deines Browsers zu – "
-"nichts verlässt den Rechner."
-msgstr ""
-"Hasta entonces, el modelo integrado de tu navegador traduce y asigna – nada "
-"sale del ordenador."
+msgid "Bis dahin übersetzt und ordnet das eingebaute Modell deines Browsers zu – nichts verlässt den Rechner."
+msgstr "Hasta entonces, el modelo integrado de tu navegador traduce y asigna – nada sale del ordenador."
 
 #: build/admin.js:4
 msgid "Erste Ebene"
 msgstr "Primera capa"
 
-#: build/admin.js:4 build/admin.js:20
+#: build/admin.js:4
+#: build/admin.js:20
 msgid "Auswahl"
 msgstr "Selección"
 
-#: build/admin.js:4 build/admin.js:19 build/admin.js:20
+#: build/admin.js:4
+#: build/admin.js:19
+#: build/admin.js:20
 msgid "Platzhalter"
 msgstr "Marcador de posición"
 
@@ -877,11 +840,13 @@ msgstr "Marcador de posición"
 msgid "Ebene"
 msgstr "Capa"
 
-#: build/admin.js:4 build/admin.js:25
+#: build/admin.js:4
+#: build/admin.js:25
 msgid "Sprache"
 msgstr "Idioma"
 
-#: build/admin.js:4 build/admin.js:19
+#: build/admin.js:4
+#: build/admin.js:19
 msgid "Gerät"
 msgstr "Dispositivo"
 
@@ -914,20 +879,12 @@ msgid "Mit Cookie-Tabelle einfügen"
 msgstr "Insertar con la tabla de cookies"
 
 #: build/admin.js:4
-msgid ""
-"Darunter kommt die Cookie-Tabelle: alle Dienste und Cookies, und sie hält "
-"sich selbst aktuell."
-msgstr ""
-"Debajo va la tabla de cookies: todos los servicios y cookies, y se mantiene "
-"actualizada por sí sola."
+msgid "Darunter kommt die Cookie-Tabelle: alle Dienste und Cookies, und sie hält sich selbst aktuell."
+msgstr "Debajo va la tabla de cookies: todos los servicios y cookies, y se mantiene actualizada por sí sola."
 
 #: build/admin.js:4
-msgid ""
-"Noch kein eigener Absatz: eingefügt wird die Vorlage der Bibliothek. Der "
-"Assistent oder das Modell deines Browsers schreibt ihn für deine Website."
-msgstr ""
-"Aún no hay un párrafo propio: se inserta la plantilla de la biblioteca. El "
-"asistente o el modelo de tu navegador lo escribe para tu web."
+msgid "Noch kein eigener Absatz: eingefügt wird die Vorlage der Bibliothek. Der Assistent oder das Modell deines Browsers schreibt ihn für deine Website."
+msgstr "Aún no hay un párrafo propio: se inserta la plantilla de la biblioteca. El asistente o el modelo de tu navegador lo escribe para tu web."
 
 #: build/admin.js:4
 msgid "unten links"
@@ -941,20 +898,25 @@ msgstr "abajo a la derecha"
 msgid "unten in der Mitte"
 msgstr "abajo en el centro"
 
-#: build/admin.js:4 build/admin.js:18
+#: build/admin.js:4
+#: build/admin.js:18
 msgid "Box"
 msgstr "Caja"
 
-#: build/admin.js:4 build/admin.js:18
+#: build/admin.js:4
+#: build/admin.js:18
 msgid "Leiste"
 msgstr "Barra"
 
-#: build/admin.js:4 build/admin.js:18
+#: build/admin.js:4
+#: build/admin.js:18
 msgid "Fenster"
 msgstr "Ventana"
 
 #. translators: %d: services
+#. translators: %d: number of services
 #: build/admin.js:5
+#: build/admin.js:30
 #, js-format
 msgid "%d Dienst"
 msgid_plural "%d Dienste"
@@ -983,7 +945,9 @@ msgstr "%1$s: %2$s, %3$s → %4$s"
 msgid "Vorschlag deines Browsers"
 msgstr "Sugerencia de tu navegador"
 
-#: build/admin.js:8 build/admin.js:15 build/admin.js:20
+#: build/admin.js:8
+#: build/admin.js:15
+#: build/admin.js:20
 msgid "Vorschlag"
 msgstr "Sugerencia"
 
@@ -1006,14 +970,8 @@ msgid "%s – als Platzhalter mit Vorschaubild"
 msgstr "%s – como marcador de posición con miniatura"
 
 #: build/admin.js:10
-msgid ""
-"Bis zur Einwilligung steht dort ein Platzhalter in der Größe des Inhalts: "
-"„Laden“ lädt einmal, „Immer laden“ ist die Einwilligung für den Dienst. "
-"YouTube lädt danach über youtube-nocookie.com."
-msgstr ""
-"Hasta el consentimiento, ahí hay un marcador de posición del tamaño del "
-"contenido: «Cargar» lo carga una vez, «Cargar siempre» es el consentimiento "
-"para el servicio. YouTube se carga después a través de youtube-nocookie.com."
+msgid "Bis zur Einwilligung steht dort ein Platzhalter in der Größe des Inhalts: „Laden“ lädt einmal, „Immer laden“ ist die Einwilligung für den Dienst. YouTube lädt danach über youtube-nocookie.com."
+msgstr "Hasta el consentimiento, ahí hay un marcador de posición del tamaño del contenido: «Cargar» lo carga una vez, «Cargar siempre» es el consentimiento para el servicio. YouTube se carga después a través de youtube-nocookie.com."
 
 #. translators: %d: number of things
 #: build/admin.js:11
@@ -1028,14 +986,8 @@ msgid "WordPress-Emoji aus"
 msgstr "Emoji de WordPress desactivados"
 
 #: build/admin.js:11
-msgid ""
-"Schriften, Styles und Bilder von Dritten werden beim Einschalten auf deinen "
-"Server kopiert und die Verweise umgeschrieben – dann sieht kein Dritter die "
-"IP-Adresse deiner Besucher, und es braucht keine Einwilligung."
-msgstr ""
-"Al activarlo, las fuentes, los estilos y las imágenes de terceros se copian "
-"a tu servidor y se reescriben las referencias – así ningún tercero ve la "
-"dirección IP de tus visitantes y no hace falta consentimiento."
+msgid "Schriften, Styles und Bilder von Dritten werden beim Einschalten auf deinen Server kopiert und die Verweise umgeschrieben – dann sieht kein Dritter die IP-Adresse deiner Besucher, und es braucht keine Einwilligung."
+msgstr "Al activarlo, las fuentes, los estilos y las imágenes de terceros se copian a tu servidor y se reescriben las referencias – así ningún tercero ve la dirección IP de tus visitantes y no hace falta consentimiento."
 
 #: build/admin.js:11
 msgid "Texte in deinem Ton"
@@ -1045,11 +997,13 @@ msgstr "Textos en tu tono"
 msgid "Standardtexte"
 msgstr "Textos predeterminados"
 
-#: build/admin.js:11 build/admin.js:19
+#: build/admin.js:11
+#: build/admin.js:19
 msgid "per Sie"
 msgstr "formal (usted)"
 
-#: build/admin.js:11 build/admin.js:19
+#: build/admin.js:11
+#: build/admin.js:19
 msgid "per du"
 msgstr "informal (tú)"
 
@@ -1071,7 +1025,8 @@ msgstr "tu logo"
 msgid "Vor %s · Tags warten auf Einwilligung"
 msgstr "Antes de %s · las etiquetas esperan al consentimiento"
 
-#: build/admin.js:12 build/admin.js:26
+#: build/admin.js:12
+#: build/admin.js:26
 msgid "Datenschutzerklärung"
 msgstr "Política de privacidad"
 
@@ -1092,12 +1047,8 @@ msgstr "He leído %s"
 #. translators: 1: pages, 2: scripts, 3: embeds, 4: plugins
 #: build/admin.js:15
 #, js-format
-msgid ""
-"%1$d Seiten, %2$d Skripte, %3$d Einbettungen, %4$d Plugins. Unten steht mein"
-" Vorschlag, rechts siehst du ihn auf deiner Startseite."
-msgstr ""
-"%1$d páginas, %2$d scripts, %3$d incrustaciones, %4$d plugins. Abajo está mi"
-" propuesta; a la derecha la ves en tu página de inicio."
+msgid "%1$d Seiten, %2$d Skripte, %3$d Einbettungen, %4$d Plugins. Unten steht mein Vorschlag, rechts siehst du ihn auf deiner Startseite."
+msgstr "%1$d páginas, %2$d scripts, %3$d incrustaciones, %4$d plugins. Abajo está mi propuesta; a la derecha la ves en tu página de inicio."
 
 #: build/admin.js:15
 msgid "Sag mir, was anders sein soll – z. B. „Schreib per Sie“"
@@ -1152,17 +1103,12 @@ msgid "Dialog einschalten"
 msgstr "Activar diálogo"
 
 #: build/admin.js:16
-msgid ""
-"Bis dahin ändert sich nichts an deiner Website. Ausschalten geht jederzeit."
-msgstr ""
-"Hasta entonces, nada cambia en tu web. Puedes desactivarlo en cualquier "
-"momento."
+msgid "Bis dahin ändert sich nichts an deiner Website. Ausschalten geht jederzeit."
+msgstr "Hasta entonces, nada cambia en tu web. Puedes desactivarlo en cualquier momento."
 
 #: build/admin.js:16
-msgid ""
-"Ich ändere Dialog, Dienste und Einstellungen – z. B. „Füge Hotjar hinzu“"
-msgstr ""
-"Cambio el diálogo, los servicios y los ajustes – p. ej. «Añade Hotjar»"
+msgid "Ich ändere Dialog, Dienste und Einstellungen – z. B. „Füge Hotjar hinzu“"
+msgstr "Cambio el diálogo, los servicios y los ajustes – p. ej. «Añade Hotjar»"
 
 #: build/admin.js:16
 msgid "Wie viele haben gestern abgelehnt?"
@@ -1226,7 +1172,8 @@ msgstr "Aceptado todo"
 msgid "Eigene Auswahl"
 msgstr "Selección propia"
 
-#: build/admin.js:18 build/admin.js:20
+#: build/admin.js:18
+#: build/admin.js:20
 msgid "Nur notwendige"
 msgstr "Solo necesarias"
 
@@ -1242,7 +1189,8 @@ msgstr "Fondo"
 msgid "Text"
 msgstr "Texto"
 
-#: build/admin.js:18 build/blocks.js:1
+#: build/admin.js:18
+#: build/blocks.js:1
 msgid "Button"
 msgstr "Botón"
 
@@ -1250,7 +1198,8 @@ msgstr "Botón"
 msgid "Button-Text"
 msgstr "Texto del botón"
 
-#: build/admin.js:18 build/admin.js:19
+#: build/admin.js:18
+#: build/admin.js:19
 msgid "Links"
 msgstr "Enlaces"
 
@@ -1282,7 +1231,8 @@ msgstr "Enlace a la privacidad"
 msgid "Link Impressum"
 msgstr "Enlace al aviso legal"
 
-#: build/admin.js:18 build/admin.js:26
+#: build/admin.js:18
+#: build/admin.js:26
 msgid "Button zum Öffnen"
 msgstr "Botón para volver a abrir"
 
@@ -1294,11 +1244,13 @@ msgstr "Marcador de posición: Cargar"
 msgid "Platzhalter: Immer laden"
 msgstr "Marcador de posición: Cargar siempre"
 
-#: build/admin.js:18 build/admin.js:26
+#: build/admin.js:18
+#: build/admin.js:26
 msgid "Position"
 msgstr "Posición"
 
-#: build/admin.js:18 build/admin.js:26
+#: build/admin.js:18
+#: build/admin.js:26
 msgctxt "position"
 msgid "Links"
 msgstr "Izquierda"
@@ -1307,7 +1259,8 @@ msgstr "Izquierda"
 msgid "Mitte"
 msgstr "Centro"
 
-#: build/admin.js:18 build/admin.js:26
+#: build/admin.js:18
+#: build/admin.js:26
 msgid "Rechts"
 msgstr "Derecha"
 
@@ -1456,22 +1409,15 @@ msgid "Im Ton meiner Website"
 msgstr "En el tono de mi web"
 
 #: build/admin.js:19
-msgid ""
-"„Kürzer“ macht dein Browser. Für den Ton deiner Website braucht WordPress "
-"einen KI-Anbieter."
-msgstr ""
-"«Más corto» lo hace tu navegador. Para el tono de tu web, WordPress necesita"
-" un proveedor de IA."
+msgid "„Kürzer“ macht dein Browser. Für den Ton deiner Website braucht WordPress einen KI-Anbieter."
+msgstr "«Más corto» lo hace tu navegador. Para el tono de tu web, WordPress necesita un proveedor de IA."
 
 #: build/admin.js:19
-msgid ""
-"Dafür braucht WordPress einen KI-Anbieter – oder Chrome mit eingebautem "
-"Modell für „Kürzer“."
-msgstr ""
-"Para esto, WordPress necesita un proveedor de IA – o Chrome con su modelo "
-"integrado para «Más corto»."
+msgid "Dafür braucht WordPress einen KI-Anbieter – oder Chrome mit eingebautem Modell für „Kürzer“."
+msgstr "Para esto, WordPress necesita un proveedor de IA – o Chrome con su modelo integrado para «Más corto»."
 
-#: build/admin.js:19 build/admin.js:27
+#: build/admin.js:19
+#: build/admin.js:27
 msgid "Sprachen"
 msgstr "Idiomas"
 
@@ -1507,7 +1453,8 @@ msgstr "Elegir páginas"
 msgid "Alle Texte als Liste"
 msgstr "Todos los textos como lista"
 
-#: build/admin.js:19 build/admin.js:21
+#: build/admin.js:19
+#: build/admin.js:21
 msgid "Texte geändert"
 msgstr "Textos cambiados"
 
@@ -1555,7 +1502,9 @@ msgstr "nunca se carga"
 msgid "wartet auf Einwilligung"
 msgstr "espera al consentimiento"
 
-#: build/admin.js:19 build/admin.js:20 build/admin.js:24
+#: build/admin.js:19
+#: build/admin.js:20
+#: build/admin.js:24
 msgid "Eigener Dienst"
 msgstr "Servicio propio"
 
@@ -1563,7 +1512,10 @@ msgstr "Servicio propio"
 msgid "Wirklich entfernen"
 msgstr "Quitar de verdad"
 
-#: build/admin.js:19 build/admin.js:22 build/admin.js:28
+#: build/admin.js:19
+#: build/admin.js:22
+#: build/admin.js:30
+#: build/admin.js:31
 msgid "Abbrechen"
 msgstr "Cancelar"
 
@@ -1573,11 +1525,13 @@ msgstr "Cancelar"
 msgid "Gespeichert · gilt ab Version %d"
 msgstr "Guardado · vale a partir de la versión %d"
 
-#: build/admin.js:20 build/admin.js:28
+#: build/admin.js:20
+#: build/admin.js:31
 msgid "Gespeichert"
 msgstr "Guardado"
 
-#: build/admin.js:20 build/admin.js:23
+#: build/admin.js:20
+#: build/admin.js:23
 msgid "Fertig"
 msgstr "Listo"
 
@@ -1605,7 +1559,8 @@ msgstr "Resumen"
 msgid "Name"
 msgstr "Nombre"
 
-#: build/admin.js:20 build/admin.js:22
+#: build/admin.js:20
+#: build/admin.js:22
 msgid "Kategorie"
 msgstr "Categoría"
 
@@ -1671,7 +1626,8 @@ msgstr "Hosts"
 msgid "nur über Snippet oder data-cookie-service"
 msgstr "solo mediante fragmento o data-cookie-service"
 
-#: build/admin.js:20 build/admin.js:25
+#: build/admin.js:20
+#: build/admin.js:25
 msgid "Wo"
 msgstr "Dónde"
 
@@ -1711,7 +1667,8 @@ msgstr "Cargar siempre"
 msgid "Vorschaubild und Titel über deinen Server"
 msgstr "Miniatura y título a través de tu servidor"
 
-#: build/admin.js:20 build/admin.js:26
+#: build/admin.js:20
+#: build/admin.js:26
 msgid "„Immer laden“ anbieten"
 msgstr "Ofrecer «Cargar siempre»"
 
@@ -1736,14 +1693,8 @@ msgid "keine eigenen – die Kategorie gibt sie"
 msgstr "ninguna propia – las da la categoría"
 
 #: build/admin.js:20
-msgid ""
-"Mit der Einwilligung für diesen Dienst gehen diese Signale an Google. Eine "
-"ganze Kategorie gibt ihre eigenen dazu (Statistik: analytics_storage, "
-"Marketing: die drei ad_*)."
-msgstr ""
-"Con el consentimiento para este servicio, estas señales van a Google. Una "
-"categoría entera añade las suyas (Estadísticas: analytics_storage, "
-"Marketing: las tres ad_*)."
+msgid "Mit der Einwilligung für diesen Dienst gehen diese Signale an Google. Eine ganze Kategorie gibt ihre eigenen dazu (Statistik: analytics_storage, Marketing: die drei ad_*)."
+msgstr "Con el consentimiento para este servicio, estas señales van a Google. Una categoría entera añade las suyas (Estadísticas: analytics_storage, Marketing: las tres ad_*)."
 
 #: build/admin.js:20
 msgid "Anders einbinden"
@@ -1758,12 +1709,8 @@ msgid "Snippet"
 msgstr "Fragmento"
 
 #: build/admin.js:20
-msgid ""
-"Der Code des Anbieters. Das Plugin druckt ihn zurückgehalten und lädt ihn "
-"bei Einwilligung – ohne Neuladen. <noscript> fällt weg."
-msgstr ""
-"El código del proveedor. El plugin lo imprime retenido y lo carga con el "
-"consentimiento – sin recargar. <noscript> se omite."
+msgid "Der Code des Anbieters. Das Plugin druckt ihn zurückgehalten und lädt ihn bei Einwilligung – ohne Neuladen. <noscript> fällt weg."
+msgstr "El código del proveedor. El plugin lo imprime retenido y lo carga con el consentimiento – sin recargar. <noscript> se omite."
 
 #: build/admin.js:20
 msgid "Im Theme oder in einem Plugin"
@@ -1783,8 +1730,7 @@ msgstr "Patrones"
 
 #: build/admin.js:20
 msgid "Teile von Adressen oder Code, an denen der Dienst erkannt wird."
-msgstr ""
-"Partes de direcciones o de código por las que se reconoce el servicio."
+msgstr "Partes de direcciones o de código por las que se reconoce el servicio."
 
 #: build/admin.js:20
 msgid "Seit"
@@ -1837,12 +1783,8 @@ msgid "Seit %1$s · %2$s"
 msgstr "Desde %1$s · %2$s"
 
 #: build/admin.js:21
-msgid ""
-"Das hat jede Person gesehen, die bei dieser Version entschieden hat – in "
-"allen Sprachen gespeichert."
-msgstr ""
-"Esto es lo que vio cada persona que decidió con esta versión – guardado en "
-"todos los idiomas."
+msgid "Das hat jede Person gesehen, die bei dieser Version entschieden hat – in allen Sprachen gespeichert."
+msgstr "Esto es lo que vio cada persona que decidió con esta versión – guardado en todos los idiomas."
 
 #: build/admin.js:21
 msgid "Kopiert"
@@ -1861,14 +1803,8 @@ msgid "Ich lese deine Website …"
 msgstr "Leyendo tu web …"
 
 #: build/admin.js:21
-msgid ""
-"Startseite und bis zu 20 Seiten, als Besucher ohne Einwilligung: jedes "
-"Skript, jede Einbettung, jede Schrift von Dritten. Das dauert ein paar "
-"Sekunden."
-msgstr ""
-"La página de inicio y hasta 20 páginas, como visitante sin consentimiento: "
-"cada script, cada incrustación, cada fuente de terceros. Tarda unos "
-"segundos."
+msgid "Startseite und bis zu 20 Seiten, als Besucher ohne Einwilligung: jedes Skript, jede Einbettung, jede Schrift von Dritten. Das dauert ein paar Sekunden."
+msgstr "La página de inicio y hasta 20 páginas, como visitante sin consentimiento: cada script, cada incrustación, cada fuente de terceros. Tarda unos segundos."
 
 #: build/admin.js:21
 msgid "Aussehen"
@@ -1883,36 +1819,25 @@ msgid "Texte"
 msgstr "Textos"
 
 #: build/admin.js:21
-msgid ""
-"Klick auf einen Text in der Vorschau, um ihn zu ändern – oder sag dem "
-"Assistenten, wie er klingen soll."
-msgstr ""
-"Haz clic en un texto de la vista previa para cambiarlo – o dile al asistente"
-" cómo debe sonar."
+msgid "Klick auf einen Text in der Vorschau, um ihn zu ändern – oder sag dem Assistenten, wie er klingen soll."
+msgstr "Haz clic en un texto de la vista previa para cambiarlo – o dile al asistente cómo debe sonar."
 
 #. translators: %d: next version
 #: build/admin.js:22
 #, js-format
-msgid ""
-"Gespeichert, sobald du etwas änderst. Neue Texte werden Version %d – "
-"Besucher werden einmal neu gefragt."
-msgstr ""
-"Se guarda en cuanto cambias algo. Los textos nuevos pasan a ser la versión "
-"%d – se vuelve a preguntar una vez a los visitantes."
+msgid "Gespeichert, sobald du etwas änderst. Neue Texte werden Version %d – Besucher werden einmal neu gefragt."
+msgstr "Se guarda en cuanto cambias algo. Los textos nuevos pasan a ser la versión %d – se vuelve a preguntar una vez a los visitantes."
 
 #: build/admin.js:22
-msgid ""
-"Gespeichert, sobald du etwas änderst. Auf der Website erscheint es, wenn du "
-"den Dialog einschaltest."
-msgstr ""
-"Se guarda en cuanto cambias algo. En la web aparece cuando actives el "
-"diálogo."
+msgid "Gespeichert, sobald du etwas änderst. Auf der Website erscheint es, wenn du den Dialog einschaltest."
+msgstr "Se guarda en cuanto cambias algo. En la web aparece cuando actives el diálogo."
 
 #: build/admin.js:22
 msgid "Dienst oder Host suchen"
 msgstr "Buscar servicio o host"
 
-#: build/admin.js:22 build/blocks.js:1
+#: build/admin.js:22
+#: build/blocks.js:1
 msgid "Dienst"
 msgstr "Servicio"
 
@@ -1933,12 +1858,8 @@ msgid "Zu prüfen"
 msgstr "Por revisar"
 
 #: build/admin.js:22
-msgid ""
-"Neu auf deiner Website und noch nicht im Dialog – lädt bis dahin ohne "
-"Einwilligung."
-msgstr ""
-"Nuevo en tu web y aún no está en el diálogo – hasta entonces se carga sin "
-"consentimiento."
+msgid "Neu auf deiner Website und noch nicht im Dialog – lädt bis dahin ohne Einwilligung."
+msgstr "Nuevo en tu web y aún no está en el diálogo – hasta entonces se carga sin consentimiento."
 
 #. translators: %s: date
 #: build/admin.js:22
@@ -1989,12 +1910,8 @@ msgid "Von deinem Server statt von Dritten"
 msgstr "De tu servidor en lugar de terceros"
 
 #: build/admin.js:23
-msgid ""
-"Keine Einwilligung nötig – die Dateien liegen bei dir und werden wöchentlich"
-" geprüft."
-msgstr ""
-"No hace falta consentimiento – los archivos están en tu servidor y se "
-"comprueban cada semana."
+msgid "Keine Einwilligung nötig – die Dateien liegen bei dir und werden wöchentlich geprüft."
+msgstr "No hace falta consentimiento – los archivos están en tu servidor y se comprueban cada semana."
 
 #: build/admin.js:23
 msgid "über den Server"
@@ -2008,7 +1925,8 @@ msgstr "local"
 msgid "aus"
 msgstr "desactivado"
 
-#: build/admin.js:23 build/admin.js:26
+#: build/admin.js:23
+#: build/admin.js:26
 msgid "Über den Server"
 msgstr "A través del servidor"
 
@@ -2018,8 +1936,7 @@ msgstr "Desactivar"
 
 #: build/admin.js:23
 msgid "Die letzte Prüfung hat keine Datei dieses Dienstes gefunden."
-msgstr ""
-"La última comprobación no ha encontrado ningún archivo de este servicio."
+msgstr "La última comprobación no ha encontrado ningún archivo de este servicio."
 
 #: build/admin.js:23
 msgid "Schriften"
@@ -2051,9 +1968,7 @@ msgstr "antes"
 
 #: build/admin.js:23
 msgid "Deine eigene Domain – etwa ein CDN. Als Auftragsverarbeiter notwendig."
-msgstr ""
-"Tu propio dominio – por ejemplo, un CDN. Necesario como encargado del "
-"tratamiento."
+msgstr "Tu propio dominio – por ejemplo, un CDN. Necesario como encargado del tratamiento."
 
 #: build/admin.js:23
 msgid "eigene Domain"
@@ -2065,9 +1980,7 @@ msgstr "Añadir"
 
 #: build/admin.js:23
 msgid "Aus der Bibliothek: Anbieter, Zweck, Cookies und Texte sind schon da."
-msgstr ""
-"De la biblioteca: proveedor, finalidad, cookies y textos ya están "
-"rellenados."
+msgstr "De la biblioteca: proveedor, finalidad, cookies y textos ya están rellenados."
 
 #. translators: %d: more services
 #: build/admin.js:24
@@ -2130,21 +2043,10 @@ msgstr "Aún no hay decisiones en este periodo."
 #. translators: %d: months
 #: build/admin.js:26
 #, js-format
-msgid ""
-"Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der "
-"Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d Monat."
-msgid_plural ""
-"Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der "
-"Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d "
-"Monaten."
-msgstr[0] ""
-"Cada fila guarda la versión del diálogo que vio la persona – la prueba según"
-" el art. 7 del RGPD. Direcciones IP solo con hash, borradas al cabo de %d "
-"mes."
-msgstr[1] ""
-"Cada fila guarda la versión del diálogo que vio la persona – la prueba según"
-" el art. 7 del RGPD. Direcciones IP solo con hash, borradas al cabo de %d "
-"meses."
+msgid "Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d Monat."
+msgid_plural "Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d Monaten."
+msgstr[0] "Cada fila guarda la versión del diálogo que vio la persona – la prueba según el art. 7 del RGPD. Direcciones IP solo con hash, borradas al cabo de %d mes."
+msgstr[1] "Cada fila guarda la versión del diálogo que vio la persona – la prueba según el art. 7 del RGPD. Direcciones IP solo con hash, borradas al cabo de %d meses."
 
 #: build/admin.js:26
 msgid "überall"
@@ -2183,48 +2085,32 @@ msgid "Consent Mode aus"
 msgstr "Consent Mode desactivado"
 
 #: build/admin.js:26
-msgid ""
-"„Abgelehnt“ steht vor jedem Google-Tag; die Wahl geht als Update hinterher."
-msgstr ""
-"«Denegado» va antes de cada etiqueta de Google; la elección le sigue como "
-"actualización."
+msgid "„Abgelehnt“ steht vor jedem Google-Tag; die Wahl geht als Update hinterher."
+msgstr "«Denegado» va antes de cada etiqueta de Google; la elección le sigue como actualización."
 
 #: build/admin.js:26
 msgid "Modus"
 msgstr "Modo"
 
 #: build/admin.js:26
-msgid ""
-"Basic: Tags laden erst nach Einwilligung – empfohlen in DE und AT. Advanced:"
-" Tags laden und senden cookielose Pings."
-msgstr ""
-"Basic: las etiquetas se cargan solo tras el consentimiento – recomendado en "
-"Alemania y Austria. Advanced: las etiquetas se cargan y envían pings sin "
-"cookies."
+msgid "Basic: Tags laden erst nach Einwilligung – empfohlen in DE und AT. Advanced: Tags laden und senden cookielose Pings."
+msgstr "Basic: las etiquetas se cargan solo tras el consentimiento – recomendado en Alemania y Austria. Advanced: las etiquetas se cargan y envían pings sin cookies."
 
 #: build/admin.js:26
 msgid "Tag Manager"
 msgstr "Tag Manager"
 
 #: build/admin.js:26
-msgid ""
-"Vom Plugin geladen, nach dem Standard. Eigener Container im Theme? Leer "
-"lassen."
-msgstr ""
-"Lo carga el plugin, después del valor por defecto. ¿Tu propio contenedor en "
-"el tema? Déjalo vacío."
+msgid "Vom Plugin geladen, nach dem Standard. Eigener Container im Theme? Leer lassen."
+msgstr "Lo carga el plugin, después del valor por defecto. ¿Tu propio contenedor en el tema? Déjalo vacío."
 
 #: build/admin.js:26
 msgid "Regionen mit „abgelehnt“"
 msgstr "Regiones con «denegado»"
 
 #: build/admin.js:26
-msgid ""
-"Außerhalb darf Google ohne Wahl messen – der Dialog hält Tags trotzdem "
-"zurück."
-msgstr ""
-"Fuera de ellas, Google puede medir sin elección – el diálogo retiene las "
-"etiquetas de todos modos."
+msgid "Außerhalb darf Google ohne Wahl messen – der Dialog hält Tags trotzdem zurück."
+msgstr "Fuera de ellas, Google puede medir sin elección – el diálogo retiene las etiquetas de todos modos."
 
 #: build/admin.js:26
 msgid "Überall"
@@ -2236,8 +2122,7 @@ msgstr "Passthrough de URL"
 
 #: build/admin.js:26
 msgid "Klick-IDs in Links weitergeben, solange Cookies abgelehnt sind."
-msgstr ""
-"Pasar los ID de clic en los enlaces mientras las cookies estén rechazadas."
+msgstr "Pasar los ID de clic en los enlaces mientras las cookies estén rechazadas."
 
 #: build/admin.js:26
 msgid "Ads-Daten kürzen"
@@ -2272,23 +2157,16 @@ msgid "Unbekannte iframes als Platzhalter"
 msgstr "Iframes desconocidos como marcadores de posición"
 
 #: build/admin.js:26
-msgid ""
-"Auch Einbettungen, die die Bibliothek nicht kennt, laden erst auf Klick."
-msgstr ""
-"También las incrustaciones que la biblioteca no conoce se cargan solo al "
-"hacer clic."
+msgid "Auch Einbettungen, die die Bibliothek nicht kennt, laden erst auf Klick."
+msgstr "También las incrustaciones que la biblioteca no conoce se cargan solo al hacer clic."
 
 #: build/admin.js:26
 msgid "Vorschaubilder über deinen Server"
 msgstr "Miniaturas a través de tu servidor"
 
 #: build/admin.js:26
-msgid ""
-"YouTube, Vimeo, Spotify: Bild und Titel in der Mediathek, keine Verbindung "
-"zum Anbieter."
-msgstr ""
-"YouTube, Vimeo, Spotify: imagen y título en la biblioteca de medios, sin "
-"conexión con el proveedor."
+msgid "YouTube, Vimeo, Spotify: Bild und Titel in der Mediathek, keine Verbindung zum Anbieter."
+msgstr "YouTube, Vimeo, Spotify: imagen y título en la biblioteca de medios, sin conexión con el proveedor."
 
 #: build/admin.js:26
 msgid "YouTube über youtube-nocookie.com"
@@ -2312,9 +2190,7 @@ msgstr "Cargar el script de emoji de WordPress"
 
 #: build/admin.js:26
 msgid "Lädt Bilder von s.w.org. Browser zeigen Emoji längst selbst."
-msgstr ""
-"Carga imágenes de s.w.org. Los navegadores muestran emoji por sí solos desde"
-" hace mucho."
+msgstr "Carga imágenes de s.w.org. Los navegadores muestran emoji por sí solos desde hace mucho."
 
 #: build/admin.js:26
 msgid "Hinweise an Dritte entfernen"
@@ -2357,11 +2233,8 @@ msgid "Global Privacy Control beachten"
 msgstr "Respetar Global Privacy Control"
 
 #: build/admin.js:26
-msgid ""
-"Sendet der Browser das Signal, bleibt Marketing bei „Alle akzeptieren“ aus."
-msgstr ""
-"Si el navegador envía la señal, Marketing se queda desactivado con «Aceptar "
-"todas»."
+msgid "Sendet der Browser das Signal, bleibt Marketing bei „Alle akzeptieren“ aus."
+msgstr "Si el navegador envía la señal, Marketing se queda desactivado con «Aceptar todas»."
 
 #: build/admin.js:26
 msgid "Erneut öffnen"
@@ -2384,27 +2257,16 @@ msgid "Shortcode, Block und #cookie-settings"
 msgstr "Shortcode, bloque y #cookie-settings"
 
 #: build/admin.js:26
-msgid ""
-"Erscheint nach der ersten Wahl. Widerrufen muss so leicht sein wie "
-"Zustimmen."
-msgstr ""
-"Aparece después de la primera elección. Retirar el consentimiento debe ser "
-"tan fácil como darlo."
+msgid "Erscheint nach der ersten Wahl. Widerrufen muss so leicht sein wie Zustimmen."
+msgstr "Aparece después de la primera elección. Retirar el consentimiento debe ser tan fácil como darlo."
 
 #: build/admin.js:26
-msgid ""
-"Oder selbst platzieren – im Footer, im Menü, in der Datenschutzerklärung:"
-msgstr ""
-"O colócalo tú mismo – en el pie de página, en el menú, en la política de "
-"privacidad:"
+msgid "Oder selbst platzieren – im Footer, im Menü, in der Datenschutzerklärung:"
+msgstr "O colócalo tú mismo – en el pie de página, en el menú, en la política de privacidad:"
 
 #: build/admin.js:26
-msgid ""
-"Block: „Cookie-Einstellungen“. Im Menü: ein eigener Link auf #cookie-"
-"settings."
-msgstr ""
-"Bloque: «Ajustes de cookies». En el menú: un enlace personalizado a #cookie-"
-"settings."
+msgid "Block: „Cookie-Einstellungen“. Im Menü: ein eigener Link auf #cookie-settings."
+msgstr "Bloque: «Ajustes de cookies». En el menú: un enlace personalizado a #cookie-settings."
 
 #: build/admin.js:26
 msgid "Seiten"
@@ -2435,11 +2297,8 @@ msgid "Damit man lesen kann, bevor man entscheidet."
 msgstr "Para poder leer antes de decidir."
 
 #: build/admin.js:26
-msgid ""
-"Die Cookie-Tabelle für die Datenschutzerklärung: Block „Cookie-Tabelle“ oder"
-msgstr ""
-"La tabla de cookies para la política de privacidad: bloque «Tabla de "
-"cookies» o"
+msgid "Die Cookie-Tabelle für die Datenschutzerklärung: Block „Cookie-Tabelle“ oder"
+msgstr "La tabla de cookies para la política de privacidad: bloque «Tabla de cookies» o"
 
 #. translators: %d: months
 #: build/admin.js:27
@@ -2458,14 +2317,8 @@ msgid "Danach löscht ein täglicher Job die Einträge."
 msgstr "Después, una tarea diaria borra las entradas."
 
 #: build/admin.js:27
-msgid ""
-"Gespeichert werden Consent-ID, Zeit, Wahl, Version, Sprache, Ort der "
-"Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich "
-"neuem Salz – nie die IP selbst."
-msgstr ""
-"Se guardan el ID de consentimiento, la hora, la elección, la versión, el "
-"idioma, el lugar de la decisión, la familia de navegador y la dirección IP "
-"como SHA-256 con una sal que cambia a diario – nunca la IP en sí."
+msgid "Gespeichert werden Consent-ID, Zeit, Wahl, Version, Sprache, Ort der Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich neuem Salz – nie die IP selbst."
+msgstr "Se guardan el ID de consentimiento, la hora, la elección, la versión, el idioma, el lugar de la decisión, la familia de navegador y la dirección IP como SHA-256 con una sal que cambia a diario – nunca la IP en sí."
 
 #: build/admin.js:27
 msgid "Alles als CSV"
@@ -2488,12 +2341,8 @@ msgid "KI-Anbieter"
 msgstr "Proveedor de IA"
 
 #: build/admin.js:27
-msgid ""
-"WordPress verwaltet ihn unter Einstellungen › Konnektoren – ein API Key für "
-"alle Plugins."
-msgstr ""
-"WordPress lo gestiona en Ajustes › Connectors – una clave de API para todos "
-"los plugins."
+msgid "WordPress verwaltet ihn unter Einstellungen › Konnektoren – ein API Key für alle Plugins."
+msgstr "WordPress lo gestiona en Ajustes › Connectors – una clave de API para todos los plugins."
 
 #: build/admin.js:27
 msgid "Ab WordPress 7.0."
@@ -2508,12 +2357,8 @@ msgid "Konnektoren"
 msgstr "Connectors"
 
 #: build/admin.js:27
-msgid ""
-"Empfohlen: Vercel AI Gateway – 5 $ im Monat gratis, ein API Key für die "
-"Modelle aller Anbieter."
-msgstr ""
-"Recomendado: Vercel AI Gateway – 5 $ al mes gratis, una clave de API para "
-"los modelos de todos los proveedores."
+msgid "Empfohlen: Vercel AI Gateway – 5 $ im Monat gratis, ein API Key für die Modelle aller Anbieter."
+msgstr "Recomendado: Vercel AI Gateway – 5 $ al mes gratis, una clave de API para los modelos de todos los proveedores."
 
 #: build/admin.js:27
 msgid "Plugin installieren"
@@ -2525,9 +2370,7 @@ msgstr "Modelo"
 
 #: build/admin.js:27
 msgid "Günstig reicht für alles hier: eine Einrichtung kostet etwa 4 Cent."
-msgstr ""
-"Económico basta para todo lo de aquí: una configuración cuesta unos 4 "
-"céntimos."
+msgstr "Económico basta para todo lo de aquí: una configuración cuesta unos 4 céntimos."
 
 #: build/admin.js:27
 msgid "Günstig"
@@ -2550,17 +2393,12 @@ msgid "Einfache Aufgaben im Browser"
 msgstr "Tareas sencillas en el navegador"
 
 #: build/admin.js:27
-msgid ""
-"Dein Browser hat ein eingebautes Modell: Übersetzen, Kürzen, Zuordnen und "
-"der Datenschutz-Absatz laufen dort, nichts verlässt den Rechner."
-msgstr ""
-"Tu navegador tiene un modelo integrado: traducir, acortar, asignar y el "
-"párrafo de privacidad se hacen ahí, nada sale del ordenador."
+msgid "Dein Browser hat ein eingebautes Modell: Übersetzen, Kürzen, Zuordnen und der Datenschutz-Absatz laufen dort, nichts verlässt den Rechner."
+msgstr "Tu navegador tiene un modelo integrado: traducir, acortar, asignar y el párrafo de privacidad se hacen ahí, nada sale del ordenador."
 
 #: build/admin.js:27
 msgid "Dieser Browser hat kein eingebautes Modell (Chrome ab 148, Edge)."
-msgstr ""
-"Este navegador no tiene modelo integrado (Chrome 148 o posterior, Edge)."
+msgstr "Este navegador no tiene modelo integrado (Chrome 148 o posterior, Edge)."
 
 #. translators: 1: tokens, 2: last model
 #: build/admin.js:27
@@ -2573,14 +2411,8 @@ msgid "wie deine Website"
 msgstr "como tu web"
 
 #: build/admin.js:27
-msgid ""
-"Der Dialog spricht die Sprache der Seite: mit Polylang oder WPML jede "
-"Sprache der Website, sonst die von WordPress. Texte und Übersetzungen "
-"bearbeitest du unter Dialog."
-msgstr ""
-"El diálogo habla el idioma de la página: con Polylang o WPML, cada idioma de"
-" la web; si no, el de WordPress. Los textos y las traducciones los editas en"
-" Diálogo."
+msgid "Der Dialog spricht die Sprache der Seite: mit Polylang oder WPML jede Sprache der Website, sonst die von WordPress. Texte und Übersetzungen bearbeitest du unter Dialog."
+msgstr "El diálogo habla el idioma de la página: con Polylang o WPML, cada idioma de la web; si no, el de WordPress. Los textos y las traducciones los editas en Diálogo."
 
 #: build/admin.js:27
 msgid "Sprachen deiner Website"
@@ -2624,55 +2456,49 @@ msgstr "Leer de nuevo cada semana"
 msgid "Neue Skripte erscheinen unter Dienste › Zu prüfen."
 msgstr "Los scripts nuevos aparecen en Servicios › Por revisar."
 
-#: build/admin.js:28
-msgid ""
-"Ausschalten? Skripte laufen dann wieder ohne Einwilligung. Das Protokoll "
-"bleibt."
-msgstr ""
-"¿Desactivar? Los scripts volverán a ejecutarse sin consentimiento. El "
-"registro se conserva."
+#: build/admin.js:31
+msgid "Ausschalten? Skripte laufen dann wieder ohne Einwilligung. Das Protokoll bleibt."
+msgstr "¿Desactivar? Los scripts volverán a ejecutarse sin consentimiento. El registro se conserva."
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Dialog ausschalten"
 msgstr "Desactivar diálogo"
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Skripte laufen dann wieder ohne Einwilligung. Das Protokoll bleibt."
-msgstr ""
-"Los scripts volverán a ejecutarse sin consentimiento. El registro se "
-"conserva."
+msgstr "Los scripts volverán a ejecutarse sin consentimiento. El registro se conserva."
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Zum Einschalten"
 msgstr "Para activarlo"
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Der Dialog ist noch aus."
 msgstr "El diálogo aún está desactivado."
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "z. B. „Füge Hotjar hinzu“"
 msgstr "p. ej. «Añade Hotjar»"
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Frag zum Protokoll, z. B. „Wie viele haben gestern abgelehnt?“"
 msgstr "Pregunta sobre el registro, p. ej. «¿Cuántos rechazaron ayer?»"
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Speichert …"
 msgstr "Guardando …"
 
 #. translators: %d: version
-#: build/admin.js:29
+#: build/admin.js:32
 #, js-format
 msgid "Live · Version %d"
 msgstr "En vivo · versión %d"
 
-#: build/admin.js:29
+#: build/admin.js:32
 msgid "Auf der Website ansehen"
 msgstr "Ver en la web"
 
-#: build/admin.js:29
+#: build/admin.js:32
 msgid "Noch nicht live"
 msgstr "Aún no está en vivo"
 
@@ -2710,14 +2536,11 @@ msgstr "– elegir –"
 
 #: build/blocks.js:1
 msgid "Besucher sehen hier einen Platzhalter, bis sie dem Dienst zustimmen."
-msgstr ""
-"Los visitantes ven aquí un marcador de posición hasta que acepten el "
-"servicio."
+msgstr "Los visitantes ven aquí un marcador de posición hasta que acepten el servicio."
 
 #: build/blocks.js:1
 msgid "Wähle rechts den Dienst, dem Besucher zuerst zustimmen."
-msgstr ""
-"Elige a la derecha el servicio que los visitantes deben aceptar primero."
+msgstr "Elige a la derecha el servicio que los visitantes deben aceptar primero."
 
 #: blocks/cookie-table/block.json
 msgctxt "block title"
@@ -2726,14 +2549,11 @@ msgstr "Tabla de cookies"
 
 #: blocks/cookie-table/block.json
 msgctxt "block description"
-msgid ""
-"Alle Dienste und Cookies, nach Kategorien – für die Datenschutzerklärung. "
-"Hält sich selbst aktuell."
-msgstr ""
-"Todos los servicios y cookies, por categorías – para la política de "
-"privacidad. Se mantiene actualizada por sí sola."
+msgid "Alle Dienste und Cookies, nach Kategorien – für die Datenschutzerklärung. Hält sich selbst aktuell."
+msgstr "Todos los servicios y cookies, por categorías – para la política de privacidad. Se mantiene actualizada por sí sola."
 
-#: blocks/cookie-table/block.json blocks/placeholder/block.json
+#: blocks/cookie-table/block.json
+#: blocks/placeholder/block.json
 #: blocks/settings-button/block.json
 msgctxt "block keyword"
 msgid "cookie"
@@ -2761,12 +2581,8 @@ msgstr "Solo tras el consentimiento"
 
 #: blocks/placeholder/block.json
 msgctxt "block description"
-msgid ""
-"Was in diesem Block steht, lädt erst, wenn Besucher dem gewählten Dienst "
-"zustimmen. Bis dahin zeigt sich ein Platzhalter."
-msgstr ""
-"Lo que hay en este bloque se carga solo cuando los visitantes aceptan el "
-"servicio elegido. Hasta entonces se muestra un marcador de posición."
+msgid "Was in diesem Block steht, lädt erst, wenn Besucher dem gewählten Dienst zustimmen. Bis dahin zeigt sich ein Platzhalter."
+msgstr "Lo que hay en este bloque se carga solo cuando los visitantes aceptan el servicio elegido. Hasta entonces se muestra un marcador de posición."
 
 #: blocks/placeholder/block.json
 msgctxt "block keyword"
@@ -2783,7 +2599,8 @@ msgctxt "block keyword"
 msgid "embed"
 msgstr "incrustar"
 
-#: blocks/placeholder/block.json blocks/settings-button/block.json
+#: blocks/placeholder/block.json
+#: blocks/settings-button/block.json
 msgctxt "block keyword"
 msgid "consent"
 msgstr "consentimiento"
@@ -2795,11 +2612,8 @@ msgstr "Ajustes de cookies"
 
 #: blocks/settings-button/block.json
 msgctxt "block description"
-msgid ""
-"Ein Button oder Link, der die Cookie-Auswahl öffnet – für den Widerruf."
-msgstr ""
-"Un botón o enlace que abre la selección de cookies – para retirar el "
-"consentimiento."
+msgid "Ein Button oder Link, der die Cookie-Auswahl öffnet – für den Widerruf."
+msgstr "Un botón o enlace que abre la selección de cookies – para retirar el consentimiento."
 
 #: blocks/settings-button/block.json
 msgctxt "block keyword"
@@ -2810,3 +2624,70 @@ msgstr "consentimiento"
 msgctxt "block keyword"
 msgid "widerruf"
 msgstr "retirar"
+
+#: includes/class-config.php:700
+#: build/admin.js:28
+msgid "In dieser Datei sind keine Einstellungen von Cookie Dialog."
+msgstr "Este archivo no contiene ajustes de Cookie Dialog."
+
+#: includes/class-rest.php:174
+msgid "Importiert"
+msgstr "Importado"
+
+#. translators: %s: the host the file comes from, e.g. staging.example.com
+#: includes/class-rest.php:182
+#, php-format
+msgid "Einstellungen von %s importiert"
+msgstr "Ajustes importados de %s"
+
+#: includes/class-rest.php:183
+msgid "Einstellungen importiert"
+msgstr "Ajustes importados"
+
+#: build/admin.js:28
+msgid "Export und Import"
+msgstr "Exportar e importar"
+
+#: build/admin.js:28
+msgid "Die Einstellungen als Datei, etwa von Staging auf Live"
+msgstr "Los ajustes como archivo, por ejemplo de staging a la web en vivo"
+
+#: build/admin.js:28
+msgid "Exportieren"
+msgstr "Exportar"
+
+#: build/admin.js:28
+msgid "Dialog, Texte, Dienste und Einstellungen als JSON-Datei – ohne Protokoll."
+msgstr "Diálogo, textos, servicios y ajustes en un archivo JSON, sin el registro."
+
+#: build/admin.js:28
+msgid "Datei laden"
+msgstr "Descargar archivo"
+
+#: build/admin.js:28
+msgid "Importieren"
+msgstr "Importar"
+
+#: build/admin.js:28
+msgid "Ersetzt Dialog, Texte, Dienste und Einstellungen. Ob der Dialog an ist und das Protokoll bleiben; Datenschutzerklärung und Impressum werden über ihre Adresse zugeordnet."
+msgstr "Sustituye el diálogo, los textos, los servicios y los ajustes. Se mantienen si el diálogo está activado y el registro; la política de privacidad y el aviso legal se asignan por su dirección."
+
+#: build/admin.js:28
+msgid "Datei wählen …"
+msgstr "Elegir archivo …"
+
+#. translators: %s: host, e.g. staging.example.com
+#: build/admin.js:29
+#, js-format
+msgid "von %s"
+msgstr "de %s"
+
+#: build/admin.js:30
+msgid "Der Dialog ist an: Ändert sich, was Besucher lesen, gilt eine neue Version."
+msgstr "El diálogo está activado: si cambia lo que leen los visitantes, se aplica una nueva versión."
+
+#. translators: %s: file name
+#: build/admin.js:31
+#, js-format
+msgid "%s übernommen."
+msgstr "%s importado."

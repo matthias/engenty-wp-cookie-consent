@@ -9,14 +9,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-10T14:06:42+00:00\n"
+"POT-Creation-Date: 2026-10-11T19:40:53+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: cookie-dialog\n"
 
 #. Plugin Name of the plugin
 #: cookie-dialog.php
-#: includes/class-admin.php:185
+#: includes/class-admin.php:202
 msgid "Cookie Dialog"
 msgstr ""
 
@@ -40,66 +40,67 @@ msgstr ""
 msgid "https://engenty.ai"
 msgstr ""
 
-#: includes/class-admin.php:64
+#: includes/class-admin.php:65
 #: build/admin.js:20
 msgid "Cookies"
 msgstr ""
 
-#: includes/class-admin.php:65
-#: includes/class-admin.php:138
+#: includes/class-admin.php:66
+#: includes/class-admin.php:141
 #: build/admin.js:19
 #: build/admin.js:21
 msgid "Start"
 msgstr ""
 
-#: includes/class-admin.php:66
+#: includes/class-admin.php:67
 #: build/admin.js:20
 #: build/admin.js:22
 msgid "Dialog"
 msgstr ""
 
-#: includes/class-admin.php:67
+#: includes/class-admin.php:68
 #: build/admin.js:24
 msgid "Dienste"
 msgstr ""
 
-#: includes/class-admin.php:68
+#: includes/class-admin.php:69
 #: build/admin.js:12
 #: build/admin.js:18
 #: build/admin.js:26
 msgid "Protokoll"
 msgstr ""
 
-#: includes/class-admin.php:69
+#: includes/class-admin.php:70
 #: build/admin.js:18
-#: build/admin.js:28
+#: build/admin.js:31
 #: build/blocks.js:1
 msgid "Einstellungen"
 msgstr ""
 
-#: includes/class-admin.php:79
-#: build/admin.js:29
+#: includes/class-admin.php:80
+#: build/admin.js:32
 msgid "Cookie Dialog lädt …"
 msgstr ""
 
-#: includes/class-admin.php:139
-#: includes/class-admin.php:158
+#: includes/class-admin.php:142
+#: includes/class-admin.php:161
 msgid "Einrichten"
 msgstr ""
 
-#: includes/class-admin.php:155
+#: includes/class-admin.php:158
 msgid "Cookie Dialog ist noch aus."
 msgstr ""
 
-#: includes/class-admin.php:156
+#: includes/class-admin.php:159
 msgid "Bis du ihn einschaltest, ändert sich nichts an deiner Website."
 msgstr ""
 
-#: includes/class-admin.php:165
+#: includes/class-admin.php:168
+#: includes/class-admin.php:187
 msgid "Nicht erlaubt."
 msgstr ""
 
-#: includes/class-admin.php:188
+#: includes/class-admin.php:205
 msgid "Cookie Dialog speichert die Wahl der Besucher im eigenen Cookie „cookie_dialog“ (Consent-ID, Version, Zeit, Kategorien und Dienste) so lange, wie unter Cookies › Einstellungen eingestellt (6 Monate, wenn nichts geändert wurde). Jede Entscheidung kommt ins Protokoll: Consent-ID, Version des Dialogs, Sprache, Ort der Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich neuem Salz; gelöscht nach 12 Monaten, wenn nichts geändert wurde. Der Block „Cookie-Tabelle“ listet alle Dienste und Cookies."
 msgstr ""
 
@@ -268,6 +269,7 @@ msgstr ""
 #: build/admin.js:8
 #: build/admin.js:20
 #: build/admin.js:23
+#: build/admin.js:30
 msgid "Übernehmen"
 msgstr ""
 
@@ -530,8 +532,8 @@ msgstr ""
 
 #. translators: %s: service
 #: includes/class-checks.php:622
-#: includes/class-rest.php:257
-#: includes/class-rest.php:259
+#: includes/class-rest.php:284
+#: includes/class-rest.php:286
 #, php-format
 msgid "%s hinzugefügt"
 msgstr ""
@@ -546,6 +548,11 @@ msgstr ""
 
 #: includes/class-checks.php:657
 msgid "Eingefügt. Die Tabelle hält sich selbst aktuell."
+msgstr ""
+
+#: includes/class-config.php:700
+#: build/admin.js:28
+msgid "In dieser Datei sind keine Einstellungen von Cookie Dialog."
 msgstr ""
 
 #. translators: 1: version number, 2: what changed
@@ -604,41 +611,55 @@ msgstr ""
 msgid "%s lokal eingebunden"
 msgstr ""
 
-#: includes/class-rest.php:198
-#: includes/class-rest.php:199
+#: includes/class-rest.php:174
+msgid "Importiert"
+msgstr ""
+
+#. translators: %s: the host the file comes from, e.g. staging.example.com
+#: includes/class-rest.php:182
+#, php-format
+msgid "Einstellungen von %s importiert"
+msgstr ""
+
+#: includes/class-rest.php:183
+msgid "Einstellungen importiert"
+msgstr ""
+
+#: includes/class-rest.php:225
+#: includes/class-rest.php:226
 msgid "Dialog eingeschaltet"
 msgstr ""
 
-#: includes/class-rest.php:204
+#: includes/class-rest.php:231
 msgid "Dialog ausgeschaltet"
 msgstr ""
 
-#: includes/class-rest.php:249
+#: includes/class-rest.php:276
 msgid "Diesen Dienst kennt die Bibliothek nicht."
 msgstr ""
 
-#: includes/class-rest.php:264
+#: includes/class-rest.php:291
 msgid "Ein Dienst braucht einen Namen."
 msgstr ""
 
 #. translators: %s: service
-#: includes/class-rest.php:289
+#: includes/class-rest.php:316
 #, php-format
 msgid "%s geändert"
 msgstr ""
 
 #. translators: %s: service
-#: includes/class-rest.php:306
-#: includes/class-rest.php:308
+#: includes/class-rest.php:333
+#: includes/class-rest.php:335
 #, php-format
 msgid "%s entfernt"
 msgstr ""
 
-#: includes/class-rest.php:361
+#: includes/class-rest.php:388
 msgid "Diese Version gibt es nicht."
 msgstr ""
 
-#: includes/class-rest.php:373
+#: includes/class-rest.php:400
 #: build/admin.js:16
 msgid "Was soll anders sein?"
 msgstr ""
@@ -912,7 +933,9 @@ msgid "Fenster"
 msgstr ""
 
 #. translators: %d: services
+#. translators: %d: number of services
 #: build/admin.js:5
+#: build/admin.js:30
 #, js-format
 msgid "%d Dienst"
 msgid_plural "%d Dienste"
@@ -1510,7 +1533,8 @@ msgstr ""
 
 #: build/admin.js:19
 #: build/admin.js:22
-#: build/admin.js:28
+#: build/admin.js:30
+#: build/admin.js:31
 msgid "Abbrechen"
 msgstr ""
 
@@ -1521,7 +1545,7 @@ msgid "Gespeichert · gilt ab Version %d"
 msgstr ""
 
 #: build/admin.js:20
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Gespeichert"
 msgstr ""
 
@@ -2452,48 +2476,96 @@ msgid "Neue Skripte erscheinen unter Dienste › Zu prüfen."
 msgstr ""
 
 #: build/admin.js:28
+msgid "Export und Import"
+msgstr ""
+
+#: build/admin.js:28
+msgid "Die Einstellungen als Datei, etwa von Staging auf Live"
+msgstr ""
+
+#: build/admin.js:28
+msgid "Exportieren"
+msgstr ""
+
+#: build/admin.js:28
+msgid "Dialog, Texte, Dienste und Einstellungen als JSON-Datei – ohne Protokoll."
+msgstr ""
+
+#: build/admin.js:28
+msgid "Datei laden"
+msgstr ""
+
+#: build/admin.js:28
+msgid "Importieren"
+msgstr ""
+
+#: build/admin.js:28
+msgid "Ersetzt Dialog, Texte, Dienste und Einstellungen. Ob der Dialog an ist und das Protokoll bleiben; Datenschutzerklärung und Impressum werden über ihre Adresse zugeordnet."
+msgstr ""
+
+#: build/admin.js:28
+msgid "Datei wählen …"
+msgstr ""
+
+#. translators: %s: host, e.g. staging.example.com
+#: build/admin.js:29
+#, js-format
+msgid "von %s"
+msgstr ""
+
+#: build/admin.js:30
+msgid "Der Dialog ist an: Ändert sich, was Besucher lesen, gilt eine neue Version."
+msgstr ""
+
+#. translators: %s: file name
+#: build/admin.js:31
+#, js-format
+msgid "%s übernommen."
+msgstr ""
+
+#: build/admin.js:31
 msgid "Ausschalten? Skripte laufen dann wieder ohne Einwilligung. Das Protokoll bleibt."
 msgstr ""
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Dialog ausschalten"
 msgstr ""
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Skripte laufen dann wieder ohne Einwilligung. Das Protokoll bleibt."
 msgstr ""
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Zum Einschalten"
 msgstr ""
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Der Dialog ist noch aus."
 msgstr ""
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "z. B. „Füge Hotjar hinzu“"
 msgstr ""
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Frag zum Protokoll, z. B. „Wie viele haben gestern abgelehnt?“"
 msgstr ""
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Speichert …"
 msgstr ""
 
 #. translators: %d: version
-#: build/admin.js:29
+#: build/admin.js:32
 #, js-format
 msgid "Live · Version %d"
 msgstr ""
 
-#: build/admin.js:29
+#: build/admin.js:32
 msgid "Auf der Website ansehen"
 msgstr ""
 
-#: build/admin.js:29
+#: build/admin.js:32
 msgid "Noch nicht live"
 msgstr ""
 

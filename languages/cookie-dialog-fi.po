@@ -1,22 +1,22 @@
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: Cookie Dialog 0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cookie-dialog\n"
-"POT-Creation-Date: 2026-10-10T14:06:42+00:00\n"
-"PO-Revision-Date: 2026-10-10T14:06:42+00:00\n"
 "Last-Translator: engenty\n"
 "Language-Team: engenty\n"
-"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-10T14:06:42+00:00\n"
+"PO-Revision-Date: 2026-10-10T14:06:42+00:00\n"
+"Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: cookie-dialog\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
 #. Plugin Name of the plugin
-#: cookie-dialog.php includes/class-admin.php:185
+#: cookie-dialog.php
+#: includes/class-admin.php:202
 msgid "Cookie Dialog"
 msgstr "Cookie Dialog"
 
@@ -27,14 +27,8 @@ msgstr "https://engenty.ai/cookie-dialog"
 
 #. Description of the plugin
 #: cookie-dialog.php
-msgid ""
-"A simple, beautiful cookie dialog for the EU: categories and services, "
-"scripts and embeds only after consent, a consent log, Google Consent Mode v2"
-" – and an assistant that sets it up."
-msgstr ""
-"Yksinkertainen, kaunis evästedialogi EU:hun: kategoriat ja palvelut, "
-"skriptit ja upotukset vasta suostumuksen jälkeen, suostumusloki, Googlen "
-"Consent Mode v2 – ja avustaja, joka tekee asetukset."
+msgid "A simple, beautiful cookie dialog for the EU: categories and services, scripts and embeds only after consent, a consent log, Google Consent Mode v2 – and an assistant that sets it up."
+msgstr "Yksinkertainen, kaunis evästedialogi EU:hun: kategoriat ja palvelut, skriptit ja upotukset vasta suostumuksen jälkeen, suostumusloki, Googlen Consent Mode v2 – ja avustaja, joka tekee asetukset."
 
 #. Author of the plugin
 #: cookie-dialog.php
@@ -46,72 +40,69 @@ msgstr "engenty"
 msgid "https://engenty.ai"
 msgstr "https://engenty.ai"
 
-#: includes/class-admin.php:64 build/admin.js:20
+#: includes/class-admin.php:65
+#: build/admin.js:20
 msgid "Cookies"
 msgstr "Evästeet"
 
-#: includes/class-admin.php:65 includes/class-admin.php:138 build/admin.js:19
+#: includes/class-admin.php:66
+#: includes/class-admin.php:141
+#: build/admin.js:19
 #: build/admin.js:21
 msgid "Start"
 msgstr "Aloitus"
 
-#: includes/class-admin.php:66 build/admin.js:20 build/admin.js:22
+#: includes/class-admin.php:67
+#: build/admin.js:20
+#: build/admin.js:22
 msgid "Dialog"
 msgstr "Dialogi"
 
-#: includes/class-admin.php:67 build/admin.js:24
+#: includes/class-admin.php:68
+#: build/admin.js:24
 msgid "Dienste"
 msgstr "Palvelut"
 
-#: includes/class-admin.php:68 build/admin.js:12 build/admin.js:18
+#: includes/class-admin.php:69
+#: build/admin.js:12
+#: build/admin.js:18
 #: build/admin.js:26
 msgid "Protokoll"
 msgstr "Loki"
 
-#: includes/class-admin.php:69 build/admin.js:18 build/admin.js:28
+#: includes/class-admin.php:70
+#: build/admin.js:18
+#: build/admin.js:31
 #: build/blocks.js:1
 msgid "Einstellungen"
 msgstr "Asetukset"
 
-#: includes/class-admin.php:79 build/admin.js:29
+#: includes/class-admin.php:80
+#: build/admin.js:32
 msgid "Cookie Dialog lädt …"
 msgstr "Cookie Dialog latautuu …"
 
-#: includes/class-admin.php:139 includes/class-admin.php:158
+#: includes/class-admin.php:142
+#: includes/class-admin.php:161
 msgid "Einrichten"
 msgstr "Ota käyttöön"
 
-#: includes/class-admin.php:155
+#: includes/class-admin.php:158
 msgid "Cookie Dialog ist noch aus."
 msgstr "Cookie Dialog on vielä pois päältä."
 
-#: includes/class-admin.php:156
+#: includes/class-admin.php:159
 msgid "Bis du ihn einschaltest, ändert sich nichts an deiner Website."
 msgstr "Ennen kuin otat sen käyttöön, sivustollasi ei muutu mikään."
 
-#: includes/class-admin.php:165
+#: includes/class-admin.php:168
+#: includes/class-admin.php:187
 msgid "Nicht erlaubt."
 msgstr "Ei sallittu."
 
-#: includes/class-admin.php:188
-msgid ""
-"Cookie Dialog speichert die Wahl der Besucher im eigenen Cookie "
-"„cookie_dialog“ (Consent-ID, Version, Zeit, Kategorien und Dienste) so "
-"lange, wie unter Cookies › Einstellungen eingestellt (6 Monate, wenn nichts "
-"geändert wurde). Jede Entscheidung kommt ins Protokoll: Consent-ID, Version "
-"des Dialogs, Sprache, Ort der Entscheidung, Browser-Familie und die IP-"
-"Adresse als SHA-256 mit täglich neuem Salz; gelöscht nach 12 Monaten, wenn "
-"nichts geändert wurde. Der Block „Cookie-Tabelle“ listet alle Dienste und "
-"Cookies."
-msgstr ""
-"Cookie Dialog tallentaa kävijän valinnan omaan evästeeseensä ”cookie_dialog”"
-" (suostumustunnus, versio, aika, kategoriat ja palvelut) niin pitkäksi aikaa"
-" kuin kohdassa Evästeet › Asetukset on määritetty (6 kuukautta, ellei "
-"muutettu). Jokainen päätös kirjataan lokiin: suostumustunnus, dialogin "
-"versio, kieli, päätöksen paikka, selainperhe ja IP-osoite "
-"SHA-256-tiivisteenä päivittäin vaihtuvalla suolalla; poistetaan 12 kuukauden"
-" kuluttua, ellei muutettu. Lohko ”Evästetaulukko” luettelee kaikki palvelut "
-"ja evästeet."
+#: includes/class-admin.php:205
+msgid "Cookie Dialog speichert die Wahl der Besucher im eigenen Cookie „cookie_dialog“ (Consent-ID, Version, Zeit, Kategorien und Dienste) so lange, wie unter Cookies › Einstellungen eingestellt (6 Monate, wenn nichts geändert wurde). Jede Entscheidung kommt ins Protokoll: Consent-ID, Version des Dialogs, Sprache, Ort der Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich neuem Salz; gelöscht nach 12 Monaten, wenn nichts geändert wurde. Der Block „Cookie-Tabelle“ listet alle Dienste und Cookies."
+msgstr "Cookie Dialog tallentaa kävijän valinnan omaan evästeeseensä ”cookie_dialog” (suostumustunnus, versio, aika, kategoriat ja palvelut) niin pitkäksi aikaa kuin kohdassa Evästeet › Asetukset on määritetty (6 kuukautta, ellei muutettu). Jokainen päätös kirjataan lokiin: suostumustunnus, dialogin versio, kieli, päätöksen paikka, selainperhe ja IP-osoite SHA-256-tiivisteenä päivittäin vaihtuvalla suolalla; poistetaan 12 kuukauden kuluttua, ellei muutettu. Lohko ”Evästetaulukko” luettelee kaikki palvelut ja evästeet."
 
 #: includes/class-assistant.php:124
 msgid "Der Assistent braucht WordPress 7.0 oder neuer."
@@ -122,13 +113,16 @@ msgid "Die Antwort war kein JSON. Versuch es noch einmal."
 msgstr "Vastaus ei ollut JSONia. Yritä uudelleen."
 
 #. translators: %s: what the person asked
-#: includes/class-assistant.php:508 includes/class-assistant.php:510
+#: includes/class-assistant.php:508
+#: includes/class-assistant.php:510
 #, php-format
 msgid "Assistent: %s"
 msgstr "Avustaja: %s"
 
 #. translators: %s: what the person asked
-#: includes/class-assistant.php:508 build/admin.js:4 build/admin.js:27
+#: includes/class-assistant.php:508
+#: build/admin.js:4
+#: build/admin.js:27
 msgid "Assistent"
 msgstr "Avustaja"
 
@@ -156,13 +150,13 @@ msgstr "Avustaja: muutos kumottu"
 msgid "Zurückgenommen"
 msgstr "Kumottu"
 
-#: includes/class-assistant.php:705 includes/class-assistant.php:850
+#: includes/class-assistant.php:705
+#: includes/class-assistant.php:850
 msgid "Diese Aufgabe gibt es nicht."
 msgstr "Tätä tehtävää ei ole olemassa."
 
 #: includes/class-assistant.php:737
-msgid ""
-"Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren)."
+msgid "Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren)."
 msgstr "Tähän WordPress tarvitsee tekoälypalvelun (Asetukset › Connectors)."
 
 #: includes/class-assistant.php:762
@@ -193,7 +187,8 @@ msgstr "Teksti lyhennetty"
 msgid "Gekürzt."
 msgstr "Lyhennetty."
 
-#: includes/class-assistant.php:803 includes/class-checks.php:516
+#: includes/class-assistant.php:803
+#: includes/class-checks.php:516
 msgid "Diesen Host kennt die letzte Prüfung nicht."
 msgstr "Viimeisin tarkistus ei tunne tätä palvelinta."
 
@@ -239,11 +234,10 @@ msgstr "%s – tulevat sitten omalta palvelimeltasi"
 
 #: includes/class-checks.php:63
 msgid "Kein Dritter sieht die IP-Adresse, bevor jemand zustimmt."
-msgstr ""
-"Kukaan kolmas osapuoli ei näe IP-osoitetta, ennen kuin joku antaa "
-"suostumuksen."
+msgstr "Kukaan kolmas osapuoli ei näe IP-osoitetta, ennen kuin joku antaa suostumuksen."
 
-#: includes/class-checks.php:67 build/admin.js:23
+#: includes/class-checks.php:67
+#: build/admin.js:23
 msgid "Lokal einbinden"
 msgstr "Tarjoa paikallisesti"
 
@@ -254,30 +248,36 @@ msgid "Neues Skript seit %1$s: %2$s"
 msgstr "Uusi skripti %1$s alkaen: %2$s"
 
 #. translators: %s: host
-#: includes/class-checks.php:85 build/admin.js:7
-#, php-format, js-format
+#: includes/class-checks.php:85
+#: build/admin.js:7
+#, php-format,js-format
 msgid "Skript unbekannt: %s"
 msgstr "Tuntematon skripti: %s"
 
 #. translators: 1: service, 2: purpose, 3: category
-#: includes/class-checks.php:88 build/admin.js:23
-#, php-format, js-format
+#: includes/class-checks.php:88
+#: build/admin.js:23
+#, php-format,js-format
 msgid "Vorschlag: %1$s, %2$s → %3$s"
 msgstr "Ehdotus: %1$s – %2$s → %3$s"
 
 #: includes/class-checks.php:89
 msgid "Lädt bis zur Zuordnung ohne Einwilligung. Ordne es einem Dienst zu."
-msgstr ""
-"Latautuu ilman suostumusta, kunnes se on liitetty. Liitä se johonkin "
-"palveluun."
+msgstr "Latautuu ilman suostumusta, kunnes se on liitetty. Liitä se johonkin palveluun."
 
-#: includes/class-checks.php:96 build/admin.js:8 build/admin.js:20
+#: includes/class-checks.php:96
+#: build/admin.js:8
+#: build/admin.js:20
 #: build/admin.js:23
+#: build/admin.js:30
 msgid "Übernehmen"
 msgstr "Hyväksy"
 
-#: includes/class-checks.php:101 build/admin.js:8 build/admin.js:19
-#: build/admin.js:20 build/admin.js:23
+#: includes/class-checks.php:101
+#: build/admin.js:8
+#: build/admin.js:19
+#: build/admin.js:20
+#: build/admin.js:23
 msgid "Ändern"
 msgstr "Muuta"
 
@@ -292,12 +292,8 @@ msgid "Dienste warten auf die Einwilligung"
 msgstr "Palvelut odottavat suostumusta"
 
 #: includes/class-checks.php:127
-msgid ""
-"Ein Skript lädt sie nach, das der Dialog nicht kennt. Trage das Einbinden "
-"als Snippet ein oder markiere das Tag mit data-cookie-service."
-msgstr ""
-"Niitä lataa skripti, jota dialogi ei tunne. Lisää upotuskoodi koodinpätkänä "
-"tai merkitse tagi attribuutilla data-cookie-service."
+msgid "Ein Skript lädt sie nach, das der Dialog nicht kennt. Trage das Einbinden als Snippet ein oder markiere das Tag mit data-cookie-service."
+msgstr "Niitä lataa skripti, jota dialogi ei tunne. Lisää upotuskoodi koodinpätkänä tai merkitse tagi attribuutilla data-cookie-service."
 
 #: includes/class-checks.php:128
 msgid "Kein Dienst lädt, bevor jemand zustimmt."
@@ -318,23 +314,22 @@ msgid "Vor der Einwilligung nur notwendige Cookies"
 msgstr "Ennen suostumusta vain välttämättömät evästeet"
 
 #: includes/class-checks.php:147
-msgid ""
-"Der Server setzt sie beim ersten Besuch. Gehören sie zu einem notwendigen "
-"Dienst, trage sie dort ein."
-msgstr ""
-"Palvelin asettaa ne ensimmäisellä käynnillä. Jos ne kuuluvat välttämättömään"
-" palveluun, lisää ne sinne."
+msgid "Der Server setzt sie beim ersten Besuch. Gehören sie zu einem notwendigen Dienst, trage sie dort ein."
+msgstr "Palvelin asettaa ne ensimmäisellä käynnillä. Jos ne kuuluvat välttämättömään palveluun, lisää ne sinne."
 
 #: includes/class-checks.php:148
 msgid "Gelesen ohne Einwilligung: keine anderen Cookies."
 msgstr "Luettu ilman suostumusta: ei muita evästeitä."
 
-#: includes/class-checks.php:152 build/admin.js:8 build/admin.js:20
+#: includes/class-checks.php:152
+#: build/admin.js:8
+#: build/admin.js:20
 #: build/admin.js:23
 msgid "Zuordnen"
 msgstr "Liitä"
 
-#: includes/class-checks.php:165 build/admin.js:11
+#: includes/class-checks.php:165
+#: build/admin.js:11
 msgid "Google Consent Mode v2"
 msgstr "Google Consent Mode v2"
 
@@ -343,17 +338,12 @@ msgid "Vor jedem Google-Tag · Tags warten auf Einwilligung"
 msgstr "Ennen jokaista Google-tagia · tagit odottavat suostumusta"
 
 #: includes/class-checks.php:167
-msgid ""
-"Ein Google-Tag steht vor dem Consent-Mode-Standard – es kommt von einem "
-"anderen Plugin oder dem Theme."
-msgstr ""
-"Jokin Google-tagi on ennen Consent Moden oletusta – se tulee toisesta "
-"lisäosasta tai teemasta."
+msgid "Ein Google-Tag steht vor dem Consent-Mode-Standard – es kommt von einem anderen Plugin oder dem Theme."
+msgstr "Jokin Google-tagi on ennen Consent Moden oletusta – se tulee toisesta lisäosasta tai teemasta."
 
 #: includes/class-checks.php:168
 msgid "Aus. Google verlangt ihn für Messung und Anzeigen im EWR."
-msgstr ""
-"Pois päältä. Google vaatii sen mittaukseen ja mainontaan ETA-alueella."
+msgstr "Pois päältä. Google vaatii sen mittaukseen ja mainontaan ETA-alueella."
 
 #: includes/class-checks.php:172
 msgid "Einschalten"
@@ -385,7 +375,8 @@ msgstr "Evästetaulukko pysyy itsestään ajan tasalla."
 msgid "Die Cookie-Tabelle und ein Absatz werden eingefügt."
 msgstr "Evästetaulukko ja kappale lisätään."
 
-#: includes/class-checks.php:199 includes/class-checks.php:222
+#: includes/class-checks.php:199
+#: includes/class-checks.php:222
 msgid "Seite wählen"
 msgstr "Valitse sivu"
 
@@ -406,11 +397,8 @@ msgid "Kein Impressum gewählt"
 msgstr "Julkaisutietoja ei ole valittu"
 
 #: includes/class-checks.php:218
-msgid ""
-"Datenschutz und Impressum bleiben lesbar, der Dialog zeigt sich dort klein."
-msgstr ""
-"Tietosuojaseloste ja julkaisutiedot pysyvät luettavina, dialogi näkyy siellä"
-" pienenä."
+msgid "Datenschutz und Impressum bleiben lesbar, der Dialog zeigt sich dort klein."
+msgstr "Tietosuojaseloste ja julkaisutiedot pysyvät luettavina, dialogi näkyy siellä pienenä."
 
 #: includes/class-checks.php:231
 msgid "Widerruf so einfach wie die Einwilligung"
@@ -433,8 +421,9 @@ msgid "Button einschalten"
 msgstr "Ota painike käyttöön"
 
 #. translators: %s: contrast ratio, e.g. 7.2
-#: includes/class-checks.php:248 build/admin.js:19
-#, php-format, js-format
+#: includes/class-checks.php:248
+#: build/admin.js:19
+#, php-format,js-format
 msgid "Kontrast %s : 1"
 msgstr "Kontrasti %s : 1"
 
@@ -470,8 +459,7 @@ msgstr "Hylkääminen yhtä helppoa kuin hyväksyminen"
 
 #: includes/class-checks.php:284
 msgid "Zwei gleiche Buttons auf der ersten Ebene, nichts vorausgewählt."
-msgstr ""
-"Kaksi samanlaista painiketta ensimmäisellä tasolla, mitään ei esivalittu."
+msgstr "Kaksi samanlaista painiketta ensimmäisellä tasolla, mitään ei esivalittu."
 
 #: includes/class-checks.php:290
 msgid "Protokoll mit Version"
@@ -499,7 +487,8 @@ msgstr "Sivustoa ei ole vielä luettu"
 msgid "Jede Woche neu, damit neue Skripte auffallen."
 msgstr "Joka viikko uudelleen, jotta uudet skriptit huomataan."
 
-#: includes/class-checks.php:308 build/admin.js:28
+#: includes/class-checks.php:308
+#: build/admin.js:28
 msgid "Jetzt lesen"
 msgstr "Lue nyt"
 
@@ -542,8 +531,9 @@ msgid "Diese Aktion gibt es nicht."
 msgstr "Tätä toimintoa ei ole olemassa."
 
 #. translators: %s: service
-#: includes/class-checks.php:622 includes/class-rest.php:257
-#: includes/class-rest.php:259
+#: includes/class-checks.php:622
+#: includes/class-rest.php:284
+#: includes/class-rest.php:286
 #, php-format
 msgid "%s hinzugefügt"
 msgstr "%s lisätty"
@@ -567,7 +557,8 @@ msgid "Version %1$d: %2$s – Besucher werden einmal neu gefragt"
 msgstr "Versio %1$d: %2$s – kävijöiltä kysytään kerran uudelleen"
 
 #. translators: 1: version number, 2: what changed
-#: includes/class-consent.php:172 includes/class-consent.php:174
+#: includes/class-consent.php:172
+#: includes/class-consent.php:174
 msgid "Texte oder Dienste geändert"
 msgstr "Tekstejä tai palveluja muutettu"
 
@@ -578,12 +569,8 @@ msgid "Version %1$d: %2$s"
 msgstr "Versio %1$d: %2$s"
 
 #: includes/class-front.php:385
-msgid ""
-"Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder"
-" gespeichert noch protokolliert."
-msgstr ""
-"Esikatselu: näin uusi kävijä näkee dialogin. Valintaasi täällä ei tallenneta"
-" eikä kirjata lokiin."
+msgid "Vorschau: So sieht ein neuer Besucher den Dialog. Deine Wahl hier wird weder gespeichert noch protokolliert."
+msgstr "Esikatselu: näin uusi kävijä näkee dialogin. Valintaasi täällä ei tallenneta eikä kirjata lokiin."
 
 #: includes/class-front.php:386
 msgid "Neu starten"
@@ -619,39 +606,42 @@ msgstr "%s tulee omalta palvelimeltasi"
 msgid "%s lokal eingebunden"
 msgstr "%s tarjotaan paikallisesti"
 
-#: includes/class-rest.php:198 includes/class-rest.php:199
+#: includes/class-rest.php:225
+#: includes/class-rest.php:226
 msgid "Dialog eingeschaltet"
 msgstr "Dialogi otettu käyttöön"
 
-#: includes/class-rest.php:204
+#: includes/class-rest.php:231
 msgid "Dialog ausgeschaltet"
 msgstr "Dialogi poistettu käytöstä"
 
-#: includes/class-rest.php:249
+#: includes/class-rest.php:276
 msgid "Diesen Dienst kennt die Bibliothek nicht."
 msgstr "Kirjasto ei tunne tätä palvelua."
 
-#: includes/class-rest.php:264
+#: includes/class-rest.php:291
 msgid "Ein Dienst braucht einen Namen."
 msgstr "Palvelu tarvitsee nimen."
 
 #. translators: %s: service
-#: includes/class-rest.php:289
+#: includes/class-rest.php:316
 #, php-format
 msgid "%s geändert"
 msgstr "%s muutettu"
 
 #. translators: %s: service
-#: includes/class-rest.php:306 includes/class-rest.php:308
+#: includes/class-rest.php:333
+#: includes/class-rest.php:335
 #, php-format
 msgid "%s entfernt"
 msgstr "%s poistettu"
 
-#: includes/class-rest.php:361
+#: includes/class-rest.php:388
 msgid "Diese Version gibt es nicht."
 msgstr "Tätä versiota ei ole olemassa."
 
-#: includes/class-rest.php:373 build/admin.js:16
+#: includes/class-rest.php:400
+#: build/admin.js:16
 msgid "Was soll anders sein?"
 msgstr "Mitä pitäisi muuttaa?"
 
@@ -659,7 +649,8 @@ msgstr "Mitä pitäisi muuttaa?"
 msgid "Das hat nicht geklappt."
 msgstr "Se ei onnistunut."
 
-#: build/admin.js:1 build/admin.js:4
+#: build/admin.js:1
+#: build/admin.js:4
 msgid "Schließen"
 msgstr "Sulje"
 
@@ -680,36 +671,25 @@ msgstr[0] "%d kuukausi"
 msgstr[1] "%d kuukautta"
 
 #: build/admin.js:2
-msgid ""
-"Das Modell deines Browsers hat das nicht geschafft. Mit einem KI-Anbieter "
-"(Einstellungen › Konnektoren) klappt es."
-msgstr ""
-"Selaimesi malli ei onnistunut tässä. Tekoälypalvelulla (Asetukset › "
-"Connectors) se onnistuu."
+msgid "Das Modell deines Browsers hat das nicht geschafft. Mit einem KI-Anbieter (Einstellungen › Konnektoren) klappt es."
+msgstr "Selaimesi malli ei onnistunut tässä. Tekoälypalvelulla (Asetukset › Connectors) se onnistuu."
 
 #: build/admin.js:2
-msgid ""
-"Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren) – "
-"oder Chrome mit eingebautem Modell."
-msgstr ""
-"Tähän WordPress tarvitsee tekoälypalvelun (Asetukset › Connectors) – tai "
-"Chromen sisäänrakennetulla mallilla."
+msgid "Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren) – oder Chrome mit eingebautem Modell."
+msgstr "Tähän WordPress tarvitsee tekoälypalvelun (Asetukset › Connectors) – tai Chromen sisäänrakennetulla mallilla."
 
 #. translators: %s: language name
 #: build/admin.js:3
 #, js-format
-msgid ""
-"Das Modell deines Browsers schreibt nicht auf %s. Mit einem KI-Anbieter "
-"(Einstellungen › Konnektoren) klappt es."
-msgstr ""
-"Selaimesi malli ei kirjoita kielellä %s. Tekoälypalvelulla (Asetukset › "
-"Connectors) se onnistuu."
+msgid "Das Modell deines Browsers schreibt nicht auf %s. Mit einem KI-Anbieter (Einstellungen › Konnektoren) klappt es."
+msgstr "Selaimesi malli ei kirjoita kielellä %s. Tekoälypalvelulla (Asetukset › Connectors) se onnistuu."
 
 #: build/admin.js:3
 msgid "Zeigen, was einzurichten ist"
 msgstr "Näytä, mitä pitää ottaa käyttöön"
 
-#: build/admin.js:3 build/admin.js:4
+#: build/admin.js:3
+#: build/admin.js:4
 msgid "Hinweis ausblenden"
 msgstr "Piilota huomautus"
 
@@ -726,19 +706,16 @@ msgid "Senden"
 msgstr "Lähetä"
 
 #: build/admin.js:3
-msgid ""
-"Sag, was anders sein soll – ich ändere Dialog, Dienste und Einstellungen. "
-"Jede Änderung kommt als Karte und lässt sich zurücknehmen."
-msgstr ""
-"Kerro, mitä pitäisi muuttaa – muutan dialogia, palveluja ja asetuksia. "
-"Jokainen muutos tulee korttina, ja sen voi kumota."
+msgid "Sag, was anders sein soll – ich ändere Dialog, Dienste und Einstellungen. Jede Änderung kommt als Karte und lässt sich zurücknehmen."
+msgstr "Kerro, mitä pitäisi muuttaa – muutan dialogia, palveluja ja asetuksia. Jokainen muutos tulee korttina, ja sen voi kumota."
 
 #: build/admin.js:3
 msgid "Rückgängig"
 msgstr "Kumoa"
 
 #. translators: %d: version
-#: build/admin.js:4 build/admin.js:20
+#: build/admin.js:4
+#: build/admin.js:20
 #, js-format
 msgid "Version %d"
 msgstr "Versio %d"
@@ -751,7 +728,8 @@ msgstr "Kumottu."
 msgid "Denkt nach …"
 msgstr "Miettii …"
 
-#: build/admin.js:4 build/admin.js:27
+#: build/admin.js:4
+#: build/admin.js:27
 msgid "kein KI-Anbieter"
 msgstr "ei tekoälypalvelua"
 
@@ -812,12 +790,8 @@ msgid "Der Chat braucht WordPress 7.0"
 msgstr "Chat tarvitsee WordPress 7.0:n"
 
 #: build/admin.js:4
-msgid ""
-"Ab 7.0 denkt der Assistent mit dem KI-Anbieter, den du unter Einstellungen ›"
-" Konnektoren einrichtest. Alles andere funktioniert schon jetzt."
-msgstr ""
-"Versiosta 7.0 alkaen avustaja ajattelee tekoälypalvelulla, jonka otat "
-"käyttöön kohdassa Asetukset › Connectors. Kaikki muu toimii jo nyt."
+msgid "Ab 7.0 denkt der Assistent mit dem KI-Anbieter, den du unter Einstellungen › Konnektoren einrichtest. Alles andere funktioniert schon jetzt."
+msgstr "Versiosta 7.0 alkaen avustaja ajattelee tekoälypalvelulla, jonka otat käyttöön kohdassa Asetukset › Connectors. Kaikki muu toimii jo nyt."
 
 #: build/admin.js:4
 msgid "WordPress aktualisieren"
@@ -828,14 +802,8 @@ msgid "Erst einen KI-Anbieter einrichten"
 msgstr "Ota ensin käyttöön tekoälypalvelu"
 
 #: build/admin.js:4
-msgid ""
-"Der Assistent denkt mit dem Anbieter, den du in WordPress unter "
-"Einstellungen › Konnektoren einrichtest – dein API Key bleibt dort. Dialog, "
-"Dienste und Blockieren funktionieren auch ohne."
-msgstr ""
-"Avustaja ajattelee palvelulla, jonka otat käyttöön WordPressissä kohdassa "
-"Asetukset › Connectors – API-avaimesi pysyy siellä. Dialogi, palvelut ja "
-"estäminen toimivat ilman sitäkin."
+msgid "Der Assistent denkt mit dem Anbieter, den du in WordPress unter Einstellungen › Konnektoren einrichtest – dein API Key bleibt dort. Dialog, Dienste und Blockieren funktionieren auch ohne."
+msgstr "Avustaja ajattelee palvelulla, jonka otat käyttöön WordPressissä kohdassa Asetukset › Connectors – API-avaimesi pysyy siellä. Dialogi, palvelut ja estäminen toimivat ilman sitäkin."
 
 #: build/admin.js:4
 msgid "Konnektoren öffnen"
@@ -846,30 +814,25 @@ msgid "Vercel AI Gateway installieren"
 msgstr "Asenna Vercel AI Gateway"
 
 #: build/admin.js:4
-msgid ""
-"Ohne Vertrag bei einem Anbieter: Vercel AI Gateway gibt 5 $ im Monat gratis,"
-" keine Kreditkarte."
-msgstr ""
-"Ei sopimusta palveluntarjoajan kanssa: Vercel AI Gateway antaa 5 $ "
-"kuukaudessa ilmaiseksi, ilman luottokorttia."
+msgid "Ohne Vertrag bei einem Anbieter: Vercel AI Gateway gibt 5 $ im Monat gratis, keine Kreditkarte."
+msgstr "Ei sopimusta palveluntarjoajan kanssa: Vercel AI Gateway antaa 5 $ kuukaudessa ilmaiseksi, ilman luottokorttia."
 
 #: build/admin.js:4
-msgid ""
-"Bis dahin übersetzt und ordnet das eingebaute Modell deines Browsers zu – "
-"nichts verlässt den Rechner."
-msgstr ""
-"Siihen asti selaimesi sisäänrakennettu malli kääntää ja liittää – mikään ei "
-"poistu tietokoneelta."
+msgid "Bis dahin übersetzt und ordnet das eingebaute Modell deines Browsers zu – nichts verlässt den Rechner."
+msgstr "Siihen asti selaimesi sisäänrakennettu malli kääntää ja liittää – mikään ei poistu tietokoneelta."
 
 #: build/admin.js:4
 msgid "Erste Ebene"
 msgstr "Ensimmäinen taso"
 
-#: build/admin.js:4 build/admin.js:20
+#: build/admin.js:4
+#: build/admin.js:20
 msgid "Auswahl"
 msgstr "Valinnat"
 
-#: build/admin.js:4 build/admin.js:19 build/admin.js:20
+#: build/admin.js:4
+#: build/admin.js:19
+#: build/admin.js:20
 msgid "Platzhalter"
 msgstr "Paikkamerkki"
 
@@ -877,11 +840,13 @@ msgstr "Paikkamerkki"
 msgid "Ebene"
 msgstr "Taso"
 
-#: build/admin.js:4 build/admin.js:25
+#: build/admin.js:4
+#: build/admin.js:25
 msgid "Sprache"
 msgstr "Kieli"
 
-#: build/admin.js:4 build/admin.js:19
+#: build/admin.js:4
+#: build/admin.js:19
 msgid "Gerät"
 msgstr "Laite"
 
@@ -914,20 +879,12 @@ msgid "Mit Cookie-Tabelle einfügen"
 msgstr "Lisää evästetaulukon kanssa"
 
 #: build/admin.js:4
-msgid ""
-"Darunter kommt die Cookie-Tabelle: alle Dienste und Cookies, und sie hält "
-"sich selbst aktuell."
-msgstr ""
-"Sen alle tulee evästetaulukko: kaikki palvelut ja evästeet, ja se pysyy "
-"itsestään ajan tasalla."
+msgid "Darunter kommt die Cookie-Tabelle: alle Dienste und Cookies, und sie hält sich selbst aktuell."
+msgstr "Sen alle tulee evästetaulukko: kaikki palvelut ja evästeet, ja se pysyy itsestään ajan tasalla."
 
 #: build/admin.js:4
-msgid ""
-"Noch kein eigener Absatz: eingefügt wird die Vorlage der Bibliothek. Der "
-"Assistent oder das Modell deines Browsers schreibt ihn für deine Website."
-msgstr ""
-"Ei vielä omaa kappaletta: lisätään kirjaston malli. Avustaja tai selaimesi "
-"malli kirjoittaa sen sivustollesi."
+msgid "Noch kein eigener Absatz: eingefügt wird die Vorlage der Bibliothek. Der Assistent oder das Modell deines Browsers schreibt ihn für deine Website."
+msgstr "Ei vielä omaa kappaletta: lisätään kirjaston malli. Avustaja tai selaimesi malli kirjoittaa sen sivustollesi."
 
 #: build/admin.js:4
 msgid "unten links"
@@ -941,20 +898,25 @@ msgstr "alhaalla oikealla"
 msgid "unten in der Mitte"
 msgstr "alhaalla keskellä"
 
-#: build/admin.js:4 build/admin.js:18
+#: build/admin.js:4
+#: build/admin.js:18
 msgid "Box"
 msgstr "Laatikko"
 
-#: build/admin.js:4 build/admin.js:18
+#: build/admin.js:4
+#: build/admin.js:18
 msgid "Leiste"
 msgstr "Palkki"
 
-#: build/admin.js:4 build/admin.js:18
+#: build/admin.js:4
+#: build/admin.js:18
 msgid "Fenster"
 msgstr "Ikkuna"
 
 #. translators: %d: services
+#. translators: %d: number of services
 #: build/admin.js:5
+#: build/admin.js:30
 #, js-format
 msgid "%d Dienst"
 msgid_plural "%d Dienste"
@@ -983,7 +945,9 @@ msgstr "%1$s: %2$s – %3$s → %4$s"
 msgid "Vorschlag deines Browsers"
 msgstr "Selaimesi ehdotus"
 
-#: build/admin.js:8 build/admin.js:15 build/admin.js:20
+#: build/admin.js:8
+#: build/admin.js:15
+#: build/admin.js:20
 msgid "Vorschlag"
 msgstr "Ehdotus"
 
@@ -1006,14 +970,8 @@ msgid "%s – als Platzhalter mit Vorschaubild"
 msgstr "%s – paikkamerkkinä esikatselukuvan kanssa"
 
 #: build/admin.js:10
-msgid ""
-"Bis zur Einwilligung steht dort ein Platzhalter in der Größe des Inhalts: "
-"„Laden“ lädt einmal, „Immer laden“ ist die Einwilligung für den Dienst. "
-"YouTube lädt danach über youtube-nocookie.com."
-msgstr ""
-"Suostumukseen asti paikalla on sisällön kokoinen paikkamerkki: ”Lataa” lataa"
-" kerran, ”Lataa aina” on suostumus palvelulle. YouTube latautuu sen jälkeen "
-"osoitteesta youtube-nocookie.com."
+msgid "Bis zur Einwilligung steht dort ein Platzhalter in der Größe des Inhalts: „Laden“ lädt einmal, „Immer laden“ ist die Einwilligung für den Dienst. YouTube lädt danach über youtube-nocookie.com."
+msgstr "Suostumukseen asti paikalla on sisällön kokoinen paikkamerkki: ”Lataa” lataa kerran, ”Lataa aina” on suostumus palvelulle. YouTube latautuu sen jälkeen osoitteesta youtube-nocookie.com."
 
 #. translators: %d: number of things
 #: build/admin.js:11
@@ -1028,15 +986,8 @@ msgid "WordPress-Emoji aus"
 msgstr "WordPress-emojit pois"
 
 #: build/admin.js:11
-msgid ""
-"Schriften, Styles und Bilder von Dritten werden beim Einschalten auf deinen "
-"Server kopiert und die Verweise umgeschrieben – dann sieht kein Dritter die "
-"IP-Adresse deiner Besucher, und es braucht keine Einwilligung."
-msgstr ""
-"Kun otat tämän käyttöön, kolmansien osapuolten fontit, tyylit ja kuvat "
-"kopioidaan palvelimellesi ja viittaukset kirjoitetaan uusiksi – silloin "
-"kukaan kolmas osapuoli ei näe kävijöidesi IP-osoitetta, eikä suostumusta "
-"tarvita."
+msgid "Schriften, Styles und Bilder von Dritten werden beim Einschalten auf deinen Server kopiert und die Verweise umgeschrieben – dann sieht kein Dritter die IP-Adresse deiner Besucher, und es braucht keine Einwilligung."
+msgstr "Kun otat tämän käyttöön, kolmansien osapuolten fontit, tyylit ja kuvat kopioidaan palvelimellesi ja viittaukset kirjoitetaan uusiksi – silloin kukaan kolmas osapuoli ei näe kävijöidesi IP-osoitetta, eikä suostumusta tarvita."
 
 #: build/admin.js:11
 msgid "Texte in deinem Ton"
@@ -1046,11 +997,13 @@ msgstr "Tekstit sinun sävyysi"
 msgid "Standardtexte"
 msgstr "Oletustekstit"
 
-#: build/admin.js:11 build/admin.js:19
+#: build/admin.js:11
+#: build/admin.js:19
 msgid "per Sie"
 msgstr "teititellen (Sie)"
 
-#: build/admin.js:11 build/admin.js:19
+#: build/admin.js:11
+#: build/admin.js:19
 msgid "per du"
 msgstr "sinutellen (du)"
 
@@ -1072,7 +1025,8 @@ msgstr "logosi"
 msgid "Vor %s · Tags warten auf Einwilligung"
 msgstr "Ennen: %s · tagit odottavat suostumusta"
 
-#: build/admin.js:12 build/admin.js:26
+#: build/admin.js:12
+#: build/admin.js:26
 msgid "Datenschutzerklärung"
 msgstr "Tietosuojaseloste"
 
@@ -1093,12 +1047,8 @@ msgstr "Olen lukenut sivuston %s"
 #. translators: 1: pages, 2: scripts, 3: embeds, 4: plugins
 #: build/admin.js:15
 #, js-format
-msgid ""
-"%1$d Seiten, %2$d Skripte, %3$d Einbettungen, %4$d Plugins. Unten steht mein"
-" Vorschlag, rechts siehst du ihn auf deiner Startseite."
-msgstr ""
-"%1$d sivua, %2$d skriptiä, %3$d upotusta, %4$d lisäosaa. Alla on "
-"ehdotukseni, oikealla näet sen etusivullasi."
+msgid "%1$d Seiten, %2$d Skripte, %3$d Einbettungen, %4$d Plugins. Unten steht mein Vorschlag, rechts siehst du ihn auf deiner Startseite."
+msgstr "%1$d sivua, %2$d skriptiä, %3$d upotusta, %4$d lisäosaa. Alla on ehdotukseni, oikealla näet sen etusivullasi."
 
 #: build/admin.js:15
 msgid "Sag mir, was anders sein soll – z. B. „Schreib per Sie“"
@@ -1153,15 +1103,11 @@ msgid "Dialog einschalten"
 msgstr "Ota dialogi käyttöön"
 
 #: build/admin.js:16
-msgid ""
-"Bis dahin ändert sich nichts an deiner Website. Ausschalten geht jederzeit."
-msgstr ""
-"Siihen asti sivustollasi ei muutu mikään. Voit poistaa sen käytöstä milloin "
-"tahansa."
+msgid "Bis dahin ändert sich nichts an deiner Website. Ausschalten geht jederzeit."
+msgstr "Siihen asti sivustollasi ei muutu mikään. Voit poistaa sen käytöstä milloin tahansa."
 
 #: build/admin.js:16
-msgid ""
-"Ich ändere Dialog, Dienste und Einstellungen – z. B. „Füge Hotjar hinzu“"
+msgid "Ich ändere Dialog, Dienste und Einstellungen – z. B. „Füge Hotjar hinzu“"
 msgstr "Muutan dialogia, palveluja ja asetuksia – esim. ”Lisää Hotjar”"
 
 #: build/admin.js:16
@@ -1226,7 +1172,8 @@ msgstr "Hyväksyi kaikki"
 msgid "Eigene Auswahl"
 msgstr "Oma valinta"
 
-#: build/admin.js:18 build/admin.js:20
+#: build/admin.js:18
+#: build/admin.js:20
 msgid "Nur notwendige"
 msgstr "Vain välttämättömät"
 
@@ -1242,7 +1189,8 @@ msgstr "Tausta"
 msgid "Text"
 msgstr "Teksti"
 
-#: build/admin.js:18 build/blocks.js:1
+#: build/admin.js:18
+#: build/blocks.js:1
 msgid "Button"
 msgstr "Painike"
 
@@ -1250,7 +1198,8 @@ msgstr "Painike"
 msgid "Button-Text"
 msgstr "Painikkeen teksti"
 
-#: build/admin.js:18 build/admin.js:19
+#: build/admin.js:18
+#: build/admin.js:19
 msgid "Links"
 msgstr "Linkit"
 
@@ -1282,7 +1231,8 @@ msgstr "Tietosuojalinkki"
 msgid "Link Impressum"
 msgstr "Julkaisutietolinkki"
 
-#: build/admin.js:18 build/admin.js:26
+#: build/admin.js:18
+#: build/admin.js:26
 msgid "Button zum Öffnen"
 msgstr "Avauspainike"
 
@@ -1294,11 +1244,13 @@ msgstr "Paikkamerkki: Lataa"
 msgid "Platzhalter: Immer laden"
 msgstr "Paikkamerkki: Lataa aina"
 
-#: build/admin.js:18 build/admin.js:26
+#: build/admin.js:18
+#: build/admin.js:26
 msgid "Position"
 msgstr "Sijainti"
 
-#: build/admin.js:18 build/admin.js:26
+#: build/admin.js:18
+#: build/admin.js:26
 msgctxt "position"
 msgid "Links"
 msgstr "Vasen"
@@ -1307,7 +1259,8 @@ msgstr "Vasen"
 msgid "Mitte"
 msgstr "Keskellä"
 
-#: build/admin.js:18 build/admin.js:26
+#: build/admin.js:18
+#: build/admin.js:26
 msgid "Rechts"
 msgstr "Oikea"
 
@@ -1456,22 +1409,15 @@ msgid "Im Ton meiner Website"
 msgstr "Sivustoni sävyyn"
 
 #: build/admin.js:19
-msgid ""
-"„Kürzer“ macht dein Browser. Für den Ton deiner Website braucht WordPress "
-"einen KI-Anbieter."
-msgstr ""
-"”Lyhyemmin” hoitaa selaimesi. Sivustosi sävyyn WordPress tarvitsee "
-"tekoälypalvelun."
+msgid "„Kürzer“ macht dein Browser. Für den Ton deiner Website braucht WordPress einen KI-Anbieter."
+msgstr "”Lyhyemmin” hoitaa selaimesi. Sivustosi sävyyn WordPress tarvitsee tekoälypalvelun."
 
 #: build/admin.js:19
-msgid ""
-"Dafür braucht WordPress einen KI-Anbieter – oder Chrome mit eingebautem "
-"Modell für „Kürzer“."
-msgstr ""
-"Tähän WordPress tarvitsee tekoälypalvelun – tai Chromen sisäänrakennetun "
-"mallin ”Lyhyemmin”-toimintoon."
+msgid "Dafür braucht WordPress einen KI-Anbieter – oder Chrome mit eingebautem Modell für „Kürzer“."
+msgstr "Tähän WordPress tarvitsee tekoälypalvelun – tai Chromen sisäänrakennetun mallin ”Lyhyemmin”-toimintoon."
 
-#: build/admin.js:19 build/admin.js:27
+#: build/admin.js:19
+#: build/admin.js:27
 msgid "Sprachen"
 msgstr "Kielet"
 
@@ -1507,7 +1453,8 @@ msgstr "Valitse sivut"
 msgid "Alle Texte als Liste"
 msgstr "Kaikki tekstit luettelona"
 
-#: build/admin.js:19 build/admin.js:21
+#: build/admin.js:19
+#: build/admin.js:21
 msgid "Texte geändert"
 msgstr "Tekstit muutettu"
 
@@ -1555,7 +1502,9 @@ msgstr "ei koskaan ladata"
 msgid "wartet auf Einwilligung"
 msgstr "odottaa suostumusta"
 
-#: build/admin.js:19 build/admin.js:20 build/admin.js:24
+#: build/admin.js:19
+#: build/admin.js:20
+#: build/admin.js:24
 msgid "Eigener Dienst"
 msgstr "Oma palvelu"
 
@@ -1563,7 +1512,10 @@ msgstr "Oma palvelu"
 msgid "Wirklich entfernen"
 msgstr "Poista varmasti"
 
-#: build/admin.js:19 build/admin.js:22 build/admin.js:28
+#: build/admin.js:19
+#: build/admin.js:22
+#: build/admin.js:30
+#: build/admin.js:31
 msgid "Abbrechen"
 msgstr "Peruuta"
 
@@ -1573,11 +1525,13 @@ msgstr "Peruuta"
 msgid "Gespeichert · gilt ab Version %d"
 msgstr "Tallennettu · voimassa versiosta %d"
 
-#: build/admin.js:20 build/admin.js:28
+#: build/admin.js:20
+#: build/admin.js:31
 msgid "Gespeichert"
 msgstr "Tallennettu"
 
-#: build/admin.js:20 build/admin.js:23
+#: build/admin.js:20
+#: build/admin.js:23
 msgid "Fertig"
 msgstr "Valmis"
 
@@ -1605,7 +1559,8 @@ msgstr "Yhteenveto"
 msgid "Name"
 msgstr "Nimi"
 
-#: build/admin.js:20 build/admin.js:22
+#: build/admin.js:20
+#: build/admin.js:22
 msgid "Kategorie"
 msgstr "Kategoria"
 
@@ -1671,7 +1626,8 @@ msgstr "Palvelimet"
 msgid "nur über Snippet oder data-cookie-service"
 msgstr "vain koodinpätkän tai data-cookie-service-attribuutin kautta"
 
-#: build/admin.js:20 build/admin.js:25
+#: build/admin.js:20
+#: build/admin.js:25
 msgid "Wo"
 msgstr "Missä"
 
@@ -1711,7 +1667,8 @@ msgstr "Lataa aina"
 msgid "Vorschaubild und Titel über deinen Server"
 msgstr "Esikatselukuva ja otsikko oman palvelimesi kautta"
 
-#: build/admin.js:20 build/admin.js:26
+#: build/admin.js:20
+#: build/admin.js:26
 msgid "„Immer laden“ anbieten"
 msgstr "Tarjoa ”Lataa aina”"
 
@@ -1736,14 +1693,8 @@ msgid "keine eigenen – die Kategorie gibt sie"
 msgstr "ei omia – kategoria antaa ne"
 
 #: build/admin.js:20
-msgid ""
-"Mit der Einwilligung für diesen Dienst gehen diese Signale an Google. Eine "
-"ganze Kategorie gibt ihre eigenen dazu (Statistik: analytics_storage, "
-"Marketing: die drei ad_*)."
-msgstr ""
-"Kun tälle palvelulle annetaan suostumus, nämä signaalit lähtevät Googlelle. "
-"Koko kategoria lisää omansa (Tilastot: analytics_storage, Markkinointi: "
-"kolme ad_*-signaalia)."
+msgid "Mit der Einwilligung für diesen Dienst gehen diese Signale an Google. Eine ganze Kategorie gibt ihre eigenen dazu (Statistik: analytics_storage, Marketing: die drei ad_*)."
+msgstr "Kun tälle palvelulle annetaan suostumus, nämä signaalit lähtevät Googlelle. Koko kategoria lisää omansa (Tilastot: analytics_storage, Markkinointi: kolme ad_*-signaalia)."
 
 #: build/admin.js:20
 msgid "Anders einbinden"
@@ -1758,12 +1709,8 @@ msgid "Snippet"
 msgstr "Koodinpätkä"
 
 #: build/admin.js:20
-msgid ""
-"Der Code des Anbieters. Das Plugin druckt ihn zurückgehalten und lädt ihn "
-"bei Einwilligung – ohne Neuladen. <noscript> fällt weg."
-msgstr ""
-"Palveluntarjoajan koodi. Lisäosa tulostaa sen pidätettynä ja suorittaa sen "
-"suostumuksen jälkeen – ilman uudelleenlatausta. <noscript> jätetään pois."
+msgid "Der Code des Anbieters. Das Plugin druckt ihn zurückgehalten und lädt ihn bei Einwilligung – ohne Neuladen. <noscript> fällt weg."
+msgstr "Palveluntarjoajan koodi. Lisäosa tulostaa sen pidätettynä ja suorittaa sen suostumuksen jälkeen – ilman uudelleenlatausta. <noscript> jätetään pois."
 
 #: build/admin.js:20
 msgid "Im Theme oder in einem Plugin"
@@ -1836,12 +1783,8 @@ msgid "Seit %1$s · %2$s"
 msgstr "Alkaen %1$s · %2$s"
 
 #: build/admin.js:21
-msgid ""
-"Das hat jede Person gesehen, die bei dieser Version entschieden hat – in "
-"allen Sprachen gespeichert."
-msgstr ""
-"Tämän näki jokainen, joka teki päätöksen tällä versiolla – tallennettu "
-"kaikilla kielillä."
+msgid "Das hat jede Person gesehen, die bei dieser Version entschieden hat – in allen Sprachen gespeichert."
+msgstr "Tämän näki jokainen, joka teki päätöksen tällä versiolla – tallennettu kaikilla kielillä."
 
 #: build/admin.js:21
 msgid "Kopiert"
@@ -1860,14 +1803,8 @@ msgid "Ich lese deine Website …"
 msgstr "Luen sivustoasi …"
 
 #: build/admin.js:21
-msgid ""
-"Startseite und bis zu 20 Seiten, als Besucher ohne Einwilligung: jedes "
-"Skript, jede Einbettung, jede Schrift von Dritten. Das dauert ein paar "
-"Sekunden."
-msgstr ""
-"Etusivu ja enintään 20 sivua, kävijänä ilman suostumusta: jokainen skripti, "
-"jokainen upotus, jokainen kolmannen osapuolen fontti. Tämä kestää muutaman "
-"sekunnin."
+msgid "Startseite und bis zu 20 Seiten, als Besucher ohne Einwilligung: jedes Skript, jede Einbettung, jede Schrift von Dritten. Das dauert ein paar Sekunden."
+msgstr "Etusivu ja enintään 20 sivua, kävijänä ilman suostumusta: jokainen skripti, jokainen upotus, jokainen kolmannen osapuolen fontti. Tämä kestää muutaman sekunnin."
 
 #: build/admin.js:21
 msgid "Aussehen"
@@ -1882,36 +1819,25 @@ msgid "Texte"
 msgstr "Tekstit"
 
 #: build/admin.js:21
-msgid ""
-"Klick auf einen Text in der Vorschau, um ihn zu ändern – oder sag dem "
-"Assistenten, wie er klingen soll."
-msgstr ""
-"Napsauta tekstiä esikatselussa muuttaaksesi sitä – tai kerro avustajalle, "
-"miltä sen pitäisi kuulostaa."
+msgid "Klick auf einen Text in der Vorschau, um ihn zu ändern – oder sag dem Assistenten, wie er klingen soll."
+msgstr "Napsauta tekstiä esikatselussa muuttaaksesi sitä – tai kerro avustajalle, miltä sen pitäisi kuulostaa."
 
 #. translators: %d: next version
 #: build/admin.js:22
 #, js-format
-msgid ""
-"Gespeichert, sobald du etwas änderst. Neue Texte werden Version %d – "
-"Besucher werden einmal neu gefragt."
-msgstr ""
-"Tallennetaan heti, kun muutat jotain. Uusista teksteistä tulee versio %d – "
-"kävijöiltä kysytään kerran uudelleen."
+msgid "Gespeichert, sobald du etwas änderst. Neue Texte werden Version %d – Besucher werden einmal neu gefragt."
+msgstr "Tallennetaan heti, kun muutat jotain. Uusista teksteistä tulee versio %d – kävijöiltä kysytään kerran uudelleen."
 
 #: build/admin.js:22
-msgid ""
-"Gespeichert, sobald du etwas änderst. Auf der Website erscheint es, wenn du "
-"den Dialog einschaltest."
-msgstr ""
-"Tallennetaan heti, kun muutat jotain. Sivustolla se näkyy, kun otat dialogin"
-" käyttöön."
+msgid "Gespeichert, sobald du etwas änderst. Auf der Website erscheint es, wenn du den Dialog einschaltest."
+msgstr "Tallennetaan heti, kun muutat jotain. Sivustolla se näkyy, kun otat dialogin käyttöön."
 
 #: build/admin.js:22
 msgid "Dienst oder Host suchen"
 msgstr "Etsi palvelua tai palvelinta"
 
-#: build/admin.js:22 build/blocks.js:1
+#: build/admin.js:22
+#: build/blocks.js:1
 msgid "Dienst"
 msgstr "Palvelu"
 
@@ -1932,12 +1858,8 @@ msgid "Zu prüfen"
 msgstr "Tarkistettavaa"
 
 #: build/admin.js:22
-msgid ""
-"Neu auf deiner Website und noch nicht im Dialog – lädt bis dahin ohne "
-"Einwilligung."
-msgstr ""
-"Uutta sivustollasi eikä vielä dialogissa – latautuu siihen asti ilman "
-"suostumusta."
+msgid "Neu auf deiner Website und noch nicht im Dialog – lädt bis dahin ohne Einwilligung."
+msgstr "Uutta sivustollasi eikä vielä dialogissa – latautuu siihen asti ilman suostumusta."
 
 #. translators: %s: date
 #: build/admin.js:22
@@ -1988,12 +1910,8 @@ msgid "Von deinem Server statt von Dritten"
 msgstr "Omalta palvelimeltasi kolmansien osapuolten sijaan"
 
 #: build/admin.js:23
-msgid ""
-"Keine Einwilligung nötig – die Dateien liegen bei dir und werden wöchentlich"
-" geprüft."
-msgstr ""
-"Suostumusta ei tarvita – tiedostot ovat sinulla ja ne tarkistetaan "
-"viikoittain."
+msgid "Keine Einwilligung nötig – die Dateien liegen bei dir und werden wöchentlich geprüft."
+msgstr "Suostumusta ei tarvita – tiedostot ovat sinulla ja ne tarkistetaan viikoittain."
 
 #: build/admin.js:23
 msgid "über den Server"
@@ -2007,7 +1925,8 @@ msgstr "paikallinen"
 msgid "aus"
 msgstr "pois"
 
-#: build/admin.js:23 build/admin.js:26
+#: build/admin.js:23
+#: build/admin.js:26
 msgid "Über den Server"
 msgstr "Palvelimen kautta"
 
@@ -2049,9 +1968,7 @@ msgstr "aiemmin"
 
 #: build/admin.js:23
 msgid "Deine eigene Domain – etwa ein CDN. Als Auftragsverarbeiter notwendig."
-msgstr ""
-"Oma verkkotunnuksesi – esimerkiksi CDN. Välttämätön henkilötietojen "
-"käsittelijänä."
+msgstr "Oma verkkotunnuksesi – esimerkiksi CDN. Välttämätön henkilötietojen käsittelijänä."
 
 #: build/admin.js:23
 msgid "eigene Domain"
@@ -2063,9 +1980,7 @@ msgstr "Lisää"
 
 #: build/admin.js:23
 msgid "Aus der Bibliothek: Anbieter, Zweck, Cookies und Texte sind schon da."
-msgstr ""
-"Kirjastosta: palveluntarjoaja, tarkoitus, evästeet ja tekstit ovat jo "
-"valmiina."
+msgstr "Kirjastosta: palveluntarjoaja, tarkoitus, evästeet ja tekstit ovat jo valmiina."
 
 #. translators: %d: more services
 #: build/admin.js:24
@@ -2128,21 +2043,10 @@ msgstr "Ei vielä päätöksiä tällä ajanjaksolla."
 #. translators: %d: months
 #: build/admin.js:26
 #, js-format
-msgid ""
-"Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der "
-"Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d Monat."
-msgid_plural ""
-"Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der "
-"Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d "
-"Monaten."
-msgstr[0] ""
-"Jokainen rivi sisältää dialogin version, jonka henkilö näki – näyttö GDPR:n "
-"7 artiklan mukaan. IP-osoitteet vain tiivisteinä, poistetaan %d kuukauden "
-"kuluttua."
-msgstr[1] ""
-"Jokainen rivi sisältää dialogin version, jonka henkilö näki – näyttö GDPR:n "
-"7 artiklan mukaan. IP-osoitteet vain tiivisteinä, poistetaan %d kuukauden "
-"kuluttua."
+msgid "Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d Monat."
+msgid_plural "Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d Monaten."
+msgstr[0] "Jokainen rivi sisältää dialogin version, jonka henkilö näki – näyttö GDPR:n 7 artiklan mukaan. IP-osoitteet vain tiivisteinä, poistetaan %d kuukauden kuluttua."
+msgstr[1] "Jokainen rivi sisältää dialogin version, jonka henkilö näki – näyttö GDPR:n 7 artiklan mukaan. IP-osoitteet vain tiivisteinä, poistetaan %d kuukauden kuluttua."
 
 #: build/admin.js:26
 msgid "überall"
@@ -2181,46 +2085,32 @@ msgid "Consent Mode aus"
 msgstr "Consent Mode pois"
 
 #: build/admin.js:26
-msgid ""
-"„Abgelehnt“ steht vor jedem Google-Tag; die Wahl geht als Update hinterher."
-msgstr ""
-"”Hylätty” asetetaan ennen jokaista Google-tagia; valinta seuraa "
-"päivityksenä."
+msgid "„Abgelehnt“ steht vor jedem Google-Tag; die Wahl geht als Update hinterher."
+msgstr "”Hylätty” asetetaan ennen jokaista Google-tagia; valinta seuraa päivityksenä."
 
 #: build/admin.js:26
 msgid "Modus"
 msgstr "Tila"
 
 #: build/admin.js:26
-msgid ""
-"Basic: Tags laden erst nach Einwilligung – empfohlen in DE und AT. Advanced:"
-" Tags laden und senden cookielose Pings."
-msgstr ""
-"Basic: tagit latautuvat vasta suostumuksen jälkeen – suositeltu Saksassa ja "
-"Itävallassa. Advanced: tagit latautuvat ja lähettävät evästeettömiä pingejä."
+msgid "Basic: Tags laden erst nach Einwilligung – empfohlen in DE und AT. Advanced: Tags laden und senden cookielose Pings."
+msgstr "Basic: tagit latautuvat vasta suostumuksen jälkeen – suositeltu Saksassa ja Itävallassa. Advanced: tagit latautuvat ja lähettävät evästeettömiä pingejä."
 
 #: build/admin.js:26
 msgid "Tag Manager"
 msgstr "Tag Manager"
 
 #: build/admin.js:26
-msgid ""
-"Vom Plugin geladen, nach dem Standard. Eigener Container im Theme? Leer "
-"lassen."
-msgstr ""
-"Lisäosan lataama, oletuksen jälkeen. Oma säiliö teemassa? Jätä tyhjäksi."
+msgid "Vom Plugin geladen, nach dem Standard. Eigener Container im Theme? Leer lassen."
+msgstr "Lisäosan lataama, oletuksen jälkeen. Oma säiliö teemassa? Jätä tyhjäksi."
 
 #: build/admin.js:26
 msgid "Regionen mit „abgelehnt“"
 msgstr "Alueet, joilla ”hylätty”"
 
 #: build/admin.js:26
-msgid ""
-"Außerhalb darf Google ohne Wahl messen – der Dialog hält Tags trotzdem "
-"zurück."
-msgstr ""
-"Niiden ulkopuolella Google saa mitata ilman valintaa – dialogi pidättää "
-"tagit silti."
+msgid "Außerhalb darf Google ohne Wahl messen – der Dialog hält Tags trotzdem zurück."
+msgstr "Niiden ulkopuolella Google saa mitata ilman valintaa – dialogi pidättää tagit silti."
 
 #: build/admin.js:26
 msgid "Überall"
@@ -2240,9 +2130,7 @@ msgstr "Peitä mainosdata"
 
 #: build/admin.js:26
 msgid "IAB TCF 2.2 braucht nur, wer AdSense, Ad Manager oder AdMob nutzt."
-msgstr ""
-"IAB TCF 2.2:ta tarvitsevat vain AdSensen, Ad Managerin tai AdMobin "
-"käyttäjät."
+msgstr "IAB TCF 2.2:ta tarvitsevat vain AdSensen, Ad Managerin tai AdMobin käyttäjät."
 
 #: build/admin.js:26
 msgid "Von Dritten"
@@ -2269,22 +2157,16 @@ msgid "Unbekannte iframes als Platzhalter"
 msgstr "Tuntemattomat iframet paikkamerkkeinä"
 
 #: build/admin.js:26
-msgid ""
-"Auch Einbettungen, die die Bibliothek nicht kennt, laden erst auf Klick."
-msgstr ""
-"Myös upotukset, joita kirjasto ei tunne, latautuvat vasta napsautuksesta."
+msgid "Auch Einbettungen, die die Bibliothek nicht kennt, laden erst auf Klick."
+msgstr "Myös upotukset, joita kirjasto ei tunne, latautuvat vasta napsautuksesta."
 
 #: build/admin.js:26
 msgid "Vorschaubilder über deinen Server"
 msgstr "Esikatselukuvat oman palvelimesi kautta"
 
 #: build/admin.js:26
-msgid ""
-"YouTube, Vimeo, Spotify: Bild und Titel in der Mediathek, keine Verbindung "
-"zum Anbieter."
-msgstr ""
-"YouTube, Vimeo, Spotify: kuva ja otsikko mediakirjastossa, ei yhteyttä "
-"palveluntarjoajaan."
+msgid "YouTube, Vimeo, Spotify: Bild und Titel in der Mediathek, keine Verbindung zum Anbieter."
+msgstr "YouTube, Vimeo, Spotify: kuva ja otsikko mediakirjastossa, ei yhteyttä palveluntarjoajaan."
 
 #: build/admin.js:26
 msgid "YouTube über youtube-nocookie.com"
@@ -2308,9 +2190,7 @@ msgstr "Lataa WordPressin emojiskripti"
 
 #: build/admin.js:26
 msgid "Lädt Bilder von s.w.org. Browser zeigen Emoji längst selbst."
-msgstr ""
-"Lataa kuvia osoitteesta s.w.org. Selaimet ovat jo pitkään näyttäneet emojit "
-"itse."
+msgstr "Lataa kuvia osoitteesta s.w.org. Selaimet ovat jo pitkään näyttäneet emojit itse."
 
 #: build/admin.js:26
 msgid "Hinweise an Dritte entfernen"
@@ -2353,11 +2233,8 @@ msgid "Global Privacy Control beachten"
 msgstr "Huomioi Global Privacy Control"
 
 #: build/admin.js:26
-msgid ""
-"Sendet der Browser das Signal, bleibt Marketing bei „Alle akzeptieren“ aus."
-msgstr ""
-"Jos selain lähettää signaalin, markkinointi pysyy pois päältä myös "
-"valinnalla ”Hyväksy kaikki”."
+msgid "Sendet der Browser das Signal, bleibt Marketing bei „Alle akzeptieren“ aus."
+msgstr "Jos selain lähettää signaalin, markkinointi pysyy pois päältä myös valinnalla ”Hyväksy kaikki”."
 
 #: build/admin.js:26
 msgid "Erneut öffnen"
@@ -2380,26 +2257,16 @@ msgid "Shortcode, Block und #cookie-settings"
 msgstr "Lyhytkoodi, lohko ja #cookie-settings"
 
 #: build/admin.js:26
-msgid ""
-"Erscheint nach der ersten Wahl. Widerrufen muss so leicht sein wie "
-"Zustimmen."
-msgstr ""
-"Ilmestyy ensimmäisen valinnan jälkeen. Peruuttamisen on oltava yhtä helppoa "
-"kuin suostumisen."
+msgid "Erscheint nach der ersten Wahl. Widerrufen muss so leicht sein wie Zustimmen."
+msgstr "Ilmestyy ensimmäisen valinnan jälkeen. Peruuttamisen on oltava yhtä helppoa kuin suostumisen."
 
 #: build/admin.js:26
-msgid ""
-"Oder selbst platzieren – im Footer, im Menü, in der Datenschutzerklärung:"
-msgstr ""
-"Tai sijoita itse – alatunnisteeseen, valikkoon, tietosuojaselosteeseen:"
+msgid "Oder selbst platzieren – im Footer, im Menü, in der Datenschutzerklärung:"
+msgstr "Tai sijoita itse – alatunnisteeseen, valikkoon, tietosuojaselosteeseen:"
 
 #: build/admin.js:26
-msgid ""
-"Block: „Cookie-Einstellungen“. Im Menü: ein eigener Link auf #cookie-"
-"settings."
-msgstr ""
-"Lohko: ”Evästeasetukset”. Valikossa: mukautettu linkki kohteeseen #cookie-"
-"settings."
+msgid "Block: „Cookie-Einstellungen“. Im Menü: ein eigener Link auf #cookie-settings."
+msgstr "Lohko: ”Evästeasetukset”. Valikossa: mukautettu linkki kohteeseen #cookie-settings."
 
 #: build/admin.js:26
 msgid "Seiten"
@@ -2430,8 +2297,7 @@ msgid "Damit man lesen kann, bevor man entscheidet."
 msgstr "Jotta voi lukea ennen päätöstä."
 
 #: build/admin.js:26
-msgid ""
-"Die Cookie-Tabelle für die Datenschutzerklärung: Block „Cookie-Tabelle“ oder"
+msgid "Die Cookie-Tabelle für die Datenschutzerklärung: Block „Cookie-Tabelle“ oder"
 msgstr "Evästetaulukko tietosuojaselosteeseen: lohko ”Evästetaulukko” tai"
 
 #. translators: %d: months
@@ -2451,14 +2317,8 @@ msgid "Danach löscht ein täglicher Job die Einträge."
 msgstr "Sen jälkeen päivittäinen ajo poistaa merkinnät."
 
 #: build/admin.js:27
-msgid ""
-"Gespeichert werden Consent-ID, Zeit, Wahl, Version, Sprache, Ort der "
-"Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich "
-"neuem Salz – nie die IP selbst."
-msgstr ""
-"Tallennetaan suostumustunnus, aika, valinta, versio, kieli, päätöksen "
-"paikka, selainperhe ja IP-osoite SHA-256-tiivisteenä päivittäin vaihtuvalla "
-"suolalla – ei koskaan itse IP-osoitetta."
+msgid "Gespeichert werden Consent-ID, Zeit, Wahl, Version, Sprache, Ort der Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich neuem Salz – nie die IP selbst."
+msgstr "Tallennetaan suostumustunnus, aika, valinta, versio, kieli, päätöksen paikka, selainperhe ja IP-osoite SHA-256-tiivisteenä päivittäin vaihtuvalla suolalla – ei koskaan itse IP-osoitetta."
 
 #: build/admin.js:27
 msgid "Alles als CSV"
@@ -2481,12 +2341,8 @@ msgid "KI-Anbieter"
 msgstr "Tekoälypalvelu"
 
 #: build/admin.js:27
-msgid ""
-"WordPress verwaltet ihn unter Einstellungen › Konnektoren – ein API Key für "
-"alle Plugins."
-msgstr ""
-"WordPress hallinnoi sitä kohdassa Asetukset › Connectors – yksi API-avain "
-"kaikille lisäosille."
+msgid "WordPress verwaltet ihn unter Einstellungen › Konnektoren – ein API Key für alle Plugins."
+msgstr "WordPress hallinnoi sitä kohdassa Asetukset › Connectors – yksi API-avain kaikille lisäosille."
 
 #: build/admin.js:27
 msgid "Ab WordPress 7.0."
@@ -2501,12 +2357,8 @@ msgid "Konnektoren"
 msgstr "Connectors"
 
 #: build/admin.js:27
-msgid ""
-"Empfohlen: Vercel AI Gateway – 5 $ im Monat gratis, ein API Key für die "
-"Modelle aller Anbieter."
-msgstr ""
-"Suositus: Vercel AI Gateway – 5 $ kuukaudessa ilmaiseksi, yksi API-avain "
-"kaikkien palveluntarjoajien malleihin."
+msgid "Empfohlen: Vercel AI Gateway – 5 $ im Monat gratis, ein API Key für die Modelle aller Anbieter."
+msgstr "Suositus: Vercel AI Gateway – 5 $ kuukaudessa ilmaiseksi, yksi API-avain kaikkien palveluntarjoajien malleihin."
 
 #: build/admin.js:27
 msgid "Plugin installieren"
@@ -2518,8 +2370,7 @@ msgstr "Malli"
 
 #: build/admin.js:27
 msgid "Günstig reicht für alles hier: eine Einrichtung kostet etwa 4 Cent."
-msgstr ""
-"Edullinen riittää kaikkeen täällä: yksi käyttöönotto maksaa noin 4 senttiä."
+msgstr "Edullinen riittää kaikkeen täällä: yksi käyttöönotto maksaa noin 4 senttiä."
 
 #: build/admin.js:27
 msgid "Günstig"
@@ -2542,19 +2393,12 @@ msgid "Einfache Aufgaben im Browser"
 msgstr "Yksinkertaiset tehtävät selaimessa"
 
 #: build/admin.js:27
-msgid ""
-"Dein Browser hat ein eingebautes Modell: Übersetzen, Kürzen, Zuordnen und "
-"der Datenschutz-Absatz laufen dort, nichts verlässt den Rechner."
-msgstr ""
-"Selaimessasi on sisäänrakennettu malli: kääntäminen, lyhentäminen, "
-"liittäminen ja tietosuojakappale hoituvat siellä, mikään ei poistu "
-"tietokoneelta."
+msgid "Dein Browser hat ein eingebautes Modell: Übersetzen, Kürzen, Zuordnen und der Datenschutz-Absatz laufen dort, nichts verlässt den Rechner."
+msgstr "Selaimessasi on sisäänrakennettu malli: kääntäminen, lyhentäminen, liittäminen ja tietosuojakappale hoituvat siellä, mikään ei poistu tietokoneelta."
 
 #: build/admin.js:27
 msgid "Dieser Browser hat kein eingebautes Modell (Chrome ab 148, Edge)."
-msgstr ""
-"Tässä selaimessa ei ole sisäänrakennettua mallia (Chrome 148 tai uudempi, "
-"Edge)."
+msgstr "Tässä selaimessa ei ole sisäänrakennettua mallia (Chrome 148 tai uudempi, Edge)."
 
 #. translators: 1: tokens, 2: last model
 #: build/admin.js:27
@@ -2567,14 +2411,8 @@ msgid "wie deine Website"
 msgstr "kuten sivustosi"
 
 #: build/admin.js:27
-msgid ""
-"Der Dialog spricht die Sprache der Seite: mit Polylang oder WPML jede "
-"Sprache der Website, sonst die von WordPress. Texte und Übersetzungen "
-"bearbeitest du unter Dialog."
-msgstr ""
-"Dialogi puhuu sivun kieltä: Polylangin tai WPML:n kanssa jokaista sivuston "
-"kieltä, muuten WordPressin kieltä. Tekstejä ja käännöksiä muokkaat kohdassa "
-"Dialogi."
+msgid "Der Dialog spricht die Sprache der Seite: mit Polylang oder WPML jede Sprache der Website, sonst die von WordPress. Texte und Übersetzungen bearbeitest du unter Dialog."
+msgstr "Dialogi puhuu sivun kieltä: Polylangin tai WPML:n kanssa jokaista sivuston kieltä, muuten WordPressin kieltä. Tekstejä ja käännöksiä muokkaat kohdassa Dialogi."
 
 #: build/admin.js:27
 msgid "Sprachen deiner Website"
@@ -2618,53 +2456,49 @@ msgstr "Lue uudelleen joka viikko"
 msgid "Neue Skripte erscheinen unter Dienste › Zu prüfen."
 msgstr "Uudet skriptit ilmestyvät kohtaan Palvelut › Tarkistettavaa."
 
-#: build/admin.js:28
-msgid ""
-"Ausschalten? Skripte laufen dann wieder ohne Einwilligung. Das Protokoll "
-"bleibt."
-msgstr ""
-"Poistetaanko käytöstä? Skriptit toimivat silloin taas ilman suostumusta. "
-"Loki säilyy."
+#: build/admin.js:31
+msgid "Ausschalten? Skripte laufen dann wieder ohne Einwilligung. Das Protokoll bleibt."
+msgstr "Poistetaanko käytöstä? Skriptit toimivat silloin taas ilman suostumusta. Loki säilyy."
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Dialog ausschalten"
 msgstr "Poista dialogi käytöstä"
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Skripte laufen dann wieder ohne Einwilligung. Das Protokoll bleibt."
 msgstr "Skriptit toimivat silloin taas ilman suostumusta. Loki säilyy."
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Zum Einschalten"
 msgstr "Käyttöönottoon"
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Der Dialog ist noch aus."
 msgstr "Dialogi on vielä pois päältä."
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "z. B. „Füge Hotjar hinzu“"
 msgstr "esim. ”Lisää Hotjar”"
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Frag zum Protokoll, z. B. „Wie viele haben gestern abgelehnt?“"
 msgstr "Kysy lokista, esim. ”Kuinka moni hylkäsi eilen?”"
 
-#: build/admin.js:28
+#: build/admin.js:31
 msgid "Speichert …"
 msgstr "Tallennetaan …"
 
 #. translators: %d: version
-#: build/admin.js:29
+#: build/admin.js:32
 #, js-format
 msgid "Live · Version %d"
 msgstr "Käytössä · versio %d"
 
-#: build/admin.js:29
+#: build/admin.js:32
 msgid "Auf der Website ansehen"
 msgstr "Näytä sivustolla"
 
-#: build/admin.js:29
+#: build/admin.js:32
 msgid "Noch nicht live"
 msgstr "Ei vielä käytössä"
 
@@ -2715,14 +2549,11 @@ msgstr "Evästetaulukko"
 
 #: blocks/cookie-table/block.json
 msgctxt "block description"
-msgid ""
-"Alle Dienste und Cookies, nach Kategorien – für die Datenschutzerklärung. "
-"Hält sich selbst aktuell."
-msgstr ""
-"Kaikki palvelut ja evästeet kategorioittain – tietosuojaselosteeseen. Pysyy "
-"itsestään ajan tasalla."
+msgid "Alle Dienste und Cookies, nach Kategorien – für die Datenschutzerklärung. Hält sich selbst aktuell."
+msgstr "Kaikki palvelut ja evästeet kategorioittain – tietosuojaselosteeseen. Pysyy itsestään ajan tasalla."
 
-#: blocks/cookie-table/block.json blocks/placeholder/block.json
+#: blocks/cookie-table/block.json
+#: blocks/placeholder/block.json
 #: blocks/settings-button/block.json
 msgctxt "block keyword"
 msgid "cookie"
@@ -2750,12 +2581,8 @@ msgstr "Vasta suostumuksen jälkeen"
 
 #: blocks/placeholder/block.json
 msgctxt "block description"
-msgid ""
-"Was in diesem Block steht, lädt erst, wenn Besucher dem gewählten Dienst "
-"zustimmen. Bis dahin zeigt sich ein Platzhalter."
-msgstr ""
-"Tämän lohkon sisältö latautuu vasta, kun kävijät hyväksyvät valitun "
-"palvelun. Siihen asti näkyy paikkamerkki."
+msgid "Was in diesem Block steht, lädt erst, wenn Besucher dem gewählten Dienst zustimmen. Bis dahin zeigt sich ein Platzhalter."
+msgstr "Tämän lohkon sisältö latautuu vasta, kun kävijät hyväksyvät valitun palvelun. Siihen asti näkyy paikkamerkki."
 
 #: blocks/placeholder/block.json
 msgctxt "block keyword"
@@ -2772,7 +2599,8 @@ msgctxt "block keyword"
 msgid "embed"
 msgstr "embed"
 
-#: blocks/placeholder/block.json blocks/settings-button/block.json
+#: blocks/placeholder/block.json
+#: blocks/settings-button/block.json
 msgctxt "block keyword"
 msgid "consent"
 msgstr "consent"
@@ -2784,10 +2612,8 @@ msgstr "Evästeasetukset"
 
 #: blocks/settings-button/block.json
 msgctxt "block description"
-msgid ""
-"Ein Button oder Link, der die Cookie-Auswahl öffnet – für den Widerruf."
-msgstr ""
-"Painike tai linkki, joka avaa evästevalinnat – suostumuksen peruuttamiseen."
+msgid "Ein Button oder Link, der die Cookie-Auswahl öffnet – für den Widerruf."
+msgstr "Painike tai linkki, joka avaa evästevalinnat – suostumuksen peruuttamiseen."
 
 #: blocks/settings-button/block.json
 msgctxt "block keyword"
@@ -2798,3 +2624,70 @@ msgstr "suostumus"
 msgctxt "block keyword"
 msgid "widerruf"
 msgstr "peruutus"
+
+#: includes/class-config.php:700
+#: build/admin.js:28
+msgid "In dieser Datei sind keine Einstellungen von Cookie Dialog."
+msgstr "Tässä tiedostossa ei ole Cookie Dialogin asetuksia."
+
+#: includes/class-rest.php:174
+msgid "Importiert"
+msgstr "Tuotu"
+
+#. translators: %s: the host the file comes from, e.g. staging.example.com
+#: includes/class-rest.php:182
+#, php-format
+msgid "Einstellungen von %s importiert"
+msgstr "Asetukset tuotu sivustolta %s"
+
+#: includes/class-rest.php:183
+msgid "Einstellungen importiert"
+msgstr "Asetukset tuotu"
+
+#: build/admin.js:28
+msgid "Export und Import"
+msgstr "Vienti ja tuonti"
+
+#: build/admin.js:28
+msgid "Die Einstellungen als Datei, etwa von Staging auf Live"
+msgstr "Asetukset tiedostona, esimerkiksi testiympäristöstä tuotantoon"
+
+#: build/admin.js:28
+msgid "Exportieren"
+msgstr "Vie"
+
+#: build/admin.js:28
+msgid "Dialog, Texte, Dienste und Einstellungen als JSON-Datei – ohne Protokoll."
+msgstr "Dialogi, tekstit, palvelut ja asetukset JSON-tiedostona – ilman lokia."
+
+#: build/admin.js:28
+msgid "Datei laden"
+msgstr "Lataa tiedosto"
+
+#: build/admin.js:28
+msgid "Importieren"
+msgstr "Tuo"
+
+#: build/admin.js:28
+msgid "Ersetzt Dialog, Texte, Dienste und Einstellungen. Ob der Dialog an ist und das Protokoll bleiben; Datenschutzerklärung und Impressum werden über ihre Adresse zugeordnet."
+msgstr "Korvaa dialogin, tekstit, palvelut ja asetukset. Dialogin käyttötila ja loki säilyvät; tietosuojaseloste ja julkaisutiedot yhdistetään osoitteensa perusteella."
+
+#: build/admin.js:28
+msgid "Datei wählen …"
+msgstr "Valitse tiedosto …"
+
+#. translators: %s: host, e.g. staging.example.com
+#: build/admin.js:29
+#, js-format
+msgid "von %s"
+msgstr "sivustolta %s"
+
+#: build/admin.js:30
+msgid "Der Dialog ist an: Ändert sich, was Besucher lesen, gilt eine neue Version."
+msgstr "Dialogi on käytössä: jos kävijöiden lukema muuttuu, voimaan tulee uusi versio."
+
+#. translators: %s: file name
+#: build/admin.js:31
+#, js-format
+msgid "%s übernommen."
+msgstr "%s tuotu."

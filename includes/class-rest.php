@@ -1,7 +1,7 @@
 <?php
 /**
- * The admin app's routes (`cookie-dialog/v1`): the state of everything, config, live, scan, fixes,
- * services, log, assistant. Only for those who manage the site.
+ * The admin app's routes (`cookie-dialog/v1`): the state of everything, config, import, live, scan,
+ * fixes, services, log, assistant. Only for those who manage the site.
  *
  * @package Cookie_Dialog
  */
@@ -34,6 +34,7 @@ class Cookie_Dialog_Rest {
 		$routes = array(
 			'/state'                       => array( 'GET', 'state' ),
 			'/config'                      => array( 'POST', 'config' ),
+			'/import'                      => array( 'POST', 'import' ),
 			'/live'                        => array( 'POST', 'live' ),
 			'/scan'                        => array( 'POST', 'scan' ),
 			'/fix'                         => array( 'POST', 'fix' ),
@@ -155,6 +156,32 @@ class Cookie_Dialog_Rest {
 		}
 		unset( $patch['live'], $patch['version'], $patch['reask'] );
 		Cookie_Dialog_Config::patch( $patch, sanitize_text_field( (string) $request->get_param( 'note' ) ) );
+		return self::state();
+	}
+
+	/**
+	 * Takes the configuration of an export file. Its snippets only from someone who may write HTML with
+	 * scripts; the others keep the snippets this site has.
+	 *
+	 * @param WP_REST_Request $request `data`: the file's content.
+	 * @return array|WP_Error
+	 */
+	public static function import( WP_REST_Request $request ) {
+		$data = $request->get_param( 'data' );
+		if ( is_array( $data ) && is_array( $data['config']['services'] ?? null ) ) {
+			$data['config']['services'] = self::guard_snippets( $data['config']['services'] );
+		}
+		$saved = Cookie_Dialog_Config::import( $data, __( 'Importiert', 'cookie-dialog' ) );
+		if ( is_wp_error( $saved ) ) {
+			return $saved;
+		}
+		$from = is_array( $data ) ? (string) wp_parse_url( (string) ( $data['site'] ?? '' ), PHP_URL_HOST ) : '';
+		Cookie_Dialog_Config::remember(
+			$from
+				/* translators: %s: the host the file comes from, e.g. staging.example.com */
+				? sprintf( __( 'Einstellungen von %s importiert', 'cookie-dialog' ), $from )
+				: __( 'Einstellungen importiert', 'cookie-dialog' )
+		);
 		return self::state();
 	}
 
