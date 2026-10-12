@@ -22,9 +22,12 @@ class Cookie_Dialog_Assistant {
 	const SIMPLE = array( 'translate', 'shorten', 'classify', 'privacy' );
 
 	/** Models tried in order; the AI Client falls back to the provider's first model. */
+	// The provider's first model it has from these. Newest first, then older ones for accounts
+	// without them (2026-10: GPT-6 Luna, Claude Haiku 5.5 and Gemini 3.5 Flash-Lite cost $0.10 / $0.50
+	// per million tokens; GPT-6.1 Sol and Claude Sonnet 5.5 $2 / $10).
 	const MODELS = array(
-		'cheap'  => array( 'wizards/standard', 'google/gemini-3.5-flash-lite', 'google/gemini-2.5-flash-lite', 'gemini-3.5-flash-lite', 'gemini-2.5-flash-lite', 'openai/gpt-5-mini', 'gpt-5-mini', 'gpt-5-nano', 'anthropic/claude-haiku-4.5', 'claude-haiku-4-5', 'deepseek/deepseek-v3.2' ),
-		'strong' => array( 'wizards/high', 'anthropic/claude-sonnet-5.5', 'claude-sonnet-5-5', 'google/gemini-3.8-flash', 'gemini-3.8-flash', 'openai/gpt-5', 'gpt-5', 'google/gemini-2.5-pro', 'gemini-2.5-pro' ),
+		'cheap'  => array( 'wizards/standard', 'openai/gpt-6-luna', 'gpt-6-luna', 'anthropic/claude-haiku-5.5', 'claude-haiku-5-5', 'google/gemini-3.5-flash-lite', 'gemini-3.5-flash-lite', 'gpt-5.4-mini', 'claude-haiku-4-5', 'gemini-2.5-flash-lite', 'deepseek/deepseek-v3.2' ),
+		'strong' => array( 'wizards/high', 'anthropic/claude-sonnet-5.5', 'claude-sonnet-5-5', 'openai/gpt-6.1-sol', 'gpt-6.1-sol', 'google/gemini-3.8-flash', 'gemini-3.8-flash', 'gpt-5.5', 'gemini-2.5-pro' ),
 	);
 
 	/** Settings the assistant may change with `set`. */
