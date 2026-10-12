@@ -8,7 +8,7 @@ fail() { echo "FAIL: $1"; exit 1; }
 $WP plugin is-active cookie-dialog || fail "the plugin is not active"
 
 routes=$($WP eval 'echo implode(" ", array_keys(rest_get_server()->get_routes("cookie-dialog/v1")));')
-for r in consent state config live scan fix service local log assist job undo; do
+for r in consent state config live scan fix service local log job; do
 	echo "$routes" | grep -q "/cookie-dialog/v1/$r" || fail "REST route $r is missing"
 done
 

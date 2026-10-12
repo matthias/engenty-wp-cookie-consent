@@ -16,7 +16,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: cookie-dialog.php
-#: includes/class-admin.php:202
+#: includes/class-admin.php:206
 msgid "Cookie Dialog"
 msgstr "Cookie Dialog"
 
@@ -36,97 +36,96 @@ msgid "https://engenty.ai"
 msgstr "https://engenty.ai"
 
 #: includes/class-admin.php:65
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Cookies"
 msgstr "Cookies"
 
 #: includes/class-admin.php:66
-#: includes/class-admin.php:141
-#: build/admin.js:27
-#: build/admin.js:29
+#: includes/class-admin.php:145
+#: build/admin.js:26
+#: build/admin.js:28
 msgid "Start"
 msgstr "Start"
 
 #: includes/class-admin.php:67
-#: build/admin.js:28
-#: build/admin.js:30
+#: build/admin.js:27
+#: build/admin.js:29
 msgid "Dialog"
 msgstr "Dialog"
 
 #: includes/class-admin.php:68
-#: build/admin.js:32
+#: build/admin.js:31
 msgid "Dienste"
 msgstr "Služby"
 
 #: includes/class-admin.php:69
-#: build/admin.js:12
-#: build/admin.js:26
-#: build/admin.js:34
+#: build/admin.js:11
+#: build/admin.js:25
+#: build/admin.js:33
 msgid "Protokoll"
 msgstr "Protokol"
 
 #: includes/class-admin.php:70
-#: build/admin.js:26
-#: build/admin.js:39
+#: build/admin.js:25
+#: build/admin.js:38
 #: build/blocks.js:1
 msgid "Einstellungen"
 msgstr "Nastavení"
 
 #: includes/class-admin.php:80
-#: build/admin.js:40
+#: build/admin.js:39
 msgid "Cookie Dialog lädt …"
 msgstr "Cookie Dialog se načítá …"
 
-#: includes/class-admin.php:142
-#: includes/class-admin.php:161
+#: includes/class-admin.php:146
+#: includes/class-admin.php:165
 msgid "Einrichten"
 msgstr "Nastavit"
 
-#: includes/class-admin.php:158
+#: includes/class-admin.php:162
 msgid "Cookie Dialog ist noch aus."
 msgstr "Cookie Dialog je ještě vypnutý."
 
-#: includes/class-admin.php:159
+#: includes/class-admin.php:163
 msgid "Bis du ihn einschaltest, ändert sich nichts an deiner Website."
 msgstr "Dokud ho nezapnete, na vašem webu se nic nezmění."
 
-#: includes/class-admin.php:168
-#: includes/class-admin.php:187
+#: includes/class-admin.php:172
+#: includes/class-admin.php:191
 msgid "Nicht erlaubt."
 msgstr "Nepovoleno."
 
-#: includes/class-admin.php:205
+#: includes/class-admin.php:209
 msgid "Cookie Dialog speichert die Wahl der Besucher im eigenen Cookie „cookie_dialog“ (Consent-ID, Version, Zeit, Kategorien und Dienste) so lange, wie unter Cookies › Einstellungen eingestellt (6 Monate, wenn nichts geändert wurde). Jede Entscheidung kommt ins Protokoll: Consent-ID, Version des Dialogs, Sprache, Ort der Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich neuem Salz; gelöscht nach 12 Monaten, wenn nichts geändert wurde. Der Block „Cookie-Tabelle“ listet alle Dienste und Cookies."
 msgstr "Cookie Dialog ukládá volbu návštěvníků ve vlastní cookie „cookie_dialog“ (ID souhlasu, verze, čas, kategorie a služby) tak dlouho, jak je nastaveno v Cookies › Nastavení (6 měsíců, pokud se nic nezměnilo). Každé rozhodnutí jde do protokolu: ID souhlasu, verze dialogu, jazyk, místo rozhodnutí, rodina prohlížeče a IP adresa jako SHA-256 s denně novou solí; smazáno po 12 měsících, pokud se nic nezměnilo. Blok „Tabulka cookies“ vypisuje všechny služby a cookies."
 
-#: includes/class-assistant.php:124
+#: includes/class-assistant.php:128
 msgid "Der Assistent braucht WordPress 7.0 oder neuer."
 msgstr "Asistent potřebuje WordPress 7.0 nebo novější."
 
-#: includes/class-assistant.php:153
+#: includes/class-assistant.php:157
 msgid "Die Antwort war kein JSON. Versuch es noch einmal."
 msgstr "Odpověď nebyla JSON. Zkuste to znovu."
 
 #. translators: %s: what the person asked
-#: includes/class-assistant.php:637
-#: includes/class-assistant.php:639
+#: includes/class-assistant.php:553
+#: includes/class-assistant.php:555
 #, php-format
 msgid "Assistent: %s"
 msgstr "Asistent: %s"
 
 #. translators: %s: what the person asked
-#: includes/class-assistant.php:637
-#: build/admin.js:4
-#: build/admin.js:35
+#: includes/class-assistant.php:553
+#: build/admin.js:34
 msgid "Assistent"
 msgstr "Asistent"
 
-#: includes/class-assistant.php:641
+#: includes/class-assistant.php:557
 msgid "Geändert"
 msgstr "Změněno"
 
 #. translators: %d: number of changes
-#: includes/class-assistant.php:643
+#: includes/class-assistant.php:559
 #, php-format
 msgid "%d Änderung"
 msgid_plural "%d Änderungen"
@@ -134,79 +133,79 @@ msgstr[0] "%d změna"
 msgstr[1] "%d změny"
 msgstr[2] "%d změn"
 
-#: includes/class-assistant.php:674
+#: includes/class-assistant.php:590
 msgid "Das lässt sich nicht mehr zurücknehmen."
 msgstr "To už nelze vzít zpět."
 
-#: includes/class-assistant.php:681
+#: includes/class-assistant.php:597
 msgid "Assistent: Änderung zurückgenommen"
 msgstr "Asistent: změna vzata zpět"
 
-#: includes/class-assistant.php:682
+#: includes/class-assistant.php:598
 msgid "Zurückgenommen"
 msgstr "Vzato zpět"
 
-#: includes/class-assistant.php:834
-#: includes/class-assistant.php:979
+#: includes/class-assistant.php:750
+#: includes/class-assistant.php:895
 msgid "Diese Aufgabe gibt es nicht."
 msgstr "Tento úkol neexistuje."
 
-#: includes/class-assistant.php:866
+#: includes/class-assistant.php:782
 msgid "Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren)."
 msgstr "K tomu potřebuje WordPress poskytovatele AI (Nastavení › Konektory)."
 
-#: includes/class-assistant.php:891
+#: includes/class-assistant.php:807
 msgid "Die Übersetzung kam unvollständig zurück."
 msgstr "Překlad se vrátil neúplný."
 
 #. translators: %s: language code
-#: includes/class-assistant.php:912
+#: includes/class-assistant.php:828
 #, php-format
 msgid "Texte auf %s"
 msgstr "Texty v jazyce %s"
 
 #. translators: %s: language code
-#: includes/class-assistant.php:914
+#: includes/class-assistant.php:830
 #, php-format
 msgid "Die Texte gibt es jetzt auf %s."
 msgstr "Texty jsou teď k dispozici v jazyce %s."
 
-#: includes/class-assistant.php:921
+#: includes/class-assistant.php:837
 msgid "Kein Text zurückgekommen."
 msgstr "Nevrátil se žádný text."
 
-#: includes/class-assistant.php:924
+#: includes/class-assistant.php:840
 msgid "Text gekürzt"
 msgstr "Text zkrácen"
 
-#: includes/class-assistant.php:925
+#: includes/class-assistant.php:841
 msgid "Gekürzt."
 msgstr "Zkráceno."
 
-#: includes/class-assistant.php:932
+#: includes/class-assistant.php:848
 #: includes/class-checks.php:555
 msgid "Diesen Host kennt die letzte Prüfung nicht."
 msgstr "Tento host poslední kontrola nezná."
 
 #. translators: %s: service name
-#: includes/class-assistant.php:943
+#: includes/class-assistant.php:859
 #, php-format
 msgid "Vorschlag: %s"
 msgstr "Návrh: %s"
 
-#: includes/class-assistant.php:951
+#: includes/class-assistant.php:867
 msgid "Kein Absatz zurückgekommen."
 msgstr "Nevrátil se žádný odstavec."
 
-#: includes/class-assistant.php:955
+#: includes/class-assistant.php:871
 msgid "Der Absatz ist geschrieben."
 msgstr "Odstavec je napsaný."
 
-#: includes/class-assistant.php:973
+#: includes/class-assistant.php:889
 msgid "Texte im Ton der Website"
 msgstr "Texty v tónu webu"
 
-#: includes/class-assistant.php:975
+#: includes/class-assistant.php:891
 msgid "Die Texte klingen jetzt wie deine Website."
 msgstr "Texty teď znějí jako váš web."
 
@@ -234,7 +233,7 @@ msgid "Kein Dritter sieht die IP-Adresse, bevor jemand zustimmt."
 msgstr "Žádná třetí strana nevidí IP adresu, dokud někdo nesouhlasí."
 
 #: includes/class-checks.php:67
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Lokal einbinden"
 msgstr "Načítat lokálně"
 
@@ -246,14 +245,14 @@ msgstr "Nový skript od %1$s: %2$s"
 
 #. translators: %s: host
 #: includes/class-checks.php:85
-#: build/admin.js:7
+#: build/admin.js:6
 #, php-format,js-format
 msgid "Skript unbekannt: %s"
 msgstr "Neznámý skript: %s"
 
 #. translators: 1: service, 2: purpose, 3: category
 #: includes/class-checks.php:88
-#: build/admin.js:31
+#: build/admin.js:30
 #, php-format,js-format
 msgid "Vorschlag: %1$s, %2$s → %3$s"
 msgstr "Návrh: %1$s (%2$s) → %3$s"
@@ -263,18 +262,18 @@ msgid "Lädt bis zur Zuordnung ohne Einwilligung. Ordne es einem Dienst zu."
 msgstr "Do přiřazení se načítá bez souhlasu. Přiřaďte ho ke službě."
 
 #: includes/class-checks.php:96
-#: build/admin.js:8
-#: build/admin.js:28
-#: build/admin.js:31
-#: build/admin.js:38
+#: build/admin.js:7
+#: build/admin.js:27
+#: build/admin.js:30
+#: build/admin.js:37
 msgid "Übernehmen"
 msgstr "Použít"
 
 #: includes/class-checks.php:101
-#: build/admin.js:8
+#: build/admin.js:7
+#: build/admin.js:26
 #: build/admin.js:27
-#: build/admin.js:28
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Ändern"
 msgstr "Změnit"
 
@@ -319,14 +318,14 @@ msgid "Gelesen ohne Einwilligung: keine anderen Cookies."
 msgstr "Čteno bez souhlasu: žádné další cookies."
 
 #: includes/class-checks.php:152
-#: build/admin.js:8
-#: build/admin.js:28
-#: build/admin.js:31
+#: build/admin.js:7
+#: build/admin.js:27
+#: build/admin.js:30
 msgid "Zuordnen"
 msgstr "Přiřadit"
 
 #: includes/class-checks.php:165
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "Google Consent Mode v2"
 msgstr "Google Consent Mode v2"
 
@@ -419,7 +418,7 @@ msgstr "Zapnout tlačítko"
 
 #. translators: %s: contrast ratio, e.g. 7.2
 #: includes/class-checks.php:248
-#: build/admin.js:27
+#: build/admin.js:26
 #, php-format,js-format
 msgid "Kontrast %s : 1"
 msgstr "Kontrastní poměr %s : 1"
@@ -486,7 +485,7 @@ msgid "Jede Woche neu, damit neue Skripte auffallen."
 msgstr "Každý týden znovu, aby nové skripty neunikly."
 
 #: includes/class-checks.php:308
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Jetzt lesen"
 msgstr "Přečíst teď"
 
@@ -531,8 +530,8 @@ msgstr "Tato akce neexistuje."
 
 #. translators: %s: service
 #: includes/class-checks.php:661
+#: includes/class-rest.php:296
 #: includes/class-rest.php:298
-#: includes/class-rest.php:300
 #, php-format
 msgid "%s hinzugefügt"
 msgstr "%s přidáno"
@@ -605,42 +604,41 @@ msgstr "%s přichází z vašeho serveru"
 msgid "%s lokal eingebunden"
 msgstr "%s načítáno lokálně"
 
-#: includes/class-rest.php:239
-#: includes/class-rest.php:240
+#: includes/class-rest.php:237
+#: includes/class-rest.php:238
 msgid "Dialog eingeschaltet"
 msgstr "Dialog zapnut"
 
-#: includes/class-rest.php:245
+#: includes/class-rest.php:243
 msgid "Dialog ausgeschaltet"
 msgstr "Dialog vypnut"
 
-#: includes/class-rest.php:290
+#: includes/class-rest.php:288
 msgid "Diesen Dienst kennt die Bibliothek nicht."
 msgstr "Tuto službu knihovna nezná."
 
-#: includes/class-rest.php:305
+#: includes/class-rest.php:303
 msgid "Ein Dienst braucht einen Namen."
 msgstr "Služba potřebuje název."
 
 #. translators: %s: service
-#: includes/class-rest.php:330
+#: includes/class-rest.php:328
 #, php-format
 msgid "%s geändert"
 msgstr "%s změněno"
 
 #. translators: %s: service
+#: includes/class-rest.php:345
 #: includes/class-rest.php:347
-#: includes/class-rest.php:349
 #, php-format
 msgid "%s entfernt"
 msgstr "%s odebráno"
 
-#: includes/class-rest.php:402
+#: includes/class-rest.php:400
 msgid "Diese Version gibt es nicht."
 msgstr "Tato verze neexistuje."
 
-#: includes/class-rest.php:414
-#: build/admin.js:23
+#: build/admin.js:22
 msgid "Was soll anders sein?"
 msgstr "Co má být jinak?"
 
@@ -649,7 +647,6 @@ msgid "Das hat nicht geklappt."
 msgstr "To se nepodařilo."
 
 #: build/admin.js:1
-#: build/admin.js:4
 msgid "Schließen"
 msgstr "Zavřít"
 
@@ -684,239 +681,112 @@ msgstr "K tomu potřebuje WordPress poskytovatele AI (Nastavení › Konektory) 
 msgid "Das Modell deines Browsers schreibt nicht auf %s. Mit einem KI-Anbieter (Einstellungen › Konnektoren) klappt es."
 msgstr "Model vašeho prohlížeče nepíše v jazyce %s. S poskytovatelem AI (Nastavení › Konektory) to půjde."
 
-#: build/admin.js:3
-msgid "Zeigen, was einzurichten ist"
-msgstr "Ukázat, co je třeba nastavit"
-
-#: build/admin.js:3
-#: build/admin.js:4
-msgid "Hinweis ausblenden"
-msgstr "Skrýt upozornění"
-
-#: build/admin.js:3
-msgid "Wartet auf einen KI-Anbieter …"
-msgstr "Čeká na poskytovatele AI …"
-
-#: build/admin.js:3
-msgid "Nachricht an den Assistenten"
-msgstr "Zpráva asistentovi"
-
-#: build/admin.js:3
-msgid "Senden"
-msgstr "Odeslat"
-
-#: build/admin.js:3
-msgid "Sag, was anders sein soll – ich ändere Dialog, Dienste und Einstellungen. Jede Änderung kommt als Karte und lässt sich zurücknehmen."
-msgstr "Řekněte, co má být jinak – změním dialog, služby a nastavení. Každá změna přijde jako karta a lze ji vzít zpět."
-
-#: build/admin.js:3
-msgid "Rückgängig"
-msgstr "Zpět"
-
 #. translators: %d: version
-#: build/admin.js:4
-#: build/admin.js:28
+#: build/admin.js:27
 #, js-format
 msgid "Version %d"
 msgstr "Verze %d"
 
-#: build/admin.js:4
-msgid "Zurückgenommen."
-msgstr "Vzato zpět."
-
-#: build/admin.js:4
-msgid "Denkt nach …"
-msgstr "Přemýšlí …"
-
-#: build/admin.js:4
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "kein KI-Anbieter"
 msgstr "žádný poskytovatel AI"
 
-#: build/admin.js:4
-msgid "Neu"
-msgstr "Nový"
-
-#: build/admin.js:4
-msgid "Unten anzeigen"
-msgstr "Zobrazit dole"
-
-#: build/admin.js:4
-msgid "In der Seitenleiste anzeigen"
-msgstr "Zobrazit v postranním panelu"
-
-#: build/admin.js:4
-msgid "Sag dem Assistenten, was anders sein soll …"
-msgstr "Řekněte asistentovi, co má být jinak …"
-
-#: build/admin.js:4
-msgid "Verlauf einklappen"
-msgstr "Sbalit historii"
-
-#: build/admin.js:4
-msgid "Verlauf zeigen"
-msgstr "Zobrazit historii"
-
-#: build/admin.js:4
-msgid "Breite des Assistenten"
-msgstr "Šířka asistenta"
-
-#: build/admin.js:4
-msgid "Höhe des Verlaufs"
-msgstr "Výška historie"
-
-#: build/admin.js:4
-msgid "Assistent öffnen"
-msgstr "Otevřít asistenta"
-
-#: build/admin.js:4
-msgid "eingerichtet"
-msgstr "nastaveno"
-
-#: build/admin.js:4
-msgid "API Key fehlt"
-msgstr "chybí API klíč"
-
-#: build/admin.js:4
-msgid "antwortet nicht"
-msgstr "neodpovídá"
-
-#: build/admin.js:4
-msgid "Plugin fehlt"
-msgstr "chybí plugin"
-
-#: build/admin.js:4
-msgid "Der Chat braucht WordPress 7.0"
-msgstr "Chat potřebuje WordPress 7.0"
-
-#: build/admin.js:4
-msgid "Ab 7.0 denkt der Assistent mit dem KI-Anbieter, den du unter Einstellungen › Konnektoren einrichtest. Alles andere funktioniert schon jetzt."
-msgstr "Od verze 7.0 přemýšlí asistent s poskytovatelem AI, kterého nastavíte v Nastavení › Konektory. Všechno ostatní funguje už teď."
-
-#: build/admin.js:4
-msgid "WordPress aktualisieren"
-msgstr "Aktualizovat WordPress"
-
-#: build/admin.js:4
-msgid "Erst einen KI-Anbieter einrichten"
-msgstr "Nejdřív nastavte poskytovatele AI"
-
-#: build/admin.js:4
-msgid "Der Assistent denkt mit dem Anbieter, den du in WordPress unter Einstellungen › Konnektoren einrichtest – dein API Key bleibt dort. Dialog, Dienste und Blockieren funktionieren auch ohne."
-msgstr "Asistent přemýšlí s poskytovatelem, kterého nastavíte ve WordPressu v Nastavení › Konektory – váš API klíč zůstává tam. Dialog, služby a blokování fungují i bez něj."
-
-#: build/admin.js:4
-msgid "Konnektoren öffnen"
-msgstr "Otevřít Konektory"
-
-#: build/admin.js:4
-msgid "Vercel AI Gateway installieren"
-msgstr "Instalovat Vercel AI Gateway"
-
-#: build/admin.js:4
-msgid "Ohne Vertrag bei einem Anbieter: Vercel AI Gateway gibt 5 $ im Monat gratis, keine Kreditkarte."
-msgstr "Bez smlouvy s poskytovatelem: Vercel AI Gateway dává 5 $ měsíčně zdarma, bez platební karty."
-
-#: build/admin.js:4
-msgid "Bis dahin übersetzt und ordnet das eingebaute Modell deines Browsers zu – nichts verlässt den Rechner."
-msgstr "Do té doby překládá a přiřazuje vestavěný model vašeho prohlížeče – nic neopouští počítač."
-
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Erste Ebene"
 msgstr "První úroveň"
 
-#: build/admin.js:4
-#: build/admin.js:28
+#: build/admin.js:3
+#: build/admin.js:27
 msgid "Auswahl"
 msgstr "Výběr"
 
-#: build/admin.js:4
+#: build/admin.js:3
+#: build/admin.js:26
 #: build/admin.js:27
-#: build/admin.js:28
 msgid "Platzhalter"
 msgstr "Zástupný prvek"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Ebene"
 msgstr "Úroveň"
 
-#: build/admin.js:4
-#: build/admin.js:33
+#: build/admin.js:3
+#: build/admin.js:32
 msgid "Sprache"
 msgstr "Jazyk"
 
-#: build/admin.js:4
-#: build/admin.js:27
+#: build/admin.js:3
+#: build/admin.js:26
 msgid "Gerät"
 msgstr "Zařízení"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Desktop"
 msgstr "Počítač"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Handy"
 msgstr "Mobil"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Vorschau deiner Website mit dem Dialog"
 msgstr "Náhled vašeho webu s dialogem"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Absatz für die Datenschutzerklärung"
 msgstr "Odstavec pro zásady ochrany osobních údajů"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Neu schreiben"
 msgstr "Napsat znovu"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Für meine Website schreiben"
 msgstr "Napsat pro můj web"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Mit Cookie-Tabelle einfügen"
 msgstr "Vložit s tabulkou cookies"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Darunter kommt die Cookie-Tabelle: alle Dienste und Cookies, und sie hält sich selbst aktuell."
 msgstr "Pod něj přijde tabulka cookies: všechny služby a cookies, a sama se udržuje aktuální."
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Noch kein eigener Absatz: eingefügt wird die Vorlage der Bibliothek. Der Assistent oder das Modell deines Browsers schreibt ihn für deine Website."
 msgstr "Zatím žádný vlastní odstavec: vloží se vzor z knihovny. Asistent nebo model vašeho prohlížeče ho napíše pro váš web."
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "unten links"
 msgstr "vlevo dole"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "unten rechts"
 msgstr "vpravo dole"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "unten in der Mitte"
 msgstr "dole uprostřed"
 
-#: build/admin.js:4
-#: build/admin.js:26
+#: build/admin.js:3
+#: build/admin.js:25
 msgid "Box"
 msgstr "Box"
 
-#: build/admin.js:4
-#: build/admin.js:26
+#: build/admin.js:3
+#: build/admin.js:25
 msgid "Leiste"
 msgstr "Lišta"
 
-#: build/admin.js:4
-#: build/admin.js:26
+#: build/admin.js:3
+#: build/admin.js:25
 msgid "Fenster"
 msgstr "Okno"
 
 #. translators: %d: services
 #. translators: %d: number of services
-#: build/admin.js:5
-#: build/admin.js:38
+#: build/admin.js:4
+#: build/admin.js:37
 #, js-format
 msgid "%d Dienst"
 msgid_plural "%d Dienste"
@@ -925,7 +795,7 @@ msgstr[1] "%d služby"
 msgstr[2] "%d služeb"
 
 #. translators: %d: categories
-#: build/admin.js:6
+#: build/admin.js:5
 #, js-format
 msgid "in %d Kategorie"
 msgid_plural "in %d Kategorien"
@@ -933,32 +803,32 @@ msgstr[0] "v %d kategorii"
 msgstr[1] "ve %d kategoriích"
 msgstr[2] "v %d kategoriích"
 
-#: build/admin.js:6
+#: build/admin.js:5
 msgid "Dienste ansehen"
 msgstr "Zobrazit služby"
 
 #. translators: 1: who suggests, 2: service, 3: purpose, 4: category
-#: build/admin.js:8
+#: build/admin.js:7
 #, js-format
 msgid "%1$s: %2$s, %3$s → %4$s"
 msgstr "%1$s: %2$s, %3$s → %4$s"
 
-#: build/admin.js:8
+#: build/admin.js:7
 msgid "Vorschlag deines Browsers"
 msgstr "Návrh vašeho prohlížeče"
 
-#: build/admin.js:8
-#: build/admin.js:15
-#: build/admin.js:28
+#: build/admin.js:7
+#: build/admin.js:14
+#: build/admin.js:27
 msgid "Vorschlag"
 msgstr "Návrh"
 
-#: build/admin.js:8
+#: build/admin.js:7
 msgid "Lädt bis zur Zuordnung ohne Einwilligung"
 msgstr "Do přiřazení se načítá bez souhlasu"
 
 #. translators: %d: number of embeds
-#: build/admin.js:9
+#: build/admin.js:8
 #, js-format
 msgid "%d Einbettung wartet auf Einwilligung"
 msgid_plural "%d Einbettungen warten auf Einwilligung"
@@ -967,17 +837,17 @@ msgstr[1] "%d vložené obsahy čekají na souhlas"
 msgstr[2] "%d vložených obsahů čeká na souhlas"
 
 #. translators: %s: services
-#: build/admin.js:10
+#: build/admin.js:9
 #, js-format
 msgid "%s – als Platzhalter mit Vorschaubild"
 msgstr "%s – jako zástupný prvek s náhledovým obrázkem"
 
-#: build/admin.js:10
+#: build/admin.js:9
 msgid "Bis zur Einwilligung steht dort ein Platzhalter in der Größe des Inhalts: „Laden“ lädt einmal, „Immer laden“ ist die Einwilligung für den Dienst. YouTube lädt danach über youtube-nocookie.com."
 msgstr "Do souhlasu tam stojí zástupný prvek ve velikosti obsahu: „Načíst“ načte jednou, „Načítat vždy“ je souhlas pro službu. YouTube se pak načítá přes youtube-nocookie.com."
 
 #. translators: %d: number of things
-#: build/admin.js:11
+#: build/admin.js:10
 #, js-format
 msgid "%d Ding kommt von deinem Server statt von Dritten"
 msgid_plural "%d Dinge kommen von deinem Server statt von Dritten"
@@ -985,57 +855,57 @@ msgstr[0] "%d věc přichází z vašeho serveru místo od třetích stran"
 msgstr[1] "%d věci přicházejí z vašeho serveru místo od třetích stran"
 msgstr[2] "%d věcí přichází z vašeho serveru místo od třetích stran"
 
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "WordPress-Emoji aus"
 msgstr "Emoji WordPressu vypnuto"
 
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "Schriften, Styles und Bilder von Dritten werden beim Einschalten auf deinen Server kopiert und die Verweise umgeschrieben – dann sieht kein Dritter die IP-Adresse deiner Besucher, und es braucht keine Einwilligung."
 msgstr "Při zapnutí se písma, styly a obrázky třetích stran zkopírují na váš server a odkazy se přepíší – pak žádná třetí strana nevidí IP adresu vašich návštěvníků a není potřeba souhlas."
 
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "Texte in deinem Ton"
 msgstr "Texty ve vašem tónu"
 
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "Standardtexte"
 msgstr "Výchozí texty"
 
-#: build/admin.js:11
-#: build/admin.js:27
+#: build/admin.js:10
+#: build/admin.js:26
 msgid "per Sie"
 msgstr "vykání"
 
-#: build/admin.js:11
-#: build/admin.js:27
+#: build/admin.js:10
+#: build/admin.js:26
 msgid "per du"
 msgstr "tykání"
 
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "mit einem KI-Anbieter in deinem Ton"
 msgstr "s poskytovatelem AI ve vašem tónu"
 
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "Aussehen aus deinem Theme"
 msgstr "Vzhled z vaší šablony"
 
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "dein Logo"
 msgstr "vaše logo"
 
 #. translators: %s: Google services
-#: build/admin.js:12
+#: build/admin.js:11
 #, js-format
 msgid "Vor %s · Tags warten auf Einwilligung"
 msgstr "Před %s · tagy čekají na souhlas"
 
-#: build/admin.js:12
-#: build/admin.js:34
+#: build/admin.js:11
+#: build/admin.js:33
 msgid "Datenschutzerklärung"
 msgstr "Zásady ochrany osobních údajů"
 
 #. translators: %d: months
-#: build/admin.js:13
+#: build/admin.js:12
 #, js-format
 msgid "%d Monat · IP-Adressen nur gehasht"
 msgid_plural "%d Monate · IP-Adressen nur gehasht"
@@ -1044,51 +914,51 @@ msgstr[1] "%d měsíce · IP adresy jen jako hash"
 msgstr[2] "%d měsíců · IP adresy jen jako hash"
 
 #. translators: %s: the site's host
-#: build/admin.js:14
+#: build/admin.js:13
 #, js-format
 msgid "Ich habe %s gelesen"
 msgstr "Přečetl jsem %s"
 
 #. translators: 1: pages, 2: scripts, 3: embeds, 4: plugins
-#: build/admin.js:15
+#: build/admin.js:14
 #, js-format
 msgid "%1$d Seiten, %2$d Skripte, %3$d Einbettungen, %4$d Plugins. Unten steht mein Vorschlag, rechts siehst du ihn auf deiner Startseite."
 msgstr "%1$d stránek, %2$d skriptů, %3$d vložených obsahů, %4$d pluginů. Dole je můj návrh, vpravo ho vidíte na své úvodní stránce."
 
-#: build/admin.js:15
+#: build/admin.js:14
 msgid "Sag mir, was anders sein soll – z. B. „Schreib per Sie“"
 msgstr "Řekněte mi, co má být jinak – např. „Používejte vykání“"
 
-#: build/admin.js:22
+#: build/admin.js:21
 msgid "Schreib per Sie"
 msgstr "Používejte vykání"
 
-#: build/admin.js:23
+#: build/admin.js:22
 msgid "Dunkler Dialog"
 msgstr "Tmavý dialog"
 
-#: build/admin.js:23
+#: build/admin.js:22
 msgid "Wir nutzen keine Statistik mehr"
 msgstr "Statistiku už nepoužíváme"
 
-#: build/admin.js:15
+#: build/admin.js:14
 msgid "Alles ist voreingestellt. Öffne eine Zeile, um sie zu prüfen."
 msgstr "Všechno je přednastavené. Otevřete řádek a zkontrolujte ho."
 
-#: build/admin.js:15
+#: build/admin.js:14
 msgid "Neu lesen"
 msgstr "Přečíst znovu"
 
-#: build/admin.js:15
+#: build/admin.js:14
 msgid "So sieht es aus"
 msgstr "Tak to vypadá"
 
-#: build/admin.js:15
+#: build/admin.js:14
 msgid "Deine Startseite mit dem Dialog."
 msgstr "Vaše úvodní stránka s dialogem."
 
 #. translators: %d: open points
-#: build/admin.js:16
+#: build/admin.js:15
 #, js-format
 msgid "Bereit – %d Skript noch ohne Zuordnung."
 msgid_plural "Bereit – %d Skripte noch ohne Zuordnung."
@@ -1096,54 +966,54 @@ msgstr[0] "Připraveno – %d skript ještě bez přiřazení."
 msgstr[1] "Připraveno – %d skripty ještě bez přiřazení."
 msgstr[2] "Připraveno – %d skriptů ještě bez přiřazení."
 
-#: build/admin.js:16
+#: build/admin.js:15
 msgid "Alles bereit."
 msgstr "Všechno připraveno."
 
-#: build/admin.js:16
+#: build/admin.js:15
 msgid "Schalte ein …"
 msgstr "Zapínám …"
 
-#: build/admin.js:16
+#: build/admin.js:15
 msgid "Dialog einschalten"
 msgstr "Zapnout dialog"
 
-#: build/admin.js:16
+#: build/admin.js:15
 msgid "Bis dahin ändert sich nichts an deiner Website. Ausschalten geht jederzeit."
 msgstr "Do té doby se na vašem webu nic nezmění. Vypnout ho můžete kdykoli."
 
-#: build/admin.js:23
+#: build/admin.js:22
 msgid "Ich ändere Dialog, Dienste und Einstellungen – z. B. „Füge Hotjar hinzu“"
 msgstr "Měním dialog, služby a nastavení – např. „Přidejte Hotjar“"
 
-#: build/admin.js:22
+#: build/admin.js:21
 msgid "Mach den Dialog kleiner"
 msgstr "Zmenšete dialog"
 
-#: build/admin.js:23
+#: build/admin.js:22
 msgid "Zu tun"
 msgstr "Co udělat"
 
 #. translators: %s: time of the last scan
-#: build/admin.js:24
+#: build/admin.js:23
 #, js-format
 msgid "Aus der Prüfung %s. Ein Klick erledigt es."
 msgstr "Z kontroly %s. Jedno kliknutí to vyřídí."
 
-#: build/admin.js:24
+#: build/admin.js:23
 msgid "Jetzt prüfen"
 msgstr "Zkontrolovat teď"
 
-#: build/admin.js:24
+#: build/admin.js:23
 msgid "Alles in Ordnung"
 msgstr "Všechno v pořádku"
 
-#: build/admin.js:24
+#: build/admin.js:23
 msgid "Jede Woche liest der Dialog deine Website neu und meldet sich hier."
 msgstr "Každý týden dialog znovu přečte váš web a ozve se tady."
 
 #. translators: %d: passed checks
-#: build/admin.js:26
+#: build/admin.js:25
 #, js-format
 msgid "%d Prüfung bestanden"
 msgid_plural "%d Prüfungen bestanden"
@@ -1151,737 +1021,737 @@ msgstr[0] "%d kontrola splněna"
 msgstr[1] "%d kontroly splněny"
 msgstr[2] "%d kontrol splněno"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Letzte 30 Tage"
 msgstr "Posledních 30 dní"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Entscheidungen"
 msgstr "Rozhodnutí"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Zuletzt"
 msgstr "Naposledy"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Alle akzeptiert"
 msgstr "Přijato vše"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Eigene Auswahl"
 msgstr "Vlastní výběr"
 
-#: build/admin.js:26
-#: build/admin.js:28
+#: build/admin.js:25
+#: build/admin.js:27
 msgid "Nur notwendige"
 msgstr "Pouze nezbytné"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Noch keine Entscheidungen. Sie erscheinen, sobald Besucher wählen."
 msgstr "Zatím žádná rozhodnutí. Objeví se, jakmile návštěvníci zvolí."
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Hintergrund"
 msgstr "Pozadí"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Text"
 msgstr "Text"
 
-#: build/admin.js:26
+#: build/admin.js:25
 #: build/blocks.js:1
 msgid "Button"
 msgstr "Tlačítko"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Button-Text"
 msgstr "Text tlačítka"
 
+#: build/admin.js:25
 #: build/admin.js:26
-#: build/admin.js:27
 msgid "Links"
 msgstr "Odkazy"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Titel"
 msgstr "Název"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Alle akzeptieren"
 msgstr "Přijmout vše"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Titel der Auswahl"
 msgstr "Název výběru"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Text der Auswahl"
 msgstr "Text výběru"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Auswahl speichern"
 msgstr "Uložit výběr"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Link Datenschutz"
 msgstr "Odkaz na ochranu osobních údajů"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Link Impressum"
 msgstr "Odkaz na tiráž"
 
-#: build/admin.js:26
-#: build/admin.js:34
+#: build/admin.js:25
+#: build/admin.js:33
 msgid "Button zum Öffnen"
 msgstr "Tlačítko pro otevření"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Platzhalter: Laden"
 msgstr "Zástupný prvek: Načíst"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Platzhalter: Immer laden"
 msgstr "Zástupný prvek: Načítat vždy"
 
-#: build/admin.js:26
-#: build/admin.js:34
+#: build/admin.js:25
+#: build/admin.js:33
 msgid "Position"
 msgstr "Pozice"
 
-#: build/admin.js:26
-#: build/admin.js:34
+#: build/admin.js:25
+#: build/admin.js:33
 msgctxt "position"
 msgid "Links"
 msgstr "Vlevo"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Mitte"
 msgstr "Uprostřed"
 
-#: build/admin.js:26
-#: build/admin.js:34
+#: build/admin.js:25
+#: build/admin.js:33
 msgid "Rechts"
 msgstr "Vpravo"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Größe"
 msgstr "Velikost"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Farben"
 msgstr "Barvy"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Vom Theme"
 msgstr "Ze šablony"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Dunkel"
 msgstr "Tmavé"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Ecken"
 msgstr "Rohy"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Hell / dunkel"
 msgstr "Světlé / tmavé"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Hell"
 msgstr "Světlé"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Buttons"
 msgstr "Tlačítka"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Gleich"
 msgstr "Stejná"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Akzeptieren betont"
 msgstr "Přijmout zvýrazněné"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Umrandet"
 msgstr "Orámovaná"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Titel zeigen"
 msgstr "Zobrazit název"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Links zu Datenschutz und Impressum zeigen"
 msgstr "Zobrazit odkazy na ochranu osobních údajů a tiráž"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Sprachauswahl zeigen"
 msgstr "Zobrazit výběr jazyka"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Erst mit mehr als einer Sprache (Texte › Sprachen)."
 msgstr "Až s více než jedním jazykem (Texty › Jazyky)."
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Schrift, Logo, Abdunkeln, Seite sperren"
 msgstr "Písmo, logo, ztmavení, zamknutí stránky"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Schrift"
 msgstr "Písmo"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Theme"
 msgstr "Šablona"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "System"
 msgstr "Systémové"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Eigene"
 msgstr "Vlastní"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Schriftart (CSS)"
 msgstr "Rodina písma (CSS)"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Schrift der Überschrift"
 msgstr "Písmo nadpisu"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Leer: wie der Text."
 msgstr "Prázdné: jako text."
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Logo"
 msgstr "Logo"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Logo im Dialog"
 msgstr "Logo v dialogu"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Wählen"
 msgstr "Vybrat"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Entfernen"
 msgstr "Odebrat"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Seite abdunkeln"
 msgstr "Ztmavit stránku"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Seite sperren"
 msgstr "Zamknout stránku"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Scrollen erst nach der Wahl – nur wenn es sein muss."
 msgstr "Posouvání až po volbě – jen když to musí být."
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Ton"
 msgstr "Tón"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Anrede (Deutsch)"
 msgstr "Oslovení (němčina)"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Anrede geändert"
 msgstr "Oslovení změněno"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Kürzer"
 msgstr "Kratší"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Im Ton meiner Website"
 msgstr "V tónu mého webu"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "„Kürzer“ macht dein Browser. Für den Ton deiner Website braucht WordPress einen KI-Anbieter."
 msgstr "„Kratší“ zvládne váš prohlížeč. Pro tón vašeho webu potřebuje WordPress poskytovatele AI."
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Dafür braucht WordPress einen KI-Anbieter – oder Chrome mit eingebautem Modell für „Kürzer“."
 msgstr "K tomu potřebuje WordPress poskytovatele AI – nebo Chrome s vestavěným modelem pro „Kratší“."
 
-#: build/admin.js:27
-#: build/admin.js:35
+#: build/admin.js:26
+#: build/admin.js:34
 msgid "Sprachen"
 msgstr "Jazyky"
 
 #. translators: %s: language
-#: build/admin.js:27
+#: build/admin.js:26
 #, js-format
 msgid "%s entfernen"
 msgstr "Odebrat %s"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Sprache hinzufügen"
 msgstr "Přidat jazyk"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "– Sprache wählen –"
 msgstr "– vyberte jazyk –"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "auf deiner Website"
 msgstr "na vašem webu"
 
 #. translators: %s: language
-#: build/admin.js:27
+#: build/admin.js:26
 #, js-format
 msgid "Auf %s übersetzen"
 msgstr "Přeložit do jazyka %s"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Seiten wählen"
 msgstr "Vybrat stránky"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Alle Texte als Liste"
 msgstr "Všechny texty jako seznam"
 
-#: build/admin.js:27
-#: build/admin.js:29
+#: build/admin.js:26
+#: build/admin.js:28
 msgid "Texte geändert"
 msgstr "Texty změněny"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Sitzung"
 msgstr "Relace"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "dauerhaft"
 msgstr "trvalé"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Min."
 msgstr "min"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Std."
 msgstr "hod."
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Tage"
 msgstr "dní"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Wochen"
 msgstr "týdnů"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Monate"
 msgstr "měsíců"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Jahre"
 msgstr "let"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "immer aktiv"
 msgstr "vždy aktivní"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "nie geladen"
 msgstr "nikdy nenačteno"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "wartet auf Einwilligung"
 msgstr "čeká na souhlas"
 
+#: build/admin.js:26
 #: build/admin.js:27
-#: build/admin.js:28
-#: build/admin.js:32
+#: build/admin.js:31
 msgid "Eigener Dienst"
 msgstr "Vlastní služba"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Wirklich entfernen"
 msgstr "Opravdu odebrat"
 
-#: build/admin.js:27
-#: build/admin.js:30
+#: build/admin.js:26
+#: build/admin.js:29
+#: build/admin.js:37
 #: build/admin.js:38
-#: build/admin.js:39
 msgid "Abbrechen"
 msgstr "Zrušit"
 
 #. translators: %d: version
-#: build/admin.js:28
+#: build/admin.js:27
 #, js-format
 msgid "Gespeichert · gilt ab Version %d"
 msgstr "Uloženo · platí od verze %d"
 
-#: build/admin.js:28
-#: build/admin.js:39
+#: build/admin.js:27
+#: build/admin.js:38
 msgid "Gespeichert"
 msgstr "Uloženo"
 
-#: build/admin.js:28
-#: build/admin.js:31
+#: build/admin.js:27
+#: build/admin.js:30
 msgid "Fertig"
 msgstr "Hotovo"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "aus der Bibliothek"
 msgstr "z knihovny"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "eigener Dienst"
 msgstr "vlastní služba"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Im Dialog"
 msgstr "V dialogu"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "So sehen Besucher den Dienst in der Auswahl."
 msgstr "Tak vidí návštěvníci službu ve výběru."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Zusammenfassung"
 msgstr "Shrnutí"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Name"
 msgstr "Název"
 
-#: build/admin.js:28
-#: build/admin.js:30
+#: build/admin.js:27
+#: build/admin.js:29
 msgid "Kategorie"
 msgstr "Kategorie"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Anbieter"
 msgstr "Poskytovatel"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Adresse des Anbieters"
 msgstr "Adresa poskytovatele"
 
 #. translators: %s: language
-#: build/admin.js:28
+#: build/admin.js:27
 #, js-format
 msgid "Zweck (%s)"
 msgstr "Účel (%s)"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Datenschutzerklärung des Anbieters"
 msgstr "Zásady ochrany osobních údajů poskytovatele"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Dauer"
 msgstr "Doba platnosti"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Art"
 msgstr "Typ"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Cookie entfernen"
 msgstr "Odebrat cookie"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Cookie"
 msgstr "Cookie"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Zweck"
 msgstr "Účel"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Datenschutz"
 msgstr "Ochrana osobních údajů"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Setzt keine Cookies."
 msgstr "Nenastavuje žádné cookies."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Auf deiner Website"
 msgstr "Na vašem webu"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Erkannt an"
 msgstr "Rozpoznáno podle"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Hosts"
 msgstr "Hosty"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "nur über Snippet oder data-cookie-service"
 msgstr "jen přes snippet nebo data-cookie-service"
 
-#: build/admin.js:28
-#: build/admin.js:33
+#: build/admin.js:27
+#: build/admin.js:32
 msgid "Wo"
 msgstr "Kde"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "bei der letzten Prüfung nicht gefunden"
 msgstr "při poslední kontrole nenalezeno"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "noch nicht gelesen"
 msgstr "ještě nepřečteno"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Bis zur Einwilligung"
 msgstr "Do souhlasu"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Die Schalter gelten für alle Einbettungen."
 msgstr "Přepínače platí pro všechny vložené obsahy."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Diese Karte kommt von"
 msgstr "Tato mapa pochází od"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Dieser Inhalt kommt von"
 msgstr "Tento obsah pochází od"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Laden"
 msgstr "Načíst"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Immer laden"
 msgstr "Načítat vždy"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Vorschaubild und Titel über deinen Server"
 msgstr "Náhledový obrázek a název přes váš server"
 
-#: build/admin.js:28
-#: build/admin.js:34
+#: build/admin.js:27
+#: build/admin.js:33
 msgid "„Immer laden“ anbieten"
 msgstr "Nabízet „Načítat vždy“"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Danach über youtube-nocookie.com"
 msgstr "Potom přes youtube-nocookie.com"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Adresse im Platzhalter"
 msgstr "Adresa v zástupném prvku"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Leer: aus der Karte gelesen."
 msgstr "Prázdné: načteno z mapy."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Google-Signale"
 msgstr "Signály Google"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "keine eigenen – die Kategorie gibt sie"
 msgstr "žádné vlastní – dává je kategorie"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Mit der Einwilligung für diesen Dienst gehen diese Signale an Google. Eine ganze Kategorie gibt ihre eigenen dazu (Statistik: analytics_storage, Marketing: die drei ad_*)."
 msgstr "Se souhlasem pro tuto službu jdou tyto signály do Google. Celá kategorie přidává své vlastní (Statistika: analytics_storage, Marketing: tři ad_*)."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Anders einbinden"
 msgstr "Vložit jinak"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Snippet, eigenes Skript-Tag, data-cookie-service"
 msgstr "Snippet, vlastní tag skriptu, data-cookie-service"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Snippet"
 msgstr "Snippet"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Der Code des Anbieters. Das Plugin druckt ihn zurückgehalten und lädt ihn bei Einwilligung – ohne Neuladen. <noscript> fällt weg."
 msgstr "Kód poskytovatele. Plugin ho vytiskne pozdržený a načte ho při souhlasu – bez znovunačtení stránky. <noscript> odpadá."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Im Theme oder in einem Plugin"
 msgstr "V šabloně nebo v pluginu"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Skript-Handles in WordPress"
 msgstr "Handle skriptů ve WordPressu"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Durch Komma getrennt. Diese Skripte warten auf die Einwilligung."
 msgstr "Oddělené čárkou. Tyto skripty čekají na souhlas."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Muster"
 msgstr "Vzory"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Teile von Adressen oder Code, an denen der Dienst erkannt wird."
 msgstr "Části adres nebo kódu, podle kterých se služba pozná."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Seit"
 msgstr "Od"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Aus der Bibliothek"
 msgstr "Z knihovny"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Dienst suchen"
 msgstr "Hledat službu"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Als eigenen Dienst anlegen"
 msgstr "Založit jako vlastní službu"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Beschreibung im Dialog"
 msgstr "Popis v dialogu"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Nach oben"
 msgstr "Nahoru"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Nach unten"
 msgstr "Dolů"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Kategorie löschen"
 msgstr "Smazat kategorii"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Alle"
 msgstr "Vše"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Widerruf"
 msgstr "Odvolání"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Widerruf · Nur notwendige"
 msgstr "Odvolání · Pouze nezbytné"
 
 #. translators: 1: date, 2: note
-#: build/admin.js:29
+#: build/admin.js:28
 #, js-format
 msgid "Seit %1$s · %2$s"
 msgstr "Od %1$s · %2$s"
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Das hat jede Person gesehen, die bei dieser Version entschieden hat – in allen Sprachen gespeichert."
 msgstr "Toto viděl každý, kdo se rozhodl u této verze – uloženo ve všech jazycích."
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Kopiert"
 msgstr "Zkopírováno"
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Kopieren"
 msgstr "Kopírovat"
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "– keine –"
 msgstr "– žádné –"
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Ich lese deine Website …"
 msgstr "Čtu váš web …"
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Startseite und bis zu 20 Seiten, als Besucher ohne Einwilligung: jedes Skript, jede Einbettung, jede Schrift von Dritten. Das dauert ein paar Sekunden."
 msgstr "Úvodní stránka a až 20 stránek, jako návštěvník bez souhlasu: každý skript, každý vložený obsah, každé písmo třetích stran. Trvá to pár sekund."
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Aussehen"
 msgstr "Vzhled"
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Aus deinem Theme. Ändere nur, was nicht passt."
 msgstr "Z vaší šablony. Změňte jen to, co nesedí."
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Texte"
 msgstr "Texty"
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Klick auf einen Text in der Vorschau, um ihn zu ändern – oder sag dem Assistenten, wie er klingen soll."
 msgstr "Klikněte na text v náhledu a změňte ho – nebo řekněte asistentovi, jak má znít."
 
 #. translators: %d: next version
-#: build/admin.js:30
+#: build/admin.js:29
 #, js-format
 msgid "Gespeichert, sobald du etwas änderst. Neue Texte werden Version %d – Besucher werden einmal neu gefragt."
 msgstr "Uloženo, jakmile něco změníte. Nové texty budou verze %d – návštěvníci budou jednou znovu dotázáni."
 
-#: build/admin.js:30
+#: build/admin.js:29
 msgid "Gespeichert, sobald du etwas änderst. Auf der Website erscheint es, wenn du den Dialog einschaltest."
 msgstr "Uloženo, jakmile něco změníte. Na webu se to objeví, když dialog zapnete."
 
-#: build/admin.js:30
+#: build/admin.js:29
 msgid "Dienst oder Host suchen"
 msgstr "Hledat službu nebo host"
 
-#: build/admin.js:30
+#: build/admin.js:29
 #: build/blocks.js:1
 msgid "Dienst"
 msgstr "Služba"
 
-#: build/admin.js:30
+#: build/admin.js:29
 msgid "Name der Kategorie"
 msgstr "Název kategorie"
 
-#: build/admin.js:30
+#: build/admin.js:29
 msgid "Beschreibung"
 msgstr "Popis"
 
-#: build/admin.js:30
+#: build/admin.js:29
 msgid "Anlegen"
 msgstr "Založit"
 
-#: build/admin.js:30
+#: build/admin.js:29
 msgid "Zu prüfen"
 msgstr "Ke kontrole"
 
-#: build/admin.js:30
+#: build/admin.js:29
 msgid "Neu auf deiner Website und noch nicht im Dialog – lädt bis dahin ohne Einwilligung."
 msgstr "Nové na vašem webu a ještě ne v dialogu – do té doby se načítá bez souhlasu."
 
 #. translators: %s: date
-#: build/admin.js:30
+#: build/admin.js:29
 #, js-format
 msgid "seit %s"
 msgstr "od %s"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Ohne sie funktioniert die Seite nicht. Immer aktiv."
 msgstr "Bez nich web nefunguje. Vždy aktivní."
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Bearbeiten"
 msgstr "Upravit"
 
 #. translators: %s: category
-#: build/admin.js:31
+#: build/admin.js:30
 #, js-format
 msgid "%s im Dialog anbieten"
 msgstr "Nabízet %s v dialogu"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Nicht im Dialog: Diese Dienste laden nie."
 msgstr "Není v dialogu: tyto služby se nikdy nenačtou."
 
 #. translators: %d: cookies
-#: build/admin.js:31
+#: build/admin.js:30
 #, js-format
 msgid "%d Cookie"
 msgid_plural "%d Cookies"
@@ -1889,97 +1759,97 @@ msgstr[0] "%d cookie"
 msgstr[1] "%d cookies"
 msgstr[2] "%d cookies"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "kein Cookie"
 msgstr "žádné cookies"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Noch kein Dienst"
 msgstr "Zatím žádná služba"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Unten aus der Bibliothek hinzufügen."
 msgstr "Přidejte ji dole z knihovny."
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Von deinem Server statt von Dritten"
 msgstr "Z vašeho serveru místo od třetích stran"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Keine Einwilligung nötig – die Dateien liegen bei dir und werden wöchentlich geprüft."
 msgstr "Není potřeba souhlas – soubory jsou u vás a kontrolují se každý týden."
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "über den Server"
 msgstr "přes server"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "lokal"
 msgstr "lokálně"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "aus"
 msgstr "vypnuto"
 
-#: build/admin.js:31
-#: build/admin.js:34
+#: build/admin.js:30
+#: build/admin.js:33
 msgid "Über den Server"
 msgstr "Přes server"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Ausschalten"
 msgstr "Vypnout"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Die letzte Prüfung hat keine Datei dieses Dienstes gefunden."
 msgstr "Poslední kontrola nenašla žádný soubor této služby."
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Schriften"
 msgstr "Písma"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Stylesheets"
 msgstr "Styly"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Skript-Bibliothek – jetzt notwendig, Host in der Tabelle genannt"
 msgstr "Knihovna skriptů – teď nezbytná, host uveden v tabulce"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Emoji-Skript von WordPress"
 msgstr "Skript emoji z WordPressu"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Bilder"
 msgstr "Obrázky"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Avatare in Kommentaren"
 msgstr "Avatary v komentářích"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "vorher"
 msgstr "dříve"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Deine eigene Domain – etwa ein CDN. Als Auftragsverarbeiter notwendig."
 msgstr "Vaše vlastní doména – třeba CDN. Jako zpracovatel nezbytná."
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "eigene Domain"
 msgstr "vlastní doména"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Hinzufügen"
 msgstr "Přidat"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Aus der Bibliothek: Anbieter, Zweck, Cookies und Texte sind schon da."
 msgstr "Z knihovny: poskytovatel, účel, cookies a texty už jsou vyplněné."
 
 #. translators: %d: more services
-#: build/admin.js:32
+#: build/admin.js:31
 #, js-format
 msgid "%d weiterer"
 msgid_plural "%d weitere"
@@ -1987,58 +1857,58 @@ msgstr[0] "%d další"
 msgstr[1] "%d další"
 msgstr[2] "%d dalších"
 
-#: build/admin.js:32
+#: build/admin.js:31
 msgid "Zeitraum"
 msgstr "Období"
 
-#: build/admin.js:32
+#: build/admin.js:31
 msgid "30 Tage"
 msgstr "30 dní"
 
-#: build/admin.js:32
+#: build/admin.js:31
 msgid "12 Monate"
 msgstr "12 měsíců"
 
-#: build/admin.js:32
+#: build/admin.js:31
 msgid "Alles"
 msgstr "Vše"
 
 #. translators: %d: withdrawals
-#: build/admin.js:33
+#: build/admin.js:32
 #, js-format
 msgid "Entscheidungen · %d Widerrufe"
 msgstr "Rozhodnutí · odvolání: %d"
 
-#: build/admin.js:33
+#: build/admin.js:32
 msgid "Consent-ID suchen"
 msgstr "Hledat ID souhlasu"
 
-#: build/admin.js:33
+#: build/admin.js:32
 msgid "Zeit"
 msgstr "Čas"
 
-#: build/admin.js:33
+#: build/admin.js:32
 msgid "Consent-ID"
 msgstr "ID souhlasu"
 
-#: build/admin.js:33
+#: build/admin.js:32
 msgid "Entscheidung"
 msgstr "Rozhodnutí"
 
-#: build/admin.js:33
+#: build/admin.js:32
 msgid "Version"
 msgstr "Verze"
 
-#: build/admin.js:33
+#: build/admin.js:32
 msgid "Keine Entscheidung mit dieser Consent-ID."
 msgstr "Žádné rozhodnutí s tímto ID souhlasu."
 
-#: build/admin.js:33
+#: build/admin.js:32
 msgid "Noch keine Entscheidungen in diesem Zeitraum."
 msgstr "Zatím žádná rozhodnutí v tomto období."
 
 #. translators: %d: months
-#: build/admin.js:34
+#: build/admin.js:33
 #, js-format
 msgid "Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d Monat."
 msgid_plural "Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d Monaten."
@@ -2046,260 +1916,260 @@ msgstr[0] "Každý řádek drží verzi dialogu, kterou osoba viděla – důkaz
 msgstr[1] "Každý řádek drží verzi dialogu, kterou osoba viděla – důkaz podle čl. 7 GDPR. IP adresy jen jako hash, smazáno po %d měsících."
 msgstr[2] "Každý řádek drží verzi dialogu, kterou osoba viděla – důkaz podle čl. 7 GDPR. IP adresy jen jako hash, smazáno po %d měsících."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "überall"
 msgstr "všude"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "EWR"
 msgstr "EHP"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Schweiz"
 msgstr "Švýcarsko"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Gravatar über den Server"
 msgstr "Gravatar přes server"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Avatare aus"
 msgstr "Avatary vypnuté"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Gravatar direkt"
 msgstr "Gravatar přímo"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Google"
 msgstr "Google"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Consent Mode v2"
 msgstr "Consent Mode v2"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Consent Mode aus"
 msgstr "Consent Mode vypnutý"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "„Abgelehnt“ steht vor jedem Google-Tag; die Wahl geht als Update hinterher."
 msgstr "„Odmítnuto“ stojí před každým tagem Google; volba následuje jako aktualizace."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Modus"
 msgstr "Režim"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Basic: Tags laden erst nach Einwilligung – empfohlen in DE und AT. Advanced: Tags laden und senden cookielose Pings."
 msgstr "Basic: tagy se načtou až po souhlasu – doporučeno v Německu a Rakousku. Advanced: tagy se načtou a posílají pingy bez cookies."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Tag Manager"
 msgstr "Tag Manager"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Vom Plugin geladen, nach dem Standard. Eigener Container im Theme? Leer lassen."
 msgstr "Načítá plugin, po výchozím nastavení. Vlastní kontejner v šabloně? Nechte prázdné."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Regionen mit „abgelehnt“"
 msgstr "Regiony s „odmítnuto“"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Außerhalb darf Google ohne Wahl messen – der Dialog hält Tags trotzdem zurück."
 msgstr "Mimo ně smí Google měřit bez volby – dialog tagy přesto zadržuje."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Überall"
 msgstr "Všude"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "URL-Passthrough"
 msgstr "Předávání URL (passthrough)"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Klick-IDs in Links weitergeben, solange Cookies abgelehnt sind."
 msgstr "Předávat ID kliknutí v odkazech, dokud jsou cookies odmítnuté."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Ads-Daten kürzen"
 msgstr "Zkrátit data reklam"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "IAB TCF 2.2 braucht nur, wer AdSense, Ad Manager oder AdMob nutzt."
 msgstr "IAB TCF 2.2 potřebuje jen ten, kdo používá AdSense, Ad Manager nebo AdMob."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Von Dritten"
 msgstr "Od třetích stran"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Einbettungen als Platzhalter"
 msgstr "Vložený obsah jako zástupné prvky"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "nur bekannte Einbettungen"
 msgstr "jen známý vložený obsah"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Schriften lokal"
 msgstr "Písma lokálně"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Emoji aus"
 msgstr "Emoji vypnuto"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Unbekannte iframes als Platzhalter"
 msgstr "Neznámé iframy jako zástupné prvky"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Auch Einbettungen, die die Bibliothek nicht kennt, laden erst auf Klick."
 msgstr "I vložený obsah, který knihovna nezná, se načte až po kliknutí."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Vorschaubilder über deinen Server"
 msgstr "Náhledové obrázky přes váš server"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "YouTube, Vimeo, Spotify: Bild und Titel in der Mediathek, keine Verbindung zum Anbieter."
 msgstr "YouTube, Vimeo, Spotify: obrázek a název v knihovně médií, žádné spojení s poskytovatelem."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "YouTube über youtube-nocookie.com"
 msgstr "YouTube přes youtube-nocookie.com"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Avatare"
 msgstr "Avatary"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Aus"
 msgstr "Vypnuto"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Direkt"
 msgstr "Přímo"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "WordPress-Emoji-Skript laden"
 msgstr "Načítat skript emoji z WordPressu"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Lädt Bilder von s.w.org. Browser zeigen Emoji längst selbst."
 msgstr "Načítá obrázky z s.w.org. Prohlížeče už dávno zobrazují emoji samy."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Hinweise an Dritte entfernen"
 msgstr "Odebrat odkazy (resource hints) na třetí strany"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Was von deinem Server kommt, steht unter Dienste"
 msgstr "Co přichází z vašeho serveru, je uvedeno pod Služby"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Gültigkeit"
 msgstr "Platnost"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "neu fragen, wenn Dienste sich ändern"
 msgstr "znovu se zeptat, když se služby změní"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Global Privacy Control beachtet"
 msgstr "Global Privacy Control respektován"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Wahl gilt"
 msgstr "Volba platí"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "6 Monate empfiehlt die CNIL, bis 12 die DSK."
 msgstr "6 měsíců doporučuje CNIL, až 12 DSK."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Neu fragen, wenn sich Texte oder Dienste ändern"
 msgstr "Znovu se zeptat, když se změní texty nebo služby"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Neu fragen"
 msgstr "Znovu se zeptat"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Global Privacy Control beachten"
 msgstr "Respektovat Global Privacy Control"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Sendet der Browser das Signal, bleibt Marketing bei „Alle akzeptieren“ aus."
 msgstr "Pokud prohlížeč pošle signál, marketing zůstane při „Přijmout vše“ vypnutý."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Erneut öffnen"
 msgstr "Znovu otevřít"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Button unten links"
 msgstr "Tlačítko vlevo dole"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Button unten rechts"
 msgstr "Tlačítko vpravo dole"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "kein Button"
 msgstr "žádné tlačítko"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Shortcode, Block und #cookie-settings"
 msgstr "Shortcode, blok a #cookie-settings"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Erscheint nach der ersten Wahl. Widerrufen muss so leicht sein wie Zustimmen."
 msgstr "Objeví se po první volbě. Odvolat musí být stejně snadné jako souhlasit."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Oder selbst platzieren – im Footer, im Menü, in der Datenschutzerklärung:"
 msgstr "Nebo umístěte sami – v zápatí, v menu, v zásadách ochrany osobních údajů:"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Block: „Cookie-Einstellungen“. Im Menü: ein eigener Link auf #cookie-settings."
 msgstr "Blok: „Nastavení cookies“. V menu: vlastní odkaz na #cookie-settings."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Seiten"
 msgstr "Stránky"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "keine Datenschutzerklärung"
 msgstr "žádné zásady ochrany osobních údajů"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "kein Impressum"
 msgstr "žádná tiráž"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "dort nur klein"
 msgstr "tam jen malý"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Impressum"
 msgstr "Tiráž"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Dort nur klein zeigen"
 msgstr "Tam zobrazit jen malý"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Damit man lesen kann, bevor man entscheidet."
 msgstr "Aby se dalo číst, než se člověk rozhodne."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Die Cookie-Tabelle für die Datenschutzerklärung: Block „Cookie-Tabelle“ oder"
 msgstr "Tabulka cookies pro zásady ochrany osobních údajů: blok „Tabulka cookies“ nebo"
 
 #. translators: %d: months
-#: build/admin.js:35
+#: build/admin.js:34
 #, js-format
 msgid "%d Monat · IP gehasht · CSV"
 msgid_plural "%d Monate · IP gehasht · CSV"
@@ -2307,140 +2177,140 @@ msgstr[0] "%d měsíc · IP jako hash · CSV"
 msgstr[1] "%d měsíce · IP jako hash · CSV"
 msgstr[2] "%d měsíců · IP jako hash · CSV"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Aufbewahren"
 msgstr "Uchovávat"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Danach löscht ein täglicher Job die Einträge."
 msgstr "Potom záznamy smaže denní úloha."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Gespeichert werden Consent-ID, Zeit, Wahl, Version, Sprache, Ort der Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich neuem Salz – nie die IP selbst."
 msgstr "Ukládá se ID souhlasu, čas, volba, verze, jazyk, místo rozhodnutí, rodina prohlížeče a IP adresa jako SHA-256 s denně novou solí – nikdy IP samotná."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Alles als CSV"
 msgstr "Vše jako CSV"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "günstig"
 msgstr "levný"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "stark"
 msgstr "silný"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Einfaches im Browser"
 msgstr "Jednoduché věci v prohlížeči"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "KI-Anbieter"
 msgstr "Poskytovatel AI"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "WordPress verwaltet ihn unter Einstellungen › Konnektoren – ein API Key für alle Plugins."
 msgstr "WordPress ho spravuje v Nastavení › Konektory – jeden API klíč pro všechny pluginy."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Ab WordPress 7.0."
 msgstr "Od WordPressu 7.0."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "keiner"
 msgstr "žádný"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Konnektoren"
 msgstr "Konektory"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Empfohlen: Vercel AI Gateway – 5 $ im Monat gratis, ein API Key für die Modelle aller Anbieter."
 msgstr "Doporučeno: Vercel AI Gateway – 5 $ měsíčně zdarma, jeden API klíč pro modely všech poskytovatelů."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Plugin installieren"
 msgstr "Instalovat plugin"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Modell"
 msgstr "Model"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Günstig reicht für alles hier: eine Einrichtung kostet etwa 4 Cent."
 msgstr "Levný stačí na všechno tady: jedno nastavení stojí asi 4 centy."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Günstig"
 msgstr "Levný"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Stark"
 msgstr "Silný"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Eigenes"
 msgstr "Vlastní"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Modell-ID"
 msgstr "ID modelu"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Einfache Aufgaben im Browser"
 msgstr "Jednoduché úkoly v prohlížeči"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Dein Browser hat ein eingebautes Modell: Übersetzen, Kürzen, Zuordnen und der Datenschutz-Absatz laufen dort, nichts verlässt den Rechner."
 msgstr "Váš prohlížeč má vestavěný model: překlad, krácení, přiřazování a odstavec o ochraně osobních údajů běží tam, nic neopouští počítač."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Dieser Browser hat kein eingebautes Modell (Chrome ab 148, Edge)."
 msgstr "Tento prohlížeč nemá vestavěný model (Chrome od verze 148, Edge)."
 
 #. translators: 1: tokens, 2: last model
-#: build/admin.js:35
+#: build/admin.js:34
 #, js-format
 msgid "Diesen Monat: %1$s Tokens · zuletzt %2$s"
 msgstr "Tento měsíc: %1$s tokenů · naposledy %2$s"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "wie deine Website"
 msgstr "jako váš web"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Der Dialog spricht die Sprache der Seite: mit Polylang oder WPML jede Sprache der Website, sonst die von WordPress. Texte und Übersetzungen bearbeitest du unter Dialog."
 msgstr "Dialog mluví jazykem stránky: s Polylangem nebo WPML každým jazykem webu, jinak jazykem WordPressu. Texty a překlady upravujete pod Dialog."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Sprachen deiner Website"
 msgstr "Jazyky vašeho webu"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Texte und Sprachen"
 msgstr "Texty a jazyky"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Website lesen"
 msgstr "Číst web"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "jede Woche"
 msgstr "každý týden"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "nur von Hand"
 msgstr "jen ručně"
 
 #. translators: %s: time
-#: build/admin.js:35
+#: build/admin.js:34
 #, js-format
 msgid "zuletzt %s"
 msgstr "naposledy %s"
 
 #. translators: %d: pages
-#: build/admin.js:36
+#: build/admin.js:35
 #, js-format
 msgid "%d Seite"
 msgid_plural "%d Seiten"
@@ -2448,57 +2318,49 @@ msgstr[0] "%d stránka"
 msgstr[1] "%d stránky"
 msgstr[2] "%d stránek"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Jede Woche neu lesen"
 msgstr "Číst znovu každý týden"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Neue Skripte erscheinen unter Dienste › Zu prüfen."
 msgstr "Nové skripty se objeví pod Služby › Ke kontrole."
 
-#: build/admin.js:39
+#: build/admin.js:38
 msgid "Ausschalten? Skripte laufen dann wieder ohne Einwilligung. Das Protokoll bleibt."
 msgstr "Vypnout? Skripty pak zase poběží bez souhlasu. Protokol zůstane."
 
-#: build/admin.js:39
+#: build/admin.js:38
 msgid "Dialog ausschalten"
 msgstr "Vypnout dialog"
 
-#: build/admin.js:39
+#: build/admin.js:38
 msgid "Skripte laufen dann wieder ohne Einwilligung. Das Protokoll bleibt."
 msgstr "Skripty pak zase poběží bez souhlasu. Protokol zůstane."
 
-#: build/admin.js:39
+#: build/admin.js:38
 msgid "Zum Einschalten"
 msgstr "K zapnutí"
 
-#: build/admin.js:39
+#: build/admin.js:38
 msgid "Der Dialog ist noch aus."
 msgstr "Dialog je ještě vypnutý."
 
-#: build/admin.js:39
-msgid "z. B. „Füge Hotjar hinzu“"
-msgstr "např. „Přidejte Hotjar“"
-
-#: build/admin.js:39
-msgid "Frag zum Protokoll, z. B. „Wie viele haben gestern abgelehnt?“"
-msgstr "Zeptejte se na protokol, např. „Kolik lidí včera odmítlo?“"
-
-#: build/admin.js:39
+#: build/admin.js:38
 msgid "Speichert …"
 msgstr "Ukládání …"
 
 #. translators: %d: version
-#: build/admin.js:40
+#: build/admin.js:39
 #, js-format
 msgid "Live · Version %d"
 msgstr "Živě · verze %d"
 
-#: build/admin.js:40
+#: build/admin.js:39
 msgid "Auf der Website ansehen"
 msgstr "Zobrazit na webu"
 
-#: build/admin.js:40
+#: build/admin.js:39
 msgid "Noch nicht live"
 msgstr "Ještě není živě"
 
@@ -2626,68 +2488,68 @@ msgid "widerruf"
 msgstr "odvolání"
 
 #: includes/class-config.php:776
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "In dieser Datei sind keine Einstellungen von Cookie Dialog."
 msgstr "Tento soubor neobsahuje nastavení Cookie Dialog."
 
-#: includes/class-rest.php:188
+#: includes/class-rest.php:186
 msgid "Importiert"
 msgstr "Importováno"
 
 #. translators: %s: the host the file comes from, e.g. staging.example.com
-#: includes/class-rest.php:196
+#: includes/class-rest.php:194
 #, php-format
 msgid "Einstellungen von %s importiert"
 msgstr "Nastavení importováno z %s"
 
-#: includes/class-rest.php:197
+#: includes/class-rest.php:195
 msgid "Einstellungen importiert"
 msgstr "Nastavení importováno"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Export und Import"
 msgstr "Export a import"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Die Einstellungen als Datei, etwa von Staging auf Live"
 msgstr "Nastavení jako soubor, např. ze stagingu na ostrý web"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Exportieren"
 msgstr "Exportovat"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Dialog, Texte, Dienste und Einstellungen als JSON-Datei – ohne Protokoll."
 msgstr "Dialog, texty, služby a nastavení jako soubor JSON – bez protokolu."
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Datei laden"
 msgstr "Stáhnout soubor"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Importieren"
 msgstr "Importovat"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Ersetzt Dialog, Texte, Dienste und Einstellungen. Ob der Dialog an ist und das Protokoll bleiben; Datenschutzerklärung und Impressum werden über ihre Adresse zugeordnet."
 msgstr "Nahradí dialog, texty, služby a nastavení. Zůstane, zda je dialog zapnutý, a protokol; zásady ochrany osobních údajů a tiráž se přiřadí podle své adresy."
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Datei wählen …"
 msgstr "Vybrat soubor …"
 
 #. translators: %s: host, e.g. staging.example.com
-#: build/admin.js:37
+#: build/admin.js:36
 #, js-format
 msgid "von %s"
 msgstr "z %s"
 
-#: build/admin.js:38
+#: build/admin.js:37
 msgid "Der Dialog ist an: Ändert sich, was Besucher lesen, gilt eine neue Version."
 msgstr "Dialog je zapnutý: změní-li se to, co návštěvníci čtou, platí nová verze."
 
 #. translators: %s: file name
-#: build/admin.js:39
+#: build/admin.js:38
 #, js-format
 msgid "%s übernommen."
 msgstr "%s importován."
@@ -2709,65 +2571,65 @@ msgstr "jako nový návštěvník – nic se neukládá"
 msgid "https://engenty.ai/wordpress-plugins/cookie-dialog"
 msgstr "https://engenty.ai/wordpress-plugins/cookie-dialog"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "„engenty Cookie Dialog“ im Dialog nennen"
 msgstr "Zmínit „engenty Cookie Dialog“ v dialogu"
 
-#: includes/class-rest.php:171
+#: includes/class-rest.php:169
 msgid "Diese Prüfung gibt es gerade nicht."
 msgstr "Tato kontrola teď neexistuje."
 
 #. translators: %s: host
-#: build/admin.js:17
+#: build/admin.js:16
 #, js-format
 msgid "Warum bekommt %s die IP-Adresse?"
 msgstr "Proč %s dostává IP adresu?"
 
-#: build/admin.js:17
+#: build/admin.js:16
 msgid "Was ist noch zu tun?"
 msgstr "Co zbývá udělat?"
 
 #. translators: %s: host
-#: build/admin.js:20
+#: build/admin.js:19
 #, js-format
 msgid "Was ist %s?"
 msgstr "Co je %s?"
 
 #. translators: %s: service name
-#: build/admin.js:21
-#: build/admin.js:23
+#: build/admin.js:20
+#: build/admin.js:22
 #, js-format
 msgid "Wofür nutzen wir %s?"
 msgstr "K čemu používáme %s?"
 
-#: build/admin.js:21
+#: build/admin.js:20
 msgid "Wie viele haben diese Woche abgelehnt?"
 msgstr "Kolik lidí tento týden odmítlo?"
 
 #. translators: %s: language
-#: build/admin.js:22
+#: build/admin.js:21
 #, js-format
 msgid "Übersetze auf %s"
 msgstr "Přelož do jazyka %s"
 
-#: build/admin.js:22
+#: build/admin.js:21
 msgid "Schreib den Cookie-Absatz für die Datenschutzerklärung"
 msgstr "Napiš odstavec o cookies do zásad ochrany osobních údajů"
 
-#: build/admin.js:22
+#: build/admin.js:21
 msgid "Schreib per du"
 msgstr "Piš tykáním"
 
-#: build/admin.js:23
+#: build/admin.js:22
 msgid "Heller Dialog"
 msgstr "Světlý dialog"
 
-#: build/admin.js:24
+#: build/admin.js:23
 msgid "Ignorieren"
 msgstr "Ignorovat"
 
 #. translators: %d: ignored checks
-#: build/admin.js:25
+#: build/admin.js:24
 #, js-format
 msgid "%d Prüfung ignoriert"
 msgid_plural "%d Prüfungen ignoriert"
@@ -2775,10 +2637,66 @@ msgstr[0] "%d kontrola ignorována"
 msgstr[1] "%d kontroly ignorovány"
 msgstr[2] "%d kontrol ignorováno"
 
-#: build/admin.js:25
+#: build/admin.js:24
 msgid "Sie meldet sich wieder, sobald sie etwas anderes findet."
 msgstr "Ozve se znovu, jakmile najde něco jiného."
 
-#: build/admin.js:25
+#: build/admin.js:24
 msgid "Wieder zeigen"
 msgstr "Znovu zobrazit"
+
+#: includes/class-family.php:68
+msgid "Der Copilot in deinem WordPress: erklärt, zeigt und erledigt es – im Admin und auf der Website."
+msgstr "Druhý pilot ve tvém WordPressu: vysvětlí, ukáže a udělá to – v administraci i na webu."
+
+#: includes/class-family.php:70
+msgid "Ein schlichter Cookie-Dialog für die EU: Dienste erst nach Zustimmung, Protokoll, Google Consent Mode."
+msgstr "Jednoduchý cookie dialog pro EU: služby až po souhlasu, protokol, Google Consent Mode."
+
+#: includes/class-family.php:72
+msgid "Kennzeichnet KI-Bilder, wie es der AI Act verlangt – mit den Symbolen der EU auf der Website."
+msgstr "Označuje obrázky z AI, jak to žádá AI Act – s ikonami EU na webu."
+
+#: includes/class-family.php:74
+msgid "Eigene KI-Assistenten auf deiner Website: als Block, Shortcode oder Bubble auf jeder Seite."
+msgstr "Vlastní AI asistenti na tvém webu: jako blok, shortcode nebo bublina na každé stránce."
+
+#: includes/class-family.php:76
+msgid "engenty als KI-Anbieter für WordPress, mit Gratis-Guthaben."
+msgstr "engenty jako poskytovatel AI pro WordPress, s kredity zdarma."
+
+#: includes/class-goose.php:87
+msgid "Der Cookie-Dialog der Website: Texte, Aussehen, Dienste, Protokoll."
+msgstr "Cookie dialog webu: texty, vzhled, služby, protokol."
+
+#: includes/class-goose.php:100
+msgid "Cookie-Dialog lesen"
+msgstr "Číst cookie dialog"
+
+#: includes/class-goose.php:115
+msgid "Cookie-Dialog ändern"
+msgstr "Změnit cookie dialog"
+
+#: includes/class-goose.php:140
+msgid "Änderung zurücknehmen"
+msgstr "Vrátit změnu"
+
+#: includes/class-goose.php:180
+msgid "Cookie-Dialog geändert"
+msgstr "Cookie dialog změněn"
+
+#: build/admin.js:3
+msgid "Mit engenty.goose, dem Copiloten für WordPress, sagst du hier, was anders sein soll: Er ändert Dialog, Dienste und Einstellungen, zeigt dir, wo was ist, und jede Änderung lässt sich zurücknehmen."
+msgstr "S engenty.goose, druhým pilotem pro WordPress, tu řekneš, co má být jinak: změní dialog, služby a nastavení, ukáže ti, kde co je, a každou změnu lze vrátit."
+
+#: build/admin.js:3
+msgid "engenty.goose aktivieren"
+msgstr "Aktivovat engenty.goose"
+
+#: build/admin.js:3
+msgid "engenty.goose holen"
+msgstr "Získat engenty.goose"
+
+#: build/admin.js:3
+msgid "Wer Plugins verwalten darf, kann engenty.goose dazuholen."
+msgstr "Kdo smí spravovat pluginy, může engenty.goose přidat."

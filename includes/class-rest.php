@@ -1,7 +1,7 @@
 <?php
 /**
  * The admin app's routes (`cookie-dialog/v1`): the state of everything, config, import, live, scan,
- * fixes, services, log, assistant. Only for those who manage the site.
+ * fixes, services, log, the jobs of the assistant. Only for those who manage the site.
  *
  * @package Cookie_Dialog
  */
@@ -44,9 +44,7 @@ class Cookie_Dialog_Rest {
 			'/local'                       => array( 'POST', 'local' ),
 			'/log'                         => array( 'GET', 'log' ),
 			'/version/(?P<v>\d+)'          => array( 'GET', 'version' ),
-			'/assist'                      => array( 'POST', 'assist' ),
 			'/job'                         => array( 'POST', 'job' ),
-			'/undo'                        => array( 'POST', 'undo' ),
 		);
 		foreach ( $routes as $path => [ $method, $callback ] ) {
 			register_rest_route(
@@ -403,24 +401,6 @@ class Cookie_Dialog_Rest {
 	}
 
 	/**
-	 * One turn of the chat.
-	 *
-	 * @param WP_REST_Request $request `message`, `history`, `view`.
-	 * @return array|WP_Error
-	 */
-	public static function assist( WP_REST_Request $request ) {
-		$message = trim( sanitize_textarea_field( (string) $request->get_param( 'message' ) ) );
-		if ( '' === $message ) {
-			return new WP_Error( 'cookie_dialog_empty', __( 'Was soll anders sein?', 'cookie-dialog' ), array( 'status' => 400 ) );
-		}
-		$answer = Cookie_Dialog_Assistant::ask( $message, (array) $request->get_param( 'history' ), sanitize_key( (string) $request->get_param( 'view' ) ) );
-		if ( is_wp_error( $answer ) ) {
-			return $answer;
-		}
-		return array( 'answer' => $answer ) + self::state();
-	}
-
-	/**
 	 * A job for the provider, or the answer of the browser's model.
 	 *
 	 * @param WP_REST_Request $request `job`, `input`, `result`.
@@ -440,16 +420,5 @@ class Cookie_Dialog_Rest {
 			return array( 'run' => $out );
 		}
 		return array( 'result' => $out ) + self::state();
-	}
-
-	/**
-	 * Takes back the assistant's last changes.
-	 *
-	 * @param WP_REST_Request $request `token`.
-	 * @return array|WP_Error
-	 */
-	public static function undo( WP_REST_Request $request ) {
-		$result = Cookie_Dialog_Assistant::undo( (string) $request->get_param( 'token' ) );
-		return is_wp_error( $result ) ? $result : self::state();
 	}
 }

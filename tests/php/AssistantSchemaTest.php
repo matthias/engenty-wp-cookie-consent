@@ -43,7 +43,6 @@ class AssistantSchemaTest extends Cookie_Dialog_TestCase {
 
 	public function test_every_schema_is_strict() {
 		$this->configure( array( 'ga4' ) );
-		$this->assertStrict( Cookie_Dialog_Assistant::strict( Cookie_Dialog_Assistant::answer_schema() ), 'answer' );
 		foreach ( array( 'translate', 'shorten', 'classify', 'privacy', 'setup' ) as $job ) {
 			$prompt = Cookie_Dialog_Assistant::job_prompt(
 				$job,

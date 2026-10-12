@@ -16,7 +16,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: cookie-dialog.php
-#: includes/class-admin.php:202
+#: includes/class-admin.php:206
 msgid "Cookie Dialog"
 msgstr "Cookie Dialog"
 
@@ -36,176 +36,175 @@ msgid "https://engenty.ai"
 msgstr "https://engenty.ai"
 
 #: includes/class-admin.php:65
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Cookies"
 msgstr "Cookies"
 
 #: includes/class-admin.php:66
-#: includes/class-admin.php:141
-#: build/admin.js:27
-#: build/admin.js:29
+#: includes/class-admin.php:145
+#: build/admin.js:26
+#: build/admin.js:28
 msgid "Start"
 msgstr "Start"
 
 #: includes/class-admin.php:67
-#: build/admin.js:28
-#: build/admin.js:30
+#: build/admin.js:27
+#: build/admin.js:29
 msgid "Dialog"
 msgstr "Dialog"
 
 #: includes/class-admin.php:68
-#: build/admin.js:32
+#: build/admin.js:31
 msgid "Dienste"
 msgstr "Tjänster"
 
 #: includes/class-admin.php:69
-#: build/admin.js:12
-#: build/admin.js:26
-#: build/admin.js:34
+#: build/admin.js:11
+#: build/admin.js:25
+#: build/admin.js:33
 msgid "Protokoll"
 msgstr "Logg"
 
 #: includes/class-admin.php:70
-#: build/admin.js:26
-#: build/admin.js:39
+#: build/admin.js:25
+#: build/admin.js:38
 #: build/blocks.js:1
 msgid "Einstellungen"
 msgstr "Inställningar"
 
 #: includes/class-admin.php:80
-#: build/admin.js:40
+#: build/admin.js:39
 msgid "Cookie Dialog lädt …"
 msgstr "Cookie Dialog laddar …"
 
-#: includes/class-admin.php:142
-#: includes/class-admin.php:161
+#: includes/class-admin.php:146
+#: includes/class-admin.php:165
 msgid "Einrichten"
 msgstr "Ställ in"
 
-#: includes/class-admin.php:158
+#: includes/class-admin.php:162
 msgid "Cookie Dialog ist noch aus."
 msgstr "Cookie Dialog är fortfarande av."
 
-#: includes/class-admin.php:159
+#: includes/class-admin.php:163
 msgid "Bis du ihn einschaltest, ändert sich nichts an deiner Website."
 msgstr "Tills du slår på den ändras ingenting på din webbplats."
 
-#: includes/class-admin.php:168
-#: includes/class-admin.php:187
+#: includes/class-admin.php:172
+#: includes/class-admin.php:191
 msgid "Nicht erlaubt."
 msgstr "Inte tillåtet."
 
-#: includes/class-admin.php:205
+#: includes/class-admin.php:209
 msgid "Cookie Dialog speichert die Wahl der Besucher im eigenen Cookie „cookie_dialog“ (Consent-ID, Version, Zeit, Kategorien und Dienste) so lange, wie unter Cookies › Einstellungen eingestellt (6 Monate, wenn nichts geändert wurde). Jede Entscheidung kommt ins Protokoll: Consent-ID, Version des Dialogs, Sprache, Ort der Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich neuem Salz; gelöscht nach 12 Monaten, wenn nichts geändert wurde. Der Block „Cookie-Tabelle“ listet alle Dienste und Cookies."
 msgstr "Cookie Dialog sparar besökarens val i sin egen cookie ”cookie_dialog” (samtyckes-ID, version, tid, kategorier och tjänster) så länge som är inställt under Cookies › Inställningar (6 månader om inget ändrats). Varje beslut hamnar i loggen: samtyckes-ID, dialogens version, språk, var beslutet fattades, webbläsarfamilj och IP-adressen som SHA-256 med ett salt som byts dagligen; raderas efter 12 månader om inget ändrats. Blocket ”Cookietabell” listar alla tjänster och cookies."
 
-#: includes/class-assistant.php:124
+#: includes/class-assistant.php:128
 msgid "Der Assistent braucht WordPress 7.0 oder neuer."
 msgstr "Assistenten behöver WordPress 7.0 eller nyare."
 
-#: includes/class-assistant.php:153
+#: includes/class-assistant.php:157
 msgid "Die Antwort war kein JSON. Versuch es noch einmal."
 msgstr "Svaret var inte JSON. Försök igen."
 
 #. translators: %s: what the person asked
-#: includes/class-assistant.php:637
-#: includes/class-assistant.php:639
+#: includes/class-assistant.php:553
+#: includes/class-assistant.php:555
 #, php-format
 msgid "Assistent: %s"
 msgstr "Assistenten: %s"
 
 #. translators: %s: what the person asked
-#: includes/class-assistant.php:637
-#: build/admin.js:4
-#: build/admin.js:35
+#: includes/class-assistant.php:553
+#: build/admin.js:34
 msgid "Assistent"
 msgstr "Assistenten"
 
-#: includes/class-assistant.php:641
+#: includes/class-assistant.php:557
 msgid "Geändert"
 msgstr "Ändrat"
 
 #. translators: %d: number of changes
-#: includes/class-assistant.php:643
+#: includes/class-assistant.php:559
 #, php-format
 msgid "%d Änderung"
 msgid_plural "%d Änderungen"
 msgstr[0] "%d ändring"
 msgstr[1] "%d ändringar"
 
-#: includes/class-assistant.php:674
+#: includes/class-assistant.php:590
 msgid "Das lässt sich nicht mehr zurücknehmen."
 msgstr "Det går inte längre att ångra."
 
-#: includes/class-assistant.php:681
+#: includes/class-assistant.php:597
 msgid "Assistent: Änderung zurückgenommen"
 msgstr "Assistenten: ändring ångrad"
 
-#: includes/class-assistant.php:682
+#: includes/class-assistant.php:598
 msgid "Zurückgenommen"
 msgstr "Ångrat"
 
-#: includes/class-assistant.php:834
-#: includes/class-assistant.php:979
+#: includes/class-assistant.php:750
+#: includes/class-assistant.php:895
 msgid "Diese Aufgabe gibt es nicht."
 msgstr "Den här uppgiften finns inte."
 
-#: includes/class-assistant.php:866
+#: includes/class-assistant.php:782
 msgid "Dafür braucht WordPress einen KI-Anbieter (Einstellungen › Konnektoren)."
 msgstr "För det behöver WordPress en AI-leverantör (Inställningar › Connectors)."
 
-#: includes/class-assistant.php:891
+#: includes/class-assistant.php:807
 msgid "Die Übersetzung kam unvollständig zurück."
 msgstr "Översättningen kom tillbaka ofullständig."
 
 #. translators: %s: language code
-#: includes/class-assistant.php:912
+#: includes/class-assistant.php:828
 #, php-format
 msgid "Texte auf %s"
 msgstr "Texter på %s"
 
 #. translators: %s: language code
-#: includes/class-assistant.php:914
+#: includes/class-assistant.php:830
 #, php-format
 msgid "Die Texte gibt es jetzt auf %s."
 msgstr "Texterna finns nu på %s."
 
-#: includes/class-assistant.php:921
+#: includes/class-assistant.php:837
 msgid "Kein Text zurückgekommen."
 msgstr "Ingen text kom tillbaka."
 
-#: includes/class-assistant.php:924
+#: includes/class-assistant.php:840
 msgid "Text gekürzt"
 msgstr "Text förkortad"
 
-#: includes/class-assistant.php:925
+#: includes/class-assistant.php:841
 msgid "Gekürzt."
 msgstr "Förkortad."
 
-#: includes/class-assistant.php:932
+#: includes/class-assistant.php:848
 #: includes/class-checks.php:555
 msgid "Diesen Host kennt die letzte Prüfung nicht."
 msgstr "Den senaste kontrollen känner inte till den här värden."
 
 #. translators: %s: service name
-#: includes/class-assistant.php:943
+#: includes/class-assistant.php:859
 #, php-format
 msgid "Vorschlag: %s"
 msgstr "Förslag: %s"
 
-#: includes/class-assistant.php:951
+#: includes/class-assistant.php:867
 msgid "Kein Absatz zurückgekommen."
 msgstr "Inget stycke kom tillbaka."
 
-#: includes/class-assistant.php:955
+#: includes/class-assistant.php:871
 msgid "Der Absatz ist geschrieben."
 msgstr "Stycket är skrivet."
 
-#: includes/class-assistant.php:973
+#: includes/class-assistant.php:889
 msgid "Texte im Ton der Website"
 msgstr "Texter i webbplatsens ton"
 
-#: includes/class-assistant.php:975
+#: includes/class-assistant.php:891
 msgid "Die Texte klingen jetzt wie deine Website."
 msgstr "Texterna låter nu som din webbplats."
 
@@ -232,7 +231,7 @@ msgid "Kein Dritter sieht die IP-Adresse, bevor jemand zustimmt."
 msgstr "Ingen tredje part ser IP-adressen innan någon samtycker."
 
 #: includes/class-checks.php:67
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Lokal einbinden"
 msgstr "Ladda lokalt"
 
@@ -244,14 +243,14 @@ msgstr "Nytt skript sedan %1$s: %2$s"
 
 #. translators: %s: host
 #: includes/class-checks.php:85
-#: build/admin.js:7
+#: build/admin.js:6
 #, php-format,js-format
 msgid "Skript unbekannt: %s"
 msgstr "Okänt skript: %s"
 
 #. translators: 1: service, 2: purpose, 3: category
 #: includes/class-checks.php:88
-#: build/admin.js:31
+#: build/admin.js:30
 #, php-format,js-format
 msgid "Vorschlag: %1$s, %2$s → %3$s"
 msgstr "Förslag: %1$s, %2$s → %3$s"
@@ -261,18 +260,18 @@ msgid "Lädt bis zur Zuordnung ohne Einwilligung. Ordne es einem Dienst zu."
 msgstr "Laddas utan samtycke tills det är tilldelat. Tilldela det en tjänst."
 
 #: includes/class-checks.php:96
-#: build/admin.js:8
-#: build/admin.js:28
-#: build/admin.js:31
-#: build/admin.js:38
+#: build/admin.js:7
+#: build/admin.js:27
+#: build/admin.js:30
+#: build/admin.js:37
 msgid "Übernehmen"
 msgstr "Använd"
 
 #: includes/class-checks.php:101
-#: build/admin.js:8
+#: build/admin.js:7
+#: build/admin.js:26
 #: build/admin.js:27
-#: build/admin.js:28
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Ändern"
 msgstr "Ändra"
 
@@ -317,14 +316,14 @@ msgid "Gelesen ohne Einwilligung: keine anderen Cookies."
 msgstr "Läses utan samtycke: inga andra cookies."
 
 #: includes/class-checks.php:152
-#: build/admin.js:8
-#: build/admin.js:28
-#: build/admin.js:31
+#: build/admin.js:7
+#: build/admin.js:27
+#: build/admin.js:30
 msgid "Zuordnen"
 msgstr "Tilldela"
 
 #: includes/class-checks.php:165
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "Google Consent Mode v2"
 msgstr "Google Consent Mode v2"
 
@@ -417,7 +416,7 @@ msgstr "Slå på knappen"
 
 #. translators: %s: contrast ratio, e.g. 7.2
 #: includes/class-checks.php:248
-#: build/admin.js:27
+#: build/admin.js:26
 #, php-format,js-format
 msgid "Kontrast %s : 1"
 msgstr "Kontrast %s:1"
@@ -483,7 +482,7 @@ msgid "Jede Woche neu, damit neue Skripte auffallen."
 msgstr "Varje vecka igen, så att nya skript märks."
 
 #: includes/class-checks.php:308
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Jetzt lesen"
 msgstr "Läs nu"
 
@@ -527,8 +526,8 @@ msgstr "Den här åtgärden finns inte."
 
 #. translators: %s: service
 #: includes/class-checks.php:661
+#: includes/class-rest.php:296
 #: includes/class-rest.php:298
-#: includes/class-rest.php:300
 #, php-format
 msgid "%s hinzugefügt"
 msgstr "%s tillagd"
@@ -601,42 +600,41 @@ msgstr "%s kommer från din server"
 msgid "%s lokal eingebunden"
 msgstr "%s laddas lokalt"
 
-#: includes/class-rest.php:239
-#: includes/class-rest.php:240
+#: includes/class-rest.php:237
+#: includes/class-rest.php:238
 msgid "Dialog eingeschaltet"
 msgstr "Dialogen påslagen"
 
-#: includes/class-rest.php:245
+#: includes/class-rest.php:243
 msgid "Dialog ausgeschaltet"
 msgstr "Dialogen avstängd"
 
-#: includes/class-rest.php:290
+#: includes/class-rest.php:288
 msgid "Diesen Dienst kennt die Bibliothek nicht."
 msgstr "Biblioteket känner inte till den här tjänsten."
 
-#: includes/class-rest.php:305
+#: includes/class-rest.php:303
 msgid "Ein Dienst braucht einen Namen."
 msgstr "En tjänst behöver ett namn."
 
 #. translators: %s: service
-#: includes/class-rest.php:330
+#: includes/class-rest.php:328
 #, php-format
 msgid "%s geändert"
 msgstr "%s ändrad"
 
 #. translators: %s: service
+#: includes/class-rest.php:345
 #: includes/class-rest.php:347
-#: includes/class-rest.php:349
 #, php-format
 msgid "%s entfernt"
 msgstr "%s borttagen"
 
-#: includes/class-rest.php:402
+#: includes/class-rest.php:400
 msgid "Diese Version gibt es nicht."
 msgstr "Den här versionen finns inte."
 
-#: includes/class-rest.php:414
-#: build/admin.js:23
+#: build/admin.js:22
 msgid "Was soll anders sein?"
 msgstr "Vad ska vara annorlunda?"
 
@@ -645,7 +643,6 @@ msgid "Das hat nicht geklappt."
 msgstr "Det fungerade inte."
 
 #: build/admin.js:1
-#: build/admin.js:4
 msgid "Schließen"
 msgstr "Stäng"
 
@@ -679,239 +676,112 @@ msgstr "För det behöver WordPress en AI-leverantör (Inställningar › Connec
 msgid "Das Modell deines Browsers schreibt nicht auf %s. Mit einem KI-Anbieter (Einstellungen › Konnektoren) klappt es."
 msgstr "Din webbläsares modell skriver inte på %s. Med en AI-leverantör (Inställningar › Connectors) fungerar det."
 
-#: build/admin.js:3
-msgid "Zeigen, was einzurichten ist"
-msgstr "Visa vad som behöver ställas in"
-
-#: build/admin.js:3
-#: build/admin.js:4
-msgid "Hinweis ausblenden"
-msgstr "Dölj meddelandet"
-
-#: build/admin.js:3
-msgid "Wartet auf einen KI-Anbieter …"
-msgstr "Väntar på en AI-leverantör …"
-
-#: build/admin.js:3
-msgid "Nachricht an den Assistenten"
-msgstr "Meddelande till assistenten"
-
-#: build/admin.js:3
-msgid "Senden"
-msgstr "Skicka"
-
-#: build/admin.js:3
-msgid "Sag, was anders sein soll – ich ändere Dialog, Dienste und Einstellungen. Jede Änderung kommt als Karte und lässt sich zurücknehmen."
-msgstr "Säg vad som ska vara annorlunda – jag ändrar dialog, tjänster och inställningar. Varje ändring kommer som ett kort och kan ångras."
-
-#: build/admin.js:3
-msgid "Rückgängig"
-msgstr "Ångra"
-
 #. translators: %d: version
-#: build/admin.js:4
-#: build/admin.js:28
+#: build/admin.js:27
 #, js-format
 msgid "Version %d"
 msgstr "Version %d"
 
-#: build/admin.js:4
-msgid "Zurückgenommen."
-msgstr "Ångrat."
-
-#: build/admin.js:4
-msgid "Denkt nach …"
-msgstr "Tänker …"
-
-#: build/admin.js:4
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "kein KI-Anbieter"
 msgstr "ingen AI-leverantör"
 
-#: build/admin.js:4
-msgid "Neu"
-msgstr "Ny"
-
-#: build/admin.js:4
-msgid "Unten anzeigen"
-msgstr "Visa längst ner"
-
-#: build/admin.js:4
-msgid "In der Seitenleiste anzeigen"
-msgstr "Visa i sidopanelen"
-
-#: build/admin.js:4
-msgid "Sag dem Assistenten, was anders sein soll …"
-msgstr "Säg till assistenten vad som ska vara annorlunda …"
-
-#: build/admin.js:4
-msgid "Verlauf einklappen"
-msgstr "Fäll ihop historiken"
-
-#: build/admin.js:4
-msgid "Verlauf zeigen"
-msgstr "Visa historiken"
-
-#: build/admin.js:4
-msgid "Breite des Assistenten"
-msgstr "Assistentens bredd"
-
-#: build/admin.js:4
-msgid "Höhe des Verlaufs"
-msgstr "Historikens höjd"
-
-#: build/admin.js:4
-msgid "Assistent öffnen"
-msgstr "Öppna assistenten"
-
-#: build/admin.js:4
-msgid "eingerichtet"
-msgstr "inställd"
-
-#: build/admin.js:4
-msgid "API Key fehlt"
-msgstr "API-nyckel saknas"
-
-#: build/admin.js:4
-msgid "antwortet nicht"
-msgstr "svarar inte"
-
-#: build/admin.js:4
-msgid "Plugin fehlt"
-msgstr "tillägg saknas"
-
-#: build/admin.js:4
-msgid "Der Chat braucht WordPress 7.0"
-msgstr "Chatten kräver WordPress 7.0"
-
-#: build/admin.js:4
-msgid "Ab 7.0 denkt der Assistent mit dem KI-Anbieter, den du unter Einstellungen › Konnektoren einrichtest. Alles andere funktioniert schon jetzt."
-msgstr "Från 7.0 tänker assistenten med den AI-leverantör du ställer in under Inställningar › Connectors. Allt annat fungerar redan nu."
-
-#: build/admin.js:4
-msgid "WordPress aktualisieren"
-msgstr "Uppdatera WordPress"
-
-#: build/admin.js:4
-msgid "Erst einen KI-Anbieter einrichten"
-msgstr "Ställ in en AI-leverantör först"
-
-#: build/admin.js:4
-msgid "Der Assistent denkt mit dem Anbieter, den du in WordPress unter Einstellungen › Konnektoren einrichtest – dein API Key bleibt dort. Dialog, Dienste und Blockieren funktionieren auch ohne."
-msgstr "Assistenten tänker med den leverantör du ställer in i WordPress under Inställningar › Connectors – din API-nyckel stannar där. Dialog, tjänster och blockering fungerar även utan."
-
-#: build/admin.js:4
-msgid "Konnektoren öffnen"
-msgstr "Öppna Connectors"
-
-#: build/admin.js:4
-msgid "Vercel AI Gateway installieren"
-msgstr "Installera Vercel AI Gateway"
-
-#: build/admin.js:4
-msgid "Ohne Vertrag bei einem Anbieter: Vercel AI Gateway gibt 5 $ im Monat gratis, keine Kreditkarte."
-msgstr "Inget avtal med någon leverantör? Vercel AI Gateway ger 5 $ i månaden gratis, inget kreditkort."
-
-#: build/admin.js:4
-msgid "Bis dahin übersetzt und ordnet das eingebaute Modell deines Browsers zu – nichts verlässt den Rechner."
-msgstr "Tills dess översätter och tilldelar din webbläsares inbyggda modell – ingenting lämnar datorn."
-
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Erste Ebene"
 msgstr "Första lagret"
 
-#: build/admin.js:4
-#: build/admin.js:28
+#: build/admin.js:3
+#: build/admin.js:27
 msgid "Auswahl"
 msgstr "Val"
 
-#: build/admin.js:4
+#: build/admin.js:3
+#: build/admin.js:26
 #: build/admin.js:27
-#: build/admin.js:28
 msgid "Platzhalter"
 msgstr "Platshållare"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Ebene"
 msgstr "Lager"
 
-#: build/admin.js:4
-#: build/admin.js:33
+#: build/admin.js:3
+#: build/admin.js:32
 msgid "Sprache"
 msgstr "Språk"
 
-#: build/admin.js:4
-#: build/admin.js:27
+#: build/admin.js:3
+#: build/admin.js:26
 msgid "Gerät"
 msgstr "Enhet"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Desktop"
 msgstr "Dator"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Handy"
 msgstr "Mobil"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Vorschau deiner Website mit dem Dialog"
 msgstr "Förhandsgranskning av din webbplats med dialogen"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Absatz für die Datenschutzerklärung"
 msgstr "Stycke för integritetspolicyn"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Neu schreiben"
 msgstr "Skriv om"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Für meine Website schreiben"
 msgstr "Skriv för min webbplats"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Mit Cookie-Tabelle einfügen"
 msgstr "Infoga med cookietabell"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Darunter kommt die Cookie-Tabelle: alle Dienste und Cookies, und sie hält sich selbst aktuell."
 msgstr "Under det kommer cookietabellen: alla tjänster och cookies, och den håller sig själv aktuell."
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "Noch kein eigener Absatz: eingefügt wird die Vorlage der Bibliothek. Der Assistent oder das Modell deines Browsers schreibt ihn für deine Website."
 msgstr "Inget eget stycke ännu: bibliotekets mall infogas. Assistenten eller din webbläsares modell skriver det för din webbplats."
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "unten links"
 msgstr "nere till vänster"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "unten rechts"
 msgstr "nere till höger"
 
-#: build/admin.js:4
+#: build/admin.js:3
 msgid "unten in der Mitte"
 msgstr "nere i mitten"
 
-#: build/admin.js:4
-#: build/admin.js:26
+#: build/admin.js:3
+#: build/admin.js:25
 msgid "Box"
 msgstr "Ruta"
 
-#: build/admin.js:4
-#: build/admin.js:26
+#: build/admin.js:3
+#: build/admin.js:25
 msgid "Leiste"
 msgstr "Banner"
 
-#: build/admin.js:4
-#: build/admin.js:26
+#: build/admin.js:3
+#: build/admin.js:25
 msgid "Fenster"
 msgstr "Fönster"
 
 #. translators: %d: services
 #. translators: %d: number of services
-#: build/admin.js:5
-#: build/admin.js:38
+#: build/admin.js:4
+#: build/admin.js:37
 #, js-format
 msgid "%d Dienst"
 msgid_plural "%d Dienste"
@@ -919,39 +789,39 @@ msgstr[0] "%d tjänst"
 msgstr[1] "%d tjänster"
 
 #. translators: %d: categories
-#: build/admin.js:6
+#: build/admin.js:5
 #, js-format
 msgid "in %d Kategorie"
 msgid_plural "in %d Kategorien"
 msgstr[0] "i %d kategori"
 msgstr[1] "i %d kategorier"
 
-#: build/admin.js:6
+#: build/admin.js:5
 msgid "Dienste ansehen"
 msgstr "Visa tjänster"
 
 #. translators: 1: who suggests, 2: service, 3: purpose, 4: category
-#: build/admin.js:8
+#: build/admin.js:7
 #, js-format
 msgid "%1$s: %2$s, %3$s → %4$s"
 msgstr "%1$s: %2$s – %3$s → %4$s"
 
-#: build/admin.js:8
+#: build/admin.js:7
 msgid "Vorschlag deines Browsers"
 msgstr "Din webbläsares förslag"
 
-#: build/admin.js:8
-#: build/admin.js:15
-#: build/admin.js:28
+#: build/admin.js:7
+#: build/admin.js:14
+#: build/admin.js:27
 msgid "Vorschlag"
 msgstr "Förslag"
 
-#: build/admin.js:8
+#: build/admin.js:7
 msgid "Lädt bis zur Zuordnung ohne Einwilligung"
 msgstr "Laddas utan samtycke tills det är tilldelat"
 
 #. translators: %d: number of embeds
-#: build/admin.js:9
+#: build/admin.js:8
 #, js-format
 msgid "%d Einbettung wartet auf Einwilligung"
 msgid_plural "%d Einbettungen warten auf Einwilligung"
@@ -959,74 +829,74 @@ msgstr[0] "%d inbäddning väntar på samtycke"
 msgstr[1] "%d inbäddningar väntar på samtycke"
 
 #. translators: %s: services
-#: build/admin.js:10
+#: build/admin.js:9
 #, js-format
 msgid "%s – als Platzhalter mit Vorschaubild"
 msgstr "%s – som platshållare med förhandsbild"
 
-#: build/admin.js:10
+#: build/admin.js:9
 msgid "Bis zur Einwilligung steht dort ein Platzhalter in der Größe des Inhalts: „Laden“ lädt einmal, „Immer laden“ ist die Einwilligung für den Dienst. YouTube lädt danach über youtube-nocookie.com."
 msgstr "Tills samtycke står där en platshållare i innehållets storlek: ”Ladda” laddar en gång, ”Ladda alltid” är samtycket för tjänsten. YouTube laddas därefter via youtube-nocookie.com."
 
 #. translators: %d: number of things
-#: build/admin.js:11
+#: build/admin.js:10
 #, js-format
 msgid "%d Ding kommt von deinem Server statt von Dritten"
 msgid_plural "%d Dinge kommen von deinem Server statt von Dritten"
 msgstr[0] "%d sak kommer från din server i stället för från tredje part"
 msgstr[1] "%d saker kommer från din server i stället för från tredje part"
 
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "WordPress-Emoji aus"
 msgstr "WordPress-emoji av"
 
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "Schriften, Styles und Bilder von Dritten werden beim Einschalten auf deinen Server kopiert und die Verweise umgeschrieben – dann sieht kein Dritter die IP-Adresse deiner Besucher, und es braucht keine Einwilligung."
 msgstr "När du slår på det kopieras typsnitt, stilar och bilder från tredje part till din server och hänvisningarna skrivs om – då ser ingen tredje part dina besökares IP-adress, och inget samtycke behövs."
 
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "Texte in deinem Ton"
 msgstr "Texter i din ton"
 
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "Standardtexte"
 msgstr "Standardtexter"
 
-#: build/admin.js:11
-#: build/admin.js:27
+#: build/admin.js:10
+#: build/admin.js:26
 msgid "per Sie"
 msgstr "formellt (Sie)"
 
-#: build/admin.js:11
-#: build/admin.js:27
+#: build/admin.js:10
+#: build/admin.js:26
 msgid "per du"
 msgstr "informellt (du)"
 
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "mit einem KI-Anbieter in deinem Ton"
 msgstr "i din ton med en AI-leverantör"
 
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "Aussehen aus deinem Theme"
 msgstr "Utseende från ditt tema"
 
-#: build/admin.js:11
+#: build/admin.js:10
 msgid "dein Logo"
 msgstr "din logga"
 
 #. translators: %s: Google services
-#: build/admin.js:12
+#: build/admin.js:11
 #, js-format
 msgid "Vor %s · Tags warten auf Einwilligung"
 msgstr "Före %s · taggar väntar på samtycke"
 
-#: build/admin.js:12
-#: build/admin.js:34
+#: build/admin.js:11
+#: build/admin.js:33
 msgid "Datenschutzerklärung"
 msgstr "Integritetspolicy"
 
 #. translators: %d: months
-#: build/admin.js:13
+#: build/admin.js:12
 #, js-format
 msgid "%d Monat · IP-Adressen nur gehasht"
 msgid_plural "%d Monate · IP-Adressen nur gehasht"
@@ -1034,1454 +904,1446 @@ msgstr[0] "%d månad · IP-adresser bara hashade"
 msgstr[1] "%d månader · IP-adresser bara hashade"
 
 #. translators: %s: the site's host
-#: build/admin.js:14
+#: build/admin.js:13
 #, js-format
 msgid "Ich habe %s gelesen"
 msgstr "Jag har läst %s"
 
 #. translators: 1: pages, 2: scripts, 3: embeds, 4: plugins
-#: build/admin.js:15
+#: build/admin.js:14
 #, js-format
 msgid "%1$d Seiten, %2$d Skripte, %3$d Einbettungen, %4$d Plugins. Unten steht mein Vorschlag, rechts siehst du ihn auf deiner Startseite."
 msgstr "%1$d sidor, %2$d skript, %3$d inbäddningar, %4$d tillägg. Nedan står mitt förslag, till höger ser du det på din startsida."
 
-#: build/admin.js:15
+#: build/admin.js:14
 msgid "Sag mir, was anders sein soll – z. B. „Schreib per Sie“"
 msgstr "Säg vad som ska vara annorlunda – t.ex. ”Skriv mer formellt”"
 
-#: build/admin.js:22
+#: build/admin.js:21
 msgid "Schreib per Sie"
 msgstr "Skriv mer formellt"
 
-#: build/admin.js:23
+#: build/admin.js:22
 msgid "Dunkler Dialog"
 msgstr "Mörk dialog"
 
-#: build/admin.js:23
+#: build/admin.js:22
 msgid "Wir nutzen keine Statistik mehr"
 msgstr "Vi använder inte statistik längre"
 
-#: build/admin.js:15
+#: build/admin.js:14
 msgid "Alles ist voreingestellt. Öffne eine Zeile, um sie zu prüfen."
 msgstr "Allt är förinställt. Öppna en rad för att kontrollera den."
 
-#: build/admin.js:15
+#: build/admin.js:14
 msgid "Neu lesen"
 msgstr "Läs igen"
 
-#: build/admin.js:15
+#: build/admin.js:14
 msgid "So sieht es aus"
 msgstr "Så här ser det ut"
 
-#: build/admin.js:15
+#: build/admin.js:14
 msgid "Deine Startseite mit dem Dialog."
 msgstr "Din startsida med dialogen."
 
 #. translators: %d: open points
-#: build/admin.js:16
+#: build/admin.js:15
 #, js-format
 msgid "Bereit – %d Skript noch ohne Zuordnung."
 msgid_plural "Bereit – %d Skripte noch ohne Zuordnung."
 msgstr[0] "Klart – %d skript fortfarande utan tilldelning."
 msgstr[1] "Klart – %d skript fortfarande utan tilldelning."
 
-#: build/admin.js:16
+#: build/admin.js:15
 msgid "Alles bereit."
 msgstr "Allt klart."
 
-#: build/admin.js:16
+#: build/admin.js:15
 msgid "Schalte ein …"
 msgstr "Slår på …"
 
-#: build/admin.js:16
+#: build/admin.js:15
 msgid "Dialog einschalten"
 msgstr "Slå på dialogen"
 
-#: build/admin.js:16
+#: build/admin.js:15
 msgid "Bis dahin ändert sich nichts an deiner Website. Ausschalten geht jederzeit."
 msgstr "Tills dess ändras ingenting på din webbplats. Du kan stänga av när som helst."
 
-#: build/admin.js:23
+#: build/admin.js:22
 msgid "Ich ändere Dialog, Dienste und Einstellungen – z. B. „Füge Hotjar hinzu“"
 msgstr "Jag ändrar dialog, tjänster och inställningar – t.ex. ”Lägg till Hotjar”"
 
-#: build/admin.js:22
+#: build/admin.js:21
 msgid "Mach den Dialog kleiner"
 msgstr "Gör dialogen mindre"
 
-#: build/admin.js:23
+#: build/admin.js:22
 msgid "Zu tun"
 msgstr "Att göra"
 
 #. translators: %s: time of the last scan
-#: build/admin.js:24
+#: build/admin.js:23
 #, js-format
 msgid "Aus der Prüfung %s. Ein Klick erledigt es."
 msgstr "Från kontrollen %s. Ett klick fixar det."
 
-#: build/admin.js:24
+#: build/admin.js:23
 msgid "Jetzt prüfen"
 msgstr "Kontrollera nu"
 
-#: build/admin.js:24
+#: build/admin.js:23
 msgid "Alles in Ordnung"
 msgstr "Allt är i ordning"
 
-#: build/admin.js:24
+#: build/admin.js:23
 msgid "Jede Woche liest der Dialog deine Website neu und meldet sich hier."
 msgstr "Varje vecka läser dialogen din webbplats igen och rapporterar här."
 
 #. translators: %d: passed checks
-#: build/admin.js:26
+#: build/admin.js:25
 #, js-format
 msgid "%d Prüfung bestanden"
 msgid_plural "%d Prüfungen bestanden"
 msgstr[0] "%d kontroll godkänd"
 msgstr[1] "%d kontroller godkända"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Letzte 30 Tage"
 msgstr "Senaste 30 dagarna"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Entscheidungen"
 msgstr "Beslut"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Zuletzt"
 msgstr "Senaste"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Alle akzeptiert"
 msgstr "Accepterade alla"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Eigene Auswahl"
 msgstr "Eget val"
 
-#: build/admin.js:26
-#: build/admin.js:28
+#: build/admin.js:25
+#: build/admin.js:27
 msgid "Nur notwendige"
 msgstr "Endast nödvändiga"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Noch keine Entscheidungen. Sie erscheinen, sobald Besucher wählen."
 msgstr "Inga beslut ännu. De visas så snart besökare väljer."
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Hintergrund"
 msgstr "Bakgrund"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Text"
 msgstr "Text"
 
-#: build/admin.js:26
+#: build/admin.js:25
 #: build/blocks.js:1
 msgid "Button"
 msgstr "Knapp"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Button-Text"
 msgstr "Knapptext"
 
+#: build/admin.js:25
 #: build/admin.js:26
-#: build/admin.js:27
 msgid "Links"
 msgstr "Länkar"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Titel"
 msgstr "Rubrik"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Alle akzeptieren"
 msgstr "Acceptera alla"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Titel der Auswahl"
 msgstr "Rubrik för valen"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Text der Auswahl"
 msgstr "Text för valen"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Auswahl speichern"
 msgstr "Spara val"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Link Datenschutz"
 msgstr "Länk till integritetspolicy"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Link Impressum"
 msgstr "Länk till juridisk information"
 
-#: build/admin.js:26
-#: build/admin.js:34
+#: build/admin.js:25
+#: build/admin.js:33
 msgid "Button zum Öffnen"
 msgstr "Knapp för att öppna igen"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Platzhalter: Laden"
 msgstr "Platshållare: Ladda"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Platzhalter: Immer laden"
 msgstr "Platshållare: Ladda alltid"
 
-#: build/admin.js:26
-#: build/admin.js:34
+#: build/admin.js:25
+#: build/admin.js:33
 msgid "Position"
 msgstr "Position"
 
-#: build/admin.js:26
-#: build/admin.js:34
+#: build/admin.js:25
+#: build/admin.js:33
 msgctxt "position"
 msgid "Links"
 msgstr "Vänster"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Mitte"
 msgstr "Mitten"
 
-#: build/admin.js:26
-#: build/admin.js:34
+#: build/admin.js:25
+#: build/admin.js:33
 msgid "Rechts"
 msgstr "Höger"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Größe"
 msgstr "Storlek"
 
-#: build/admin.js:26
+#: build/admin.js:25
 msgid "Farben"
 msgstr "Färger"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Vom Theme"
 msgstr "Från temat"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Dunkel"
 msgstr "Mörk"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Ecken"
 msgstr "Hörn"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Hell / dunkel"
 msgstr "Ljus / mörk"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Hell"
 msgstr "Ljus"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Buttons"
 msgstr "Knappar"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Gleich"
 msgstr "Lika"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Akzeptieren betont"
 msgstr "Acceptera framhävd"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Umrandet"
 msgstr "Med kantlinje"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Titel zeigen"
 msgstr "Visa rubrik"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Links zu Datenschutz und Impressum zeigen"
 msgstr "Visa länkar till integritetspolicy och juridisk information"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Sprachauswahl zeigen"
 msgstr "Visa språkval"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Erst mit mehr als einer Sprache (Texte › Sprachen)."
 msgstr "Först med fler än ett språk (Texter › Språk)."
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Schrift, Logo, Abdunkeln, Seite sperren"
 msgstr "Typsnitt, logga, mörkläggning, låsa sidan"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Schrift"
 msgstr "Typsnitt"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Theme"
 msgstr "Tema"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "System"
 msgstr "System"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Eigene"
 msgstr "Eget"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Schriftart (CSS)"
 msgstr "Typsnittsfamilj (CSS)"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Schrift der Überschrift"
 msgstr "Rubrikens typsnitt"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Leer: wie der Text."
 msgstr "Tomt: som texten."
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Logo"
 msgstr "Logga"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Logo im Dialog"
 msgstr "Logga i dialogen"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Wählen"
 msgstr "Välj"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Entfernen"
 msgstr "Ta bort"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Seite abdunkeln"
 msgstr "Mörklägg sidan"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Seite sperren"
 msgstr "Lås sidan"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Scrollen erst nach der Wahl – nur wenn es sein muss."
 msgstr "Scrollning först efter valet – bara om det måste."
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Ton"
 msgstr "Ton"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Anrede (Deutsch)"
 msgstr "Tilltal (tyska)"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Anrede geändert"
 msgstr "Tilltal ändrat"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Kürzer"
 msgstr "Kortare"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Im Ton meiner Website"
 msgstr "I min webbplats ton"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "„Kürzer“ macht dein Browser. Für den Ton deiner Website braucht WordPress einen KI-Anbieter."
 msgstr "”Kortare” gör din webbläsare. För din webbplats ton behöver WordPress en AI-leverantör."
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Dafür braucht WordPress einen KI-Anbieter – oder Chrome mit eingebautem Modell für „Kürzer“."
 msgstr "För det behöver WordPress en AI-leverantör – eller Chrome med inbyggd modell för ”Kortare”."
 
-#: build/admin.js:27
-#: build/admin.js:35
+#: build/admin.js:26
+#: build/admin.js:34
 msgid "Sprachen"
 msgstr "Språk"
 
 #. translators: %s: language
-#: build/admin.js:27
+#: build/admin.js:26
 #, js-format
 msgid "%s entfernen"
 msgstr "Ta bort %s"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Sprache hinzufügen"
 msgstr "Lägg till språk"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "– Sprache wählen –"
 msgstr "– välj språk –"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "auf deiner Website"
 msgstr "på din webbplats"
 
 #. translators: %s: language
-#: build/admin.js:27
+#: build/admin.js:26
 #, js-format
 msgid "Auf %s übersetzen"
 msgstr "Översätt till %s"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Seiten wählen"
 msgstr "Välj sidor"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Alle Texte als Liste"
 msgstr "Alla texter som lista"
 
-#: build/admin.js:27
-#: build/admin.js:29
+#: build/admin.js:26
+#: build/admin.js:28
 msgid "Texte geändert"
 msgstr "Texter ändrade"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Sitzung"
 msgstr "Session"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "dauerhaft"
 msgstr "permanent"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Min."
 msgstr "min"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Std."
 msgstr "h"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Tage"
 msgstr "dagar"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Wochen"
 msgstr "veckor"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Monate"
 msgstr "månader"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Jahre"
 msgstr "år"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "immer aktiv"
 msgstr "alltid aktiv"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "nie geladen"
 msgstr "laddas aldrig"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "wartet auf Einwilligung"
 msgstr "väntar på samtycke"
 
+#: build/admin.js:26
 #: build/admin.js:27
-#: build/admin.js:28
-#: build/admin.js:32
+#: build/admin.js:31
 msgid "Eigener Dienst"
 msgstr "Egen tjänst"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "Wirklich entfernen"
 msgstr "Ja, ta bort"
 
-#: build/admin.js:27
-#: build/admin.js:30
+#: build/admin.js:26
+#: build/admin.js:29
+#: build/admin.js:37
 #: build/admin.js:38
-#: build/admin.js:39
 msgid "Abbrechen"
 msgstr "Avbryt"
 
 #. translators: %d: version
-#: build/admin.js:28
+#: build/admin.js:27
 #, js-format
 msgid "Gespeichert · gilt ab Version %d"
 msgstr "Sparat · gäller från version %d"
 
-#: build/admin.js:28
-#: build/admin.js:39
+#: build/admin.js:27
+#: build/admin.js:38
 msgid "Gespeichert"
 msgstr "Sparat"
 
-#: build/admin.js:28
-#: build/admin.js:31
+#: build/admin.js:27
+#: build/admin.js:30
 msgid "Fertig"
 msgstr "Klart"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "aus der Bibliothek"
 msgstr "från biblioteket"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "eigener Dienst"
 msgstr "egen tjänst"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Im Dialog"
 msgstr "I dialogen"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "So sehen Besucher den Dienst in der Auswahl."
 msgstr "Så ser besökare tjänsten bland valen."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Zusammenfassung"
 msgstr "Sammanfattning"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Name"
 msgstr "Namn"
 
-#: build/admin.js:28
-#: build/admin.js:30
+#: build/admin.js:27
+#: build/admin.js:29
 msgid "Kategorie"
 msgstr "Kategori"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Anbieter"
 msgstr "Leverantör"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Adresse des Anbieters"
 msgstr "Leverantörens adress"
 
 #. translators: %s: language
-#: build/admin.js:28
+#: build/admin.js:27
 #, js-format
 msgid "Zweck (%s)"
 msgstr "Syfte (%s)"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Datenschutzerklärung des Anbieters"
 msgstr "Leverantörens integritetspolicy"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Dauer"
 msgstr "Varaktighet"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Art"
 msgstr "Typ"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Cookie entfernen"
 msgstr "Ta bort cookie"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Cookie"
 msgstr "Cookie"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Zweck"
 msgstr "Syfte"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Datenschutz"
 msgstr "Integritet"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Setzt keine Cookies."
 msgstr "Sätter inga cookies."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Auf deiner Website"
 msgstr "På din webbplats"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Erkannt an"
 msgstr "Identifieras genom"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Hosts"
 msgstr "Värdar"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "nur über Snippet oder data-cookie-service"
 msgstr "bara via kodsnutt eller data-cookie-service"
 
-#: build/admin.js:28
-#: build/admin.js:33
+#: build/admin.js:27
+#: build/admin.js:32
 msgid "Wo"
 msgstr "Var"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "bei der letzten Prüfung nicht gefunden"
 msgstr "hittades inte vid senaste kontrollen"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "noch nicht gelesen"
 msgstr "inte läst ännu"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Bis zur Einwilligung"
 msgstr "Tills samtycke"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Die Schalter gelten für alle Einbettungen."
 msgstr "Reglagen gäller för alla inbäddningar."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Diese Karte kommt von"
 msgstr "Den här kartan kommer från"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Dieser Inhalt kommt von"
 msgstr "Det här innehållet kommer från"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Laden"
 msgstr "Ladda"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Immer laden"
 msgstr "Ladda alltid"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Vorschaubild und Titel über deinen Server"
 msgstr "Förhandsbild och titel via din server"
 
-#: build/admin.js:28
-#: build/admin.js:34
+#: build/admin.js:27
+#: build/admin.js:33
 msgid "„Immer laden“ anbieten"
 msgstr "Erbjud ”Ladda alltid”"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Danach über youtube-nocookie.com"
 msgstr "Därefter via youtube-nocookie.com"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Adresse im Platzhalter"
 msgstr "Adress i platshållaren"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Leer: aus der Karte gelesen."
 msgstr "Tomt: läses från kartan."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Google-Signale"
 msgstr "Google-signaler"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "keine eigenen – die Kategorie gibt sie"
 msgstr "inga egna – kategorin ger dem"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Mit der Einwilligung für diesen Dienst gehen diese Signale an Google. Eine ganze Kategorie gibt ihre eigenen dazu (Statistik: analytics_storage, Marketing: die drei ad_*)."
 msgstr "Med samtycke för den här tjänsten går dessa signaler till Google. En hel kategori lägger till sina egna (Statistik: analytics_storage, Marknadsföring: de tre ad_*)."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Anders einbinden"
 msgstr "Andra sätt att bädda in"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Snippet, eigenes Skript-Tag, data-cookie-service"
 msgstr "Kodsnutt, egen skripttagg, data-cookie-service"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Snippet"
 msgstr "Kodsnutt"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Der Code des Anbieters. Das Plugin druckt ihn zurückgehalten und lädt ihn bei Einwilligung – ohne Neuladen. <noscript> fällt weg."
 msgstr "Leverantörens kod. Tillägget skriver ut den vilande och kör den vid samtycke – utan omladdning. <noscript> tas bort."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Im Theme oder in einem Plugin"
 msgstr "I temat eller i ett tillägg"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Skript-Handles in WordPress"
 msgstr "Skript-handles i WordPress"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Durch Komma getrennt. Diese Skripte warten auf die Einwilligung."
 msgstr "Kommaseparerade. Dessa skript väntar på samtycke."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Muster"
 msgstr "Mönster"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Teile von Adressen oder Code, an denen der Dienst erkannt wird."
 msgstr "Delar av adresser eller kod som tjänsten identifieras på."
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Seit"
 msgstr "Sedan"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Aus der Bibliothek"
 msgstr "Från biblioteket"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Dienst suchen"
 msgstr "Sök tjänst"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Als eigenen Dienst anlegen"
 msgstr "Skapa som egen tjänst"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Beschreibung im Dialog"
 msgstr "Beskrivning i dialogen"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Nach oben"
 msgstr "Flytta upp"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Nach unten"
 msgstr "Flytta ner"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Kategorie löschen"
 msgstr "Ta bort kategori"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Alle"
 msgstr "Alla"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Widerruf"
 msgstr "Återkallelse"
 
-#: build/admin.js:28
+#: build/admin.js:27
 msgid "Widerruf · Nur notwendige"
 msgstr "Återkallelse · Endast nödvändiga"
 
 #. translators: 1: date, 2: note
-#: build/admin.js:29
+#: build/admin.js:28
 #, js-format
 msgid "Seit %1$s · %2$s"
 msgstr "Sedan %1$s · %2$s"
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Das hat jede Person gesehen, die bei dieser Version entschieden hat – in allen Sprachen gespeichert."
 msgstr "Det här såg alla som fattade sitt beslut under den här versionen – sparat på alla språk."
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Kopiert"
 msgstr "Kopierat"
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Kopieren"
 msgstr "Kopiera"
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "– keine –"
 msgstr "– ingen –"
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Ich lese deine Website …"
 msgstr "Jag läser din webbplats …"
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Startseite und bis zu 20 Seiten, als Besucher ohne Einwilligung: jedes Skript, jede Einbettung, jede Schrift von Dritten. Das dauert ein paar Sekunden."
 msgstr "Startsidan och upp till 20 sidor, som besökare utan samtycke: varje skript, varje inbäddning, varje typsnitt från tredje part. Det tar några sekunder."
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Aussehen"
 msgstr "Utseende"
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Aus deinem Theme. Ändere nur, was nicht passt."
 msgstr "Från ditt tema. Ändra bara det som inte passar."
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Texte"
 msgstr "Texter"
 
-#: build/admin.js:29
+#: build/admin.js:28
 msgid "Klick auf einen Text in der Vorschau, um ihn zu ändern – oder sag dem Assistenten, wie er klingen soll."
 msgstr "Klicka på en text i förhandsgranskningen för att ändra den – eller säg till assistenten hur den ska låta."
 
 #. translators: %d: next version
-#: build/admin.js:30
+#: build/admin.js:29
 #, js-format
 msgid "Gespeichert, sobald du etwas änderst. Neue Texte werden Version %d – Besucher werden einmal neu gefragt."
 msgstr "Sparas så snart du ändrar något. Nya texter blir version %d – besökare tillfrågas en gång till."
 
-#: build/admin.js:30
+#: build/admin.js:29
 msgid "Gespeichert, sobald du etwas änderst. Auf der Website erscheint es, wenn du den Dialog einschaltest."
 msgstr "Sparas så snart du ändrar något. På webbplatsen visas det när du slår på dialogen."
 
-#: build/admin.js:30
+#: build/admin.js:29
 msgid "Dienst oder Host suchen"
 msgstr "Sök tjänst eller värd"
 
-#: build/admin.js:30
+#: build/admin.js:29
 #: build/blocks.js:1
 msgid "Dienst"
 msgstr "Tjänst"
 
-#: build/admin.js:30
+#: build/admin.js:29
 msgid "Name der Kategorie"
 msgstr "Kategorins namn"
 
-#: build/admin.js:30
+#: build/admin.js:29
 msgid "Beschreibung"
 msgstr "Beskrivning"
 
-#: build/admin.js:30
+#: build/admin.js:29
 msgid "Anlegen"
 msgstr "Skapa"
 
-#: build/admin.js:30
+#: build/admin.js:29
 msgid "Zu prüfen"
 msgstr "Att kontrollera"
 
-#: build/admin.js:30
+#: build/admin.js:29
 msgid "Neu auf deiner Website und noch nicht im Dialog – lädt bis dahin ohne Einwilligung."
 msgstr "Nytt på din webbplats och inte i dialogen ännu – laddas utan samtycke tills dess."
 
 #. translators: %s: date
-#: build/admin.js:30
+#: build/admin.js:29
 #, js-format
 msgid "seit %s"
 msgstr "sedan %s"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Ohne sie funktioniert die Seite nicht. Immer aktiv."
 msgstr "Utan dem fungerar inte webbplatsen. Alltid aktiva."
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Bearbeiten"
 msgstr "Redigera"
 
 #. translators: %s: category
-#: build/admin.js:31
+#: build/admin.js:30
 #, js-format
 msgid "%s im Dialog anbieten"
 msgstr "Erbjud %s i dialogen"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Nicht im Dialog: Diese Dienste laden nie."
 msgstr "Inte i dialogen: de här tjänsterna laddas aldrig."
 
 #. translators: %d: cookies
-#: build/admin.js:31
+#: build/admin.js:30
 #, js-format
 msgid "%d Cookie"
 msgid_plural "%d Cookies"
 msgstr[0] "%d cookie"
 msgstr[1] "%d cookies"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "kein Cookie"
 msgstr "ingen cookie"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Noch kein Dienst"
 msgstr "Ingen tjänst ännu"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Unten aus der Bibliothek hinzufügen."
 msgstr "Lägg till från biblioteket nedan."
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Von deinem Server statt von Dritten"
 msgstr "Från din server i stället för från tredje part"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Keine Einwilligung nötig – die Dateien liegen bei dir und werden wöchentlich geprüft."
 msgstr "Inget samtycke behövs – filerna ligger hos dig och kontrolleras varje vecka."
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "über den Server"
 msgstr "via servern"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "lokal"
 msgstr "lokalt"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "aus"
 msgstr "av"
 
-#: build/admin.js:31
-#: build/admin.js:34
+#: build/admin.js:30
+#: build/admin.js:33
 msgid "Über den Server"
 msgstr "Via servern"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Ausschalten"
 msgstr "Stäng av"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Die letzte Prüfung hat keine Datei dieses Dienstes gefunden."
 msgstr "Den senaste kontrollen hittade ingen fil från den här tjänsten."
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Schriften"
 msgstr "Typsnitt"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Stylesheets"
 msgstr "Stilmallar"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Skript-Bibliothek – jetzt notwendig, Host in der Tabelle genannt"
 msgstr "Skriptbibliotek – nu nödvändigt, värden nämns i tabellen"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Emoji-Skript von WordPress"
 msgstr "Emoji-skript från WordPress"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Bilder"
 msgstr "Bilder"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Avatare in Kommentaren"
 msgstr "Avatarer i kommentarer"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "vorher"
 msgstr "tidigare"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Deine eigene Domain – etwa ein CDN. Als Auftragsverarbeiter notwendig."
 msgstr "Din egen domän – t.ex. ett CDN. Nödvändig som personuppgiftsbiträde."
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "eigene Domain"
 msgstr "egen domän"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Hinzufügen"
 msgstr "Lägg till"
 
-#: build/admin.js:31
+#: build/admin.js:30
 msgid "Aus der Bibliothek: Anbieter, Zweck, Cookies und Texte sind schon da."
 msgstr "Från biblioteket: leverantör, syfte, cookies och texter finns redan."
 
 #. translators: %d: more services
-#: build/admin.js:32
+#: build/admin.js:31
 #, js-format
 msgid "%d weiterer"
 msgid_plural "%d weitere"
 msgstr[0] "%d till"
 msgstr[1] "%d till"
 
-#: build/admin.js:32
+#: build/admin.js:31
 msgid "Zeitraum"
 msgstr "Period"
 
-#: build/admin.js:32
+#: build/admin.js:31
 msgid "30 Tage"
 msgstr "30 dagar"
 
-#: build/admin.js:32
+#: build/admin.js:31
 msgid "12 Monate"
 msgstr "12 månader"
 
-#: build/admin.js:32
+#: build/admin.js:31
 msgid "Alles"
 msgstr "Allt"
 
 #. translators: %d: withdrawals
-#: build/admin.js:33
+#: build/admin.js:32
 #, js-format
 msgid "Entscheidungen · %d Widerrufe"
 msgstr "Beslut · %d återkallelser"
 
-#: build/admin.js:33
+#: build/admin.js:32
 msgid "Consent-ID suchen"
 msgstr "Sök samtyckes-ID"
 
-#: build/admin.js:33
+#: build/admin.js:32
 msgid "Zeit"
 msgstr "Tid"
 
-#: build/admin.js:33
+#: build/admin.js:32
 msgid "Consent-ID"
 msgstr "Samtyckes-ID"
 
-#: build/admin.js:33
+#: build/admin.js:32
 msgid "Entscheidung"
 msgstr "Beslut"
 
-#: build/admin.js:33
+#: build/admin.js:32
 msgid "Version"
 msgstr "Version"
 
-#: build/admin.js:33
+#: build/admin.js:32
 msgid "Keine Entscheidung mit dieser Consent-ID."
 msgstr "Inget beslut med det här samtyckes-ID:t."
 
-#: build/admin.js:33
+#: build/admin.js:32
 msgid "Noch keine Entscheidungen in diesem Zeitraum."
 msgstr "Inga beslut under den här perioden ännu."
 
 #. translators: %d: months
-#: build/admin.js:34
+#: build/admin.js:33
 #, js-format
 msgid "Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d Monat."
 msgid_plural "Jede Zeile hält die Version des Dialogs, die die Person gesehen hat – der Nachweis nach Art. 7 DSGVO. IP-Adressen nur gehasht, gelöscht nach %d Monaten."
 msgstr[0] "Varje rad innehåller den version av dialogen som personen såg – beviset enligt artikel 7 i GDPR. IP-adresser bara hashade, raderas efter %d månad."
 msgstr[1] "Varje rad innehåller den version av dialogen som personen såg – beviset enligt artikel 7 i GDPR. IP-adresser bara hashade, raderas efter %d månader."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "überall"
 msgstr "överallt"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "EWR"
 msgstr "EES"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Schweiz"
 msgstr "Schweiz"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Gravatar über den Server"
 msgstr "Gravatar via servern"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Avatare aus"
 msgstr "Avatarer av"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Gravatar direkt"
 msgstr "Direkt från Gravatar"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Google"
 msgstr "Google"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Consent Mode v2"
 msgstr "Consent Mode v2"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Consent Mode aus"
 msgstr "Consent Mode av"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "„Abgelehnt“ steht vor jedem Google-Tag; die Wahl geht als Update hinterher."
 msgstr "”Nekad” sätts före varje Google-tagg; valet följer som en uppdatering."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Modus"
 msgstr "Läge"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Basic: Tags laden erst nach Einwilligung – empfohlen in DE und AT. Advanced: Tags laden und senden cookielose Pings."
 msgstr "Basic: taggar laddas först efter samtycke – rekommenderas i Tyskland och Österrike. Advanced: taggar laddas och skickar cookiefria pingar."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Tag Manager"
 msgstr "Tag Manager"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Vom Plugin geladen, nach dem Standard. Eigener Container im Theme? Leer lassen."
 msgstr "Laddas av tillägget, efter standardvärdet. Egen container i temat? Lämna tomt."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Regionen mit „abgelehnt“"
 msgstr "Regioner med ”nekad”"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Außerhalb darf Google ohne Wahl messen – der Dialog hält Tags trotzdem zurück."
 msgstr "Utanför dem får Google mäta utan val – dialogen håller ändå tillbaka taggar."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Überall"
 msgstr "Överallt"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "URL-Passthrough"
 msgstr "URL-passthrough"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Klick-IDs in Links weitergeben, solange Cookies abgelehnt sind."
 msgstr "Skicka med klick-ID:n i länkar så länge cookies är nekade."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Ads-Daten kürzen"
 msgstr "Maskera annonsdata"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "IAB TCF 2.2 braucht nur, wer AdSense, Ad Manager oder AdMob nutzt."
 msgstr "IAB TCF 2.2 behöver bara den som använder AdSense, Ad Manager eller AdMob."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Von Dritten"
 msgstr "Från tredje part"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Einbettungen als Platzhalter"
 msgstr "Inbäddningar som platshållare"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "nur bekannte Einbettungen"
 msgstr "bara kända inbäddningar"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Schriften lokal"
 msgstr "Typsnitt lokalt"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Emoji aus"
 msgstr "Emoji av"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Unbekannte iframes als Platzhalter"
 msgstr "Okända iframes som platshållare"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Auch Einbettungen, die die Bibliothek nicht kennt, laden erst auf Klick."
 msgstr "Även inbäddningar som biblioteket inte känner till laddas först vid klick."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Vorschaubilder über deinen Server"
 msgstr "Förhandsbilder via din server"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "YouTube, Vimeo, Spotify: Bild und Titel in der Mediathek, keine Verbindung zum Anbieter."
 msgstr "YouTube, Vimeo, Spotify: bild och titel i mediabiblioteket, ingen anslutning till leverantören."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "YouTube über youtube-nocookie.com"
 msgstr "YouTube via youtube-nocookie.com"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Avatare"
 msgstr "Avatarer"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Aus"
 msgstr "Av"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Direkt"
 msgstr "Direkt"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "WordPress-Emoji-Skript laden"
 msgstr "Ladda WordPress emoji-skript"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Lädt Bilder von s.w.org. Browser zeigen Emoji längst selbst."
 msgstr "Laddar bilder från s.w.org. Webbläsare visar sedan länge emoji själva."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Hinweise an Dritte entfernen"
 msgstr "Ta bort resurstips till tredje part"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Was von deinem Server kommt, steht unter Dienste"
 msgstr "Det som kommer från din server står under Tjänster"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Gültigkeit"
 msgstr "Giltighet"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "neu fragen, wenn Dienste sich ändern"
 msgstr "fråga igen när tjänster ändras"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Global Privacy Control beachtet"
 msgstr "Global Privacy Control respekteras"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Wahl gilt"
 msgstr "Valet gäller"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "6 Monate empfiehlt die CNIL, bis 12 die DSK."
 msgstr "CNIL rekommenderar 6 månader, DSK upp till 12."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Neu fragen, wenn sich Texte oder Dienste ändern"
 msgstr "Fråga igen när texter eller tjänster ändras"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Neu fragen"
 msgstr "Fråga igen"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Global Privacy Control beachten"
 msgstr "Respektera Global Privacy Control"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Sendet der Browser das Signal, bleibt Marketing bei „Alle akzeptieren“ aus."
 msgstr "Skickar webbläsaren signalen förblir marknadsföring av vid ”Acceptera alla”."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Erneut öffnen"
 msgstr "Öppna igen"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Button unten links"
 msgstr "Knapp nere till vänster"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Button unten rechts"
 msgstr "Knapp nere till höger"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "kein Button"
 msgstr "ingen knapp"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Shortcode, Block und #cookie-settings"
 msgstr "Kortkod, block och #cookie-settings"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Erscheint nach der ersten Wahl. Widerrufen muss so leicht sein wie Zustimmen."
 msgstr "Visas efter det första valet. Att återkalla måste vara lika lätt som att samtycka."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Oder selbst platzieren – im Footer, im Menü, in der Datenschutzerklärung:"
 msgstr "Eller placera den själv – i sidfoten, i menyn, i integritetspolicyn:"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Block: „Cookie-Einstellungen“. Im Menü: ein eigener Link auf #cookie-settings."
 msgstr "Block: ”Cookie-inställningar”. I menyn: en egen länk till #cookie-settings."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Seiten"
 msgstr "Sidor"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "keine Datenschutzerklärung"
 msgstr "ingen integritetspolicy"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "kein Impressum"
 msgstr "ingen juridisk information"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "dort nur klein"
 msgstr "bara liten där"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Impressum"
 msgstr "Juridisk information"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Dort nur klein zeigen"
 msgstr "Visa bara liten där"
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Damit man lesen kann, bevor man entscheidet."
 msgstr "Så att man kan läsa innan man bestämmer sig."
 
-#: build/admin.js:34
+#: build/admin.js:33
 msgid "Die Cookie-Tabelle für die Datenschutzerklärung: Block „Cookie-Tabelle“ oder"
 msgstr "Cookietabellen för integritetspolicyn: blocket ”Cookietabell” eller"
 
 #. translators: %d: months
-#: build/admin.js:35
+#: build/admin.js:34
 #, js-format
 msgid "%d Monat · IP gehasht · CSV"
 msgid_plural "%d Monate · IP gehasht · CSV"
 msgstr[0] "%d månad · IP hashad · CSV"
 msgstr[1] "%d månader · IP hashad · CSV"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Aufbewahren"
 msgstr "Behåll"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Danach löscht ein täglicher Job die Einträge."
 msgstr "Därefter raderar ett dagligt jobb posterna."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Gespeichert werden Consent-ID, Zeit, Wahl, Version, Sprache, Ort der Entscheidung, Browser-Familie und die IP-Adresse als SHA-256 mit täglich neuem Salz – nie die IP selbst."
 msgstr "Det som sparas är samtyckes-ID, tid, val, version, språk, var beslutet fattades, webbläsarfamilj och IP-adressen som SHA-256 med ett salt som byts dagligen – aldrig IP-adressen själv."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Alles als CSV"
 msgstr "Allt som CSV"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "günstig"
 msgstr "billig"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "stark"
 msgstr "stark"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Einfaches im Browser"
 msgstr "Enkla saker i webbläsaren"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "KI-Anbieter"
 msgstr "AI-leverantör"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "WordPress verwaltet ihn unter Einstellungen › Konnektoren – ein API Key für alle Plugins."
 msgstr "WordPress hanterar den under Inställningar › Connectors – en API-nyckel för alla tillägg."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Ab WordPress 7.0."
 msgstr "Från WordPress 7.0."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "keiner"
 msgstr "ingen"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Konnektoren"
 msgstr "Connectors"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Empfohlen: Vercel AI Gateway – 5 $ im Monat gratis, ein API Key für die Modelle aller Anbieter."
 msgstr "Rekommenderat: Vercel AI Gateway – 5 $ i månaden gratis, en API-nyckel för alla leverantörers modeller."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Plugin installieren"
 msgstr "Installera tillägg"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Modell"
 msgstr "Modell"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Günstig reicht für alles hier: eine Einrichtung kostet etwa 4 Cent."
 msgstr "Billig räcker för allt här: att ställa in allt kostar ungefär 4 cent."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Günstig"
 msgstr "Billig"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Stark"
 msgstr "Stark"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Eigenes"
 msgstr "Eget"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Modell-ID"
 msgstr "Modell-ID"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Einfache Aufgaben im Browser"
 msgstr "Enkla uppgifter i webbläsaren"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Dein Browser hat ein eingebautes Modell: Übersetzen, Kürzen, Zuordnen und der Datenschutz-Absatz laufen dort, nichts verlässt den Rechner."
 msgstr "Din webbläsare har en inbyggd modell: översättning, förkortning, tilldelning och integritetsstycket körs där, ingenting lämnar datorn."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Dieser Browser hat kein eingebautes Modell (Chrome ab 148, Edge)."
 msgstr "Den här webbläsaren har ingen inbyggd modell (Chrome från 148, Edge)."
 
 #. translators: 1: tokens, 2: last model
-#: build/admin.js:35
+#: build/admin.js:34
 #, js-format
 msgid "Diesen Monat: %1$s Tokens · zuletzt %2$s"
 msgstr "Den här månaden: %1$s tokens · senast %2$s"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "wie deine Website"
 msgstr "som din webbplats"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Der Dialog spricht die Sprache der Seite: mit Polylang oder WPML jede Sprache der Website, sonst die von WordPress. Texte und Übersetzungen bearbeitest du unter Dialog."
 msgstr "Dialogen talar sidans språk: med Polylang eller WPML varje språk på webbplatsen, annars WordPress språk. Texter och översättningar redigerar du under Dialog."
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Sprachen deiner Website"
 msgstr "Din webbplats språk"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Texte und Sprachen"
 msgstr "Texter och språk"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "Website lesen"
 msgstr "Läs webbplatsen"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "jede Woche"
 msgstr "varje vecka"
 
-#: build/admin.js:35
+#: build/admin.js:34
 msgid "nur von Hand"
 msgstr "bara manuellt"
 
 #. translators: %s: time
-#: build/admin.js:35
+#: build/admin.js:34
 #, js-format
 msgid "zuletzt %s"
 msgstr "senast %s"
 
 #. translators: %d: pages
-#: build/admin.js:36
+#: build/admin.js:35
 #, js-format
 msgid "%d Seite"
 msgid_plural "%d Seiten"
 msgstr[0] "%d sida"
 msgstr[1] "%d sidor"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Jede Woche neu lesen"
 msgstr "Läs igen varje vecka"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Neue Skripte erscheinen unter Dienste › Zu prüfen."
 msgstr "Nya skript visas under Tjänster › Att kontrollera."
 
-#: build/admin.js:39
+#: build/admin.js:38
 msgid "Ausschalten? Skripte laufen dann wieder ohne Einwilligung. Das Protokoll bleibt."
 msgstr "Stänga av? Skript körs då igen utan samtycke. Loggen finns kvar."
 
-#: build/admin.js:39
+#: build/admin.js:38
 msgid "Dialog ausschalten"
 msgstr "Stäng av dialogen"
 
-#: build/admin.js:39
+#: build/admin.js:38
 msgid "Skripte laufen dann wieder ohne Einwilligung. Das Protokoll bleibt."
 msgstr "Skript körs då igen utan samtycke. Loggen finns kvar."
 
-#: build/admin.js:39
+#: build/admin.js:38
 msgid "Zum Einschalten"
 msgstr "För att slå på"
 
-#: build/admin.js:39
+#: build/admin.js:38
 msgid "Der Dialog ist noch aus."
 msgstr "Dialogen är fortfarande av."
 
-#: build/admin.js:39
-msgid "z. B. „Füge Hotjar hinzu“"
-msgstr "t.ex. ”Lägg till Hotjar”"
-
-#: build/admin.js:39
-msgid "Frag zum Protokoll, z. B. „Wie viele haben gestern abgelehnt?“"
-msgstr "Fråga om loggen, t.ex. ”Hur många avböjde igår?”"
-
-#: build/admin.js:39
+#: build/admin.js:38
 msgid "Speichert …"
 msgstr "Sparar …"
 
 #. translators: %d: version
-#: build/admin.js:40
+#: build/admin.js:39
 #, js-format
 msgid "Live · Version %d"
 msgstr "Live · version %d"
 
-#: build/admin.js:40
+#: build/admin.js:39
 msgid "Auf der Website ansehen"
 msgstr "Visa på webbplatsen"
 
-#: build/admin.js:40
+#: build/admin.js:39
 msgid "Noch nicht live"
 msgstr "Inte live ännu"
 
@@ -2609,68 +2471,68 @@ msgid "widerruf"
 msgstr "återkalla"
 
 #: includes/class-config.php:776
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "In dieser Datei sind keine Einstellungen von Cookie Dialog."
 msgstr "Den här filen innehåller inga inställningar från Cookie Dialog."
 
-#: includes/class-rest.php:188
+#: includes/class-rest.php:186
 msgid "Importiert"
 msgstr "Importerad"
 
 #. translators: %s: the host the file comes from, e.g. staging.example.com
-#: includes/class-rest.php:196
+#: includes/class-rest.php:194
 #, php-format
 msgid "Einstellungen von %s importiert"
 msgstr "Inställningar importerade från %s"
 
-#: includes/class-rest.php:197
+#: includes/class-rest.php:195
 msgid "Einstellungen importiert"
 msgstr "Inställningar importerade"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Export und Import"
 msgstr "Export och import"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Die Einstellungen als Datei, etwa von Staging auf Live"
 msgstr "Inställningarna som fil, till exempel från staging till live"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Exportieren"
 msgstr "Exportera"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Dialog, Texte, Dienste und Einstellungen als JSON-Datei – ohne Protokoll."
 msgstr "Dialog, texter, tjänster och inställningar som JSON-fil – utan loggen."
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Datei laden"
 msgstr "Ladda ned fil"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Importieren"
 msgstr "Importera"
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Ersetzt Dialog, Texte, Dienste und Einstellungen. Ob der Dialog an ist und das Protokoll bleiben; Datenschutzerklärung und Impressum werden über ihre Adresse zugeordnet."
 msgstr "Ersätter dialog, texter, tjänster och inställningar. Om dialogen är påslagen och loggen finns kvar; integritetspolicy och juridisk information matchas på sin adress."
 
-#: build/admin.js:36
+#: build/admin.js:35
 msgid "Datei wählen …"
 msgstr "Välj fil …"
 
 #. translators: %s: host, e.g. staging.example.com
-#: build/admin.js:37
+#: build/admin.js:36
 #, js-format
 msgid "von %s"
 msgstr "från %s"
 
-#: build/admin.js:38
+#: build/admin.js:37
 msgid "Der Dialog ist an: Ändert sich, was Besucher lesen, gilt eine neue Version."
 msgstr "Dialogen är påslagen: ändras det besökarna läser gäller en ny version."
 
 #. translators: %s: file name
-#: build/admin.js:39
+#: build/admin.js:38
 #, js-format
 msgid "%s übernommen."
 msgstr "%s importerad."
@@ -2692,75 +2554,131 @@ msgstr "som en ny besökare – inget sparas"
 msgid "https://engenty.ai/wordpress-plugins/cookie-dialog"
 msgstr "https://engenty.ai/wordpress-plugins/cookie-dialog"
 
-#: build/admin.js:27
+#: build/admin.js:26
 msgid "„engenty Cookie Dialog“ im Dialog nennen"
 msgstr "Nämn ”engenty Cookie Dialog” i dialogen"
 
-#: includes/class-rest.php:171
+#: includes/class-rest.php:169
 msgid "Diese Prüfung gibt es gerade nicht."
 msgstr "Den här kontrollen finns inte just nu."
 
 #. translators: %s: host
-#: build/admin.js:17
+#: build/admin.js:16
 #, js-format
 msgid "Warum bekommt %s die IP-Adresse?"
 msgstr "Varför får %s IP-adressen?"
 
-#: build/admin.js:17
+#: build/admin.js:16
 msgid "Was ist noch zu tun?"
 msgstr "Vad återstår att göra?"
 
 #. translators: %s: host
-#: build/admin.js:20
+#: build/admin.js:19
 #, js-format
 msgid "Was ist %s?"
 msgstr "Vad är %s?"
 
 #. translators: %s: service name
-#: build/admin.js:21
-#: build/admin.js:23
+#: build/admin.js:20
+#: build/admin.js:22
 #, js-format
 msgid "Wofür nutzen wir %s?"
 msgstr "Vad använder vi %s till?"
 
-#: build/admin.js:21
+#: build/admin.js:20
 msgid "Wie viele haben diese Woche abgelehnt?"
 msgstr "Hur många tackade nej den här veckan?"
 
 #. translators: %s: language
-#: build/admin.js:22
+#: build/admin.js:21
 #, js-format
 msgid "Übersetze auf %s"
 msgstr "Översätt till %s"
 
-#: build/admin.js:22
+#: build/admin.js:21
 msgid "Schreib den Cookie-Absatz für die Datenschutzerklärung"
 msgstr "Skriv cookie-stycket till integritetspolicyn"
 
-#: build/admin.js:22
+#: build/admin.js:21
 msgid "Schreib per du"
 msgstr "Skriv med du"
 
-#: build/admin.js:23
+#: build/admin.js:22
 msgid "Heller Dialog"
 msgstr "Ljus dialog"
 
-#: build/admin.js:24
+#: build/admin.js:23
 msgid "Ignorieren"
 msgstr "Ignorera"
 
 #. translators: %d: ignored checks
-#: build/admin.js:25
+#: build/admin.js:24
 #, js-format
 msgid "%d Prüfung ignoriert"
 msgid_plural "%d Prüfungen ignoriert"
 msgstr[0] "%d kontroll ignorerad"
 msgstr[1] "%d kontroller ignorerade"
 
-#: build/admin.js:25
+#: build/admin.js:24
 msgid "Sie meldet sich wieder, sobald sie etwas anderes findet."
 msgstr "Den hör av sig igen så snart den hittar något annat."
 
-#: build/admin.js:25
+#: build/admin.js:24
 msgid "Wieder zeigen"
 msgstr "Visa igen"
+
+#: includes/class-family.php:68
+msgid "Der Copilot in deinem WordPress: erklärt, zeigt und erledigt es – im Admin und auf der Website."
+msgstr "Andrapiloten i ditt WordPress: förklarar, visar och gör det – i adminpanelen och på webbplatsen."
+
+#: includes/class-family.php:70
+msgid "Ein schlichter Cookie-Dialog für die EU: Dienste erst nach Zustimmung, Protokoll, Google Consent Mode."
+msgstr "En enkel cookiedialog för EU: tjänster först efter samtycke, logg, Google Consent Mode."
+
+#: includes/class-family.php:72
+msgid "Kennzeichnet KI-Bilder, wie es der AI Act verlangt – mit den Symbolen der EU auf der Website."
+msgstr "Märker AI-bilder som AI-förordningen kräver – med EU:s symboler på webbplatsen."
+
+#: includes/class-family.php:74
+msgid "Eigene KI-Assistenten auf deiner Website: als Block, Shortcode oder Bubble auf jeder Seite."
+msgstr "Egna AI-assistenter på din webbplats: som block, kortkod eller bubbla på varje sida."
+
+#: includes/class-family.php:76
+msgid "engenty als KI-Anbieter für WordPress, mit Gratis-Guthaben."
+msgstr "engenty som AI-leverantör för WordPress, med gratis krediter."
+
+#: includes/class-goose.php:87
+msgid "Der Cookie-Dialog der Website: Texte, Aussehen, Dienste, Protokoll."
+msgstr "Webbplatsens cookiedialog: texter, utseende, tjänster, logg."
+
+#: includes/class-goose.php:100
+msgid "Cookie-Dialog lesen"
+msgstr "Läs cookiedialogen"
+
+#: includes/class-goose.php:115
+msgid "Cookie-Dialog ändern"
+msgstr "Ändra cookiedialogen"
+
+#: includes/class-goose.php:140
+msgid "Änderung zurücknehmen"
+msgstr "Ångra en ändring"
+
+#: includes/class-goose.php:180
+msgid "Cookie-Dialog geändert"
+msgstr "Cookiedialogen ändrad"
+
+#: build/admin.js:3
+msgid "Mit engenty.goose, dem Copiloten für WordPress, sagst du hier, was anders sein soll: Er ändert Dialog, Dienste und Einstellungen, zeigt dir, wo was ist, und jede Änderung lässt sich zurücknehmen."
+msgstr "Med engenty.goose, andrapiloten för WordPress, säger du här vad som ska vara annorlunda: den ändrar dialog, tjänster och inställningar, visar dig var allt finns, och varje ändring kan ångras."
+
+#: build/admin.js:3
+msgid "engenty.goose aktivieren"
+msgstr "Aktivera engenty.goose"
+
+#: build/admin.js:3
+msgid "engenty.goose holen"
+msgstr "Hämta engenty.goose"
+
+#: build/admin.js:3
+msgid "Wer Plugins verwalten darf, kann engenty.goose dazuholen."
+msgstr "Den som får hantera tillägg kan lägga till engenty.goose."

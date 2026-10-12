@@ -20,9 +20,13 @@ Cookie Dialog reads your website as a visitor without consent, proposes the whol
 * A consent log with the version each person saw, IP addresses only hashed, CSV export.
 * Google Consent Mode v2, Tag Manager, Meta and Microsoft consent signals.
 * A library of 60 services with German and English texts.
-* The assistant uses the AI provider set up under Settings › Connectors (WordPress 7.0+). Simple jobs run in your browser's built-in model. Everything else works without AI.
+* The assistant's jobs (texts in the site's tone, translating, naming unknown hosts, the privacy paragraph) use the AI provider set up under Settings › Connectors (WordPress 7.0+); simple ones run in your browser's built-in model. Everything else works without AI.
+* With engenty.goose, the copilot for WordPress, you say on Start what should be different: it changes dialog, services and settings through Cookie Dialog's abilities, and every change can be taken back.
 
 == Changelog ==
+
+= Unreleased =
+* The conversation moved to engenty.goose, the copilot for WordPress: Cookie Dialog brings a skill and three abilities (read the configuration, change it, take a change back); on its own pages Goose has the skill from the start. Without Goose, Start shows how to activate or get it. The jobs (translating, shortening, naming hosts, the privacy paragraph, texts in the site's tone) stay in Cookie Dialog.
 
 = 0.2.2 =
 * The assistant works with OpenAI: its answer schemas go to the provider in the strict form structured outputs require, without a temperature, and the model lists start with today's models (GPT-6 Luna, Claude Haiku 5.5, Gemini 3.5 Flash-Lite; for „stark“ Claude Sonnet 5.5, GPT-6.1 Sol, Gemini 3.8 Flash).

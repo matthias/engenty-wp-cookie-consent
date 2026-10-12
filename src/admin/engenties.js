@@ -35,10 +35,51 @@ const INCOGNITO =
 	`<ellipse cx="60" cy="30" rx="25" ry="3.6" fill="${ INK }"/></g>`;
 
 /**
- * One engenty's SVG content; `incognito` is the drop with sunglasses and hat.
+ * engenty.goose, the copilot (from its engenties.js; change it there): the round engenty as a jet pilot of the eighties – a glossy flight helmet in its
+ * own livery (ember red, a white centre stripe with navy pinstripes, racing stripes along the sides,
+ * the smoked visor flipped up), aviator sunglasses over its one eye (gold frame, mirrored teardrop lens) and a
+ * moustache. A nod to the films of the time, nothing taken from one. Drawn for the round engenty's
+ * eye at 68/58; the helmet rides the head as it breathes (3.6 s).
+ */
+const SHELL = 'oklch(56% 0.2 27)';
+const SHELL_DARK = 'oklch(40% 0.14 25)';
+const NAVY = 'oklch(30% 0.09 262)';
+const VISOR = 'oklch(26% 0.03 255 / 0.92)';
+const GOLD = 'oklch(80% 0.13 85)';
+const LENS = 'oklch(30% 0.05 245 / 0.6)';
+const MOUSTACHE = 'oklch(30% 0.05 48)';
+const PILOT =
+	'<g><animateTransform attributeName="transform" type="translate" dur="3.6s" repeatCount="indefinite" values="0 0;0 5;0 0"/>' +
+	// The shell, its rim, the gloss.
+	`<path d="M24 52 Q20 14 60 13 Q100 14 96 52 Q93 47 87 46 Q60 41 33 46 Q27 47 24 52 Z" fill="${ SHELL }"/>` +
+	`<path d="M24 52 Q27 47 33 46 Q60 41 87 46 Q93 47 96 52" fill="none" stroke="${ SHELL_DARK }" stroke-width="1.6" stroke-linejoin="round"/>` +
+	'<path d="M33 27 Q42 17.5 56 16" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.4"/>' +
+	// The livery: a centre stripe with pinstripes, racing stripes along both sides of the shell.
+	'<path d="M55.6 13.9 L56.4 42 L63.6 42 L64.4 13.9 Z" fill="#fff"/>' +
+	`<path d="M53.9 14.2 L54.8 42.3 M66.1 14.2 L65.2 42.3" fill="none" stroke="${ NAVY }" stroke-width="1.3"/>` +
+	'<path d="M27.6 43 Q25.8 24 45.5 16.6 M92.4 43 Q94.2 24 74.5 16.6" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/>' +
+	`<path d="M31.4 41.4 Q30.4 26.5 47 19.6 M88.6 41.4 Q89.6 26.5 73 19.6" fill="none" stroke="${ NAVY }" stroke-width="1.6" stroke-linecap="round"/>` +
+	// The visor, flipped up, on its pivots.
+	`<path d="M31 45 Q60 36.5 89 45 L88.2 40.2 Q60 31.8 31.8 40.2 Z" fill="${ VISOR }"/>` +
+	'<path d="M40 39 Q50 35.9 60 35.5" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>' +
+	'<circle cx="31.4" cy="42.6" r="1.8" fill="oklch(85% 0.01 250)"/><circle cx="88.6" cy="42.6" r="1.8" fill="oklch(85% 0.01 250)"/>' +
+	'</g>' +
+	// Aviator sunglasses: the bar and the temple, the teardrop lens over the eye, a mirror's glint.
+	`<path d="M47.5 52.6 Q51.5 49.4 56.7 50.6 M80 50.8 L95.6 50" fill="none" stroke="${ GOLD }" stroke-width="1.5" stroke-linecap="round"/>` +
+	`<path d="M56.5 50.5 Q58 48.2 68 48.6 Q78.5 48.2 80 50.8 Q81.2 57.5 77 63.8 Q72.5 69.8 66.2 68.8 Q59 67.5 57 60.5 Q55.8 55 56.5 50.5 Z" fill="${ LENS }" stroke="${ GOLD }" stroke-width="1.6" stroke-linejoin="round"/>` +
+	'<path d="M59.5 55.5 Q65 50.8 74.5 51" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/>' +
+	'<circle cx="76.4" cy="61.5" r="1.1" fill="#fff" opacity="0.7"/>' +
+	// The moustache.
+	`<path d="M54 78 Q57 72.5 63 74 Q66 75 68 74.2 Q70 75 73 74 Q79 72.5 82 78 Q77.5 81.5 72.5 79.6 Q69.5 78.6 68 79.8 Q66.5 78.6 63.5 79.6 Q58.5 81.5 54 78 Z" fill="${ MOUSTACHE }"/>`;
+
+/**
+ * One engenty's SVG content; `incognito` is the drop with sunglasses and hat, `goose` the copilot.
  * @param kind
  */
 export function engentyMarkup( kind ) {
+	if ( kind === 'goose' ) {
+		return ENGENTIES.round.replace( /<\/g>$/, `${ PILOT }</g>` );
+	}
 	if ( kind === 'incognito' ) {
 		return ENGENTIES.drop.replace( /<\/g>$/, `${ INCOGNITO }</g>` );
 	}

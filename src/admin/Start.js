@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from '@wordpress/element';
 import { __, _n, sprintf } from '@wordpress/i18n';
 import { boot, pageUrl, post, problem } from './api';
-import { AssistantCard, browserModel, runJob } from './Assistant';
+import { browserModel, runJob } from './Assistant';
+import { GooseCard } from './Goose';
 import Preview from './Preview';
 import {
 	Button,
@@ -594,7 +595,7 @@ function Before( { state, onState } ) {
 	const open = state.unassigned.length;
 	return (
 		<>
-			<AssistantCard
+			<GooseCard
 				title={ sprintf(
 					/* translators: %s: the site's host */
 					__( 'Ich habe %s gelesen', 'cookie-dialog' ),
@@ -820,7 +821,7 @@ function Live( { state, onState } ) {
 	const s = state.stats;
 	return (
 		<>
-			<AssistantCard
+			<GooseCard
 				title={ __( 'Was soll anders sein?', 'cookie-dialog' ) }
 				placeholder={ __(
 					'Ich ändere Dialog, Dienste und Einstellungen – z. B. „Füge Hotjar hinzu“',

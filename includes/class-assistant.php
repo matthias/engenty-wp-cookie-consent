@@ -1,10 +1,11 @@
 <?php
 /**
- * The assistant thinks through WordPress: `wp_ai_client_prompt()` with a JSON answer – a message,
- * changes and cards – that PHP checks and applies. No key of its own: the provider is the one set
- * up under Einstellungen › Konnektoren. Simple jobs (translating, shortening, naming an unknown host,
- * the privacy paragraph) can also run in the admin's browser, in Chrome's or Edge's built-in model:
- * the admin app gets the same prompt and schema and posts the answer back.
+ * The jobs think through WordPress: `wp_ai_client_prompt()` with a JSON answer that PHP checks and
+ * applies. No key of its own: the provider is the one set up under Einstellungen › Konnektoren.
+ * Simple jobs (translating, shortening, naming an unknown host, the privacy paragraph) can also run
+ * in the admin's browser, in Chrome's or Edge's built-in model: the admin app gets the same prompt
+ * and schema and posts the answer back. The conversation is engenty.goose's: it changes the
+ * configuration through the abilities of includes/class-goose.php, with apply() and undo() here.
  *
  * @package Cookie_Dialog
  */
@@ -12,7 +13,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Prompts, schemas, applying changes and undo.
+ * Jobs, applying changes and undo.
  */
 class Cookie_Dialog_Assistant {
 
@@ -283,20 +284,11 @@ class Cookie_Dialog_Assistant {
 	}
 
 	/**
-	 * The admin's language for answers.
-	 *
-	 * @return string
-	 */
-	private static function admin_language() {
-		return str_starts_with( get_user_locale(), 'de' ) ? 'German (informal "du")' : 'English';
-	}
-
-	/**
 	 * The configuration as the model needs it.
 	 *
 	 * @return array
 	 */
-	private static function context() {
+	public static function context() {
 		$config = Cookie_Dialog_Config::get();
 		$scan   = Cookie_Dialog_Scanner::result();
 		$texts  = array();
@@ -359,134 +351,55 @@ class Cookie_Dialog_Assistant {
 	}
 
 	/**
-	 * The schema of a chat answer.
+	 * The schema of one change, as `cookie-dialog/change` takes a list of them.
 	 *
 	 * @return array
 	 */
-	public static function answer_schema() {
+	public static function change_schema() {
 		$str = array( 'type' => 'string' );
 		return array(
 			'type'       => 'object',
 			'properties' => array(
-				'message' => $str,
-				'changes' => array(
-					'type'  => 'array',
-					'items' => array(
-						'type'       => 'object',
-						'properties' => array(
-							'op'          => array(
-								'type' => 'string',
-								'enum' => array( 'set', 'text', 'texts', 'add_service', 'remove_service', 'service', 'remove_language', 'category', 'privacy_text' ),
-							),
-							'path'        => $str,
-							'value'       => array( 'type' => array( 'string', 'number', 'boolean', 'array' ) ),
-							'lang'        => $str,
-							'key'         => $str,
-							'texts'       => array(
-								'type'                 => 'object',
-								'additionalProperties' => $str,
-							),
-							'preset'      => $str,
-							'id'          => $str,
-							'name'        => $str,
-							'category'    => $str,
-							'provider'    => $str,
-							'purpose'     => $str,
-							'hosts'       => array(
-								'type'  => 'array',
-								'items' => $str,
-							),
-							'description' => $str,
+				'op'          => array(
+					'type' => 'string',
+					'enum' => array( 'set', 'text', 'texts', 'add_service', 'remove_service', 'service', 'remove_language', 'category', 'privacy_text' ),
+				),
+				'path'        => $str,
+				'value'       => array(
+					'anyOf' => array(
+						array( 'type' => 'string' ),
+						array( 'type' => 'number' ),
+						array( 'type' => 'boolean' ),
+						array(
+							'type'  => 'array',
+							'items' => $str,
 						),
-						'required'   => array( 'op' ),
 					),
 				),
-				'cards'   => array(
-					'type'  => 'array',
-					'items' => array(
-						'type'       => 'object',
-						'properties' => array(
-							'title' => $str,
-							'text'  => $str,
-						),
-						'required'   => array( 'title', 'text' ),
-					),
+				'lang'        => $str,
+				'key'         => $str,
+				'texts'       => array(
+					'type'                 => 'object',
+					'additionalProperties' => $str,
 				),
+				'preset'      => $str,
+				'id'          => $str,
+				'name'        => $str,
+				'category'    => $str,
+				'provider'    => $str,
+				'purpose'     => $str,
+				'hosts'       => array(
+					'type'  => 'array',
+					'items' => $str,
+				),
+				'description' => $str,
 			),
-			'required'   => array( 'message', 'changes', 'cards' ),
+			'required'   => array( 'op' ),
 		);
 	}
 
 	/**
-	 * One turn of the chat.
-	 *
-	 * @param string $message What the person wrote.
-	 * @param array  $history Earlier turns: `role` (me, assistant), `text`.
-	 * @param string $view    The admin page the person is on.
-	 * @return array|WP_Error `message`, `cards`, `undo`, `version`.
-	 */
-	public static function ask( $message, array $history = array(), $view = 'start' ) {
-		$library = array();
-		foreach ( Cookie_Dialog_Config::library() as $preset ) {
-			$library[] = $preset['id'] . ' (' . $preset['name'] . ', ' . $preset['category'] . ')';
-		}
-		$stats  = Cookie_Dialog_Consent::stats( array( 'range' => '30d' ) );
-		$system = implode(
-			"\n",
-			array(
-				'You are the assistant inside the WordPress plugin "Cookie Dialog", an EU cookie consent dialog. You help the site owner by changing the plugin\'s configuration and by answering questions about it.',
-				'Answer with one JSON object: "message" (your reply, short, in ' . self::admin_language() . '), "changes" (operations the plugin applies), "cards" (one card per change you made: title and a short text; empty when nothing changed).',
-				'Operations: {"op":"set","path":"design.colors.button","value":"#1f3d2b"} for settings (paths: design.layout box|bar|modal, design.position left|right|center, design.size s|m|l, design.scheme light|dark|auto, design.radius 0-32, design.colors.{background,text,button,buttonText,link} and design.dark.* as hex, design.buttons same|accept|outline (both buttons filled, accept filled and only necessary outlined, both outlined), design.showTitle and design.showLinks true|false (the title and the privacy and imprint links on the first layer), design.showLanguages true|false (visitors pick the language of the dialog when there are several), design.backdrop, design.lock, tone.address du|Sie, tone.style, google.mode basic|advanced, google.gtm, google.consentMode, google.regions [EEA,UK,CH], google.everywhere, validity.months 1-12, reopen.button, reopen.position left|right, log.months, thirdParty.*); {"op":"text","lang":"de","key":"title","value":"…"} for one dialog text (keys: title, text, accept, reject, settings, save, layerTitle, layerText, privacy, imprint); {"op":"texts","lang":"it","texts":{…}} to add or translate a language (all keys above); {"op":"remove_language","lang":"it"}; {"op":"add_service","preset":"hotjar"} from the library, or {"op":"add_service","name":"…","category":"…","provider":"…","purpose":"…","hosts":["…"]} for one the library lacks; {"op":"remove_service","id":"…"}; {"op":"service","id":"…","category":"…","purpose":"…","lang":"de"}; {"op":"category","id":"statistics","lang":"de","name":"…","description":"…"}; {"op":"privacy_text","lang":"de","value":"<h2>…</h2><p>…</p>"} for the cookie paragraph of the privacy policy.',
-				'Rules you never break, even when asked: rejecting stays as easy as accepting (the plugin always shows "accept all" and "only necessary" as two equal buttons on the first layer); nothing is pre-selected; texts do not pressure, guilt or mislead; necessary services stay necessary only when the site cannot work without them; Consent Mode stays on when Google services are used. When asked for something that breaks them, explain why in one sentence and offer what is allowed.',
-				'Texts on the site use {site} for the site name. Keep dialog texts short: a title of a few words, a text of two sentences.',
-				'For questions (numbers, what loads, what a setting does) answer from the context and return no changes. Do not invent services, cookies or numbers. What the site loads and where is in context.config.scan (the last scan: hosts with the pages and URLs they load on); a service or host that is not there was not seen on the site, say so. The library only lists services the plugin knows, not what the site uses.',
-				'The person is on the admin page "' . $view . '".',
-			)
-		);
-		$turns  = array();
-		foreach ( array_slice( $history, -8 ) as $turn ) {
-			$turns[] = ( 'me' === ( $turn['role'] ?? '' ) ? 'Owner: ' : 'Assistant: ' ) . wp_strip_all_tags( (string) ( $turn['text'] ?? '' ) );
-		}
-		$prompt = 'Context (JSON): ' . wp_json_encode(
-			array(
-				'config'     => self::context(),
-				'library'    => $library,
-				'unassigned' => array_map( static fn( $e ) => $e['host'], Cookie_Dialog_Checks::unassigned() ),
-				'stats30d'   => $stats,
-			)
-		) . "\n\n" . ( $turns ? "Earlier:\n" . implode( "\n", $turns ) . "\n\n" : '' ) . 'Owner: ' . $message;
-
-		$answer = self::generate( $system, $prompt, self::answer_schema() );
-		if ( is_wp_error( $answer ) ) {
-			return $answer;
-		}
-		$changes = is_array( $answer['changes'] ?? null ) ? $answer['changes'] : array();
-		$undo    = $changes ? self::keep_undo() : null;
-		$applied = $changes ? self::apply( $changes, wp_strip_all_tags( (string) $message ) ) : array( 'cards' => array() );
-		$cards   = array();
-		foreach ( (array) ( $answer['cards'] ?? array() ) as $card ) {
-			if ( is_array( $card ) && ! empty( $card['title'] ) ) {
-				$cards[] = array(
-					'title' => sanitize_text_field( (string) $card['title'] ),
-					'text'  => sanitize_text_field( (string) ( $card['text'] ?? '' ) ),
-				);
-			}
-		}
-		if ( ! $cards ) {
-			$cards = $applied['cards'];
-		}
-		$config = Cookie_Dialog_Config::get();
-		return array(
-			'message' => sanitize_textarea_field( (string) ( $answer['message'] ?? '' ) ),
-			'cards'   => ! empty( $applied['applied'] ) ? $cards : array(),
-			'skipped' => $applied['skipped'] ?? array(),
-			'undo'    => ! empty( $applied['applied'] ) ? $undo : null,
-			'version' => (int) $config['version'],
-		);
-	}
-
-	/**
-	 * Applies operations of an answer; what is not allowed is skipped.
+	 * Applies changes; what is not allowed is skipped.
 	 *
 	 * @param array  $changes Operations.
 	 * @param string $note    What the person asked, for the version's note.
@@ -665,7 +578,7 @@ class Cookie_Dialog_Assistant {
 	}
 
 	/**
-	 * Puts the configuration back as it was before an answer.
+	 * Puts the configuration back as it was before a change.
 	 *
 	 * @param string $token The token.
 	 * @return array|WP_Error The configuration.

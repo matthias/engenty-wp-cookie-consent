@@ -36,6 +36,8 @@ require_once COOKIE_DIALOG_DIR . 'includes/class-resources.php';
 require_once COOKIE_DIALOG_DIR . 'includes/class-scanner.php';
 require_once COOKIE_DIALOG_DIR . 'includes/class-checks.php';
 require_once COOKIE_DIALOG_DIR . 'includes/class-assistant.php';
+require_once COOKIE_DIALOG_DIR . 'includes/class-goose.php';
+require_once COOKIE_DIALOG_DIR . 'includes/class-family.php';
 require_once COOKIE_DIALOG_DIR . 'includes/class-rest.php';
 require_once COOKIE_DIALOG_DIR . 'includes/class-admin.php';
 require_once COOKIE_DIALOG_DIR . 'includes/class-blocks.php';
@@ -116,5 +118,6 @@ add_action(
 		Cookie_Dialog_Rest::init();
 		Cookie_Dialog_Admin::init();
 		Cookie_Dialog_Blocks::init();
+		Cookie_Dialog_Goose::boot();
 	}
 );

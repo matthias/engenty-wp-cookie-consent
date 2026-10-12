@@ -95,7 +95,9 @@ class Cookie_Dialog_Admin {
 		);
 		wp_enqueue_media();
 		wp_enqueue_style( 'cookie-dialog-admin', COOKIE_DIALOG_URL . 'build/admin.css', array(), $meta['version'] );
-		wp_enqueue_script( 'cookie-dialog-admin', COOKIE_DIALOG_URL . 'build/admin.js', $meta['dependencies'], $meta['version'], true );
+		// With engenty.goose on this page the app shows its card and talks through it, so it loads after it.
+		$deps = Cookie_Dialog_Goose::active() ? array_merge( $meta['dependencies'], array( 'engenty-goose' ) ) : $meta['dependencies'];
+		wp_enqueue_script( 'cookie-dialog-admin', COOKIE_DIALOG_URL . 'build/admin.js', $deps, $meta['version'], true );
 		$boot = array(
 			'view'      => self::PAGES[ $page ],
 			'admin'     => admin_url( 'admin.php' ),
@@ -109,6 +111,8 @@ class Cookie_Dialog_Admin {
 			'locale'    => get_user_locale(),
 			'wpVersion' => get_bloginfo( 'version' ),
 			'user'      => wp_get_current_user()->display_name,
+			// The copilot: whether it is here, and how to get or activate it.
+			'goose'     => Cookie_Dialog_Family::get( 'engenty-goose' ),
 		);
 		wp_add_inline_script( 'cookie-dialog-admin', 'window.cookieDialogAdmin = ' . wp_json_encode( $boot ) . ';', 'before' );
 		wp_set_script_translations( 'cookie-dialog-admin', 'cookie-dialog', COOKIE_DIALOG_DIR . 'languages' );

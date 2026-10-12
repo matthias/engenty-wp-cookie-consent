@@ -9,7 +9,6 @@ import {
 } from '@wordpress/element';
 import { __, sprintf } from '@wordpress/i18n';
 import { api, boot, post, problem } from './api';
-import { ChatDock, ChatProvider } from './Assistant';
 import { Button, Engenty, Icon, Notice, Spinner } from './ui';
 import Start from './Start';
 import Dialog from './Dialog';
@@ -24,15 +23,6 @@ const VIEWS = {
 	services: [ Services, __( 'Dienste', 'cookie-dialog' ) ],
 	log: [ Log, __( 'Protokoll', 'cookie-dialog' ) ],
 	settings: [ Settings, __( 'Einstellungen', 'cookie-dialog' ) ],
-};
-
-/** What the assistant's input suggests on each page. */
-const PLACEHOLDERS = {
-	start: __( 'z. B. „Füge Hotjar hinzu“', 'cookie-dialog' ),
-	log: __(
-		'Frag zum Protokoll, z. B. „Wie viele haben gestern abgelehnt?“',
-		'cookie-dialog'
-	),
 };
 
 const AppContext = createContext( null );
@@ -143,6 +133,36 @@ function App( { view } ) {
 			.catch( ( e ) => setError( problem( e ).message ) );
 	}, [ onState ] );
 
+	// engenty.goose changed the dialog (or took a change back): show it.
+	useEffect( () => {
+		const changed = ( e ) => {
+			if (
+				( e.detail?.abilities || [] ).some( ( a ) =>
+					a.startsWith( 'cookie-dialog/' )
+				)
+			) {
+				api( '/state' ).then( onState );
+			}
+		};
+		window.addEventListener( 'engenty-goose:changed', changed );
+		return () =>
+			window.removeEventListener( 'engenty-goose:changed', changed );
+	}, [ onState ] );
+
+	// What Goose knows about this page.
+	const live = state?.config?.live;
+	const version = state?.config?.version;
+	useEffect( () => {
+		window.engentyGoose?.setContext( 'cookie-dialog', {
+			description: 'Cookie Dialog',
+			value: `The person is on Cookie Dialog's admin page "${
+				( VIEWS[ view ] || VIEWS.start )[ 1 ]
+			}"; the dialog is ${
+				live ? `live, version ${ version }` : 'not live yet'
+			}.`,
+		} );
+	}, [ view, live, version ] );
+
 	/** Saves part of the configuration; saves run one after another. */
 	const save = useCallback(
 		( patch, note = '' ) => {
@@ -190,21 +210,11 @@ function App( { view } ) {
 					<AppContext.Provider
 						value={ { state, onState, save, saving: saving > 0 } }
 					>
-						<ChatProvider
+						<View
 							state={ state }
 							onState={ onState }
-							view={ view }
-						>
-							<View
-								state={ state }
-								onState={ onState }
-								save={ save }
-							/>
-							<ChatDock
-								placeholder={ PLACEHOLDERS[ view ] }
-								quiet={ view === 'start' }
-							/>
-						</ChatProvider>
+							save={ save }
+						/>
 					</AppContext.Provider>
 				) : null }
 			</main>
