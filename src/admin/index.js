@@ -133,15 +133,17 @@ function App( { view } ) {
 			.catch( ( e ) => setError( problem( e ).message ) );
 	}, [ onState ] );
 
-	// engenty.goose changed the dialog (or took a change back): show it.
+	// engenty.goose changed the dialog (or took a change back): show it. When it changed nothing
+	// else, the page shows it all itself – Goose need not reload it.
 	useEffect( () => {
 		const changed = ( e ) => {
-			if (
-				( e.detail?.abilities || [] ).some( ( a ) =>
-					a.startsWith( 'cookie-dialog/' )
-				)
-			) {
+			const abilities = e.detail?.abilities || [];
+			const ours = ( a ) => a.startsWith( 'cookie-dialog/' );
+			if ( abilities.some( ours ) ) {
 				api( '/state' ).then( onState );
+			}
+			if ( abilities.length && abilities.every( ours ) ) {
+				e.preventDefault();
 			}
 		};
 		window.addEventListener( 'engenty-goose:changed', changed );
