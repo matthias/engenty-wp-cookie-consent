@@ -615,11 +615,7 @@ function Before( { state, onState } ) {
 					'Sag mir, was anders sein soll – z. B. „Schreib per Sie“',
 					'cookie-dialog'
 				) }
-				suggestions={ [
-					__( 'Schreib per Sie', 'cookie-dialog' ),
-					__( 'Dunkler Dialog', 'cookie-dialog' ),
-					__( 'Wir nutzen keine Statistik mehr', 'cookie-dialog' ),
-				] }
+				suggestions={ suggestions( state, false ) }
 			/>
 			<div className="cd-split">
 				<div className="cd-split__main">
@@ -701,13 +697,126 @@ function Before( { state, onState } ) {
 	);
 }
 
+/**
+ * What to ask the assistant, from what this site has: an open check, an unknown host, a service,
+ * the log, a missing language – three at most.
+ * @param state
+ * @param live  Whether the dialog is on (else the suggestions shape the proposal).
+ */
+function suggestions( state, live ) {
+	const c = state.config;
+	const open = state.checks.filter( ( k ) => ! k.ok && ! k.ignored );
+	const third = open.find( ( k ) => k.id === 'third_party' );
+	const host = third?.fixes?.[ 0 ]?.args?.hosts?.[ 0 ];
+	const service = c.services.find(
+		( s ) =>
+			s.category !== 'necessary' &&
+			! [ 'font', 'style', 'library', 'image', 'avatar' ].includes(
+				s.kind
+			)
+	);
+	const unknown = state.unassigned[ 0 ]?.host;
+	const missing = ( state.siteLanguages || [] ).find(
+		( l ) => ! c.languages.includes( l )
+	);
+	const out = [];
+	if ( live ) {
+		if ( host ) {
+			out.push(
+				sprintf(
+					/* translators: %s: host */
+					__( 'Warum bekommt %s die IP-Adresse?', 'cookie-dialog' ),
+					host
+				)
+			);
+		} else if ( open.length ) {
+			out.push( __( 'Was ist noch zu tun?', 'cookie-dialog' ) );
+		}
+		if ( unknown ) {
+			out.push(
+				// translators: %s: host
+				sprintf( __( 'Was ist %s?', 'cookie-dialog' ), unknown )
+			);
+		}
+		if ( service ) {
+			out.push(
+				sprintf(
+					/* translators: %s: service name */
+					__( 'Wofür nutzen wir %s?', 'cookie-dialog' ),
+					service.name
+				)
+			);
+		}
+		if ( state.stats?.total ) {
+			out.push(
+				__( 'Wie viele haben diese Woche abgelehnt?', 'cookie-dialog' )
+			);
+		}
+		if ( missing ) {
+			out.push(
+				sprintf(
+					/* translators: %s: language */
+					__( 'Übersetze auf %s', 'cookie-dialog' ),
+					languageName( missing )
+				)
+			);
+		}
+		if ( ! c.privacyText?.[ c.languages[ 0 ] ] ) {
+			out.push(
+				__(
+					'Schreib den Cookie-Absatz für die Datenschutzerklärung',
+					'cookie-dialog'
+				)
+			);
+		}
+		out.push( __( 'Mach den Dialog kleiner', 'cookie-dialog' ) );
+	} else {
+		out.push(
+			c.tone.address === 'Sie'
+				? __( 'Schreib per du', 'cookie-dialog' )
+				: __( 'Schreib per Sie', 'cookie-dialog' )
+		);
+		if ( service ) {
+			out.push(
+				sprintf(
+					/* translators: %s: service name */
+					__( 'Wofür nutzen wir %s?', 'cookie-dialog' ),
+					service.name
+				)
+			);
+		}
+		if ( c.services.some( ( s ) => s.category === 'statistics' ) ) {
+			out.push(
+				__( 'Wir nutzen keine Statistik mehr', 'cookie-dialog' )
+			);
+		}
+		out.push(
+			c.design.scheme === 'dark'
+				? __( 'Heller Dialog', 'cookie-dialog' )
+				: __( 'Dunkler Dialog', 'cookie-dialog' )
+		);
+	}
+	return Array.from( new Set( out ) ).slice( 0, 3 );
+}
+
 /* ------------------------------------------------------------------ once it is on */
 
 function Live( { state, onState } ) {
 	const fix = useFix( state, onState );
 	const [ passedOpen, setPassedOpen ] = useState( false );
-	const open = state.checks.filter( ( c ) => ! c.ok );
+	const [ ignoredOpen, setIgnoredOpen ] = useState( false );
+	const [ ignoring, setIgnoring ] = useState( null );
+	const open = state.checks.filter( ( c ) => ! c.ok && ! c.ignored );
+	const ignored = state.checks.filter( ( c ) => ! c.ok && c.ignored );
 	const passed = state.checks.filter( ( c ) => c.ok );
+	const ignore = async ( id, on ) => {
+		setIgnoring( id );
+		try {
+			onState( await post( '/ignore', { id, ignore: on } ) );
+		} finally {
+			setIgnoring( null );
+		}
+	};
 	const s = state.stats;
 	return (
 		<>
@@ -717,11 +826,7 @@ function Live( { state, onState } ) {
 					'Ich ändere Dialog, Dienste und Einstellungen – z. B. „Füge Hotjar hinzu“',
 					'cookie-dialog'
 				) }
-				suggestions={ [
-					__( 'Wie viele haben gestern abgelehnt?', 'cookie-dialog' ),
-					__( 'Übersetze auf Italienisch', 'cookie-dialog' ),
-					__( 'Mach den Dialog kleiner', 'cookie-dialog' ),
-				] }
+				suggestions={ suggestions( state, true ) }
 			/>
 			<Section
 				title={
@@ -772,26 +877,87 @@ function Live( { state, onState } ) {
 							lead={ <Status /> }
 							title={ c.title }
 							sub={ c.text }
-							right={ c.fixes.map( ( f ) => (
+							right={ [
+								...c.fixes.map( ( f ) => (
+									<Button
+										key={ f.action }
+										size="sm"
+										kind={
+											f.primary
+												? 'primary'
+												: f.action === 'edit' ||
+												  f.action === 'read_privacy'
+												? 'ghost'
+												: 'secondary'
+										}
+										busy={ fix.busy === c.id + f.action }
+										onClick={ () => fix.run( c, f ) }
+									>
+										{ f.label }
+									</Button>
+								) ),
 								<Button
-									key={ f.action }
+									key="ignore"
 									size="sm"
-									kind={
-										f.primary
-											? 'primary'
-											: f.action === 'edit' ||
-											  f.action === 'read_privacy'
-											? 'ghost'
-											: 'secondary'
-									}
-									busy={ fix.busy === c.id + f.action }
-									onClick={ () => fix.run( c, f ) }
+									kind="ghost"
+									busy={ ignoring === c.id }
+									onClick={ () => ignore( c.id, true ) }
 								>
-									{ f.label }
-								</Button>
-							) ) }
+									{ __( 'Ignorieren', 'cookie-dialog' ) }
+								</Button>,
+							] }
 						/>
 					) ) }
+					{ ignored.length ? (
+						<Row
+							className="cd-row--quiet"
+							lead={ <Status ok /> }
+							title={ sprintf(
+								/* translators: %d: ignored checks */
+								_n(
+									'%d Prüfung ignoriert',
+									'%d Prüfungen ignoriert',
+									ignored.length,
+									'cookie-dialog'
+								),
+								ignored.length
+							) }
+							sub={ __(
+								'Sie meldet sich wieder, sobald sie etwas anderes findet.',
+								'cookie-dialog'
+							) }
+							right={
+								<Icon
+									name={ ignoredOpen ? 'down' : 'chevron' }
+									size={ 16 }
+								/>
+							}
+							onClick={ () => setIgnoredOpen( ! ignoredOpen ) }
+						/>
+					) : null }
+					{ ignored.length && ignoredOpen ? (
+						<div className="cd-rowx">
+							{ ignored.map( ( c ) => (
+								<div key={ c.id } className="cd-cl">
+									<Icon name="eye" size={ 13 } />
+									<span>
+										<b>{ c.title }</b> · { c.text }
+									</span>
+									<Button
+										size="sm"
+										kind="ghost"
+										busy={ ignoring === c.id }
+										onClick={ () => ignore( c.id, false ) }
+									>
+										{ __(
+											'Wieder zeigen',
+											'cookie-dialog'
+										) }
+									</Button>
+								</div>
+							) ) }
+						</div>
+					) : null }
 					<Row
 						className="cd-row--quiet"
 						lead={ <Status ok /> }

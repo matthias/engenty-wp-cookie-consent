@@ -34,6 +34,7 @@ class Cookie_Dialog_Rest {
 		$routes = array(
 			'/state'                       => array( 'GET', 'state' ),
 			'/config'                      => array( 'POST', 'config' ),
+			'/ignore'                      => array( 'POST', 'ignore' ),
 			'/import'                      => array( 'POST', 'import' ),
 			'/live'                        => array( 'POST', 'live' ),
 			'/scan'                        => array( 'POST', 'scan' ),
@@ -120,7 +121,7 @@ class Cookie_Dialog_Rest {
 				'plugins' => $scan['plugins'],
 			),
 			'checks'        => $checks,
-			'open'          => count( array_filter( $checks, static fn( $c ) => ! $c['ok'] ) ),
+			'open'          => count( array_filter( $checks, static fn( $c ) => ! $c['ok'] && ! $c['ignored'] ) ),
 			'unassigned'    => $unassigned,
 			'library'       => $library,
 			'assistant'     => Cookie_Dialog_Assistant::status(),
@@ -156,6 +157,19 @@ class Cookie_Dialog_Rest {
 		}
 		unset( $patch['live'], $patch['version'], $patch['reask'] );
 		Cookie_Dialog_Config::patch( $patch, sanitize_text_field( (string) $request->get_param( 'note' ) ) );
+		return self::state();
+	}
+
+	/**
+	 * Ignores a check of the Prüfung as it stands, or shows it again.
+	 *
+	 * @param WP_REST_Request $request `id`, `ignore`.
+	 * @return array|WP_Error
+	 */
+	public static function ignore( WP_REST_Request $request ) {
+		if ( ! Cookie_Dialog_Checks::ignore( (string) $request->get_param( 'id' ), false !== $request->get_param( 'ignore' ) ) ) {
+			return new WP_Error( 'cookie_dialog_check', __( 'Diese Prüfung gibt es gerade nicht.', 'cookie-dialog' ), array( 'status' => 404 ) );
+		}
 		return self::state();
 	}
 

@@ -738,7 +738,8 @@ function usePresence( show ) {
  * set up in WordPress.
  * @param root0
  * @param root0.placeholder What the input suggests on this page.
- * @param root0.quiet       Hidden without a provider (Start says it in its card).
+ * @param root0.quiet       Start: hidden without a provider (the card says it), and only the engenty
+ *                          until a conversation begins in the card – one input at a time.
  */
 export function ChatDock( { placeholder, quiet = false } ) {
 	const chat = useChat();
@@ -750,9 +751,10 @@ export function ChatDock( { placeholder, quiet = false } ) {
 	const { layout } = chat;
 	const mode = layout.mode === 'side' && canSide ? 'side' : 'bottom';
 	const locked = ! chat.ready;
+	const begun = ! quiet || chat.messages.length > 0;
 	let view = 'off';
 	if ( ! ( locked && quiet ) ) {
-		view = layout.open ? mode : 'avatar';
+		view = layout.open && begun ? mode : 'avatar';
 	}
 	const sideOpen = view === 'side';
 	const sideMax = Math.min( SIDE.max, width - 760 );
@@ -941,7 +943,21 @@ export function ChatDock( { placeholder, quiet = false } ) {
 					title={ __( 'Assistent öffnen', 'cookie-dialog' ) }
 					aria-label={ __( 'Assistent öffnen', 'cookie-dialog' ) }
 					tabIndex={ view === 'avatar' ? undefined : -1 }
-					onClick={ () => chat.setLayout( { open: true } ) }
+					onClick={ () => {
+						if ( ! begun ) {
+							// Nothing to show yet: the card on Start is where one begins.
+							const card = document.getElementById( 'assistant' );
+							card?.scrollIntoView( {
+								behavior: 'smooth',
+								block: 'center',
+							} );
+							card?.querySelector( 'input' )?.focus( {
+								preventScroll: true,
+							} );
+							return;
+						}
+						chat.setLayout( { open: true } );
+					} }
 				>
 					<Engenty kind="drop" size={ 44 } dim={ locked } />
 					{ chat.busy ? <span className="cd-avatar__busy" /> : null }
@@ -1095,6 +1111,11 @@ export function AssistantCard( {
 } ) {
 	const chat = useChat();
 	const locked = ! chat.ready;
+	// While a conversation is open in the chat, the card steps back: one input at a time. Closing
+	// the chat or starting anew brings it back.
+	if ( ! locked && chat.messages.length && chat.layout.open ) {
+		return null;
+	}
 	return (
 		<div
 			className={ `cd-acard${ locked ? ' is-off' : '' }` }

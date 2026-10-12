@@ -310,6 +310,10 @@ class Cookie_Dialog_Checks {
 				),
 			),
 		);
+		foreach ( $checks as &$check ) {
+			$check['ignored'] = ! $check['ok'] && ( $config['ignored'][ $check['id'] ] ?? '' ) === self::said( $check );
+		}
+		unset( $check );
 		return $checks;
 	}
 
@@ -319,7 +323,42 @@ class Cookie_Dialog_Checks {
 	 * @return int
 	 */
 	public static function open_count() {
-		return count( array_filter( self::run(), static fn( $c ) => ! $c['ok'] ) );
+		return count( array_filter( self::run(), static fn( $c ) => ! $c['ok'] && empty( $c['ignored'] ) ) );
+	}
+
+	/**
+	 * What a check says, as a fingerprint: an ignored check comes back when it says something else
+	 * (another host, another cookie).
+	 *
+	 * @param array $check A check.
+	 * @return string
+	 */
+	public static function said( array $check ) {
+		return md5( $check['id'] . '|' . $check['title'] . '|' . $check['text'] );
+	}
+
+	/**
+	 * Ignores a check as it stands, or shows it again.
+	 *
+	 * @param string $id     The check's ID.
+	 * @param bool   $ignore Whether to ignore it.
+	 * @return bool Whether there was such a check.
+	 */
+	public static function ignore( $id, $ignore ) {
+		$config = Cookie_Dialog_Config::get();
+		foreach ( self::run( $config ) as $check ) {
+			if ( $check['id'] !== $id ) {
+				continue;
+			}
+			if ( $ignore ) {
+				$config['ignored'][ $id ] = self::said( $check );
+			} else {
+				unset( $config['ignored'][ $id ] );
+			}
+			Cookie_Dialog_Config::save( $config );
+			return true;
+		}
+		return false;
 	}
 
 	/**

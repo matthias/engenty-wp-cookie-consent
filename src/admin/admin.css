@@ -141,6 +141,8 @@ button.cd-row__main { cursor: pointer; }
 .cd-cl { display: flex; gap: 10px; align-items: baseline; font-size: 13px; color: var(--cd-ink-2); }
 .cd-cl em { font-style: normal; color: var(--cd-ink-3); width: 96px; flex: none; }
 .cd-cl input { flex: 1; }
+.cd-cl > span { flex: 1; min-width: 0; }
+.cd-cl > .cd-btn { flex: none; align-self: center; }
 .cd-logo { width: 34px; height: 34px; border-radius: 9px; background: var(--cd-paper-2); display: inline-flex; align-items: center; justify-content: center; font: 600 12px "Space Grotesk", sans-serif; color: var(--cd-ink-2); flex: none; text-transform: uppercase; }
 .cd-status { width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; flex: none; }
 .cd-status--ok { background: var(--cd-moss-tint); color: var(--cd-moss); }

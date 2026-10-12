@@ -173,6 +173,8 @@ class Cookie_Dialog_Config {
 			'scan'        => array(
 				'weekly' => true,
 			),
+			// Checks the admin chose to ignore: ID => what the check said then (Cookie_Dialog_Checks).
+			'ignored'     => array(),
 		);
 	}
 
@@ -775,7 +777,7 @@ class Cookie_Dialog_Config {
 		}
 		$config  = $data['config'];
 		$current = self::get();
-		foreach ( array( 'live', 'version', 'reask' ) as $key ) {
+		foreach ( array( 'live', 'version', 'reask', 'ignored' ) as $key ) {
 			$config[ $key ] = $current[ $key ];
 		}
 		$config['pages'] = is_array( $config['pages'] ?? null ) ? $config['pages'] : array();
@@ -1006,6 +1008,13 @@ class Cookie_Dialog_Config {
 			'custom'  => sanitize_text_field( (string) ( $c['assistant']['custom'] ?? '' ) ),
 		);
 		$c['scan']      = array( 'weekly' => ! empty( $c['scan']['weekly'] ) );
+		$ignored        = array();
+		foreach ( (array) ( $c['ignored'] ?? array() ) as $id => $said ) {
+			if ( is_string( $said ) && preg_match( '/^[a-f0-9]{32}$/', $said ) ) {
+				$ignored[ sanitize_text_field( (string) $id ) ] = $said;
+			}
+		}
+		$c['ignored'] = $ignored;
 
 		return array_intersect_key( $c, $d );
 	}
