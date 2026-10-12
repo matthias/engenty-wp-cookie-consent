@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Cookie Dialog 0.2.1\n"
+"Project-Id-Version: Cookie Dialog 0.2.2\n"
 "Report-Msgid-Bugs-To: https://engenty.ai\n"
 "Last-Translator: engenty <https://engenty.ai>\n"
 "Language-Team: English (United States)\n"

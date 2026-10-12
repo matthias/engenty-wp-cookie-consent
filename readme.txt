@@ -4,7 +4,7 @@ Tags: cookie, consent, gdpr, dsgvo, cookie banner
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 0.2.1
+Stable tag: 0.2.2
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,6 +23,16 @@ Cookie Dialog reads your website as a visitor without consent, proposes the whol
 * The assistant uses the AI provider set up under Settings › Connectors (WordPress 7.0+). Simple jobs run in your browser's built-in model. Everything else works without AI.
 
 == Changelog ==
+
+= 0.2.2 =
+* The assistant works with OpenAI: its answer schemas go to the provider in the strict form structured outputs require, without a temperature, and the model lists start with today's models (GPT-6 Luna, Claude Haiku 5.5, Gemini 3.5 Flash-Lite; for „stark“ Claude Sonnet 5.5, GPT-6.1 Sol, Gemini 3.8 Flash).
+* The assistant sees the last scan and says what the site loads and where; a service it did not see is not used.
+* Checks of the Prüfung can be ignored until they find something else.
+* The assistant's suggestions come from the site: an open check, an unknown host, a service in use, the log, a missing language.
+* On Start one input at a time: while a conversation is open in the chat, the card steps back.
+* „Immer laden“ on a placeholder allows only that service; the banner stays open for the rest.
+* Second layer: Alle akzeptieren, Nur notwendige, Auswahl speichern; „Gleich“ makes all three the same.
+* The credit reads engenty Cookie Dialog and links to the plugin's page on engenty.ai.
 
 = 0.2.1 =
 * WordPress names the comment cookies only where the site shows a comment form (the scan looks for one), and wp-postpass_* only with a password-protected post.
