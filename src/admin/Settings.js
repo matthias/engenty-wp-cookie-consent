@@ -918,7 +918,7 @@ export default function Settings( { state, onState, save } ) {
 								type="text"
 								className="cd-input-s"
 								defaultValue={ c.assistant.custom }
-								placeholder="google/gemini-2.5-flash-lite"
+								placeholder="gpt-6-luna"
 								onBlur={ ( e ) =>
 									save( {
 										assistant: { custom: e.target.value },
