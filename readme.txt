@@ -4,7 +4,7 @@ Tags: cookie, consent, gdpr, dsgvo, cookie banner
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 0.2.2
+Stable tag: 0.2.3
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,18 @@ Cookie Dialog reads your website as a visitor without consent, proposes the whol
 
 = Unreleased =
 * The conversation moved to engenty.goose, the copilot for WordPress: Cookie Dialog brings a skill and three abilities (read the configuration, change it, take a change back); on its own pages Goose has the skill from the start. Without Goose, Start shows how to activate or get it. The jobs (translating, shortening, naming hosts, the privacy paragraph, texts in the site's tone) stay in Cookie Dialog.
+
+= 0.2.3 =
+* The conversation moves to engenty.goose: Cookie Dialog brings the skill cookie-dialog and three abilities (get-config, change, undo). Goose changes the dialog in one step, with undo, and sees which page you are on.
+* The built-in chat, its dock and /assist and /undo are gone; Start shows Goose's card, or how to activate or get it.
+* A change Goose made only to the dialog does not reload the page.
+* Translations for the new texts.
+
+= 0.2.3 =
+* The conversation moves to engenty.goose: Cookie Dialog brings the skill cookie-dialog and three abilities (get-config, change, undo). Goose changes the dialog in one step, with undo, and sees which page you are on.
+* The built-in chat, its dock and /assist and /undo are gone; Start shows Goose's card, or how to activate or get it.
+* A change Goose made only to the dialog does not reload the page.
+* Translations for the new texts.
 
 = 0.2.2 =
 * The assistant works with OpenAI: its answer schemas go to the provider in the strict form structured outputs require, without a temperature, and the model lists start with today's models (GPT-6 Luna, Claude Haiku 5.5, Gemini 3.5 Flash-Lite; for „stark“ Claude Sonnet 5.5, GPT-6.1 Sol, Gemini 3.8 Flash).

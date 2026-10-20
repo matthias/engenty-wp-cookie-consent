@@ -1,6 +1,6 @@
 {
 	"name": "cookie-dialog",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"private": true,
 	"description": "Cookie Dialog for WordPress: the dialog on the site, the admin app and the blocks' editor.",
 	"license": "GPL-2.0-or-later",
